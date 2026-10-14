@@ -19,6 +19,13 @@
 \def\aftersubsectionspace{6pt}
 \setlist[itemize]{leftmargin=*, itemsep=1.75pt, topsep=2pt, parsep=0pt, partopsep=0pt}
 
+\geometry{top=0.32in}
+\renewcommand\makeheader{%
+  \noindent\begin{tabu} to \dimexpr\textwidth-2\tabcolsep\relax { X[l,m] X[2,c,m] X[r,m] }
+    \printaddress & \printname & \printcontacts \\
+  \end{tabu}\par
+}
+
 \name{Aldo Escobar}
 \contacts{\href{https://www.linkedin.com/in/aldo-escobar-810a0598/}{LinkedIn} \linebreak \href{https://github.com/aoelvp94}{GitHub}}
 
