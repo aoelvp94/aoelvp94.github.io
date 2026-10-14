@@ -32,8 +32,23 @@ jobs:
 
       - name: Assemble the site
         run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
           mkdir -p site
-          cp cv.pdf index.html site/
+          pdftoppm -png -r 160 cv.pdf site/page
+          python3 - <<'PY'
+          from pathlib import Path
+          html = Path("index.html").read_text()
+          pages = sorted(Path("site").glob("page-*.png"), key=lambda p: int(p.stem.split("-")[-1]))
+          if not pages or "<!-- pages -->" not in html:
+              raise SystemExit("CV page images were not added to the site")
+          imgs = "\n".join(
+              f'    <img src="{page.name}" alt="Curriculum vitae, page {number}">'
+              for number, page in enumerate(pages, 1)
+          )
+          Path("site/index.html").write_text(html.replace("<!-- pages -->", imgs))
+          PY
+          cp cv.pdf site/
 
       - uses: actions/upload-pages-artifact@v3
         with:
