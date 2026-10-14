@@ -1,0 +1,139 @@
+\documentclass{mcdowellcv}
+
+% microtype letterspacing is unavailable on XeTeX; keep the name unspaced so the class still compiles.
+\makeatletter
+\renewcommand{\textls}[2][]{#2}
+\makeatother
+
+\usepackage{needspace}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+
+% The class uses large negative skips, so titles, rules, and bullets sit on top of each other.
+\def\beforesectionheaderspace{8pt}
+\def\aftersectionheaderspace{1pt}
+\def\aftersinglelinesubsectionheaderspace{-6pt}
+\def\aftersubsectionspace{6pt}
+\setlist[itemize]{leftmargin=*, itemsep=1.75pt, topsep=2pt, parsep=0pt, partopsep=0pt}
+
+\name{Aldo Escobar}
+
+\begin{document}
+
+\makeheader
+
+\begin{cvsection}{WORK EXPERIENCE}
+
+	\begin{cvsubsection}{Data Engineer}{Roxom}{March 2026 -- October 2026}
+		\begin{itemize}
+			\item Migrated a serverless setup to a medallion lakehouse (bronze, silver, gold) on Athena and Iceberg with dbt, covering several areas of the company. Moved 90+ raw tables from JSON to typed Iceberg.
+			\item Owned 100+ Airflow 3 DAGs (Astronomer Cosmos) on EKS, with KubernetesExecutor and deploys that rebuild only the changed dbt models. Cut the core pipeline from 32 to 19 minutes.
+			\item Wrote ingestion for 15+ exchange, custody, and banking APIs, writing directly to Iceberg. Managed Airbyte as code with Terraform, with schema-drift and sync-recovery alerts.
+			\item Built gold KPI models (growth funnel, cohorts, sales fee attribution, reconciliations) and a semantic layer. Added data-quality checks and alerts when something goes wrong.
+			\item Reduced cloud cost and made a core report about three times faster, from about 300 seconds to 90. Built Airflow plugins the team uses for data health, cost, and reports, and automated the recurring business reports.
+		\end{itemize}
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Lead Teacher}{Le Wagon}{June 2025 -- Present}
+		\begin{itemize}
+			\item Lead teacher for the data engineering courses in Latin America. Teach the classes and run the demos.
+		\end{itemize}
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Data Engineer}{Mutt Data}{December 2019 -- February 2026}
+		\begin{itemize}
+			\item Helped build ETLs to migrate data from Teradata to Athena, with data-validation checks, and added Google Sheets reports to the pipeline.
+			\item Taught Apache Airflow and Apache Spark seminars at Digital House.
+			\item Refactored Sqoop and Airflow ETL jobs, applying best practices, to migrate data from Oracle to Impala.
+			\item Built an analytics dashboard that produces an automatic diagnosis from geographic data, using analytics and unsupervised learning.
+			\item Built an automated data product that computes a customer credit score from telecom and banking data, and deployed the services, databases, and dashboards behind the models.
+			\item Built the codebase for a fraud project on virtual-wallet transactions.
+			\item Took part in onboarding new team members through mentoring and follow-up.
+			\item Contributed to data pipelines on GCP (Composer, Cloud Storage, Speech, Artifact Registry, BigQuery, Dataproc, and serverless Spark) and refactored them for idempotency and better data quality.
+			\item Reduced technical debt on an ad-tech project: a modern Python stack, idempotent pipelines, data validation, and process refactors.
+			\item Built a modern data stack on AWS (Airflow, Airbyte, dbt, DataHub, and MLflow; EC2, ECR, RDS, S3, Athena) as a machine-learning platform for credit scoring.
+			\item Built a modern data stack (MongoDB, Airflow, dbt, and Preset on AWS: EC2, ECR, DMS, RDS, S3, Athena, SSM) to give a ticketing company analytics. Wrote the news-feed ingestion design (SQS, SNS, Firehose, Lambda, and S3), mentored junior members, and wrote the architecture decisions and the platform roadmap.
+			\item Wrote a technical review of performance issues on operational Aurora MySQL databases, with short- and long-term improvements.
+			\item Migrated scheduling workloads from AutoSys, Control-M, ESP, JAMS, Automic, and Matillion into Airflow code with Astronomer Orbiter, across several projects, and deployed the final implementation on Astro. \href{https://github.com/astronomer/orbiter}{github.com/astronomer/orbiter}
+		\end{itemize}
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Data Engineer}{Nubimetrics}{May 2019 -- December 2019}
+		\begin{itemize}
+			\item Treated outliers and built algorithms to detect anomalous values.
+			\item Refactored Nubimetrics' core from Spark SQL to native Spark, with unit and integration tests.
+			\item Automated ETL and reporting on Azure.
+		\end{itemize}
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Data Mining Analyst}{dataEvo}{August 2018 -- May 2019}
+		\begin{itemize}
+			\item Analyzed Twitter data and built visualizations for political campaigns.
+			\item Built Shiny dashboards for devoBooster, an in-house model, and improved it with unsupervised learning.
+		\end{itemize}
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Independent consultant}{}{January 2020 -- Present}
+		\begin{itemize}
+			\item Sped up a school analytics system by refactoring Kestra and a multi-project dbt setup.
+			\item Put a web scraper in production for storage and later transformation, using AWS Batch, CloudWatch Events, Lambda, ECS, and ECR, with CI/CD.
+			\item With a front-end team, built a proof of concept to collect health news by topic. It runs on an Azure VM, lands raw data in Azure Blob Storage, and stores it in MongoDB for a dashboard.
+		\end{itemize}
+	\end{cvsubsection}
+
+\end{cvsection}
+
+\Needspace{6\baselineskip}
+\begin{cvsection}{EDUCATION}
+	\begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item \textbf{Information Systems Engineer}, Universidad Tecnológica Nacional, Tucumán (2013 -- 2018).
+			\item \textbf{Master in Management + Analytics}, Universidad Torcuato Di Tella (2018 -- 2020).
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{CERTIFICATIONS AND AWARDS}
+	\begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item \textbf{\href{https://www.astronomer.io/champions/}{Astronomer Champion}} (2026).
+			\item \textbf{Seventh-highest GPA, UTN FRT} (2017), 8.53/10.
+			\item \textbf{Apache Airflow Fundamentals} (March 2025) and \textbf{DAG Authoring} (August 2025), Astronomer Academy.
+			\item \textbf{Machine learning pipelines with Spotify data}, UTN FRT (June 2021). \href{https://youtu.be/QQZ_nkEcj1I}{youtu.be/QQZ\_nkEcj1I}
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\Needspace{8\baselineskip}
+\begin{cvsection}{OPEN SOURCE}
+	\begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item \textbf{Apache Airflow.} Made OAuth credentials optional in the Airbyte provider, so self-hosted Airbyte OSS runs without OAuth. \href{https://github.com/apache/airflow/pull/64986}{\#64986}, merged.
+			\item \textbf{Astronomer Cosmos.} Fixed the dbt-on-EKS operator for newer Amazon provider versions. \href{https://github.com/astronomer/astronomer-cosmos/pull/2481}{\#2481}, merged.
+			\item \textbf{Apache Airflow.} S3 DAG bundles stage from a single archive. \href{https://github.com/apache/airflow/pull/73015}{\#73015}, open.
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{TECHNICAL STACK}
+	\begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item Python, SQL, Scala, Bash, and R.
+			\item Apache Airflow, dbt, Apache Spark, Airbyte, Apache Iceberg, Superset, DataHub, MLflow, FastAPI, Docker, and Git.
+			\item AWS (Athena, S3, EKS, Glue, ECR), GCP, Azure, and Databricks. Kubernetes, Terraform, and CI/CD.
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{LANGUAGES}
+	\begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item Spanish (native), English (professional working proficiency), and Italian (professional working proficiency).
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\end{document}
