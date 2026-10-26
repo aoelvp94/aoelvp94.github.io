@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viajes — Aldo Escobar</title>
+  <style>
+    * { box-sizing: border-box; }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #2d3748;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      color: white;
+      padding: 40px 20px 20px;
+    }
+    
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2.5em;
+      font-weight: 700;
+    }
+    
+    header p {
+      margin: 0;
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+    
+    .nav-links {
+      text-align: center;
+      padding: 10px 0 20px;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+    
+    .nav-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stat-card .number {
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #667eea;
+      margin: 0;
+    }
+    
+    .stat-card .label {
+      font-size: 0.95em;
+      color: #718096;
+      margin-top: 5px;
+    }
+    
+    .content-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 20px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .content-card h2 {
+      margin-top: 0;
+      color: #2d3748;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 10px;
+      font-size: 1.8em;
+    }
+    
+    .countries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .country-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      background: #f7fafc;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+      transition: transform 0.2s;
+    }
+    
+    .country-item:hover {
+      transform: translateX(5px);
+      background: #edf2f7;
+    }
+    
+    .country-item.upcoming {
+      border-left-color: #fbbf24;
+      opacity: 0.85;
+    }
+    
+    .country-flag {
+      font-size: 1.5em;
+    }
+    
+    .country-name {
+      font-weight: 500;
+      color: #2d3748;
+    }
+    
+    .map-note {
+      text-align: center;
+      padding: 20px;
+      background: #fff3cd;
+      border-radius: 8px;
+      margin: 20px 0;
+      color: #856404;
+    }
+    
+    .regions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .region-card {
+      background: #f7fafc;
+      border-radius: 10px;
+      padding: 20px;
+      border-top: 4px solid #667eea;
+    }
+    
+    .region-card h3 {
+      margin-top: 0;
+      color: #2d3748;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .region-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0;
+    }
+    
+    .region-card li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .region-card li:last-child {
+      border-bottom: none;
+    }
+    
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9em;
+    }
+    
+    .legend-color {
+      width: 30px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    
+    .legend-color.visited {
+      background: #667eea;
+    }
+    
+    .legend-color.upcoming {
+      background: #fbbf24;
+    }
+    
+    footer {
+      text-align: center;
+      color: white;
+      padding: 40px 20px;
+      opacity: 0.9;
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      .stat-card .number { font-size: 2em; }
+      .content-card { padding: 20px; }
+      .countries-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌍 Viajes por el Mundo</h1>
+    <p>Aldo Escobar — Data Engineer · Nómade Digital desde 2020</p>
+  </header>
+  
+  <div class="nav-links">
+    <a href="../">← Volver al CV</a>
+    <a href="#" style="opacity: 0.6; cursor: default;">Trip notes — próximamente</a>
+  </div>
+  
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="number">40+</div>
+        <div class="label">Países visitados</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">6</div>
+        <div class="label">Continentes</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">4+</div>
+        <div class="label">Años como nómade</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">🇵🇭</div>
+        <div class="label">Último visitado<br><small style="font-size: 0.85em;">Filipinas (Oct 2026)</small></div>
+      </div>
+    </div>
+    
+    <div class="content-card">
+      <h2>Sobre mis viajes</h2>
+      <p>
+        Soy Aldo Escobar, data engineer argentino y nómade digital desde 2020. Trabajo remoto 
+        mientras viajo por el mundo, colaborando con equipos distribuidos a través de zonas horarias 
+        y aprovechando la flexibilidad de la tecnología para explorar nuevas culturas.
+      </p>
+      <p style="margin-top: 15px;">
+        He visitado más de 40 países a través de 6 continentes: desde las playas del Sudeste Asiático 
+        hasta los fiordos de Escandinavia, pasando por toda América Latina, Europa, Asia Oriental y 
+        Medio Oriente.
+      </p>
+    </div>
+
+    <div class="content-card">
+      <h2>Países visitados por región</h2>
+      
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color visited"></div>
+          <span>Ya visitado</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color upcoming"></div>
+          <span>Próximamente</span>
+        </div>
+      </div>
+
+      <div class="regions">
+        <div class="region-card">
+          <h3>🌎 América del Norte</h3>
+          <ul>
+            <li>🇨🇦 Canadá</li>
+            <li>🇺🇸 Estados Unidos</li>
+            <li>🇲🇽 México</li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>🌎 América Central & Caribe</h3>
+          <ul>
+            <li>🇬🇹 Guatemala</li>
+            <li>🇳🇮 Nicaragua</li>
+            <li>🇵🇦 Panamá</li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>🌎 América del Sur</h3>
+          <ul>
+            <li>🇻🇪 Venezuela</li>
+            <li>🇸🇷 Surinam</li>
+            <li>🇪🇨 Ecuador</li>
+            <li>🇵🇪 Perú</li>
+            <li>🇧🇴 Bolivia</li>
+            <li>🇧🇷 Brasil</li>
+            <li>🇵🇾 Paraguay</li>
+            <li>🇨🇱 Chile</li>
+            <li>🇦🇷 Argentina (home)</li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>🌍 Europa Occidental</h3>
+          <ul>
+            <li>🇮🇸 Islandia</li>
+            <li>🇮🇪 Irlanda</li>
+            <li>🇬🇧 Reino Unido</li>
+            <li>🇫🇷 Francia</li>
+            <li>🇨🇭 Suiza</li>
+            <li>🇮🇹 Italia</li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>🌍 Europa del Norte</h3>
+          <ul>
+            <li>🇳🇴 Noruega</li>
+            <li>🇫🇮 Finlandia</li>
+            <li>🇩🇰 Dinamarca</li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>🌍 Europa Central & Oriental</h3>
+          <ul>
+            <li>🇨🇿 Chequia</li>
+            <li>🇷🇸 Serbia</li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>🌏 Asia Oriental</h3>
+          <ul>
+            <li>🇰🇷 Corea del Sur</li>
+            <li>🇯🇵 Japón</li>
+            <li>🇹🇼 Taiwán</li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>🌏 Sudeste Asiático</h3>
+          <ul>
+            <li>🇲🇲 Myanmar (Birmania)</li>
+            <li>🇹🇭 Tailandia</li>
+            <li>🇻🇳 Vietnam</li>
+            <li>🇲🇾 Malasia</li>
+            <li>🇮🇩 Indonesia</li>
+            <li>🇵🇭 Filipinas</li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>🌍 Medio Oriente & Norte de África</h3>
+          <ul>
+            <li>🇹🇷 Turquía</li>
+            <li>🇪🇬 Egipto</li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>🌍 Cáucaso & Medio Oriente</h3>
+          <p style="font-size: 0.9em; color: #718096; margin: 0 0 10px;">Próximos destinos:</p>
+          <ul>
+            <li class="upcoming" style="color: #856404;">🇦🇲 Armenia</li>
+            <li class="upcoming" style="color: #856404;">🇬🇪 Georgia</li>
+            <li class="upcoming" style="color: #856404;">🇦🇿 Azerbaiyán</li>
+            <li class="upcoming" style="color: #856404;">🇮🇱 Israel</li>
+            <li class="upcoming" style="color: #856404;">🇯🇴 Jordania</li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>🌍 Europa (Próximamente)</h3>
+          <p style="font-size: 0.9em; color: #718096; margin: 0 0 10px;">Próximo destino:</p>
+          <ul>
+            <li class="upcoming" style="color: #856404;">🇱🇺 Luxemburgo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2>Resumen del viaje 2026</h2>
+      <p>
+        Durante 2026 completé una ruta por México, Estados Unidos y el Sudeste Asiático, 
+        visitando Vietnam, Camboya, Laos, Tailandia, Indonesia y Filipinas. 
+      </p>
+      <p style="margin-top: 15px;">
+        <strong>Próximamente:</strong> Planeo visitar el Cáucaso (Armenia, Georgia, Azerbaiyán), 
+        Medio Oriente (Israel, Jordania) y Luxemburgo para continuar expandiendo mi mapa de viajes.
+      </p>
+      <p style="margin-top: 15px;">
+        <strong>Nota:</strong> La mayoría de estos países fueron visitados durante mis años como nómade digital 
+        desde 2020, combinando trabajo remoto con la exploración de nuevas culturas y destinos.
+      </p>
+    </div>
+  </div>
+  
+  <footer>
+    <p>Aldo Escobar · Data Engineer · Nómade Digital desde 2020</p>
+    <p style="margin-top: 10px;">
+      <a href="https://www.linkedin.com/in/aldo-escobar-810a0598/" style="color: white;">LinkedIn</a> · 
+      <a href="https://github.com/aoelvp94" style="color: white;">GitHub</a>
+    </p>
+    <p style="margin-top: 15px; font-size: 0.85em; opacity: 0.8;">
+      40+ países · 6 continentes · 4+ años viajando
+    </p>
+  </footer>
+</body>
+</html>
