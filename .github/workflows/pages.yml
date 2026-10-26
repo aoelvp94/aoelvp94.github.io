@@ -49,6 +49,7 @@ jobs:
           Path("site/index.html").write_text(html.replace("<!-- pages -->", imgs))
           PY
           cp cv.pdf site/
+          cp -r travel site/
 
       - uses: actions/upload-pages-artifact@v3
         with:
