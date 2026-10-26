@@ -15,13 +15,35 @@
       margin: 0 auto 8px;
       background: #fff;
     }
+    .travel-link {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      padding: 8px 16px;
+      background: rgba(37, 99, 235, 0.9);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: background 0.2s, transform 0.2s;
+      z-index: 1000;
+    }
+    .travel-link:hover {
+      background: rgba(37, 99, 235, 1);
+      transform: translateY(-1px);
+    }
     @media (max-width: 900px), (hover: none) and (pointer: coarse) {
       iframe { display: none; }
       #pages { display: block; }
+      .travel-link { top: 8px; right: 8px; font-size: 13px; padding: 6px 12px; }
     }
   </style>
 </head>
 <body>
+  <a href="/travel/" class="travel-link">✈️ Travel</a>
   <iframe src="cv.pdf" title="Curriculum vitae of Aldo Escobar"></iframe>
   <div id="pages">
     <!-- pages -->

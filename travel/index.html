@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aldo Escobar — Travel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #666666;
+      --border: #e0e0e0;
+      --accent: #2563eb;
+      --card-bg: #f8f9fa;
+      --done: #10b981;
+      --upcoming: #f59e0b;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a1a;
+        --text: #e5e5e5;
+        --text-muted: #a3a3a3;
+        --border: #333333;
+        --accent: #60a5fa;
+        --card-bg: #262626;
+        --done: #34d399;
+        --upcoming: #fbbf24;
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      padding: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin: 2rem 0 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    .nav a:hover {
+      opacity: 0.7;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .bio {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+    .countries {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .country-chip {
+      background: var(--card-bg);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      font-size: 0.875rem;
+      white-space: nowrap;
+    }
+
+    .regions {
+      color: var(--text-muted);
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .timeline {
+      margin-top: 2rem;
+    }
+
+    .timeline-block {
+      margin-bottom: 2.5rem;
+    }
+
+    .block-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .block-status {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-done {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--done);
+    }
+
+    .status-upcoming {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--upcoming);
+    }
+
+    .timeline-items {
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--border);
+    }
+
+    .timeline-item {
+      padding: 0.75rem 0 0.75rem 1.5rem;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.5rem;
+      top: 1.125rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+    }
+
+    .timeline-item.done::before {
+      background: var(--done);
+    }
+
+    .timeline-item.upcoming::before {
+      background: var(--upcoming);
+    }
+
+    .timeline-date {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-detail {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+    }
+
+    .coming-soon {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aldo Escobar</h1>
+    <p class="subtitle">Ingeniero de datos · Nómada digital</p>
+    <nav class="nav">
+      <a href="/">← CV</a>
+      <a href="#bio">Bio</a>
+      <a href="#stats">Stats</a>
+      <a href="#timeline">Ruta</a>
+    </nav>
+  </header>
+
+  <section id="bio">
+    <h2>Sobre mi viaje</h2>
+    <p class="bio">
+      Ingeniero de datos argentino viajando como nómada digital. Trabajo remotamente mientras me muevo por las Américas, Sudeste Asiático, Europa, el Cáucaso, Israel, luego NYC y de regreso a Argentina.
+    </p>
+  </section>
+
+  <section id="stats">
+    <h2>Viaje 2026 en números</h2>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">16</div>
+        <div class="stat-label">Países</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">~135</div>
+        <div class="stat-label">Días de viaje</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Regiones</div>
+      </div>
+    </div>
+
+    <p class="regions">
+      <strong>Bloques:</strong> Américas · SEA · Europa · Cáucaso · Medio Oriente · NYC
+    </p>
+
+    <div class="countries">
+      <span class="country-chip">🇲🇽 México</span>
+      <span class="country-chip">🇺🇸 EE. UU.</span>
+      <span class="country-chip">🇻🇳 Vietnam</span>
+      <span class="country-chip">🇰🇭 Camboya</span>
+      <span class="country-chip">🇱🇦 Laos</span>
+      <span class="country-chip">🇹🇭 Tailandia</span>
+      <span class="country-chip">🇮🇩 Indonesia</span>
+      <span class="country-chip">🇵🇭 Filipinas</span>
+      <span class="country-chip">🇳🇱 Países Bajos</span>
+      <span class="country-chip">🇱🇺 Luxemburgo</span>
+      <span class="country-chip">🇦🇲 Armenia</span>
+      <span class="country-chip">🇬🇪 Georgia</span>
+      <span class="country-chip">🇦🇿 Azerbaiyán</span>
+      <span class="country-chip">🇮🇱 Israel</span>
+      <span class="country-chip">🇮🇹 Italia</span>
+      <span class="country-chip">🇦🇷 Argentina</span>
+    </div>
+
+    <p style="margin-top: 1.5rem; color: var(--text-muted); font-size: 0.875rem;">
+      <strong>Ventana de viaje:</strong> 24 de agosto de 2026 → ~5 de enero de 2027
+    </p>
+  </section>
+
+  <section id="timeline">
+    <h2>Ruta detallada</h2>
+    <p style="margin-bottom: 2rem; color: var(--text-muted);">
+      Cronología del viaje por bloques principales. Estado actualizado al 26 de octubre de 2026.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-block">
+        <div class="block-title">
+          Américas
+          <span class="block-status status-done">Completado</span>
+        </div>
+        <div class="timeline-items">
+          <div class="timeline-item done">
+            <div class="timeline-date">24 de agosto</div>
+            <div class="timeline-detail">Buenos Aires → Ciudad de México</div>
+          </div>
+          <div class="timeline-item done">
+            <div class="timeline-date">26 de agosto</div>
+            <div class="timeline-detail">Ciudad de México → San Francisco</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-block">
+        <div class="block-title">
+          Sudeste Asiático
+          <span class="block-status status-done">Completado</span>
+        </div>
+        <div class="timeline-items">
+          <div class="timeline-item done">
+            <div class="timeline-date">29 de agosto</div>
+            <div class="timeline-detail">San Francisco → Hanói (Vietnam)</div>
+          </div>
+          <div class="timeline-item done">
+            <div class="timeline-date">2-8 de septiembre</div>
+            <div class="timeline-detail">Vietnam del norte: Hanói, Ha Long, Ninh Binh</div>
+          </div>
+          <div class="timeline-item done">
+            <div class="timeline-date">8-16 de septiembre</div>
+            <div class="timeline-detail">Camboya: Siem Reap, Phnom Penh</div>
+          </div>
+          <div class="timeline-item done">
+            <div class="timeline-date">16-19 de septiembre</div>
+            <div class="timeline-detail">Laos: Vientiane, Vang Vieng</div>
+          </div>
+          <div class="timeline-item done">
+            <div class="timeline-date">19-30 de septiembre</div>
+            <div class="timeline-detail">Tailandia: Bangkok, Chiang Mai, Phuket</div>
+          </div>
+          <div class="timeline-item done">
+            <div class="timeline-date">30 de septiembre - 4 de octubre</div>
+            <div class="timeline-detail">Indonesia: Bali (Ubud, Canggu)</div>
+          </div>
+          <div class="timeline-item done">
+            <div class="timeline-date">4-18 de octubre</div>
+            <div class="timeline-detail">Filipinas: Manila, Cebu, Bohol</div>
+          </div>
+          <div class="timeline-item done">
+            <div class="timeline-date">18-26 de octubre</div>
+            <div class="timeline-detail">Filipinas: Coron (Palawan)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-block">
+        <div class="block-title">
+          SEA → Europa
+          <span class="block-status status-upcoming">En curso</span>
+        </div>
+        <div class="timeline-items">
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">28 de octubre</div>
+            <div class="timeline-detail">Vuelo reservado: Coron → El Nido</div>
+          </div>
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">2 de noviembre</div>
+            <div class="timeline-detail">El Nido → Bangkok</div>
+          </div>
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">5 de noviembre</div>
+            <div class="timeline-detail">Bangkok → Ámsterdam</div>
+          </div>
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">6-8 de noviembre</div>
+            <div class="timeline-detail">Países Bajos: Ámsterdam</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-block">
+        <div class="block-title">
+          Cáucaso y Medio Oriente
+          <span class="block-status status-upcoming">Próximo</span>
+        </div>
+        <div class="timeline-items">
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">8 de noviembre</div>
+            <div class="timeline-detail">Ámsterdam → Luxemburgo</div>
+          </div>
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">12 de noviembre</div>
+            <div class="timeline-detail">Luxemburgo → Ereván (Armenia)</div>
+          </div>
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">14-19 de noviembre</div>
+            <div class="timeline-detail">Armenia: Ereván, Garni, Geghard</div>
+          </div>
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">19-25 de noviembre</div>
+            <div class="timeline-detail">Georgia: Tiflis, Kazbegi</div>
+          </div>
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">25-29 de noviembre</div>
+            <div class="timeline-detail">Azerbaiyán: Bakú</div>
+          </div>
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">29 nov - 8 dic</div>
+            <div class="timeline-detail">Israel: Tel Aviv, Jerusalén</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-block">
+        <div class="block-title">
+          Europa y regreso
+          <span class="block-status status-upcoming">Próximo</span>
+        </div>
+        <div class="timeline-items">
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">8-13 de diciembre</div>
+            <div class="timeline-detail">Italia: Roma</div>
+          </div>
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">13-27 de diciembre</div>
+            <div class="timeline-detail">Estados Unidos: Nueva York</div>
+          </div>
+          <div class="timeline-item upcoming">
+            <div class="timeline-date">~5 de enero de 2027</div>
+            <div class="timeline-detail">NYC → Buenos Aires</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Notas de viaje</h2>
+    <div class="coming-soon">
+      <p><strong>Próximamente</strong></p>
+      <p style="margin-top: 0.5rem;">Historias, fotos y reflexiones del camino.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Aldo Escobar · 2026</p>
+  </footer>
+</body>
+</html>
