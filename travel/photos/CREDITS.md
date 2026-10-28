@@ -237,3 +237,444 @@ License names and authors come from Commons file metadata.
 - Source: https://commons.wikimedia.org/wiki/File%3AOld%20City%20Walls%20and%20Tower%20of%20David%20in%20Jerusalem%20%282019%29%2003.jpg
 - Bytes: 70154
 
+
+## canada.webp
+- File: 1 lake louise pano 2019.jpg
+- Description: Lake Louise, Banff Alberta, Canada. Panorama from beehive (2019)
+- Author: Chensiyuan
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A1_lake_louise_pano_2019.jpg
+- Bytes: 68346
+
+## guatemala.webp
+- File: Antigua Guatemala - Santa Catalina Arch.jpg
+- Description: Sacatepéquez Guatemala
+- Author: Rene Hernandez
+- License: CC BY-SA 2.0
+- Credit: https://www.flickr.com/photos/137253937@N05/51246107218/
+- Source: https://commons.wikimedia.org/wiki/File%3AAntigua_Guatemala_-_Santa_Catalina_Arch.jpg
+- Bytes: 54010
+
+## panama.webp
+- File: Panama Canal Gatun Locks.jpg
+- Description: Photo of Panama Canal Gatun Locks.
+- Author: Stan Shebs
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3APanama_Canal_Gatun_Locks.jpg
+- Bytes: 59170
+
+## colombia.webp
+- File: Centro Histórico de Cartagena de Indias.jpg
+- Description: Esta fotografía fue tomada en el municipio colombiano con código 13001.
+- Author: Dasha Shishkova
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ACentro_Hist%C3%B3rico_de_Cartagena_de_Indias.jpg
+- Bytes: 45302
+
+## peru.webp
+- File: Plaza de Armas, Cusco, Perú, 2015-07-31, DD 53-56 PAN.jpg
+- Description: Plaza de Armas, Cusco, Peru
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3APlaza_de_Armas%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_53-56_PAN.jpg
+- Bytes: 71428
+
+## bolivia.webp
+- File: Isla Incahuasi, Salar de Uyuni, Bolivia, 2016-02-04, DD 43.jpg
+- Description: Isla Incahuasi, Salt flat of Uyuni, Bolivia
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AIsla_Incahuasi%2C_Salar_de_Uyuni%2C_Bolivia%2C_2016-02-04%2C_DD_43.jpg
+- Bytes: 53046
+
+## brazil.webp
+- File: Pão de Açúcar, Rio de Janeiro.jpg
+- Description: Pão de Açúcar - Márcia Regina Machado - (10) .Jpeg
+- Author: Marcia Photography
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AP%C3%A3o_de_A%C3%A7%C3%BAcar%2C_Rio_de_Janeiro.jpg
+- Bytes: 79880
+
+## paraguay.webp
+- File: 00 3819 Asunción - Paraguay (Südamerika).jpg
+- Description: Asunción is the capital of the state of Paraguay in South America. The picture shows the government palace. The original image as a slide dates from 1970.
+- Author: W. Bulach
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A00_3819_Asunci%C3%B3n_-_Paraguay_%28S%C3%BCdamerika%29.jpg
+- Bytes: 53448
+
+## uruguay.webp
+- File: Palacio Salvo, Montevideo.jpg
+- Description: Montevideo, Uruguay
+- Author: Christoph Derndorfer
+- License: CC BY-SA 2.0
+- Credit: Flickr : Palacio Salvo
+- Source: https://commons.wikimedia.org/wiki/File%3APalacio_Salvo%2C_Montevideo.jpg
+- Bytes: 48320
+
+## chile.webp
+- File: 175 - Torres del Paines - Janvier 2010.jpg
+- Description: The Almirante Nieto to the right and the Cuernos del Paine to the left, two geological formations part of the Cordillera del Paine in Torres del Paine National Park ,…
+- Author: Martin St-Amant ( S23678 )
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A175_-_Torres_del_Paines_-_Janvier_2010.jpg
+- Bytes: 32958
+
+## dominican-republic.webp
+- File: Santo Domingo - Fortaleza Ozama 0805.JPG
+- Description: The Ozama Fortress , in the Ciudad Colonial of Santo Domingo , Dominican Republic .
+- Author: Phyrexian
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASanto_Domingo_-_Fortaleza_Ozama_0805.JPG
+- Bytes: 59000
+
+## barbados.webp
+- File: Barbados - Bridgetown Parliament - panoramio.jpg
+- Description: Barbados - Bridgetown Parliament
+- Author: David Broad
+- License: CC BY 3.0
+- Credit: https://web.archive.org/web/20161024121437/http://www.panoramio.com/photo/84007955
+- Source: https://commons.wikimedia.org/wiki/File%3ABarbados_-_Bridgetown_Parliament_-_panoramio.jpg
+- Bytes: 43800
+
+## cuba.webp
+- File: AvMalecon-LaHabanaCuba-04735.jpg
+- Description: View of Malecón Avenue, Havana, Cuba
+- Author: Ezarate
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AAvMalecon-LaHabanaCuba-04735.jpg
+- Bytes: 34550
+
+## curacao.webp
+- File: Handelskade in Willemstad.jpg
+- Description: Handelskade in Willemstad, Curacao. This is a UNESCO World Heritage site. Photographed by user Coolcaesar on September 27, 2024. This photo was taken with a camera who…
+- Author: Coolcaesar
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AHandelskade_in_Willemstad.jpg
+- Bytes: 60754
+
+## iceland.webp
+- File: Gullfoss, Suðurland, Islandia, 2014-08-16, DD 123.JPG
+- Description: Rainbow over Gullfoss ("Golden Falls" in Icelandic), a waterfall located in the canyon of the Hvítá river and one of the main attractions of the Golden Circle in south…
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AGullfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_123.JPG
+- Bytes: 67406
+
+## norway.webp
+- File: Bryggen Hanseatic wharf at night Bergen Norway.jpg
+- Description: Night-time photograph of Bryggen, the historic Hanseatic wharf in Bergen, Vestland County, Norway. A row of brightly painted, gabled wooden warehouses stands along the…
+- Author: Smtunli
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABryggen_Hanseatic_wharf_at_night_Bergen_Norway.jpg
+- Bytes: 62454
+
+## finland.webp
+- File: Helsingin tuomiokirkko.jpg
+- Description: Helsinki Cathedral.
+- Author: kallerna
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AHelsingin_tuomiokirkko.jpg
+- Bytes: 28732
+
+## denmark.webp
+- File: Nyhavn Copenhagen 2.jpg
+- Description: Nyhavn, Copenhagen
+- Author: kallerna
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ANyhavn_Copenhagen_2.jpg
+- Bytes: 76592
+
+## sweden.webp
+- File: Munkbroleden with Kornhamstorg at Gamla Stan, Stockholm, Sweden 01.jpg
+- Description: Söderström in front of Munkbroleden and Kornhamstorg at Gamla Stan, Stockholm. In the background: Norra tornen (Vasastaden), Klara kyrka (Norrmalm), Storkyrkan (Gamla…
+- Author: OleNeitzel
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AMunkbroleden_with_Kornhamstorg_at_Gamla_Stan%2C_Stockholm%2C_Sweden_01.jpg
+- Bytes: 80366
+
+## england.webp
+- File: Tower Bridge London Feb 2006.jpg
+- Description: An extremely high resolution image of Tower Bridge in London. This image is a mosaic of 53 12.8 megapixel segments stitched with PTGui. They were taken with a Canon 5D…
+- Author: Diliff
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ATower_Bridge_London_Feb_2006.jpg
+- Bytes: 37968
+
+## netherlands.webp
+- File: Colorful windows and canal houses at blue hour with water reflection in Damrak Amsterdam Netherlands.jpg
+- Description: Water reflection of colorful windows of canal houses , east side, where the houses are located directly on the water, with the green lighted restaurant "The Grasshoper…
+- Author: Basile Morin
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AColorful_windows_and_canal_houses_at_blue_hour_with_water_reflection_in_Damrak_Amsterdam_Netherlands.jpg
+- Bytes: 54646
+
+## belgium.webp
+- File: Grand Place, Brussels, Belgium.jpg
+- Description: The Grand Place is the central square of Brussels. It is surrounded by opulent guildhalls and two larger edifices, the city's Town Hall and the Breadhouse building con…
+- Author: Theedi
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AGrand_Place%2C_Brussels%2C_Belgium.jpg
+- Bytes: 93626
+
+## germany.webp
+- File: Brandenburger Tor abends.jpg
+- Description: The Brandenburg Gate in Berlin , Germany
+- Author: Thomas Wolf
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABrandenburger_Tor_abends.jpg
+- Bytes: 45880
+
+## poland.webp
+- File: Rynek Główny, Kraków.jpg
+- Description: Rynek Główny, Kraków
+- Author: Minderbinder
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ARynek_G%C5%82%C3%B3wny%2C_Krak%C3%B3w.jpg
+- Bytes: 62510
+
+## france.webp
+- File: Eiffel Tower from the Tour Montparnasse 3, Paris May 2014.jpg
+- Description: Eiffel Tower from the Tour Montparnasse, Paris.
+- Author: David McSpadden from Daly City, United States
+- License: CC BY 2.0
+- Credit: Eiffel Tower
+- Source: https://commons.wikimedia.org/wiki/File%3AEiffel_Tower_from_the_Tour_Montparnasse_3%2C_Paris_May_2014.jpg
+- Bytes: 94044
+
+## switzerland.webp
+- File: Matterhorn from Zermatt.jpg
+- Description: Matterhorn from the north side.
+- Author: Zermatt photos
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AMatterhorn_from_Zermatt.jpg
+- Bytes: 53994
+
+## austria.webp
+- File: Hallstatt, from opposite side of the lake.jpg
+- Description: The city of Hallstatt, Upper Austria, as seen from the opposite side of the Hallstatt lake. The mountain to the left is Hohe Sieg, 1151m and the Salzberg with the Rudo…
+- Author: Herzi Pinki
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AHallstatt%2C_from_opposite_side_of_the_lake.jpg
+- Bytes: 70388
+
+## hungary.webp
+- File: Hungarian Parliament Building from across the Danube.jpg
+- Description: Hungarian Parliament Building from across the Danube. Taken on the 27th of March, 2017.
+- Author: Elekes Andor
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AHungarian_Parliament_Building_from_across_the_Danube.jpg
+- Bytes: 42704
+
+## slovakia.webp
+- File: Bratislavský hrad.jpg
+- Description: Bratislavský hrad
+- Author: Dezidor
+- License: CC BY-SA 3.0
+- Credit: Self-photographed
+- Source: https://commons.wikimedia.org/wiki/File%3ABratislavsk%C3%BD_hrad.jpg
+- Bytes: 24698
+
+## slovenia.webp
+- File: Lake Bled, Slovenia.jpg
+- Description: Lake Bled
+- Author: Viktar Palstsiuk
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ALake_Bled%2C_Slovenia.jpg
+- Bytes: 53014
+
+## spain.webp
+- File: Alhambra, Granada, Spain.jpg
+- Description: Alhambra, Granada, Spain.jpg
+- Author: Iain MacFadzean
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AAlhambra%2C_Granada%2C_Spain.jpg
+- Bytes: 36156
+
+## portugal.webp
+- File: Belém Tower Lisbon.jpg
+- Description: Belém Tower Lisbon Portugal
+- Author: Javiercomellys
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABel%C3%A9m_Tower_Lisbon.jpg
+- Bytes: 37468
+
+## italy.webp
+- File: Colosseum in Rome, Italy - April 2007.jpg
+- Description: A 4x4 segment panorama of the Coliseum at dusk. Taken by myself with a Canon 5D and 50mm f/1.8 lens at f/5.6.
+- Author: Diliff
+- License: CC BY-SA 2.5
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AColosseum_in_Rome%2C_Italy_-_April_2007.jpg
+- Bytes: 51716
+
+## czechia.webp
+- File: Karlův most, Praha.jpg
+- Description: Charles bridge in winter ( Prague , Czechia ).
+- Author: Ondřej Žváček
+- License: CC BY 2.5
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AKarl%C5%AFv_most%2C_Praha.jpg
+- Bytes: 50550
+
+## romania.webp
+- File: Avenida de la Unión, Bucarest, Rumanía, 2016-05-29, DD 57.jpg
+- Description: Unity Avenue, Bucharest, Romania
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AAvenida_de_la_Uni%C3%B3n%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_57.jpg
+- Bytes: 83448
+
+## serbia.webp
+- File: Sava and Danube in Belgrade, view from Kalemegdan Park at the Victor statue.jpg
+- Description: Sava and Danube in Belgrade, view from Kalemegdan Park at the Victor statue
+- Author: Radosław Botev
+- License: CC BY 3.0 pl
+- Credit: own archive
+- Source: https://commons.wikimedia.org/wiki/File%3ASava_and_Danube_in_Belgrade%2C_view_from_Kalemegdan_Park_at_the_Victor_statue.jpg
+- Bytes: 41648
+
+## albania.webp
+- File: Berat, Albania.jpg
+- Description: Berat, Albania
+- Author: Christoph Strässler
+- License: CC BY-SA 2.0
+- Credit: https://www.flickr.com/photos/78904630@N08/48081627737/
+- Source: https://commons.wikimedia.org/wiki/File%3ABerat%2C_Albania.jpg
+- Bytes: 94804
+
+## greece.webp
+- File: The Parthenon in Athens.jpg
+- Description: Parthenon, Athens Greece. Photo taken in 1978.
+- Author: Steve Swayne
+- License: CC BY 2.0
+- Credit: File:O Partenon de Atenas.jpg , originally posted to Flickr as The Parthenon Athens
+- Source: https://commons.wikimedia.org/wiki/File%3AThe_Parthenon_in_Athens.jpg
+- Bytes: 62374
+
+## bosnia.webp
+- File: Stari Most, Mostar.jpg
+- Description: Stari Most, Mostar, Dezember 2009
+- Author: Tony Bowden
+- License: CC BY-SA 2.0
+- Credit: Flickr : Stari Most, Mostar
+- Source: https://commons.wikimedia.org/wiki/File%3AStari_Most%2C_Mostar.jpg
+- Bytes: 59834
+
+## croatia.webp
+- File: Casco viejo de Dubrovnik, Croacia, 2014-04-13, DD 03.JPG
+- Description: Old harbour, old city of Dubrovnik, Croatia
+- Author: Diego Delso
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ACasco_viejo_de_Dubrovnik%2C_Croacia%2C_2014-04-13%2C_DD_03.JPG
+- Bytes: 43342
+
+## montenegro.webp
+- File: Vista de Kotor, Bahía de Kotor, Montenegro, 2014-04-19, DD 08-10 PAN.JPG
+- Description: View of Kotor, Bay of Kotor, Montenegro
+- Author: Diego Delso
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AVista_de_Kotor%2C_Bah%C3%ADa_de_Kotor%2C_Montenegro%2C_2014-04-19%2C_DD_08-10_PAN.JPG
+- Bytes: 71256
+
+## north-macedonia.webp
+- File: Ohrid Lake St. John Kaneo Church.jpg
+- Description: Saint John at Kaneo church on the lake's shores in Ohrid, North Macedonia.
+- Author: Benoît Vicart
+- License: CC0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AOhrid_Lake_St._John_Kaneo_Church.jpg
+- Bytes: 33910
+
+## kosovo.webp
+- File: Prizren from the fortress.jpg
+- Description: View of Prizren from the fortress, Kosovo
+- Author: Avocados2026
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3APrizren_from_the_fortress.jpg
+- Bytes: 96098
+
+## bulgaria.webp
+- File: AlexanderNevskyCathedral-Sofia-6.jpg
+- Description: Alexander Nevsky Cathedral in Sofia , Bulgaria. Its foundation stone was laid on March 3, 1882, four years after signing the Treaty of San Stefano , granting the Liber…
+- Author: Plamen Agov
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AAlexanderNevskyCathedral-Sofia-6.jpg
+- Bytes: 43792
+
+## south-korea.webp
+- File: Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg
+- Description: Royal Banquet Hall Gyeonghoeru (경회루) at Gyeongbokgung Palace (경복궁), Seoul
+- Author: Frank Schulenburg
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AGyeonghoeru_%28Royal_Banquet_Hall%29_at_Gyeongbokgung_Palace%2C_Seoul.jpg
+- Bytes: 46576
+
+## japan.webp
+- File: Haraiden of Marōdo Shrine and Floating Torii Gate, Itsukushima Shinto Shrine, Miyajima, 20240816 1707 4004.jpg
+- Description: Haraiden of Marōdo Shrine and Floating Torii Gate, Itsukushima Shinto Shrine, Miyajima
+- Author: Jakub Hałun
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AHaraiden_of_Mar%C5%8Ddo_Shrine_and_Floating_Torii_Gate%2C_Itsukushima_Shinto_Shrine%2C_Miyajima%2C_20240816_1707_4004.jpg
+- Bytes: 63054
+
+## turkey.webp
+- File: Hagia Sophia Mars 2013.jpg
+- Description: Hagia Sophia
+- Author: Arild Vågen
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AHagia_Sophia_Mars_2013.jpg
+- Bytes: 57358
+
+## egypt.webp
+- File: Kheops-Pyramid.jpg
+- Description: Kheops pyramid
+- Author: Nina
+- License: CC BY 2.5
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AKheops-Pyramid.jpg
+- Bytes: 42100
+
+## morocco.webp
+- File: Whispers of Gold - Hassan II Mosque at Dusk.jpg
+- Description: Bathed in the gentle glow of twilight, the majestic minaret of Hassan II Mosque rises like a beacon between sky and sea. Framed by delicate Moorish arches, the intrica…
+- Author: OussamaHamama
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AWhispers_of_Gold_-_Hassan_II_Mosque_at_Dusk.jpg
+- Bytes: 29440
