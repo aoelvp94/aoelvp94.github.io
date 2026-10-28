@@ -235,16 +235,21 @@
   <script src="countries.js"></script>
   <script>
     // Insertion order is chronological (oldest → newest). 2026 SEA is last among visited.
-    const VISITED = new Set(["ARG","CAN","GTM","PAN","COL","ECU","PER","BOL","BRA","PRY","URY","CHL","DOM","BRB","CUB","CUW","ISL","NOR","FIN","DNK","SWE","ENG","NLD","BEL","DEU","POL","FRA","CHE","AUT","HUN","SVK","SVN","ESP","PRT","ITA","CZE","ROU","SRB","ALB","GRC","BIH","HRV","MNE","MKD","KOS","BGR","KOR","JPN","MYS","TUR","EGY","MAR","MEX","USA","VNM","KHM","LAO","THA","IDN","PHL"]);
+    const VISITED = new Set(["ARG","CAN","GTM","PAN","COL","ECU","PER","BOL","BRA","PRY","URY","CHL","DOM","BRB","CUB","CUW","ISL","NOR","FIN","DNK","SWE","ENG","NLD","BEL","DEU","POL","FRA","CHE","AUT","HUN","SVK","SVN","ESP","PRT","ITA","CZE","ROU","SRB","ALB","GRC","BIH","HRV","MNE","MKD","KOS","BGR","KOR","JPN","MYS","TUR","EGY","MAR","SGP","BHS","PRI","SLV","MEX","USA","VNM","KHM","LAO","THA","IDN","PHL"]);
     const NEXT = new Set(["LUX","ARM","GEO","AZE","ISR","JOR"]);
     const WHEN = {
       ARG: "2020+",
+      SGP: "Apr 2025",
+      BHS: "Jul 2026",
+      PRI: "Jul 2026",
+      ECU: "Aug 2026",
+      SLV: "Aug 2026",
       MEX: "Aug 2026",
-      USA: "Aug 2026",
-      VNM: "Aug 2026",
-      KHM: "Sep 2026",
-      LAO: "Sep 2026",
-      THA: "Sep 2026",
+      USA: "2026",
+      VNM: "Sep 2026",
+      KHM: "Sep–Oct 2026",
+      LAO: "Oct 2026",
+      THA: "Oct 2026",
       IDN: "Oct 2026",
       PHL: "Oct 2026",
       LUX: "Nov 2026",
@@ -257,6 +262,7 @@
     const DOTS = [
       { a3: "BRB", name: "Barbados", lat: 13.19, lon: -59.54 },
       { a3: "CUW", name: "Curaçao", lat: 12.2, lon: -68.97 },
+      { a3: "SGP", name: "Singapore", lat: 1.35, lon: 103.82 },
       { a3: "LUX", name: "Luxembourg", lat: 49.75, lon: 6.13 }
     ];
 
