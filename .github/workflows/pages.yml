@@ -52,6 +52,8 @@ jobs:
           cp -r travel site/
           cp -r argentina site/
           cp -r blog site/
+          test -f site/argentina/index.html
+          test -f site/argentina/en/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
