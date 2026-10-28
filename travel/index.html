@@ -210,7 +210,7 @@
     <aside class="panel">
       <div>
         <h1>Countries I've been to</h1>
-        <p class="lede">Argentine data engineer, digital nomad since 2020. Latest stop: the Philippines, October 2026.</p>
+        <p class="lede">Argentine data engineer, digital nomad since 2020. List is oldest → newest. Latest stop: the Philippines, October 2026.</p>
       </div>
       <div class="stats">
         <div><b id="visited-count">0</b><span>visited</span></div>
@@ -234,8 +234,26 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="countries.js"></script>
   <script>
-    const VISITED = new Set(["CAN","USA","MEX","GTM","PAN","COL","ECU","PER","BOL","BRA","PRY","URY","CHL","ARG","DOM","BRB","CUB","CUW","ISL","NOR","FIN","DNK","SWE","ENG","NLD","BEL","DEU","POL","FRA","CHE","AUT","HUN","SVK","SVN","ESP","PRT","ITA","CZE","ROU","SRB","ALB","GRC","BIH","HRV","MNE","MKD","KOS","BGR","KOR","JPN","THA","KHM","LAO","VNM","MYS","IDN","PHL","TUR","EGY","MAR"]);
-    const NEXT = new Set(["ARM","GEO","AZE","ISR","JOR","LUX"]);
+    // Insertion order is chronological (oldest → newest). 2026 SEA is last among visited.
+    const VISITED = new Set(["ARG","CAN","GTM","PAN","COL","ECU","PER","BOL","BRA","PRY","URY","CHL","DOM","BRB","CUB","CUW","ISL","NOR","FIN","DNK","SWE","ENG","NLD","BEL","DEU","POL","FRA","CHE","AUT","HUN","SVK","SVN","ESP","PRT","ITA","CZE","ROU","SRB","ALB","GRC","BIH","HRV","MNE","MKD","KOS","BGR","KOR","JPN","MYS","TUR","EGY","MAR","MEX","USA","VNM","KHM","LAO","THA","IDN","PHL"]);
+    const NEXT = new Set(["LUX","ARM","GEO","AZE","ISR","JOR"]);
+    const WHEN = {
+      ARG: "2020+",
+      MEX: "Aug 2026",
+      USA: "Aug 2026",
+      VNM: "Aug 2026",
+      KHM: "Sep 2026",
+      LAO: "Sep 2026",
+      THA: "Sep 2026",
+      IDN: "Oct 2026",
+      PHL: "Oct 2026",
+      LUX: "Nov 2026",
+      ARM: "Nov 2026",
+      GEO: "Nov 2026",
+      AZE: "Nov 2026",
+      ISR: "Nov 2026",
+      JOR: "Next"
+    };
     const DOTS = [
       { a3: "BRB", name: "Barbados", lat: 13.19, lon: -59.54 },
       { a3: "CUW", name: "Curaçao", lat: 12.2, lon: -68.97 },
@@ -300,10 +318,12 @@
     let filter = "all";
     const detail = document.getElementById("detail");
     const list = document.getElementById("list");
+    const tripOrder = [...VISITED, ...NEXT];
+    const orderOf = Object.fromEntries(tripOrder.map((a3, i) => [a3, i]));
     const catalog = window.COUNTRIES.features
       .map((f) => ({ a3: f.properties.a3, name: f.properties.name, status: statusOf(f.properties.a3) }))
       .filter((c) => c.status !== "other")
-      .sort((a, b) => a.name.localeCompare(b.name));
+      .sort((a, b) => (orderOf[a.a3] ?? 999) - (orderOf[b.a3] ?? 999));
 
     document.getElementById("visited-count").textContent = catalog.filter((c) => c.status === "visited").length;
     document.getElementById("next-count").textContent = catalog.filter((c) => c.status === "next").length;
@@ -317,7 +337,7 @@
           const btn = document.createElement("button");
           btn.type = "button";
           btn.className = selected === c.a3 ? "on" : "";
-          btn.innerHTML = `<span><i class="dot ${c.status}"></i>${c.name}</span><span class="tag">${labelOf(c.status)}</span>`;
+          btn.innerHTML = `<span><i class="dot ${c.status}"></i>${c.name}</span><span class="tag">${WHEN[c.a3] || labelOf(c.status)}</span>`;
           btn.addEventListener("click", () => focusCountry(c.a3));
           list.appendChild(btn);
         });
