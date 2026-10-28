@@ -50,6 +50,8 @@ jobs:
           PY
           cp cv.pdf site/
           cp -r travel site/
+          cp -r argentina site/
+          cp -r blog site/
 
       - uses: actions/upload-pages-artifact@v3
         with:
