@@ -33,7 +33,7 @@
     header nav a:hover { color: #fff; }
     .stage {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 340px;
+      grid-template-columns: minmax(0, 1fr) 372px;
       height: calc(100vh - 52px);
       min-height: 560px;
     }
@@ -110,7 +110,7 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
-      padding: 18px 16px 20px;
+      padding: 18px 16px 16px;
       background: #0c1620;
       border-left: 1px solid rgba(255,255,255,0.06);
       overflow: auto;
@@ -134,7 +134,7 @@
       font-size: 0.95rem;
     }
     .search:focus { outline: 2px solid #3b82f6; border-color: transparent; }
-    .search, .filters, .stats, .card { flex-shrink: 0; }
+    .search, .filters, .stats, .card, .credits { flex-shrink: 0; }
     .filters { display: flex; gap: 8px; }
     .filters button {
       flex: 1;
@@ -150,20 +150,47 @@
     .card {
       background: #12202c;
       border-radius: 14px;
-      padding: 12px 14px;
+      padding: 0;
       border: 1px solid rgba(255,255,255,0.06);
+      overflow: hidden;
     }
+    .card .hero {
+      display: block;
+      width: 100%;
+      height: 118px;
+      object-fit: cover;
+      background: #0b1822;
+    }
+    .card-body { padding: 12px 14px 14px; }
     .card .kicker { color: #8ea0b3; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
     .card h2 { margin: 4px 0 0; font-size: 1.15rem; }
     .card p { margin: 4px 0 0; color: #b7c6d6; font-size: 0.9rem; }
     .list {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
       overflow: auto;
       min-height: 0;
-      padding-bottom: 8px;
+      padding-bottom: 4px;
     }
+    .trip-head {
+      margin: 10px 0 4px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: #12202c;
+    }
+    .list > .trip-head:first-child { margin-top: 0; }
+    .trip-head img {
+      display: block;
+      width: 100%;
+      height: 84px;
+      object-fit: cover;
+      background: #0b1822;
+    }
+    .trip-head .lbl { padding: 7px 10px 8px; }
+    .trip-head .lbl strong { display: block; font-size: 0.82rem; letter-spacing: -0.01em; }
+    .trip-head .lbl span { display: block; color: #8ea0b3; font-size: 0.7rem; margin-top: 1px; }
     .list button {
       text-align: left;
       background: transparent;
@@ -174,13 +201,65 @@
       cursor: pointer;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 8px;
+      width: 100%;
     }
     .list button:hover, .list button.on { background: #173044; }
+    .list button.shot {
+      background: #101c28;
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 5px 8px 5px 5px;
+      margin-bottom: 2px;
+    }
+    .list button.shot img {
+      width: 58px;
+      height: 44px;
+      object-fit: cover;
+      border-radius: 7px;
+      flex-shrink: 0;
+      background: #0b1822;
+    }
+    .list button.shot .name {
+      flex: 1;
+      min-width: 0;
+    }
+    .list button.feature {
+      display: block;
+      padding: 0;
+      background: #12202c;
+      border: 1px solid rgba(255,255,255,0.06);
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 2px;
+    }
+    .list button.feature img {
+      display: block;
+      width: 100%;
+      height: 96px;
+      object-fit: cover;
+      background: #0b1822;
+    }
+    .list button.feature .bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+    }
+    .list button.feature:hover, .list button.feature.on { background: #173044; }
     .dot { width: 8px; height: 8px; border-radius: 99px; display: inline-block; margin-right: 8px; }
     .dot.visited { background: #3b82f6; }
     .dot.next { background: #f59e0b; }
-    .tag { color: #8ea0b3; font-size: 0.75rem; }
+    .tag { color: #8ea0b3; font-size: 0.75rem; white-space: nowrap; }
+    .credits {
+      color: #7d8fa3;
+      font-size: 0.72rem;
+      line-height: 1.4;
+    }
+    .credits summary { cursor: pointer; }
+    .credits p { margin: 6px 0 0; }
+    .credits a { color: #9fb0c2; }
     @media (max-width: 860px) {
       .stage { grid-template-columns: 1fr; height: auto; }
       .map-shell { height: 68vh; min-height: 420px; }
@@ -224,11 +303,17 @@
         <button type="button" data-filter="next">Next</button>
       </div>
       <div class="card" id="detail">
-        <div class="kicker">Map</div>
-        <h2>Pick a country</h2>
-        <p>Zoom in and click, or choose one from the list.</p>
+        <div class="card-body">
+          <div class="kicker">Map</div>
+          <h2>Pick a country</h2>
+          <p>Zoom in and click, or choose one from the list.</p>
+        </div>
       </div>
       <div class="list" id="list"></div>
+      <details class="credits">
+        <summary>Photo credits</summary>
+        <p>Illustrative place photos from <a href="https://commons.wikimedia.org/">Wikimedia Commons</a> (CC BY, CC BY-SA, or CC0). They are not personal shots. Authors and licenses are listed in <a href="photos/CREDITS.md">photos/CREDITS.md</a>.</p>
+      </details>
     </aside>
   </div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -259,6 +344,42 @@
       ISR: "Nov 2026",
       JOR: "Next"
     };
+    const PHOTO = {
+      ARG: { src: "photos/argentina.webp", alt: "Puerto Madero waterfront in Buenos Aires" },
+      ECU: { src: "photos/ecuador.webp", alt: "Colonial street in historic Quito, Ecuador" },
+      MYS: { src: "photos/malaysia.webp", alt: "Petronas Twin Towers in Kuala Lumpur" },
+      SGP: { src: "photos/singapore.webp", alt: "Helix Bridge and Marina Bay Sands in Singapore at night" },
+      BHS: { src: "photos/bahamas.webp", alt: "Ocean Cay marine reserve in the Bahamas" },
+      PRI: { src: "photos/puerto-rico.webp", alt: "Castillo San Felipe del Morro in San Juan, Puerto Rico" },
+      SLV: { src: "photos/el-salvador.webp", alt: "El Salvador del Mundo monument with San Salvador volcano" },
+      MEX: { src: "photos/mexico.webp", alt: "The Zócalo in Mexico City" },
+      USA: { src: "photos/usa.webp", alt: "Lower Manhattan skyline from Liberty Island" },
+      VNM: { src: "photos/vietnam.webp", alt: "Limestone karsts in Ha Long Bay, Vietnam" },
+      KHM: { src: "photos/cambodia.webp", alt: "Angkor Wat reflected in water, Cambodia" },
+      LAO: { src: "photos/laos.webp", alt: "Boat on the Mekong at sunset in Luang Prabang, Laos" },
+      THA: { src: "photos/thailand.webp", alt: "Wat Arun beside the Chao Phraya in Bangkok" },
+      IDN: { src: "photos/indonesia.webp", alt: "Pura Ulun Danu Bratan on Lake Bratan, Bali" },
+      PHL: { src: "photos/philippines.webp", alt: "Island lagoon in El Nido, Palawan, Philippines" },
+      LUX: { src: "photos/luxembourg.webp", alt: "The Grund district of Luxembourg City" },
+      ARM: { src: "photos/caucasus.webp", alt: "Mount Ararat above the Yerevan skyline" },
+      GEO: { src: "photos/georgia.webp", alt: "Old town rooftops in Tbilisi, Georgia" },
+      AZE: { src: "photos/azerbaijan.webp", alt: "Flame Towers on the Baku waterfront at night" },
+      ISR: { src: "photos/jerusalem.webp", alt: "Old City walls and the Tower of David in Jerusalem" },
+      JOR: { src: "photos/petra.webp", alt: "The Treasury at Petra, Jordan" }
+    };
+    const TRIPS = [
+      { id: "home", title: "Home base", kicker: "2020+", photo: "argentina", alt: "Puerto Madero waterfront in Buenos Aires", codes: ["ARG"] },
+      { id: "latam", title: "The Americas", kicker: "Earlier travels", photo: "americas", alt: "Machu Picchu in the Andes, Peru", codes: ["CAN","GTM","PAN","COL","ECU","PER","BOL","BRA","PRY","URY","CHL"] },
+      { id: "carib", title: "Caribbean", kicker: "Earlier travels", photo: "caribbean", alt: "Beach on the coast of Barbados", codes: ["DOM","BRB","CUB","CUW"] },
+      { id: "europe", title: "Europe", kicker: "Earlier travels", photo: "europe", alt: "Geirangerfjord in Norway", codes: ["ISL","NOR","FIN","DNK","SWE","ENG","NLD","BEL","DEU","POL","FRA","CHE","AUT","HUN","SVK","SVN","ESP","PRT","ITA","CZE","ROU","SRB","ALB","GRC","BIH","HRV","MNE","MKD","KOS","BGR"] },
+      { id: "east", title: "East Asia", kicker: "Earlier travels", photo: "east-asia", alt: "Seoul skyline at night", codes: ["KOR","JPN"] },
+      { id: "malaysia", title: "Malaysia", kicker: "Earlier travels", photo: "malaysia", alt: "Petronas Twin Towers in Kuala Lumpur", codes: ["MYS"] },
+      { id: "med", title: "Mediterranean & North Africa", kicker: "Earlier travels", photo: "med", alt: "Jemaa el-Fnaa square in Marrakesh", codes: ["TUR","EGY","MAR"] },
+      { id: "sgp", title: "Singapore", kicker: "Apr 2025", photo: "singapore", alt: "Helix Bridge and Marina Bay Sands in Singapore at night", codes: ["SGP"] },
+      { id: "summer26", title: "Caribbean & North America", kicker: "Jul–Aug 2026", photo: "bahamas", alt: "Ocean Cay marine reserve in the Bahamas", codes: ["BHS","PRI","SLV","MEX","USA"] },
+      { id: "sea26", title: "Southeast Asia", kicker: "Sep–Oct 2026", photo: "vietnam", alt: "Limestone karsts in Ha Long Bay, Vietnam", codes: ["VNM","KHM","LAO","THA","IDN","PHL"] },
+      { id: "next", title: "Going next", kicker: "Nov 2026+", photo: "luxembourg", alt: "The Grund district of Luxembourg City", codes: ["LUX","ARM","GEO","AZE","ISR","JOR"] }
+    ];
     const DOTS = [
       { a3: "BRB", name: "Barbados", lat: 13.19, lon: -59.54 },
       { a3: "CUW", name: "Curaçao", lat: 12.2, lon: -68.97 },
@@ -268,6 +389,12 @@
 
     const statusOf = (a3) => VISITED.has(a3) ? "visited" : NEXT.has(a3) ? "next" : "other";
     const labelOf = (s) => s === "visited" ? "Visited" : s === "next" ? "Going next" : "Not on this trip";
+    const esc = (value) => String(value).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
+    const photoOf = (a3) => {
+      if (PHOTO[a3]) return PHOTO[a3];
+      const trip = TRIPS.find((t) => t.codes.includes(a3));
+      return trip ? { src: `photos/${trip.photo}.webp`, alt: trip.alt } : null;
+    };
 
     const baseStyle = (a3) => {
       const s = statusOf(a3);
@@ -334,19 +461,54 @@
     document.getElementById("visited-count").textContent = catalog.filter((c) => c.status === "visited").length;
     document.getElementById("next-count").textContent = catalog.filter((c) => c.status === "next").length;
 
+    function imgTag(photo, className, eager) {
+      const loading = eager ? "eager" : "lazy";
+      return `<img class="${className}" src="${esc(photo.src)}" alt="${esc(photo.alt)}" width="720" height="450" loading="${loading}" decoding="async">`;
+    }
+
+    function emptyDetail() {
+      detail.innerHTML = `<div class="card-body"><div class="kicker">Map</div><h2>Pick a country</h2><p>Zoom in and click, or choose one from the list.</p></div>`;
+    }
+
     function renderList() {
       const q = document.getElementById("q").value.trim().toLowerCase();
       list.innerHTML = "";
-      catalog
-        .filter((c) => (filter === "all" || c.status === filter) && c.name.toLowerCase().includes(q))
-        .forEach((c) => {
+      let firstImage = true;
+      TRIPS.forEach((trip) => {
+        if (filter === "visited" && trip.id === "next") return;
+        if (filter === "next" && trip.id !== "next") return;
+        const rows = catalog.filter((c) => trip.codes.includes(c.a3) && c.name.toLowerCase().includes(q));
+        if (!rows.length) return;
+
+        const featured = trip.codes.length === 1;
+        if (!featured) {
+          const head = document.createElement("div");
+          head.className = "trip-head";
+          head.innerHTML = `${imgTag({ src: `photos/${trip.photo}.webp`, alt: trip.alt }, "", firstImage)}<div class="lbl"><strong>${esc(trip.title)}</strong><span>${esc(trip.kicker)}</span></div>`;
+          firstImage = false;
+          list.appendChild(head);
+        }
+
+        rows.forEach((c) => {
           const btn = document.createElement("button");
           btn.type = "button";
-          btn.className = selected === c.a3 ? "on" : "";
-          btn.innerHTML = `<span><i class="dot ${c.status}"></i>${c.name}</span><span class="tag">${WHEN[c.a3] || labelOf(c.status)}</span>`;
+          const photo = PHOTO[c.a3] || (featured ? { src: `photos/${trip.photo}.webp`, alt: trip.alt } : null);
+          const tag = WHEN[c.a3] || labelOf(c.status);
+          if (featured && photo) {
+            btn.className = "feature" + (selected === c.a3 ? " on" : "");
+            btn.innerHTML = `${imgTag(photo, "", firstImage)}<span class="bar"><span><i class="dot ${c.status}"></i>${esc(c.name)}</span><span class="tag">${esc(tag)}</span></span>`;
+            firstImage = false;
+          } else if (photo) {
+            btn.className = "shot" + (selected === c.a3 ? " on" : "");
+            btn.innerHTML = `${imgTag(photo, "", false)}<span class="name"><i class="dot ${c.status}"></i>${esc(c.name)}</span><span class="tag">${esc(tag)}</span>`;
+          } else {
+            btn.className = selected === c.a3 ? "on" : "";
+            btn.innerHTML = `<span><i class="dot ${c.status}"></i>${esc(c.name)}</span><span class="tag">${esc(tag)}</span>`;
+          }
           btn.addEventListener("click", () => focusCountry(c.a3));
           list.appendChild(btn);
         });
+      });
     }
 
     function focusCountry(a3) {
@@ -359,7 +521,10 @@
       map.flyToBounds(shape.getBounds(), { padding: [48, 48], maxZoom: 5, duration: 0.7 });
       const name = shape.feature.properties.name;
       const s = statusOf(a3);
-      detail.innerHTML = `<div class="kicker">${labelOf(s)}</div><h2>${name}</h2><p>${s === "visited" ? "Already been here." : s === "next" ? "On the list for the next stretch." : "Not part of this map yet."}</p>`;
+      const photo = photoOf(a3);
+      const when = WHEN[a3] ? ` · ${WHEN[a3]}` : "";
+      const blurb = s === "visited" ? "Already been here." : s === "next" ? "On the list for the next stretch." : "Not part of this map yet.";
+      detail.innerHTML = `${photo ? imgTag(photo, "hero", true) : ""}<div class="card-body"><div class="kicker">${labelOf(s)}${esc(when)}</div><h2>${esc(name)}</h2><p>${blurb}</p></div>`;
       renderList();
     }
 
@@ -374,7 +539,7 @@
     document.getElementById("reset").addEventListener("click", () => {
       if (selected && layers[selected]) layers[selected].setStyle(baseStyle(selected));
       selected = null;
-      detail.innerHTML = `<div class="kicker">Map</div><h2>Pick a country</h2><p>Zoom in and click, or choose one from the list.</p>`;
+      emptyDetail();
       map.flyTo(homeCenter, homeZoom, { duration: 0.6 });
       renderList();
     });
