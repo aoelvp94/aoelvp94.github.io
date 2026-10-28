@@ -113,7 +113,7 @@
       padding: 18px 16px 16px;
       background: #0c1620;
       border-left: 1px solid rgba(255,255,255,0.06);
-      overflow: auto;
+      overflow: hidden;
     }
     h1 {
       margin: 0;
@@ -170,10 +170,13 @@
       flex-direction: column;
       gap: 3px;
       overflow: auto;
+      flex: 1;
       min-height: 0;
-      padding-bottom: 4px;
+      padding-bottom: 8px;
     }
     .trip-head {
+      position: relative;
+      flex-shrink: 0;
       margin: 10px 0 4px;
       border-radius: 12px;
       overflow: hidden;
@@ -184,13 +187,20 @@
     .trip-head img {
       display: block;
       width: 100%;
-      height: 84px;
+      height: 78px;
       object-fit: cover;
       background: #0b1822;
     }
-    .trip-head .lbl { padding: 7px 10px 8px; }
-    .trip-head .lbl strong { display: block; font-size: 0.82rem; letter-spacing: -0.01em; }
-    .trip-head .lbl span { display: block; color: #8ea0b3; font-size: 0.7rem; margin-top: 1px; }
+    .trip-head .lbl {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 20px 10px 8px;
+      background: linear-gradient(transparent, rgba(7, 16, 24, 0.88));
+    }
+    .trip-head .lbl strong { display: block; font-size: 0.84rem; letter-spacing: -0.01em; }
+    .trip-head .lbl span { display: block; color: #c5d2df; font-size: 0.7rem; margin-top: 1px; }
     .list button {
       text-align: left;
       background: transparent;
@@ -461,9 +471,10 @@
     document.getElementById("visited-count").textContent = catalog.filter((c) => c.status === "visited").length;
     document.getElementById("next-count").textContent = catalog.filter((c) => c.status === "next").length;
 
-    function imgTag(photo, className, eager) {
+    function imgTag(photo, className, eager, height) {
       const loading = eager ? "eager" : "lazy";
-      return `<img class="${className}" src="${esc(photo.src)}" alt="${esc(photo.alt)}" width="720" height="450" loading="${loading}" decoding="async">`;
+      const h = height || 84;
+      return `<img class="${className}" src="${esc(photo.src)}" alt="${esc(photo.alt)}" width="336" height="${h}" loading="${loading}" decoding="async">`;
     }
 
     function emptyDetail() {
@@ -472,6 +483,7 @@
 
     function renderList() {
       const q = document.getElementById("q").value.trim().toLowerCase();
+      const keepScroll = list.scrollTop;
       list.innerHTML = "";
       let firstImage = true;
       TRIPS.forEach((trip) => {
@@ -480,27 +492,20 @@
         const rows = catalog.filter((c) => trip.codes.includes(c.a3) && c.name.toLowerCase().includes(q));
         if (!rows.length) return;
 
-        const featured = trip.codes.length === 1;
-        if (!featured) {
-          const head = document.createElement("div");
-          head.className = "trip-head";
-          head.innerHTML = `${imgTag({ src: `photos/${trip.photo}.webp`, alt: trip.alt }, "", firstImage)}<div class="lbl"><strong>${esc(trip.title)}</strong><span>${esc(trip.kicker)}</span></div>`;
-          firstImage = false;
-          list.appendChild(head);
-        }
+        const head = document.createElement("div");
+        head.className = "trip-head";
+        head.innerHTML = `${imgTag({ src: `photos/${trip.photo}.webp`, alt: trip.alt }, "", firstImage, 78)}<div class="lbl"><strong>${esc(trip.title)}</strong><span>${esc(trip.kicker)}</span></div>`;
+        firstImage = false;
+        list.appendChild(head);
 
         rows.forEach((c) => {
           const btn = document.createElement("button");
           btn.type = "button";
-          const photo = PHOTO[c.a3] || (featured ? { src: `photos/${trip.photo}.webp`, alt: trip.alt } : null);
+          const photo = PHOTO[c.a3];
           const tag = WHEN[c.a3] || labelOf(c.status);
-          if (featured && photo) {
-            btn.className = "feature" + (selected === c.a3 ? " on" : "");
-            btn.innerHTML = `${imgTag(photo, "", firstImage)}<span class="bar"><span><i class="dot ${c.status}"></i>${esc(c.name)}</span><span class="tag">${esc(tag)}</span></span>`;
-            firstImage = false;
-          } else if (photo) {
+          if (photo) {
             btn.className = "shot" + (selected === c.a3 ? " on" : "");
-            btn.innerHTML = `${imgTag(photo, "", false)}<span class="name"><i class="dot ${c.status}"></i>${esc(c.name)}</span><span class="tag">${esc(tag)}</span>`;
+            btn.innerHTML = `${imgTag(photo, "", false, 44)}<span class="name"><i class="dot ${c.status}"></i>${esc(c.name)}</span><span class="tag">${esc(tag)}</span>`;
           } else {
             btn.className = selected === c.a3 ? "on" : "";
             btn.innerHTML = `<span><i class="dot ${c.status}"></i>${esc(c.name)}</span><span class="tag">${esc(tag)}</span>`;
@@ -509,6 +514,7 @@
           list.appendChild(btn);
         });
       });
+      list.scrollTop = keepScroll;
     }
 
     function focusCountry(a3) {
@@ -524,7 +530,7 @@
       const photo = photoOf(a3);
       const when = WHEN[a3] ? ` · ${WHEN[a3]}` : "";
       const blurb = s === "visited" ? "Already been here." : s === "next" ? "On the list for the next stretch." : "Not part of this map yet.";
-      detail.innerHTML = `${photo ? imgTag(photo, "hero", true) : ""}<div class="card-body"><div class="kicker">${labelOf(s)}${esc(when)}</div><h2>${esc(name)}</h2><p>${blurb}</p></div>`;
+      detail.innerHTML = `${photo ? imgTag(photo, "hero", true, 118) : ""}<div class="card-body"><div class="kicker">${labelOf(s)}${esc(when)}</div><h2>${esc(name)}</h2><p>${blurb}</p></div>`;
       renderList();
     }
 
