@@ -678,3 +678,1263 @@ License names and authors come from Commons file metadata.
 - Credit: Own work
 - Source: https://commons.wikimedia.org/wiki/File%3AWhispers_of_Gold_-_Hassan_II_Mosque_at_Dusk.jpg
 - Bytes: 29440
+
+## argentina-2.webp
+- File: 017 Iguazu Falls Argentina side - Iguazú National Park landscape.jpg
+- Description: Iguazu Falls wonder of nature. Argentina side - Iguazú National Park landscape.
+- Author: Marek Ślusarczyk (Tupungato) Photo portfolio
+- License: CC BY 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A017_Iguazu_Falls_Argentina_side_-_Iguaz%C3%BA_National_Park_landscape.jpg
+- Bytes: 67766
+
+## argentina-3.webp
+- File: Obelisco de Buenos Aires at sunset.jpg
+- Description: Obelisco de Buenos Aires in Avenida 9 de julio
+- Author: Dpalma01
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AObelisco_de_Buenos_Aires_at_sunset.jpg
+- Bytes: 43420
+
+## canada-2.webp
+- File: Sunset Toronto Skyline Panorama Crop from Snake Island.jpg
+- Description: Picture of the Toronto skyline at sunset taken from the Snake Islands of the Toronto Islands. This is a crop of a larger panorama.
+- Author: Jchmrt
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASunset_Toronto_Skyline_Panorama_Crop_from_Snake_Island.jpg
+- Bytes: 36748
+
+## canada-3.webp
+- File: Table Rock, Horseshoe Falls, Niagara Falls, Ontario (29951185716).jpg
+- Description: Horseshoe Falls, also known as Canadian Falls, is the largest of the three waterfalls that collectively form Niagara Falls on the Niagara River along the Canada–United States borde
+- Author: Ken Lund from Reno, Nevada, USA
+- License: CC BY-SA 2.0
+- Credit: Table Rock, Horseshoe Falls, Niagara Falls, Ontario
+- Source: https://commons.wikimedia.org/wiki/File%3ATable%20_Rock%2C%20_Horseshoe%20_Falls%2C%20_Niagara%20_Falls%2C%20_Ontario%20_%2829951185716%29.jpg
+- Bytes: 77144
+
+## guatemala-2.webp
+- File: Tikal temple jaguar.jpg
+- Description: 
+- Author: see Commons file
+- License: CC BY-SA 2.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ATikal_temple_jaguar.jpg
+- Bytes: 64284
+
+## guatemala-3.webp
+- File: 1 lake atitlan panorama 2009.jpg
+- Description: View of Lake Atitlan and the Atitlán volcano (center) in Guatemala, 2009. In the foreground, the town of San Antonio Palopó.
+- Author: chensiyuan
+- License: CC BY-SA 4.0
+- Credit: chensiyuan
+- Source: https://commons.wikimedia.org/wiki/File%3A1_lake_atitlan_panorama_2009.jpg
+- Bytes: 41990
+
+## panama-2.webp
+- File: Panama City - Casco Viejo.jpg
+- Description: Panama City: Casco Viejo
+- Author: Dr. Thomas Liptak
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3APanama_City_-_Casco_Viejo.jpg
+- Bytes: 41562
+
+## panama-3.webp
+- File: Cinta Costera de Panamá.jpg
+- Description: Cinta Costera de Panamá
+- Author: JAVR2020
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ACinta_Costera_de_Panam%C3%A1.jpg
+- Bytes: 46574
+
+## colombia-2.webp
+- File: Bogotá, Monserrate, 2023-06 CN-02.jpg
+- Description: Evening view of the Colombian capital Bogotá from Mount Monserrate at sunset shortly after a rain shower.
+- Author: Steffen Schmitz (more photos)
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg
+- Bytes: 104810
+
+## colombia-3.webp
+- File: Valle de Cocora, Colombia 02.jpg
+- Description: Wax palm (Ceroxylon quindiuense) in Cocora Valley, Colombia
+- Author: Bernard Gagnon
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AValle_de_Cocora%2C_Colombia_02.jpg
+- Bytes: 63748
+
+## ecuador-2.webp
+- File: Bartolome Island Galapagos Ecuador (245374961).jpeg
+- Description: 500px provided description: Bartolome Island Galapagos Ecuador []
+- Author: Bhasker Thodla
+- License: CC BY 3.0
+- Credit: Imported from 500px (archived version) by the Archive Team. (detail page)
+- Source: https://commons.wikimedia.org/wiki/File%3ABartolome_Island_Galapagos_Ecuador_%28245374961%29.jpeg
+- Bytes: 56018
+
+## ecuador-3.webp
+- File: Cotopaxi 01.jpg
+- Description: Volcano Cotopaxi (5897m), Ecuador
+- Author: Bernard Gagnon
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ACotopaxi_01.jpg
+- Bytes: 37700
+
+## peru-2.webp
+- File: Machu Picchu, Perú, 2015-07-30, DD 60.JPG
+- Description: Machu Picchu, Peru
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AMachu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_60.JPG
+- Bytes: 93364
+
+## peru-3.webp
+- File: Coast of Lima Peru.jpg
+- Description: The Coast of Lima.
+- Author: Checo890
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ACoast_of_Lima_Peru.jpg
+- Bytes: 63290
+
+## bolivia-2.webp
+- File: La Paz city with Illimani, Bolivia.jpg
+- Description: View of the city of La Paz with Mount Illimani in the background, Bolivia.
+- Author: Antonee Lens
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ALa%20_Paz%20_city%20_with%20_Illimani%2C%20_Bolivia.jpg
+- Bytes: 19214
+
+## bolivia-3.webp
+- File: Isla del Sol (Lake Titicaca, Bolivia) (36581010700).jpg
+- Description: IMG_20170621_142410
+- Author: Sasha India
+- License: CC BY 2.0
+- Credit: Isla del Sol (Lake Titicaca, Bolivia)
+- Source: https://commons.wikimedia.org/wiki/File%3AIsla_del_Sol_%28Lake_Titicaca%2C_Bolivia%29_%2836581010700%29.jpg
+- Bytes: 44060
+
+## brazil-2.webp
+- File: Unique Moment with the Moon and Christ the Redeemer 3.jpg
+- Description: Cultural propertyChrist the Redeemer, Corcovado, Alto da Boa Vista, Tijuca, Grande Tijuca, Rio de Janeiro, Brazil Q79961, GND ID: 4640727-3, Library of Congress Authorities ID: sh8
+- Author: Donatas Dabravolskas
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AUnique_Moment_with_the_Moon_and_Christ_the_Redeemer_3.jpg
+- Bytes: 24000
+
+## brazil-3.webp
+- File: The Iguaçu Falls with a rainbow in a sunny day.jpg
+- Description: Parque Nacional do Iguaçu de nível Federal, localizado (a) em Céu Azul (PR), Foz do Iguaçu (PR), Matelândia (PR), Medianeira (PR), São Miguel do Iguaçu (PR)
+- Author: Fellipe Toffolo de Souza
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AThe_Igua%C3%A7u_Falls_with_a_rainbow_in_a_sunny_day.jpg
+- Bytes: 65004
+
+## paraguay-2.webp
+- File: Usina Hidroelétrica Itaipu Binacional - Itaipu Dam (17335056486).jpg
+- Description: The Itaipu Dam (Guarani: Presa Itaipu, Portuguese: Barragem de Itaipu, Spanish: Represa de Itaipú; Portuguese pronunciation: [itɐjˈpu], locally: [ita.iˈpu], Spanish pronunciation: 
+- Author: Deni Williams from São Paulo, Brasil
+- License: CC BY 2.0
+- Credit: Usina Hidroelétrica Itaipu Binacional / Itaipu Dam
+- Source: https://commons.wikimedia.org/wiki/File%3AUsina_Hidroel%C3%A9trica_Itaipu_Binacional_-_Itaipu_Dam_%2817335056486%29.jpg
+- Bytes: 76712
+
+## paraguay-3.webp
+- File: Rear of the church and workshop ruins at La Santísima Trinidad de Paraná, Paraguay.jpg
+- Description: Rear view of the church and remains of the former workshops at the Jesuit mission of La Santísima Trinidad de Paraná.
+- Author: Josep M. Gracia
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ARear_of_the_church_and_workshop_ruins_at_La_Sant%C3%ADsima_Trinidad_de_Paran%C3%A1%2C_Paraguay.jpg
+- Bytes: 37740
+
+## uruguay-2.webp
+- File: Punta del Este Mansa Beach 2012.JPG
+- Description: Mansa Beach in Punta del Este, Uruguay
+- Author: mriaco (NaBUru38's mother)
+- License: CC BY 3.0
+- Credit: The author allowed me (NaBUru38) to release this image
+- Source: https://commons.wikimedia.org/wiki/File%3APunta_del_Este_Mansa_Beach_2012.JPG
+- Bytes: 59010
+
+## uruguay-3.webp
+- File: Colonia del Sacramento 2015 10.JPG
+- Description: View from the lighthouse in Colonia del Sacramento, Uruguay
+- Author: Fredlyfish4
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AColonia_del_Sacramento_2015_10.JPG
+- Bytes: 79912
+
+## chile-2.webp
+- File: Cerro Concepción, Valparaíso, Chile1.jpg
+- Description: Calle Papudo, Cerro Concepción, Valparaíso, Chile
+- Author: Diego Delso
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ACerro%20_Concepci%C3%B3n%2C%20_Valpara%C3%ADso%2C%20_Chile1.jpg
+- Bytes: 49456
+
+## chile-3.webp
+- File: Anfiteatro, Valle de la Luna, San Pedro de Atacama, Chile, 2016-02-01, DD 149.JPG
+- Description: View of "the Amfitheater", a rock formation in Valle de la Luna (in Spanish "Moon Valley") during the golden hour, Atacama Desert, Chile. Valle de la Luna is a part of the Reserva 
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AAnfiteatro%2C_Valle_de_la_Luna%2C_San_Pedro_de_Atacama%2C_Chile%2C_2016-02-01%2C_DD_149.JPG
+- Bytes: 44012
+
+## dominican-republic-2.webp
+- File: Playa Bibijagua, Punta Cana 23000, Dominican Republic - panoramio (3).jpg
+- Description: Playa Bibijagua, Punta Cana 23000, Dominican Republic
+- Author: carlos adan
+- License: CC BY-SA 3.0
+- Credit: https://web.archive.org/web/20161024210110/http://www.panoramio.com/photo/76265252
+- Source: https://commons.wikimedia.org/wiki/File%3APlaya_Bibijagua%2C_Punta_Cana_23000%2C_Dominican_Republic_-_panoramio_%283%29.jpg
+- Bytes: 86114
+
+## dominican-republic-3.webp
+- File: Catedral Primada CCSD 09 2018 1234.jpg
+- Description: Lado oeste de la Catedral Primada de América, Ciudad Colonial Santo Domingo, República Dominicana
+- Author: Mariordo (Mario Roberto Durán Ortiz)
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ACatedral_Primada_CCSD_09_2018_1234.jpg
+- Bytes: 80862
+
+## barbados-2.webp
+- File: Barbados, Karibik - Atlantic Coast near Bathsheba - panoramio (1).jpg
+- Description: Barbados, Karibik - Atlantic Coast near Bathsheba
+- Author: giggel
+- License: CC BY 3.0
+- Credit: https://web.archive.org/web/20161024222824/http://www.panoramio.com/photo/70398658
+- Source: https://commons.wikimedia.org/wiki/File%3ABarbados%2C_Karibik_-_Atlantic_Coast_near_Bathsheba_-_panoramio_%281%29.jpg
+- Bytes: 53442
+
+## barbados-3.webp
+- File: Harrisons Cave (6976862065).jpg
+- Description: At the heart of Barbados lies one of its greatest wonders, Harrison’s Cave. Located in the central uplands of the island, this breathtakingly beautiful, crystallised limestone cave
+- Author: Berit from Redhill/Surrey, UK
+- License: CC BY 2.0
+- Credit: Harrison's Cave
+- Source: https://commons.wikimedia.org/wiki/File%3AHarrisons_Cave_%286976862065%29.jpg
+- Bytes: 85346
+
+## cuba-2.webp
+- File: Plaza de la Revolucion and Havana (31089948271).jpg
+- Description: Plaza de la Revolucion and Havana
+- Author: Arturo Pardavila III from Hoboken, NJ, USA
+- License: CC BY 2.0
+- Credit: Plaza de la Revolucion and Havana
+- Source: https://commons.wikimedia.org/wiki/File%3APlaza_de_la_Revolucion_and_Havana_%2831089948271%29.jpg
+- Bytes: 27276
+
+## cuba-3.webp
+- File: Vinales vue mogotes.jpg
+- Description: View over the mogotes in Viñales Valley, Cuba.
+- Author: Velvet
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AVinales_vue_mogotes.jpg
+- Bytes: 80298
+
+## curacao-2.webp
+- File: Klein Curacao Beach (213574361).jpeg
+- Description: 500px provided description: Klein Curacao Beach [#sea ,#nature ,#beach ,#travel ,#island ,#sun ,#ocean ,#outdoor ,#summer ,#aerial ,#photo ,#photography ,#holiday ,#underwater ,#di
+- Author: Dronepicr
+- License: CC BY 3.0
+- Credit: Imported from 500px (archived version) by the Archive Team. (detail page)
+- Source: https://commons.wikimedia.org/wiki/File%3AKlein_Curacao_Beach_%28213574361%29.jpeg
+- Bytes: 32046
+
+## curacao-3.webp
+- File: Curacao Grote Knip Kenepa Grandi beach (36530701322).jpg
+- Description: Curacao Grote Knip Kenepa Grandi beach Curacao
+- Author: dronepicr
+- License: CC BY 2.0
+- Credit: Curacao Grote Knip Kenepa Grandi beach
+- Source: https://commons.wikimedia.org/wiki/File%3ACuracao_Grote_Knip_Kenepa_Grandi_beach_%2836530701322%29.jpg
+- Bytes: 38876
+
+## iceland-2.webp
+- File: Hallgrímskirkja.jpeg
+- Description: Hallgrímskirkja, a statue of Leifr Eiríksson is shown on the picture. The image was enhanced by MarkSweep doing some image processing using The Gimp.
+- Author: Andreas Tille
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AHallgr%C3%ADmskirkja.jpeg
+- Bytes: 30770
+
+## iceland-3.webp
+- File: Icebergs in the Jökulsárlón Glacier Lagoon, Iceland.jpg
+- Description: Deep blue icebergs from the Breiðamerkurjökull glacier float in the Jökulsárlón Glacier Lagoon in south-eastern Iceland. One of the country’s deepest lakes, over 200m, it keeps exp
+- Author: Marine SABRES
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AIcebergs_in_the_J%C3%B6kuls%C3%A1rl%C3%B3n_Glacier_Lagoon%2C_Iceland.jpg
+- Bytes: 49768
+
+## norway-2.webp
+- File: Oslo Opera House - 2025.jpg
+- Description: Oslo Opera House
+- Author: Pierre Blaché
+- License: CC0
+- Credit: https://www.flickr.com/photos/pierre9x6/55393868113/
+- Source: https://commons.wikimedia.org/wiki/File%3AOslo_Opera_House_-_2025.jpg
+- Bytes: 40742
+
+## norway-3.webp
+- File: Preikestolen (Pulpit Rock) - Norway - panoramio - Sergey Ashmarin.jpg
+- Description: Preikestolen (Pulpit Rock) / Norway
+- Author: Sergey Ashmarin
+- License: CC BY-SA 3.0
+- Credit: https://web.archive.org/web/20161012050251/http://www.panoramio.com/photo/18481070
+- Source: https://commons.wikimedia.org/wiki/File%3APreikestolen_%28Pulpit_Rock%29_-_Norway_-_panoramio_-_Sergey_Ashmarin.jpg
+- Bytes: 61158
+
+## finland-2.webp
+- File: Northern lights band swirls above Vuopajanniemi, Inari, Lapland, Finland, 2018 March.jpg
+- Description: Northern lights (Aurora borealis) band swirls above Vuopajanniemi at Inarijärvi lake in Inari, Lapland, Finland in 2018 March.
+- Author: Ximonic (Simo Räsänen)
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ANorthern_lights_band_swirls_above_Vuopajanniemi%2C_Inari%2C_Lapland%2C_Finland%2C_2018_March.jpg
+- Bytes: 24366
+
+## finland-3.webp
+- File: Suomenlinna.jpg
+- Description: Suomenlinna, a fortress near Helsinki, Finland. Picture taken from a ferry.
+- Author: Michal Pise, Michal.Pise
+- License: CC BY 2.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASuomenlinna.jpg
+- Bytes: 65832
+
+## denmark-2.webp
+- File: The Little Mermaid home.jpg
+- Description: Little Mermaid
+- Author: klndonnelly
+- License: CC BY 2.0
+- Credit: https://www.flickr.com/photos/genvessel/138272156/
+- Source: https://commons.wikimedia.org/wiki/File%3AThe_Little_Mermaid_home.jpg
+- Bytes: 63544
+
+## denmark-3.webp
+- File: Kronborg April 2026 05.jpg
+- Description: Kronborg is a castle and historical stronghold in the town of Helsingør, Denmark. Immortalised as Elsinore in William Shakespeare's play Hamlet, Kronborg is one of the most importa
+- Author: ArildV
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AKronborg_April_2026_05.jpg
+- Bytes: 64014
+
+## sweden-2.webp
+- File: Stockholms stadshus February 2026 02.jpg
+- Description: Stockholms stadshus (City hall) seen from Riddarholmen. Stockholm, Sweden.
+- Author: ArildV
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AStockholms_stadshus_February_2026_02.jpg
+- Bytes: 40674
+
+## sweden-3.webp
+- File: ICEHOTEL Main Hall (2014) by Alessandro Falca & AnnaSofia Mååg.jpg
+- Description: ICEHOTEL Main Hall (2014) by Alessandro Falca & AnnaSofia Mååg
+- Author: Lars Thulin
+- License: CC BY-SA 4.0
+- Credit: Private archive
+- Source: https://commons.wikimedia.org/wiki/File%3AICEHOTEL_Main_Hall_%282014%29_by_Alessandro_Falca_%26_AnnaSofia_M%C3%A5%C3%A5g.jpg
+- Bytes: 16650
+
+## england-2.webp
+- File: Palace of Westminster, London - Feb 2007.jpg
+- Description: The Palace of Westminster at night as seen from the opposite side of the River Thames. Victoria Tower and the House of Lords is on the left. The Clock Tower of Big Ben and the Hous
+- Author: Diliff
+- License: CC BY-SA 2.5
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3APalace_of_Westminster%2C_London_-_Feb_2007.jpg
+- Bytes: 44666
+
+## england-3.webp
+- File: Stonehenge2007 07 30.jpg
+- Description: Stonehenge
+- Author: garethwiscombe
+- License: CC BY 2.0
+- Credit: https://www.flickr.com/photos/garethwiscombe/1071477228/in/photostream/
+- Source: https://commons.wikimedia.org/wiki/File%3AStonehenge2007_07_30.jpg
+- Bytes: 45036
+
+## netherlands-2.webp
+- File: KinderdijkMolens02.jpg
+- Description: See the original image
+- Author: Lucas Hirschegger
+- License: CC BY-SA 3.0
+- Credit: This image has been extracted from another file
+- Source: https://commons.wikimedia.org/wiki/File%3AKinderdijkMolens02.jpg
+- Bytes: 38312
+
+## netherlands-3.webp
+- File: Keukenhof tulips - 17591061520.jpg
+- Description: Keukenhof tulips
+- Author: Willem van Valk
+- License: CC BY 2.0
+- Credit: https://www.flickr.com/photos/wfvanvalkenburg/17591061520/
+- Source: https://commons.wikimedia.org/wiki/File%3AKeukenhof_tulips_-_17591061520.jpg
+- Bytes: 89356
+
+## belgium-2.webp
+- File: Atomium, Bruselas, Bélgica, 2021-12-15, DD 148-150 HDR.jpg
+- Description: Atomium, Brussels, Belgium
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AAtomium%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-15%2C_DD_148-150_HDR.jpg
+- Bytes: 37672
+
+## belgium-3.webp
+- File: Belfry at Grand Market Square at rainy day dusk Bruges Belgium.jpg
+- Description: Belfry at Grand Market Square at rainy day dusk Bruges Belgium
+- Author: Tim Adams
+- License: CC BY 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABelfry_at_Grand_Market_Square_at_rainy_day_dusk_Bruges_Belgium.jpg
+- Bytes: 45912
+
+## germany-2.webp
+- File: Neuschwanstein Castle 2024-02.jpg
+- Description: Neuschwanstein Castle at Schwangau, Bavaria, Germany.
+- Author: Wilfredor
+- License: CC0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ANeuschwanstein_Castle_2024-02.jpg
+- Bytes: 62364
+
+## germany-3.webp
+- File: Kranhäuser Cologne, April 2018 -01.jpg
+- Description: Panorama of Cologne, including the Kranhäuser and Cologne Cathedral, as seen from the Rhine.
+- Author: Martin Falbisoner
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AKranh%C3%A4user_Cologne%2C_April_2018_-01.jpg
+- Bytes: 34058
+
+## poland-2.webp
+- File: Old Town Market Square., 2026, Warsaw, Poland.jpg
+- Description: Old Town Market Square, 2026, Warsaw, Poland
+- Author: Igor123121
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AOld_Town_Market_Square.%2C_2026%2C_Warsaw%2C_Poland.jpg
+- Bytes: 71882
+
+## poland-3.webp
+- File: Wieliczka salt mine st Kingy chapel.jpg
+- Description: Wieliczka salt mine, st. Kingy Chapel, Poland
+- Author: Chepry 💬 (Andrzej Barabasz) 📷 🇵🇱
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AWieliczka_salt_mine_st_Kingy_chapel.jpg
+- Bytes: 24668
+
+## france-2.webp
+- File: Louvre Museum Wikimedia Commons.jpg
+- Description: Courtyard of the Museum of Louvre, and its pyramid.
+- Author: Benh LIEU SONG (Flickr)
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ALouvre_Museum_Wikimedia_Commons.jpg
+- Bytes: 45158
+
+## france-3.webp
+- File: Mont St Michel at sunrise.jpg
+- Description: Sunrise on Mont-Saint-Michel. On the day of photography, sunrise occurred at 06:53 and, coincidentally, the maximum low tide occurred at 06:55.
+- Author: Lynx1211
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AMont_St_Michel_at_sunrise.jpg
+- Bytes: 23022
+
+## switzerland-2.webp
+- File: CH.LU.Luzern Kapellbrücke 01 16x9-R 16384x9216.jpg
+- Description: Chapel Bridge, a covered wooden footbridge spanning the river Reuss in the city of Lucerne in central Switzerland. Named after the nearby St. Peter's Chapel, the bridge is unique i
+- Author: NOTE: This image is a panorama consisting of multiple frames that were merged or stitched in software. As a result, this image necessarily underwent some form of digital manipulation. These manipulations may include blending, blurring, cloning, and color and perspective adjustments. As a result of these adjustments, the image content may be slightly different from reality at the points where multiple images were combined. This manipulation is often required due to lens, perspective, and parallax distortions.
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ACH.LU.Luzern_Kapellbr%C3%BCcke_01_16x9-R_16384x9216.jpg
+- Bytes: 33770
+
+## switzerland-3.webp
+- File: Jungfraujoch, Swiss Alps( Ank Kumar , Infosys Limited ) 12.jpg
+- Description: Jungfraujoch, Swiss Alps( Ank Kumar, Infosys Limited)
+- Author: Ank Kumar
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AJungfraujoch%2C_Swiss_Alps%28_Ank_Kumar_%2C_Infosys_Limited_%29_12.jpg
+- Bytes: 36292
+
+## austria-2.webp
+- File: Schoenbrunn Palace as seen from Neptune Fountain, September 2016.jpg
+- Description: Schönbrunn Palace in Vienna, Austria, as seen from (or rather through) Neptune Fountain, part of UNESCO World Heritage Site Ref. Number 786
+- Author: Martin Falbisoner
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASchoenbrunn_Palace_as_seen_from_Neptune_Fountain%2C_September_2016.jpg
+- Bytes: 42794
+
+## austria-3.webp
+- File: Salzburg Altstadt Panorama 20170409 02.jpg
+- Description: View from Mönchsberg to Hohensalzburg Fortress and the historic center of Salzburg, federal state of Salzburg, Austria
+- Author: Uoaei1
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASalzburg_Altstadt_Panorama_20170409_02.jpg
+- Bytes: 68272
+
+## hungary-2.webp
+- File: Budapest Fisherman's Bastion-20080321-RM-100000.jpg
+- Description: Halászbástya (Fisherman's Bastion)
+- Author: Ermell
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABudapest_Fisherman%27s_Bastion-20080321-RM-100000.jpg
+- Bytes: 50332
+
+## hungary-3.webp
+- File: Budapest Széchenyi Baths R04.jpg
+- Description: Budapest (Hungary): Széchenyi Baths, interior of the main building
+- Author: Marc Ryckaert (MJJR)
+- License: CC BY 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABudapest_Sz%C3%A9chenyi_Baths_R04.jpg
+- Bytes: 61450
+
+## slovakia-2.webp
+- File: High Tatra Mountains from Štrba.jpg
+- Description: High Tatra Mountains from Štrba, Slovakia.
+- Author: This Photo was taken by Miha Peče. Feel free to use my photos, but please mention me as the author. I would much appreciate if you send me an email pc.osx.linux@gmail.com or write on my talk page, for my information. Please do not upload an edited image here without consulting me. I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved. Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract.
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AHigh_Tatra_Mountains_from_%C5%A0trba.jpg
+- Bytes: 66154
+
+## slovakia-3.webp
+- File: Bratislava - St. Martins Cathedral from Danube.jpg
+- Description: Bratislava - St. Martins Cathedral from other side of Danube river
+- Author: Ingo Mehling
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABratislava_-_St._Martins_Cathedral_from_Danube.jpg
+- Bytes: 34654
+
+## slovenia-2.webp
+- File: Ljubljanica 01.jpg
+- Description: View from Ljubljanica river
+- Author: Mihael Grmek
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ALjubljanica_01.jpg
+- Bytes: 80522
+
+## slovenia-3.webp
+- File: Panorama with Battlements and Old Town - From City Walls - Piran - Adriatic Coast - Slovenia (54566097907).jpg
+- Description: Panorama with Battlements and Old Town - From City Walls - Piran - Adriatic Coast - Slovenia
+- Author: Adam Jones from Kelowna, BC, Canada
+- License: CC BY 2.0
+- Credit: Panorama with Battlements and Old Town - From City Walls - Piran - Adriatic Coast - Slovenia
+- Source: https://commons.wikimedia.org/wiki/File%3APanorama_with_Battlements_and_Old_Town_-_From_City_Walls_-_Piran_-_Adriatic_Coast_-_Slovenia_%2854566097907%29.jpg
+- Bytes: 66496
+
+## spain-2.webp
+- File: Sagrada Familia March 2015-10a.jpg
+- Description: The ceiling of Sagrada Familia Cathedral, Barcelona, Spain
+- Author: Alvesgaspar
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASagrada_Familia_March_2015-10a.jpg
+- Bytes: 46682
+
+## spain-3.webp
+- File: Mosaics of Park Güell Barcelona 21.jpg
+- Description: The World Heritage Site Park Güell harbours great biodiversity and cultural heritage of seven buildings and many designed by Antoni Gaudi in modern, eclectic and art nouveau style 
+- Author: ABruszik
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AMosaics_of_Park_G%C3%BCell_Barcelona_21.jpg
+- Bytes: 74108
+
+## portugal-2.webp
+- File: Rabelos en el río Duero, Vila Nova de Gaia, Portugal, 2012-05-09, DD 14.JPG
+- Description: Rabelos in the Douro River with the city of Porto in the background, Portugal. Rabelos are traditional Portuguese wooden cargo boats used for centuries to transport people and good
+- Author: Diego Delso
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ARabelos_en_el_r%C3%ADo_Duero%2C_Vila_Nova_de_Gaia%2C_Portugal%2C_2012-05-09%2C_DD_14.JPG
+- Bytes: 73156
+
+## portugal-3.webp
+- File: Sintra Portugal Palácio da Pena-01.jpg
+- Description: Palácio Nacional da Pena, Sintra, Portugal: View of the palace from 38.7846349N 9.3896539W
+- Author: CEphoto, Uwe Aranas
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASintra_Portugal_Pal%C3%A1cio_da_Pena-01.jpg
+- Bytes: 59188
+
+## italy-2.webp
+- File: Canal Grande Chiesa della Salute e Dogana dal ponte dell Accademia.jpg
+- Description: The Grand Canal in Venice. View from the Accademia bridge. The operation performed by the gondolier is called "va stagando" in Venetian.
+- Author: This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here are not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved. Please if you think that any changes should be required, please inform the author. Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ACanal_Grande_Chiesa_della_Salute_e_Dogana_dal_ponte_dell_Accademia.jpg
+- Bytes: 51114
+
+## italy-3.webp
+- File: Florence Cathedral (Duomo).jpg
+- Description: The Basilica di Santa Maria del Fiore is the cathedral church (Duomo) of Florence, Italy, begun in 1296 in the Gothic style to the design of Arnolfo di Cambio and completed structu
+- Author: Kevin Poh
+- License: CC BY 2.0
+- Credit: Flickr: Florence Cathedral (Duomo)
+- Source: https://commons.wikimedia.org/wiki/File%3AFlorence_Cathedral_%28Duomo%29.jpg
+- Bytes: 53106
+
+## czechia-2.webp
+- File: Solar eclipse of 2026 August 12 in Prague (Prague Castle from Riegrovy sady).jpg
+- Description: Solar Eclipse on August 12, 2026 – view from the lookout point in Riegrovy Sady toward Prague Castle and St. Vitus Cathedral
+- Author: Václav Jiroušek
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASolar_eclipse_of_2026_August_12_in_Prague_%28Prague_Castle_from_Riegrovy_sady%29.jpg
+- Bytes: 11670
+
+## czechia-3.webp
+- File: Český Krumlov Castle, Czechia, 20250504 1248 8849.jpg
+- Description: Český Krumlov Castle and a footbridge over the Vltava in Český Krumlov, Czechia
+- Author: Jakub Hałun
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A%C4%8Cesk%C3%BD_Krumlov_Castle%2C_Czechia%2C_20250504_1248_8849.jpg
+- Bytes: 67918
+
+## romania-2.webp
+- File: Bran Castle TB1.jpg
+- Description: Bran Castle, Bran, Brasov, Transylvania, Romania.mw-parser-output .monument-istoric{width:400px;max-width:100%;margin:1px;padding:2px;background-color:#800000;color:#fff;text-align
+- Author: Todor Bozhinov
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABran%20_Castle%20_TB1.jpg
+- Bytes: 70240
+
+## romania-3.webp
+- File: Romania Transfagarasan.jpg
+- Description: The Transfăgărășan or DN7C is a paved mountain road crossing the southern section of the Carpathian Mountains of Romania. It has national-road ranking and is the second-highest pav
+- Author: Dariusz Grosa
+- License: CC0
+- Credit: https://www.pexels.com/photo/aerial-photo-of-green-scenery-and-winding-road-808910/
+- Source: https://commons.wikimedia.org/wiki/File%3ARomania_Transfagarasan.jpg
+- Bytes: 110562
+
+## serbia-2.webp
+- File: Petrovaradin Fortress (Péterváradi vár, Peterwardein).JPG
+- Description: Petrovaradin Fortress
+- Author: Pudelek (Marcin Szala)
+- License: CC BY-SA 3.0 rs
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3APetrovaradin_Fortress_%28P%C3%A9terv%C3%A1radi_v%C3%A1r%2C_Peterwardein%29.JPG
+- Bytes: 56312
+
+## serbia-3.webp
+- File: Church of Saint Sava (Belgrade, Serbia).jpg
+- Description: Church of Saint Sava (Belgrade, Serbia) with the monument to Karađorđe, leader of first Serbian uprising against the Turks
+- Author: Petar Milošević
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AChurch_of_Saint_Sava_%28Belgrade%2C_Serbia%29.jpg
+- Bytes: 26430
+
+## albania-2.webp
+- File: Monumento a Skanderbeg, Tirana, Albania, 2014-04-17, DD 02.JPG
+- Description: Skanderbeg Monument, Tirana, Albania
+- Author: Diego Delso
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AMonumento_a_Skanderbeg%2C_Tirana%2C_Albania%2C_2014-04-17%2C_DD_02.JPG
+- Bytes: 52046
+
+## albania-3.webp
+- File: Blue Eye (Syri i kaltër) 03.JPG
+- Description: Blue Eye, Albania
+- Author: Pudelek (Marcin Szala)
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABlue_Eye_%28Syri_i_kalt%C3%ABr%29_03.JPG
+- Bytes: 108460
+
+## greece-2.webp
+- File: Οία 1121.jpg
+- Description: Moonrise in Oia, Santorini, Greece.
+- Author: C messier
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A%CE%9F%CE%AF%CE%B1_1121.jpg
+- Bytes: 30334
+
+## greece-3.webp
+- File: Μετεωρα by night.jpg
+- Description: Vista nocturna de la ciudad de Kalambaka desde Meteora, Grecia.
+- Author: Argiriskaramouzas
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A%CE%9C%CE%B5%CF%84%CE%B5%CF%89%CF%81%CE%B1_by_night.jpg
+- Bytes: 58518
+
+## bosnia-2.webp
+- File: 94420-Baščaršija's Mosque, Sarajevo (8268281437).jpg
+- Description: 94420-Saravejo
+- Author: xiquinhosilva
+- License: CC BY 2.0
+- Credit: 94420-Saravejo
+- Source: https://commons.wikimedia.org/wiki/File%3A94420-Ba%C5%A1%C4%8Dar%C5%A1ija%27s_Mosque%2C_Sarajevo_%288268281437%29.jpg
+- Bytes: 77076
+
+## bosnia-3.webp
+- File: Štrbački buk 1.jpg
+- Description: Wasserfall Štrbački buk an der Una südlich von Bihać.
+- Author: Julian Nyča
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A%C5%A0trba%C4%8Dki_buk_1.jpg
+- Bytes: 87204
+
+## croatia-2.webp
+- File: Trip to Croatia-Day 5-Zadar-National Park Plitvice Lakes 8 (2241199552).jpg
+- Description: Trip to Croatia-Day 5-Zadar-National Park Plitvice Lakes 8
+- Author: Coralie Ferreira
+- License: CC BY 2.0
+- Credit: Trip to Croatia-Day 5-Zadar-National Park Plitvice Lakes 8
+- Source: https://commons.wikimedia.org/wiki/File%3ATrip_to_Croatia-Day_5-Zadar-National_Park_Plitvice_Lakes_8_%282241199552%29.jpg
+- Bytes: 111052
+
+## croatia-3.webp
+- File: Split Cathedral Bell Tower From The Vestibule - Split.jpg
+- Description: Split Cathedral Bell Tower as seen from the Vestibule - Split
+- Author: Sumitsurai
+- License: CC BY-SA 4.0
+- Credit: Self-photographed This photo was taken with Sony ILCE-6000
+- Source: https://commons.wikimedia.org/wiki/File%3ASplit_Cathedral_Bell_Tower_From_The_Vestibule_-_Split.jpg
+- Bytes: 60446
+
+## montenegro-2.webp
+- File: Sveti Stefan (06).jpg
+- Description: Sveti Stefan, Montenegro.
+- Author: Marcin Konsek
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASveti_Stefan_%2806%29.jpg
+- Bytes: 60150
+
+## montenegro-3.webp
+- File: Durmitor Sedlo Pass - 3.jpg
+- Description: Sedlo Pass in Durmitor National Park / Montenegro
+- Author: Ingo Mehling
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ADurmitor_Sedlo_Pass_-_3.jpg
+- Bytes: 88890
+
+## north-macedonia-2.webp
+- File: Stone Bridge Skopje 4.jpg
+- Description: Macedonia Square seen from the Stone Bridge, Skopje.
+- Author: kallerna
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AStone_Bridge_Skopje_4.jpg
+- Bytes: 77910
+
+## north-macedonia-3.webp
+- File: Nikola Shishevski Matka.jpg
+- Description: Šiševo Monastery in the Matka Canyon, Macedonia
+- Author: Gadjowsky
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ANikola_Shishevski_Matka.jpg
+- Bytes: 18270
+
+## kosovo-2.webp
+- File: Monumento Newborn, Pristina, Kosovo, 2014-04-16, DD 22.JPG
+- Description: Newborn monument, Pristina, Kosovo
+- Author: Diego Delso
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AMonumento_Newborn%2C_Pristina%2C_Kosovo%2C_2014-04-16%2C_DD_22.JPG
+- Bytes: 65136
+
+## kosovo-3.webp
+- File: Manastiri i Gracanices -Gračanica monastery.jpg
+- Description: This is a photo of a monument in Kosovo, number:
+- Author: Xhemail Shabani
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AManastiri_i_Gracanices_-Gra%C4%8Danica_monastery.jpg
+- Bytes: 68402
+
+## bulgaria-2.webp
+- File: 2016-07-31 Bulgaria, Rila Monastery DSC 9213 DxO.jpg
+- Description: Courtyard of Rila Monastery, Bulgaria
+- Author: Laurens R. Krol
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A2016-07-31_Bulgaria%2C_Rila_Monastery_DSC_9213_DxO.jpg
+- Bytes: 95112
+
+## bulgaria-3.webp
+- File: The Old Town of Plovdiv, Bulgaria.jpg
+- Description: This is a photo of a monument in Plovdiv in Bulgaria identified by the ID
+- Author: BrankaVV
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AThe_Old_Town_of_Plovdiv%2C_Bulgaria.jpg
+- Bytes: 101668
+
+## south-korea-2.webp
+- File: Traditional hanok house with wooden doors along a steeply sloping street in Bukchon Hanok Village Seoul.jpg
+- Description: Traditional hanok house revealing Korean architecture with wooden doors, along a steeply sloping street, in Bukchon Hanok Village, Seoul, South Korea.
+- Author: Basile Morin
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ATraditional_hanok_house_with_wooden_doors_along_a_steeply_sloping_street_in_Bukchon_Hanok_Village_Seoul.jpg
+- Bytes: 86032
+
+## south-korea-3.webp
+- File: Korea-Busan-Haeundae-Beach-08.jpg
+- Description: Haeundae beach, Busan, South Korea
+- Author: by frakorea
+- License: CC BY 2.0
+- Credit: https://www.flickr.com/photos/framore/462223559/
+- Source: https://commons.wikimedia.org/wiki/File%3AKorea-Busan-Haeundae-Beach-08.jpg
+- Bytes: 44562
+
+## japan-2.webp
+- File: Lake Kawaguchiko Sakura Mount Fuji 4.JPG
+- Description: Mount Fuji and Cherry Blossoms
+- Author: Midori
+- License: CC BY 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ALake_Kawaguchiko_Sakura_Mount_Fuji_4.JPG
+- Bytes: 57072
+
+## japan-3.webp
+- File: Torii path with lantern at Fushimi Inari Taisha Shrine, Kyoto, Japan.jpg
+- Description: Torii path with a hanging lantern at Fushimi Inari Taisha Shrine Senbontorii, Kyoto, Japan.
+- Author: Basile Morin
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ATorii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg
+- Bytes: 69608
+
+## malaysia-2.webp
+- File: Penang Malaysia The-George-Town-Dispensary-01.jpg
+- Description: Penang, Malaysia: Historic building "The George Town Dispensary" at corner Jalan Pantai / Gat Lebuh China, built in 1923)
+- Author: CEphoto, Uwe Aranas
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3APenang%20_Malaysia%20_The-George-Town-Dispensary-01.jpg
+- Bytes: 48218
+
+## malaysia-3.webp
+- File: Batu Caves 4.jpg
+- Description: View of Batu Caves Railway Station, Batu Caves, Selangor, with the Batu Caves limestone outcrop in the background.
+- Author: Slleong
+- License: CC0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABatu_Caves_4.jpg
+- Bytes: 97606
+
+## turkey-2.webp
+- File: Cappadocia Aerial View Landscape.jpg
+- Description: Aerial view over Cappadocia, nearby Gorëme, Turkey. Features from very far top to bottom, the city of Avanos, its small village Çavusin and the rose and red valleys (Güllüdere and 
+- Author: Benh LIEU SONG (Flickr)
+- License: CC BY-SA 4.0
+- Credit: Cappadocia Aerial View
+- Source: https://commons.wikimedia.org/wiki/File%3ACappadocia_Aerial_View_Landscape.jpg
+- Bytes: 99484
+
+## turkey-3.webp
+- File: The travertine terraces of Pamukkale 4.jpg
+- Description: The travertine terraces of Pamukkale
+- Author: Slyronit
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AThe_travertine_terraces_of_Pamukkale_4.jpg
+- Bytes: 16816
+
+## egypt-2.webp
+- File: Great Sphinx (أبو الهول).jpg
+- Description: This is a photo of a natural heritage site in Egypt identified by the ID:
+- Author: Petar Milošević
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AGreat_Sphinx_%28%D8%A3%D8%A8%D9%88_%D8%A7%D9%84%D9%87%D9%88%D9%84%29.jpg
+- Bytes: 46526
+
+## egypt-3.webp
+- File: Templo de Ramsés II, Abu Simbel, Egipto, 2022-04-02, DD 74-76 HDR.jpg
+- Description: Bas-relief of Ramesses II on his chariot during the Battle of Kadesh against the Hittite Empire under Muwatalli II, south wall in the Hypostyle Hall of the Great Temple of Abu Simb
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ATemplo_de_Rams%C3%A9s_II%2C_Abu_Simbel%2C_Egipto%2C_2022-04-02%2C_DD_74-76_HDR.jpg
+- Bytes: 111194
+
+## morocco-2.webp
+- File: 2018 01 (Blue) - Chaouen.jpg
+- Description: Street and typical houses in Chefchaouen, the blue city of Morocco.
+- Author: Fbrandao.1963
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A2018_01_%28Blue%29_-_Chaouen.jpg
+- Bytes: 60522
+
+## morocco-3.webp
+- File: Ksar Aït Benhaddou, Marocco (أيت بن حدو، المغرب, ⴰⵢⵜ ⵃⴰⴷⴷⵓ).jpg
+- Description: Ksar Aït Benhaddou, Marocco Aït Benhaddou (Arabic: آيت بن حدّو) is a historic ighrem or ksar (fortified village) along the former caravan route between the Sahara and Marrakesh in 
+- Author: Petar Milošević
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AKsar_A%C3%AFt_Benhaddou%2C_Marocco_%28%D8%A3%D9%8A%D8%AA_%D8%A8%D9%86_%D8%AD%D8%AF%D9%88%D8%8C_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%2C_%E2%B4%B0%E2%B5%A2%E2%B5%9C_%E2%B5%83%E2%B4%B0%E2%B4%B7%E2%B4%B7%E2%B5%93%29.jpg
+- Bytes: 86658
+
+## singapore-2.webp
+- File: Singapore (SG), Gardens by the Bay, Supertree Grove -- 2019 -- 4752.jpg
+- Description: Gardens By The Bay, Singapore
+- Author: Dietmar Rabich
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASingapore_%28SG%29%2C_Gardens_by_the_Bay%2C_Supertree_Grove_--_2019_--_4752.jpg
+- Bytes: 81206
+
+## singapore-3.webp
+- File: Merlión, Marina Bay, Singapur, 2023-08-18, DD 45-47 HDR.jpg
+- Description: Merlion, Marina Bay, Singapore
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AMerli%C3%B3n%2C_Marina_Bay%2C_Singapur%2C_2023-08-18%2C_DD_45-47_HDR.jpg
+- Bytes: 33200
+
+## bahamas-2.webp
+- File: Nassau - British Colonial Hotel.jpg
+- Description: British Colonial Hotel, Nassau, Bahamas
+- Author: P. Hughes
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ANassau_-_British_Colonial_Hotel.jpg
+- Bytes: 60954
+
+## bahamas-3.webp
+- File: Pigs on the beach.jpg
+- Description: Bahamas 08.2012 on board M/Y Nina Lu The Bahamas, pigs don't fly but they do swim See the swimming pigs in the Bahamas - dallasne.ws/NsLLki Exuma, Bahamas (photos courtesy of Trent
+- Author: cdorobek
+- License: CC BY 2.0
+- Credit: https://www.flickr.com/photos/cdorobek/7875536480/
+- Source: https://commons.wikimedia.org/wiki/File%3APigs_on_the_beach.jpg
+- Bytes: 70676
+
+## puerto-rico-2.webp
+- File: Waterfall in El Yunque.jpg
+- Description: Waterfall in El Yunque
+- Author: Jeff Hitchcock
+- License: CC BY 2.0
+- Credit: https://www.flickr.com/photos/arbron/15739684043/in/album-72157650009933827/
+- Source: https://commons.wikimedia.org/wiki/File%3AWaterfall_in_El_Yunque.jpg
+- Bytes: 75708
+
+## puerto-rico-3.webp
+- File: Flamenco Beach, Culebra Island, Puerto Rico.jpg
+- Description: Flamenco Beach, Culebra Island, Puerto Rico
+- Author: Breezy Baldwin
+- License: CC BY 2.0
+- Credit: https://www.flickr.com/photos/breezy421/5346483959/
+- Source: https://commons.wikimedia.org/wiki/File%3AFlamenco_Beach%2C_Culebra_Island%2C_Puerto_Rico.jpg
+- Bytes: 32194
+
+## el-salvador-2.webp
+- File: Cratère du Volcan de Santa Ana, Salvador.jpg
+- Description: Crater lake of Santa Ana volcano, Salavador
+- Author: Emberlifi
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ACrat%C3%A8re_du_Volcan_de_Santa_Ana%2C_Salvador.jpg
+- Bytes: 70824
+
+## el-salvador-3.webp
+- File: Iglesia de Suchitoto.jpg
+- Description: This is a photo of an monument in El Salvador identified by the ID
+- Author: L.Marroquín
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AIglesia%20_de%20_Suchitoto.jpg
+- Bytes: 58684
+
+## mexico-2.webp
+- File: Chichen Itza 3.jpg
+- Description: El Castillo (pyramid of Kukulcán) in Chichén Itzá
+- Author: Daniel Schwen
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AChichen_Itza_3.jpg
+- Bytes: 59240
+
+## mexico-3.webp
+- File: Teotihuacan, Pyramid of the Sun and Avenue of the Dead (20686678965).jpg
+- Description: Teotihuacan, Pyramid of the Sun and Avenue of the Dead, from the Pyramid of the Moon Teotihuacan was an ancient Mesoamerican city located in a sub valley of the Valley of Mexico, l
+- Author: Arian Zwegers from Brussels, Belgium
+- License: CC BY 2.0
+- Credit: Teotihuacan, Pyramid of the Sun and Avenue of the Dead
+- Source: https://commons.wikimedia.org/wiki/File%3ATeotihuacan%2C_Pyramid_of_the_Sun_and_Avenue_of_the_Dead_%2820686678965%29.jpg
+- Bytes: 29856
+
+## usa-2.webp
+- File: Grand Canyon South Rim at Sunset.jpg
+- Description: Grand Canyon South Rim at Sunset.
+- Author: Mgimelfarb
+- License: CC0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AGrand_Canyon_South_Rim_at_Sunset.jpg
+- Bytes: 58706
+
+## usa-3.webp
+- File: Golden Gate Bridge from Battery Spencer.jpg
+- Description: The Golden Gate Bridge with San Francisco in the background, seen from battery Spencer in the Marin Headlands.
+- Author: Wattewyl
+- License: CC BY 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AGolden_Gate_Bridge_from_Battery_Spencer.jpg
+- Bytes: 35494
+
+## vietnam-2.webp
+- File: Hội An, Ancient Town, 2020-01 CN-11.jpg
+- Description: Hội An (Vietnam) – World Heritage Site Hoi An Ancient Town – houses
+- Author: Steffen Schmitz (more photos)
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AH%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-11.jpg
+- Bytes: 76684
+
+## vietnam-3.webp
+- File: Ho Hoan Kiem, Old Quarter, Hanoi, Vietnam (5246377586).jpg
+- Description: Hoan Kiem Lake, Hanoi, Vietnam
+- Author: yeowatzup
+- License: CC BY 2.0
+- Credit: Ho Hoan Kiem, Old Quarter, Hanoi, Vietnam
+- Source: https://commons.wikimedia.org/wiki/File%3AHo_Hoan_Kiem%2C_Old_Quarter%2C_Hanoi%2C_Vietnam_%285246377586%29.jpg
+- Bytes: 30992
+
+## cambodia-2.webp
+- File: Faces on Prasat Bayon - Angkor Thom (6208401646).jpg
+- Description: Angkor Thom (Khmer: "Great City"), located in present day Cambodia, was the last and most enduring capital city of the Khmer empire. It was established in the late twelfth century 
+- Author: Jorge Láscar from Australia
+- License: CC BY 2.0
+- Credit: Faces on Prasat Bayon - Angkor Thom
+- Source: https://commons.wikimedia.org/wiki/File%3AFaces_on_Prasat_Bayon_-_Angkor_Thom_%286208401646%29.jpg
+- Bytes: 102020
+
+## cambodia-3.webp
+- File: 2016 Phnom Penh, Pałac Królewski, Preah Tineang Phhochani (14).jpg
+- Description: Preah Tineang Phochani. Royal Palace. Phnom Penh, .
+- Author: Marcin Konsek
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A2016_Phnom_Penh%2C_Pa%C5%82ac_Kr%C3%B3lewski%2C_Preah_Tineang_Phhochani_%2814%29.jpg
+- Bytes: 50950
+
+## laos-2.webp
+- File: Kuang Si Falls and a turquoise water pool in Luang Prabang province Laos.jpg
+- Description: Kuang Si Falls and a turquoise water pool, in Luang Prabang province, Laos.
+- Author: Basile Morin
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AKuang_Si_Falls_and_a_turquoise_water_pool_in_Luang_Prabang_province_Laos.jpg
+- Bytes: 91184
+
+## laos-3.webp
+- File: Pha That Luang Vientiane Laos Wikimedia Commons.jpg
+- Description: Pha That Luang stupa (center), the national symbol of Laos, and statue of king Setthathirat (left), Vientiane, Laos.
+- Author: Benh LIEU SONG
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3APha_That_Luang_Vientiane_Laos_Wikimedia_Commons.jpg
+- Bytes: 61298
+
+## thailand-2.webp
+- File: Maya Bay, Koh Phi Phi, Krabi, Thailand.jpg
+- Description: This is the lagoon featured in the film The Beach (2000) (Danny Boyle/Leonardo DiCaprio). The island consists of a ring of steep limestone hills surrounding two shallow bays. Maya 
+- Author: Vyacheslav Argenberg
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AMaya_Bay%2C_Koh_Phi_Phi%2C_Krabi%2C_Thailand.jpg
+- Bytes: 34170
+
+## thailand-3.webp
+- File: Doi Suthep Temple Chiang Mai Thailand.jpg
+- Description: The golden chedi and the golden umbrella are the centerpieces of the Doi Suthep temple in Chiang Mai, Thailand. As one of the most sacred temples in northern Thailand, it is a popu
+- Author: Philip Nalangan
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ADoi%20_Suthep%20_Temple%20_Chiang%20_Mai%20_Thailand.jpg
+- Bytes: 59206
+
+## indonesia-2.webp
+- File: Borobudur, Java, Indonesia, 20220817 1013 8739.jpg
+- Description: View of Borobudur Temple, Java, Indonesia
+- Author: Jakub Hałun
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABorobudur%2C_Java%2C_Indonesia%2C_20220817_1013_8739.jpg
+- Bytes: 63602
+
+## indonesia-3.webp
+- File: Mount Bromo at sunrise, showing its volcanoes and Mount Semeru (background).jpg
+- Description: The Tengger massif in Java, Indonesia, at sunrise, showing the volcanoes Mt. Bromo (large crater, smoking), Mt. Semeru (background, smoking), Mount Batok in the foreground, and Mou
+- Author: Thomas Hirsch (= user Ravn)
+- License: CC BY-SA 3.0
+- Credit: made by Thomas Hirsch
+- Source: https://commons.wikimedia.org/wiki/File%3AMount_Bromo_at_sunrise%2C_showing_its_volcanoes_and_Mount_Semeru_%28background%29.jpg
+- Bytes: 14316
+
+## philippines-2.webp
+- File: Chocolate Hills - edit.jpg
+- Description: The Chocolate Hills in Bohol Province, Philippines.
+- Author: Ramir Borja derivative work: MrPanyGoff
+- License: CC BY-SA 3.0
+- Credit: File:Chocolate Hills.jpg
+- Source: https://commons.wikimedia.org/wiki/File%3AChocolate_Hills_-_edit.jpg
+- Bytes: 55434
+
+## philippines-3.webp
+- File: Banaue rice terraces.jpg
+- Description: The first glimpse of the Banaue rice terraces arriving by road from Bontoc
+- Author: Larsjepp
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ABanaue_rice_terraces.jpg
+- Bytes: 104230
+
+## luxembourg-2.webp
+- File: Vianden chateau1.jpg
+- Description: Vianden Castle, Luxembourg (view S)
+- Author: Palauenc05
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AVianden_chateau1.jpg
+- Bytes: 53686
+
+## luxembourg-3.webp
+- File: Mullerthal Trail, Luxembourg.jpg
+- Description: Mullerthal Trail
+- Author: rboed*
+- License: CC BY 2.0
+- Credit: https://www.flickr.com/photos/92082510@N04/52091695851/
+- Source: https://commons.wikimedia.org/wiki/File%3AMullerthal_Trail%2C_Luxembourg.jpg
+- Bytes: 107204
+
+## armenia-2.webp
+- File: Monasterio de Tatev, Armenia, 2016-10-01, DD 89-91 HDR.jpg
+- Description: Tatev monastery during sunset, Syunik Province, southeastern Armenia. The Armenian Apostolic monastery, built in the 9th century, hosted in the 14th and 15th centuries one of the m
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AMonasterio_de_Tatev%2C_Armenia%2C_2016-10-01%2C_DD_89-91_HDR.jpg
+- Bytes: 70094
+
+## armenia-3.webp
+- File: Templo de Garni, Armenia, 2016-10-02, DD 03.jpg
+- Description: The Temple of Garni (lit. "pagan temple of Garni") is a classical Hellenistic temple in Garni, Armenia. It is perhaps the best-known structure and symbol of pre-Christian Armenia a
+- Author: Diego Delso
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ATemplo_de_Garni%2C_Armenia%2C_2016-10-02%2C_DD_03.jpg
+- Bytes: 52262
+
+## georgia-2.webp
+- File: Gergeti Trinity Church. Kazbegi, Georgia (36130111370).jpg
+- Description: Gergeti Trinity Church. Kazbegi, Georgia.
+- Author: Stefan Wisselink
+- License: CC BY 2.0
+- Credit: Gergeti Trinity Church. Kazbegi, Georgia
+- Source: https://commons.wikimedia.org/wiki/File%3AGergeti_Trinity_Church._Kazbegi%2C_Georgia_%2836130111370%29.jpg
+- Bytes: 47560
+
+## georgia-3.webp
+- File: Ancient cave in Uplistsikhe 20230920.jpg
+- Description: one of the ancient caves in Uplistsikhe, located 10 kilometers east of the town of Gori, Shida Kartli.
+- Author: This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved. Please if you think that any changes should be required, please inform the author. Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.
+- License: CC BY 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AAncient_cave_in_Uplistsikhe_20230920.jpg
+- Bytes: 84088
+
+## azerbaijan-2.webp
+- File: Gobustan Petroglyphs (3).jpg
+- Description: Gobustan petroglyphs, Azerbaijan
+- Author: Radosław Botev
+- License: CC BY 3.0 pl
+- Credit: own archive
+- Source: https://commons.wikimedia.org/wiki/File%3AGobustan_Petroglyphs_%283%29.jpg
+- Bytes: 124256
+
+## azerbaijan-3.webp
+- File: The Khan's Palace Pool, Sheki, Azerbaijan.jpg
+- Description: The Khan's Palace Pool, Sheki, Azerbaijan
+- Author: Fanti Salms
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AThe_Khan%27s_Palace_Pool%2C_Sheki%2C_Azerbaijan.jpg
+- Bytes: 44396
+
+## israel-2.webp
+- File: PikiWiki Israel 51691 tel aviv beach promenade.jpg
+- Description: Tel Aviv beach promenade
+- Author: דר' אבישי טייכר
+- License: CC BY 2.5
+- Credit: Dr. Avishai Teicher via the PikiWiki - Israel free image collection project
+- Source: https://commons.wikimedia.org/wiki/File%3APikiWiki_Israel_51691_tel_aviv_beach_promenade.jpg
+- Bytes: 33138
+
+## israel-3.webp
+- File: 20211122 Landscape at the Dead Sea, Ein Bokek, Israel anagoria.jpg
+- Description: Landscape at the Dead Sea, Ein Bokek, Israel
+- Author: Anagoria
+- License: CC BY-SA 4.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3A20211122_Landscape_at_the_Dead_Sea%2C_Ein_Bokek%2C_Israel_anagoria.jpg
+- Bytes: 56784
+
+## jordan-2.webp
+- File: Wadi rum desert.jpg
+- Description: Desert in Wadi Rum, Jordan
+- Author: Peter Chisholm
+- License: CC0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3AWadi_rum_desert.jpg
+- Bytes: 62030
+
+## jordan-3.webp
+- File: Roman Ruins of Jerash, Jordan (4179239403).jpg
+- Description: Roman Ruins of Jerash, Jordan
+- Author: Nick Perretti
+- License: CC BY 2.0
+- Credit: Roman Ruins of Jerash, Jordan
+- Source: https://commons.wikimedia.org/wiki/File%3ARoman_Ruins_of_Jerash%2C_Jordan_%284179239403%29.jpg
+- Bytes: 54808
