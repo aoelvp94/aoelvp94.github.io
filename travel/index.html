@@ -161,6 +161,33 @@
       object-fit: cover;
       background: #0b1822;
     }
+    .gallery { background: #0b1822; }
+    .gallery .hero { cursor: pointer; }
+    .gallery-thumbs {
+      display: flex;
+      gap: 6px;
+      padding: 8px 10px 8px;
+    }
+    .gallery-thumbs button {
+      width: 64px;
+      height: 40px;
+      padding: 0;
+      border: 2px solid transparent;
+      border-radius: 7px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #071018;
+      flex: 1;
+    }
+    .gallery-thumbs button.on {
+      border-color: #60a5fa;
+    }
+    .gallery-thumbs img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .card-body { padding: 12px 14px 14px; }
     .card .kicker { color: #8ea0b3; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
     .card h2 { margin: 4px 0 0; font-size: 1.15rem; }
@@ -356,76 +383,76 @@
       JOR: "Next"
     };
     const PHOTO = {
-      ARG: { src: "photos/argentina.webp", alt: "Puerto Madero waterfront in Buenos Aires" },
-      CAN: { src: "photos/canada.webp", alt: "Lake Louise in Banff National Park, Canada" },
-      GTM: { src: "photos/guatemala.webp", alt: "Santa Catalina Arch in Antigua Guatemala" },
-      PAN: { src: "photos/panama.webp", alt: "Gatun Locks on the Panama Canal" },
-      COL: { src: "photos/colombia.webp", alt: "Historic centre of Cartagena, Colombia" },
-      ECU: { src: "photos/ecuador.webp", alt: "Colonial street in historic Quito, Ecuador" },
-      PER: { src: "photos/peru.webp", alt: "Plaza de Armas in Cusco, Peru" },
-      BOL: { src: "photos/bolivia.webp", alt: "Incahuasi Island above the Salar de Uyuni, Bolivia" },
-      BRA: { src: "photos/brazil.webp", alt: "Sugarloaf Mountain across Guanabara Bay, Rio de Janeiro" },
-      PRY: { src: "photos/paraguay.webp", alt: "Palacio de los López in Asunción, Paraguay" },
-      URY: { src: "photos/uruguay.webp", alt: "Palacio Salvo in Montevideo, Uruguay" },
-      CHL: { src: "photos/chile.webp", alt: "Cuernos del Paine in Torres del Paine, Chile" },
-      DOM: { src: "photos/dominican-republic.webp", alt: "Fortaleza Ozama in Santo Domingo" },
-      BRB: { src: "photos/barbados.webp", alt: "Parliament Buildings in Bridgetown, Barbados" },
-      CUB: { src: "photos/cuba.webp", alt: "Classic car on the Malecón in Havana" },
-      CUW: { src: "photos/curacao.webp", alt: "Colorful Handelskade waterfront in Willemstad, Curaçao" },
-      ISL: { src: "photos/iceland.webp", alt: "Rainbow over Gullfoss waterfall, Iceland" },
-      NOR: { src: "photos/norway.webp", alt: "Bryggen waterfront at night in Bergen, Norway" },
-      FIN: { src: "photos/finland.webp", alt: "Helsinki Cathedral" },
-      DNK: { src: "photos/denmark.webp", alt: "Nyhavn canal in Copenhagen" },
-      SWE: { src: "photos/sweden.webp", alt: "Gamla Stan waterfront in Stockholm" },
-      ENG: { src: "photos/england.webp", alt: "Tower Bridge in London at night" },
-      NLD: { src: "photos/netherlands.webp", alt: "Canal houses on the Damrak in Amsterdam at dusk" },
-      BEL: { src: "photos/belgium.webp", alt: "Grand Place in Brussels" },
-      DEU: { src: "photos/germany.webp", alt: "Brandenburg Gate in Berlin at night" },
-      POL: { src: "photos/poland.webp", alt: "Main Market Square in Kraków, Poland" },
-      FRA: { src: "photos/france.webp", alt: "Eiffel Tower seen from Tour Montparnasse, Paris" },
-      CHE: { src: "photos/switzerland.webp", alt: "The Matterhorn above Zermatt, Switzerland" },
-      AUT: { src: "photos/austria.webp", alt: "Hallstatt village across the lake, Austria" },
-      HUN: { src: "photos/hungary.webp", alt: "Hungarian Parliament Building on the Danube, Budapest" },
-      SVK: { src: "photos/slovakia.webp", alt: "Bratislava Castle, Slovakia" },
-      SVN: { src: "photos/slovenia.webp", alt: "Lake Bled with the castle, Slovenia" },
-      ESP: { src: "photos/spain.webp", alt: "The Alhambra in Granada, Spain" },
-      PRT: { src: "photos/portugal.webp", alt: "Belém Tower in Lisbon" },
-      ITA: { src: "photos/italy.webp", alt: "The Colosseum in Rome at dusk" },
-      CZE: { src: "photos/czechia.webp", alt: "Charles Bridge in Prague" },
-      ROU: { src: "photos/romania.webp", alt: "Palace of the Parliament on Unirii Boulevard, Bucharest" },
-      SRB: { src: "photos/serbia.webp", alt: "The Victor statue at Kalemegdan overlooking Belgrade" },
-      ALB: { src: "photos/albania.webp", alt: "Aerial view of Berat, Albania" },
-      GRC: { src: "photos/greece.webp", alt: "The Parthenon on the Acropolis in Athens" },
-      BIH: { src: "photos/bosnia.webp", alt: "Stari Most in Mostar, Bosnia and Herzegovina" },
-      HRV: { src: "photos/croatia.webp", alt: "Old harbour of Dubrovnik at night" },
-      MNE: { src: "photos/montenegro.webp", alt: "Bay of Kotor, Montenegro" },
-      MKD: { src: "photos/north-macedonia.webp", alt: "Lake Ohrid in North Macedonia" },
-      KOS: { src: "photos/kosovo.webp", alt: "View over Prizren, Kosovo" },
-      BGR: { src: "photos/bulgaria.webp", alt: "Alexander Nevsky Cathedral in Sofia" },
-      KOR: { src: "photos/south-korea.webp", alt: "Gyeonghoeru pavilion at Gyeongbokgung Palace, Seoul" },
-      JPN: { src: "photos/japan.webp", alt: "Itsukushima Shrine and floating torii on Miyajima, Japan" },
-      MYS: { src: "photos/malaysia.webp", alt: "Petronas Twin Towers in Kuala Lumpur" },
-      TUR: { src: "photos/turkey.webp", alt: "Hagia Sophia in Istanbul" },
-      EGY: { src: "photos/egypt.webp", alt: "The Great Pyramid of Giza, Egypt" },
-      MAR: { src: "photos/morocco.webp", alt: "Hassan II Mosque minaret in Casablanca" },
-      SGP: { src: "photos/singapore.webp", alt: "Helix Bridge and Marina Bay Sands in Singapore at night" },
-      BHS: { src: "photos/bahamas.webp", alt: "Ocean Cay marine reserve in the Bahamas" },
-      PRI: { src: "photos/puerto-rico.webp", alt: "Castillo San Felipe del Morro in San Juan, Puerto Rico" },
-      SLV: { src: "photos/el-salvador.webp", alt: "El Salvador del Mundo monument with San Salvador volcano" },
-      MEX: { src: "photos/mexico.webp", alt: "The Zócalo in Mexico City" },
-      USA: { src: "photos/usa.webp", alt: "Lower Manhattan skyline from Liberty Island" },
-      VNM: { src: "photos/vietnam.webp", alt: "Limestone karsts in Ha Long Bay, Vietnam" },
-      KHM: { src: "photos/cambodia.webp", alt: "Angkor Wat reflected in water, Cambodia" },
-      LAO: { src: "photos/laos.webp", alt: "Boat on the Mekong at sunset in Luang Prabang, Laos" },
-      THA: { src: "photos/thailand.webp", alt: "Wat Arun beside the Chao Phraya in Bangkok" },
-      IDN: { src: "photos/indonesia.webp", alt: "Pura Ulun Danu Bratan on Lake Bratan, Bali" },
-      PHL: { src: "photos/philippines.webp", alt: "Island lagoon in El Nido, Palawan, Philippines" },
-      LUX: { src: "photos/luxembourg.webp", alt: "The Grund district of Luxembourg City" },
-      ARM: { src: "photos/caucasus.webp", alt: "Mount Ararat above the Yerevan skyline" },
-      GEO: { src: "photos/georgia.webp", alt: "Old town rooftops in Tbilisi, Georgia" },
-      AZE: { src: "photos/azerbaijan.webp", alt: "Flame Towers on the Baku waterfront at night" },
-      ISR: { src: "photos/jerusalem.webp", alt: "Old City walls and the Tower of David in Jerusalem" },
-      JOR: { src: "photos/petra.webp", alt: "The Treasury at Petra, Jordan" }
+      ARG: [{ src: "photos/argentina.webp", alt: "Puerto Madero waterfront in Buenos Aires" }, { src: "photos/argentina-2.webp", alt: "Iguazú Falls on the Argentina side" }, { src: "photos/argentina-3.webp", alt: "Obelisco on Avenida 9 de Julio, Buenos Aires" }],
+      CAN: [{ src: "photos/canada.webp", alt: "Lake Louise in Banff National Park, Canada" }, { src: "photos/canada-2.webp", alt: "CN Tower on the Toronto skyline" }, { src: "photos/canada-3.webp", alt: "Horseshoe Falls from the Canadian side" }],
+      GTM: [{ src: "photos/guatemala.webp", alt: "Santa Catalina Arch in Antigua Guatemala" }, { src: "photos/guatemala-2.webp", alt: "Temple I rising above the rainforest at Tikal" }, { src: "photos/guatemala-3.webp", alt: "Lake Atitlán with volcanoes, Guatemala" }],
+      PAN: [{ src: "photos/panama.webp", alt: "Gatun Locks on the Panama Canal" }, { src: "photos/panama-2.webp", alt: "Casco Viejo in Panama City" }, { src: "photos/panama-3.webp", alt: "Panama City skyline along the bay" }],
+      COL: [{ src: "photos/colombia.webp", alt: "Historic centre of Cartagena, Colombia" }, { src: "photos/colombia-2.webp", alt: "Monserrate sanctuary above Bogotá" }, { src: "photos/colombia-3.webp", alt: "Wax palms in the Cocora Valley, Colombia" }],
+      ECU: [{ src: "photos/ecuador.webp", alt: "Colonial street in historic Quito, Ecuador" }, { src: "photos/ecuador-2.webp", alt: "Pinnacle Rock on Bartolomé Island, Galápagos" }, { src: "photos/ecuador-3.webp", alt: "Snow-capped Cotopaxi volcano, Ecuador" }],
+      PER: [{ src: "photos/peru.webp", alt: "Plaza de Armas in Cusco, Peru" }, { src: "photos/peru-2.webp", alt: "Machu Picchu citadel in the Andes, Peru" }, { src: "photos/peru-3.webp", alt: "Pacific coastline at Miraflores, Lima" }],
+      BOL: [{ src: "photos/bolivia.webp", alt: "Incahuasi Island above the Salar de Uyuni, Bolivia" }, { src: "photos/bolivia-2.webp", alt: "La Paz with Mount Illimani in the background" }, { src: "photos/bolivia-3.webp", alt: "Lake Titicaca on the Bolivia side" }],
+      BRA: [{ src: "photos/brazil.webp", alt: "Sugarloaf Mountain across Guanabara Bay, Rio de Janeiro" }, { src: "photos/brazil-2.webp", alt: "Christ the Redeemer above Rio de Janeiro" }, { src: "photos/brazil-3.webp", alt: "Iguaçu Falls from the Brazil side" }],
+      PRY: [{ src: "photos/paraguay.webp", alt: "Palacio de los López in Asunción, Paraguay" }, { src: "photos/paraguay-2.webp", alt: "Itaipu Dam on the Paraná River, Paraguay" }, { src: "photos/paraguay-3.webp", alt: "Jesuit ruins of La Santísima Trinidad, Paraguay" }],
+      URY: [{ src: "photos/uruguay.webp", alt: "Palacio Salvo in Montevideo, Uruguay" }, { src: "photos/uruguay-2.webp", alt: "Mansa Beach in Punta del Este, Uruguay" }, { src: "photos/uruguay-3.webp", alt: "Historic street in Colonia del Sacramento, Uruguay" }],
+      CHL: [{ src: "photos/chile.webp", alt: "Cuernos del Paine in Torres del Paine, Chile" }, { src: "photos/chile-2.webp", alt: "Cerro Concepción hillside in Valparaíso, Chile" }, { src: "photos/chile-3.webp", alt: "Valle de la Luna in the Atacama Desert, Chile" }],
+      DOM: [{ src: "photos/dominican-republic.webp", alt: "Fortaleza Ozama in Santo Domingo" }, { src: "photos/dominican-republic-2.webp", alt: "Palm-lined beach at Punta Cana" }, { src: "photos/dominican-republic-3.webp", alt: "Primatial Cathedral of the Americas, Santo Domingo" }],
+      BRB: [{ src: "photos/barbados.webp", alt: "Parliament Buildings in Bridgetown, Barbados" }, { src: "photos/barbados-2.webp", alt: "Rock formations on the Bathsheba coast, Barbados" }, { src: "photos/barbados-3.webp", alt: "Interior of Harrison's Cave, Barbados" }],
+      CUB: [{ src: "photos/cuba.webp", alt: "Classic car on the Malecón in Havana" }, { src: "photos/cuba-2.webp", alt: "José Martí Memorial at Plaza de la Revolución, Havana" }, { src: "photos/cuba-3.webp", alt: "Mogote hills in Viñales Valley, Cuba" }],
+      CUW: [{ src: "photos/curacao.webp", alt: "Colorful Handelskade waterfront in Willemstad, Curaçao" }, { src: "photos/curacao-2.webp", alt: "Beach on Klein Curaçao" }, { src: "photos/curacao-3.webp", alt: "Kenepa Grandi beach, Curaçao" }],
+      ISL: [{ src: "photos/iceland.webp", alt: "Rainbow over Gullfoss waterfall, Iceland" }, { src: "photos/iceland-2.webp", alt: "Hallgrímskirkja church in Reykjavík" }, { src: "photos/iceland-3.webp", alt: "Icebergs on Jökulsárlón glacier lagoon, Iceland" }],
+      NOR: [{ src: "photos/norway.webp", alt: "Bryggen waterfront at night in Bergen, Norway" }, { src: "photos/norway-2.webp", alt: "Oslo Opera House on the waterfront" }, { src: "photos/norway-3.webp", alt: "Preikestolen above Lysefjord, Norway" }],
+      FIN: [{ src: "photos/finland.webp", alt: "Helsinki Cathedral" }, { src: "photos/finland-2.webp", alt: "Northern lights over Lapland, Finland" }, { src: "photos/finland-3.webp", alt: "Suomenlinna sea fortress in Helsinki" }],
+      DNK: [{ src: "photos/denmark.webp", alt: "Nyhavn canal in Copenhagen" }, { src: "photos/denmark-2.webp", alt: "The Little Mermaid statue in Copenhagen" }, { src: "photos/denmark-3.webp", alt: "Kronborg Castle in Helsingør, Denmark" }],
+      SWE: [{ src: "photos/sweden.webp", alt: "Gamla Stan waterfront in Stockholm" }, { src: "photos/sweden-2.webp", alt: "Stockholm City Hall beside Lake Mälaren" }, { src: "photos/sweden-3.webp", alt: "Icehotel in Jukkasjärvi, Swedish Lapland" }],
+      ENG: [{ src: "photos/england.webp", alt: "Tower Bridge in London at night" }, { src: "photos/england-2.webp", alt: "Palace of Westminster and Big Ben, London" }, { src: "photos/england-3.webp", alt: "Stonehenge on Salisbury Plain, England" }],
+      NLD: [{ src: "photos/netherlands.webp", alt: "Canal houses on the Damrak in Amsterdam at dusk" }, { src: "photos/netherlands-2.webp", alt: "Historic windmills at Kinderdijk" }, { src: "photos/netherlands-3.webp", alt: "Tulip gardens at Keukenhof, the Netherlands" }],
+      BEL: [{ src: "photos/belgium.webp", alt: "Grand Place in Brussels" }, { src: "photos/belgium-2.webp", alt: "The Atomium in Brussels" }, { src: "photos/belgium-3.webp", alt: "Market square and belfry in Bruges" }],
+      DEU: [{ src: "photos/germany.webp", alt: "Brandenburg Gate in Berlin at night" }, { src: "photos/germany-2.webp", alt: "Neuschwanstein Castle in Bavaria, Germany" }, { src: "photos/germany-3.webp", alt: "Cologne Cathedral beside the Rhine" }],
+      POL: [{ src: "photos/poland.webp", alt: "Main Market Square in Kraków, Poland" }, { src: "photos/poland-2.webp", alt: "Old Town Market Place in Warsaw" }, { src: "photos/poland-3.webp", alt: "Chapel carved from salt in Wieliczka, Poland" }],
+      FRA: [{ src: "photos/france.webp", alt: "Eiffel Tower seen from Tour Montparnasse, Paris" }, { src: "photos/france-2.webp", alt: "Louvre Pyramid in the cour Napoléon, Paris" }, { src: "photos/france-3.webp", alt: "Mont-Saint-Michel at sunrise, France" }],
+      CHE: [{ src: "photos/switzerland.webp", alt: "The Matterhorn above Zermatt, Switzerland" }, { src: "photos/switzerland-2.webp", alt: "Chapel Bridge over the Reuss in Lucerne" }, { src: "photos/switzerland-3.webp", alt: "Aletsch Glacier from Jungfraujoch, Switzerland" }],
+      AUT: [{ src: "photos/austria.webp", alt: "Hallstatt village across the lake, Austria" }, { src: "photos/austria-2.webp", alt: "Schönbrunn Palace in Vienna" }, { src: "photos/austria-3.webp", alt: "Hohensalzburg Fortress above Salzburg" }],
+      HUN: [{ src: "photos/hungary.webp", alt: "Hungarian Parliament Building on the Danube, Budapest" }, { src: "photos/hungary-2.webp", alt: "Fisherman's Bastion overlooking the Danube, Budapest" }, { src: "photos/hungary-3.webp", alt: "Széchenyi Thermal Bath in Budapest" }],
+      SVK: [{ src: "photos/slovakia.webp", alt: "Bratislava Castle, Slovakia" }, { src: "photos/slovakia-2.webp", alt: "Peaks of the High Tatras, Slovakia" }, { src: "photos/slovakia-3.webp", alt: "St. Martin's Cathedral in Bratislava" }],
+      SVN: [{ src: "photos/slovenia.webp", alt: "Lake Bled with the castle, Slovenia" }, { src: "photos/slovenia-2.webp", alt: "Triple Bridge in central Ljubljana" }, { src: "photos/slovenia-3.webp", alt: "Piran old town on the Adriatic, Slovenia" }],
+      ESP: [{ src: "photos/spain.webp", alt: "The Alhambra in Granada, Spain" }, { src: "photos/spain-2.webp", alt: "Sagrada Família in Barcelona" }, { src: "photos/spain-3.webp", alt: "Mosaic benches at Park Güell, Barcelona" }],
+      PRT: [{ src: "photos/portugal.webp", alt: "Belém Tower in Lisbon" }, { src: "photos/portugal-2.webp", alt: "Ribeira waterfront on the Douro in Porto" }, { src: "photos/portugal-3.webp", alt: "Pena Palace above Sintra, Portugal" }],
+      ITA: [{ src: "photos/italy.webp", alt: "The Colosseum in Rome at dusk" }, { src: "photos/italy-2.webp", alt: "Grand Canal in Venice" }, { src: "photos/italy-3.webp", alt: "Florence Cathedral and Brunelleschi's dome" }],
+      CZE: [{ src: "photos/czechia.webp", alt: "Charles Bridge in Prague" }, { src: "photos/czechia-2.webp", alt: "Prague Castle and St. Vitus Cathedral" }, { src: "photos/czechia-3.webp", alt: "Český Krumlov castle above the Vltava" }],
+      ROU: [{ src: "photos/romania.webp", alt: "Palace of the Parliament on Unirii Boulevard, Bucharest" }, { src: "photos/romania-2.webp", alt: "Bran Castle in Transylvania, Romania" }, { src: "photos/romania-3.webp", alt: "Transfăgărășan mountain road, Romania" }],
+      SRB: [{ src: "photos/serbia.webp", alt: "The Victor statue at Kalemegdan overlooking Belgrade" }, { src: "photos/serbia-2.webp", alt: "Petrovaradin Fortress above Novi Sad" }, { src: "photos/serbia-3.webp", alt: "Church of Saint Sava in Belgrade" }],
+      ALB: [{ src: "photos/albania.webp", alt: "Aerial view of Berat, Albania" }, { src: "photos/albania-2.webp", alt: "Skanderbeg Square in Tirana" }, { src: "photos/albania-3.webp", alt: "The Blue Eye spring in southern Albania" }],
+      GRC: [{ src: "photos/greece.webp", alt: "The Parthenon on the Acropolis in Athens" }, { src: "photos/greece-2.webp", alt: "Whitewashed houses in Oia, Santorini" }, { src: "photos/greece-3.webp", alt: "Monasteries of Meteora, Greece" }],
+      BIH: [{ src: "photos/bosnia.webp", alt: "Stari Most in Mostar, Bosnia and Herzegovina" }, { src: "photos/bosnia-2.webp", alt: "Baščaršija old bazaar in Sarajevo" }, { src: "photos/bosnia-3.webp", alt: "Waterfall on the Una River, Bosnia and Herzegovina" }],
+      HRV: [{ src: "photos/croatia.webp", alt: "Old harbour of Dubrovnik at night" }, { src: "photos/croatia-2.webp", alt: "Waterfalls at Plitvice Lakes, Croatia" }, { src: "photos/croatia-3.webp", alt: "Peristyle of Diocletian's Palace in Split" }],
+      MNE: [{ src: "photos/montenegro.webp", alt: "Bay of Kotor, Montenegro" }, { src: "photos/montenegro-2.webp", alt: "Sveti Stefan island hotel, Montenegro" }, { src: "photos/montenegro-3.webp", alt: "Black Lake in Durmitor National Park, Montenegro" }],
+      MKD: [{ src: "photos/north-macedonia.webp", alt: "Lake Ohrid in North Macedonia" }, { src: "photos/north-macedonia-2.webp", alt: "Stone Bridge over the Vardar in Skopje" }, { src: "photos/north-macedonia-3.webp", alt: "Matka Canyon near Skopje" }],
+      KOS: [{ src: "photos/kosovo.webp", alt: "View over Prizren, Kosovo" }, { src: "photos/kosovo-2.webp", alt: "NEWBORN monument in Pristina" }, { src: "photos/kosovo-3.webp", alt: "Gračanica Monastery, Kosovo" }],
+      BGR: [{ src: "photos/bulgaria.webp", alt: "Alexander Nevsky Cathedral in Sofia" }, { src: "photos/bulgaria-2.webp", alt: "Rila Monastery in the Rila Mountains, Bulgaria" }, { src: "photos/bulgaria-3.webp", alt: "Revival houses in Plovdiv Old Town" }],
+      KOR: [{ src: "photos/south-korea.webp", alt: "Gyeonghoeru pavilion at Gyeongbokgung Palace, Seoul" }, { src: "photos/south-korea-2.webp", alt: "Traditional hanok houses in Bukchon, Seoul" }, { src: "photos/south-korea-3.webp", alt: "Haeundae waterfront in Busan" }],
+      JPN: [{ src: "photos/japan.webp", alt: "Itsukushima Shrine and floating torii on Miyajima, Japan" }, { src: "photos/japan-2.webp", alt: "Mount Fuji reflected in Lake Kawaguchi" }, { src: "photos/japan-3.webp", alt: "Torii gates at Fushimi Inari Taisha, Kyoto" }],
+      MYS: [{ src: "photos/malaysia.webp", alt: "Petronas Twin Towers in Kuala Lumpur" }, { src: "photos/malaysia-2.webp", alt: "Historic George Town Dispensary in Penang" }, { src: "photos/malaysia-3.webp", alt: "Lord Murugan statue at Batu Caves, Malaysia" }],
+      TUR: [{ src: "photos/turkey.webp", alt: "Hagia Sophia in Istanbul" }, { src: "photos/turkey-2.webp", alt: "Hot-air balloons over Cappadocia, Turkey" }, { src: "photos/turkey-3.webp", alt: "White travertine terraces at Pamukkale, Turkey" }],
+      EGY: [{ src: "photos/egypt.webp", alt: "The Great Pyramid of Giza, Egypt" }, { src: "photos/egypt-2.webp", alt: "The Great Sphinx of Giza" }, { src: "photos/egypt-3.webp", alt: "The temples of Abu Simbel, Egypt" }],
+      MAR: [{ src: "photos/morocco.webp", alt: "Hassan II Mosque minaret in Casablanca" }, { src: "photos/morocco-2.webp", alt: "Blue-washed streets of Chefchaouen, Morocco" }, { src: "photos/morocco-3.webp", alt: "Aït Benhaddou ksar in Morocco" }],
+      SGP: [{ src: "photos/singapore.webp", alt: "Helix Bridge and Marina Bay Sands in Singapore at night" }, { src: "photos/singapore-2.webp", alt: "Supertree Grove at Gardens by the Bay, Singapore" }, { src: "photos/singapore-3.webp", alt: "The Merlion facing Marina Bay, Singapore" }],
+      BHS: [{ src: "photos/bahamas.webp", alt: "Ocean Cay marine reserve in the Bahamas" }, { src: "photos/bahamas-2.webp", alt: "British Colonial Hotel on the Nassau waterfront" }, { src: "photos/bahamas-3.webp", alt: "Turquoise water in the Exuma Cays, Bahamas" }],
+      PRI: [{ src: "photos/puerto-rico.webp", alt: "Castillo San Felipe del Morro in San Juan, Puerto Rico" }, { src: "photos/puerto-rico-2.webp", alt: "Waterfall in El Yunque National Forest, Puerto Rico" }, { src: "photos/puerto-rico-3.webp", alt: "Flamenco Beach on Culebra, Puerto Rico" }],
+      SLV: [{ src: "photos/el-salvador.webp", alt: "El Salvador del Mundo monument with San Salvador volcano" }, { src: "photos/el-salvador-2.webp", alt: "Crater lake of Santa Ana Volcano, El Salvador" }, { src: "photos/el-salvador-3.webp", alt: "Parish church in Suchitoto, El Salvador" }],
+      MEX: [{ src: "photos/mexico.webp", alt: "The Zócalo in Mexico City" }, { src: "photos/mexico-2.webp", alt: "El Castillo pyramid at Chichén Itzá, Mexico" }, { src: "photos/mexico-3.webp", alt: "Pyramid of the Sun at Teotihuacan, Mexico" }],
+      USA: [{ src: "photos/usa.webp", alt: "Lower Manhattan skyline from Liberty Island" }, { src: "photos/usa-2.webp", alt: "Grand Canyon from the South Rim, Arizona" }, { src: "photos/usa-3.webp", alt: "Golden Gate Bridge in San Francisco" }],
+      VNM: [{ src: "photos/vietnam.webp", alt: "Limestone karsts in Ha Long Bay, Vietnam" }, { src: "photos/vietnam-2.webp", alt: "Lantern-lit street in Hội An Ancient Town" }, { src: "photos/vietnam-3.webp", alt: "Old Quarter street near Hoàn Kiếm, Hanoi" }],
+      KHM: [{ src: "photos/cambodia.webp", alt: "Angkor Wat reflected in water, Cambodia" }, { src: "photos/cambodia-2.webp", alt: "Stone faces of Bayon Temple, Angkor Thom" }, { src: "photos/cambodia-3.webp", alt: "Royal Palace in Phnom Penh, Cambodia" }],
+      LAO: [{ src: "photos/laos.webp", alt: "Boat on the Mekong at sunset in Luang Prabang, Laos" }, { src: "photos/laos-2.webp", alt: "Turquoise pools at Kuang Si Falls, Laos" }, { src: "photos/laos-3.webp", alt: "Pha That Luang stupa in Vientiane" }],
+      THA: [{ src: "photos/thailand.webp", alt: "Wat Arun beside the Chao Phraya in Bangkok" }, { src: "photos/thailand-2.webp", alt: "Maya Bay on Ko Phi Phi Leh, Thailand" }, { src: "photos/thailand-3.webp", alt: "Golden chedi at Wat Phra That Doi Suthep, Chiang Mai" }],
+      IDN: [{ src: "photos/indonesia.webp", alt: "Pura Ulun Danu Bratan on Lake Bratan, Bali" }, { src: "photos/indonesia-2.webp", alt: "Borobudur temple on Java, Indonesia" }, { src: "photos/indonesia-3.webp", alt: "Mount Bromo at sunrise, East Java" }],
+      PHL: [{ src: "photos/philippines.webp", alt: "Island lagoon in El Nido, Palawan, Philippines" }, { src: "photos/philippines-2.webp", alt: "Chocolate Hills in Bohol, Philippines" }, { src: "photos/philippines-3.webp", alt: "Banaue Rice Terraces in the Cordillera, Philippines" }],
+      LUX: [{ src: "photos/luxembourg.webp", alt: "The Grund district of Luxembourg City" }, { src: "photos/luxembourg-2.webp", alt: "Vianden Castle above the Our valley, Luxembourg" }, { src: "photos/luxembourg-3.webp", alt: "Rock formations on the Müllerthal Trail, Luxembourg" }],
+      ARM: [{ src: "photos/caucasus.webp", alt: "Mount Ararat above the Yerevan skyline" }, { src: "photos/armenia-2.webp", alt: "Tatev Monastery on the Vorotan gorge, Armenia" }, { src: "photos/armenia-3.webp", alt: "Hellenistic Garni Temple, Armenia" }],
+      GEO: [{ src: "photos/georgia.webp", alt: "Old town rooftops in Tbilisi, Georgia" }, { src: "photos/georgia-2.webp", alt: "Gergeti Trinity Church below Mount Kazbek, Georgia" }, { src: "photos/georgia-3.webp", alt: "Rock-hewn town of Uplistsikhe, Georgia" }],
+      AZE: [{ src: "photos/azerbaijan.webp", alt: "Flame Towers on the Baku waterfront at night" }, { src: "photos/azerbaijan-2.webp", alt: "Petroglyphs at Gobustan, Azerbaijan" }, { src: "photos/azerbaijan-3.webp", alt: "Stained glass at the Khan's Palace in Sheki" }],
+      ISR: [{ src: "photos/jerusalem.webp", alt: "Old City walls and the Tower of David in Jerusalem" }, { src: "photos/israel-2.webp", alt: "Tel Aviv beach and promenade" }, { src: "photos/israel-3.webp", alt: "Shore of the Dead Sea at Ein Bokek, Israel" }],
+      JOR: [{ src: "photos/petra.webp", alt: "The Treasury at Petra, Jordan" }, { src: "photos/jordan-2.webp", alt: "Red sandstone landscape of Wadi Rum, Jordan" }, { src: "photos/jordan-3.webp", alt: "Roman colonnade at Jerash, Jordan" }]
     };
     const TRIPS = [
       { id: "home", title: "Home base", kicker: "2020+", photo: "argentina", alt: "Puerto Madero waterfront in Buenos Aires", codes: ["ARG"] },
@@ -450,11 +477,17 @@
     const statusOf = (a3) => VISITED.has(a3) ? "visited" : NEXT.has(a3) ? "next" : "other";
     const labelOf = (s) => s === "visited" ? "Visited" : s === "next" ? "Going next" : "Not on this trip";
     const esc = (value) => String(value).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
-    const photoOf = (a3) => {
-      if (PHOTO[a3]) return PHOTO[a3];
-      const trip = TRIPS.find((t) => t.codes.includes(a3));
-      return trip ? { src: `photos/${trip.photo}.webp`, alt: trip.alt } : null;
+    const asPhotos = (value) => {
+      if (!value) return [];
+      return Array.isArray(value) ? value : [value];
     };
+    const photosOf = (a3) => {
+      const listed = asPhotos(PHOTO[a3]);
+      if (listed.length) return listed;
+      const trip = TRIPS.find((t) => t.codes.includes(a3));
+      return trip ? [{ src: `photos/${trip.photo}.webp`, alt: trip.alt }] : [];
+    };
+    const photoOf = (a3) => photosOf(a3)[0] || null;
 
     const baseStyle = (a3) => {
       const s = statusOf(a3);
@@ -551,7 +584,7 @@
         rows.forEach((c) => {
           const btn = document.createElement("button");
           btn.type = "button";
-          const photo = PHOTO[c.a3];
+          const photo = photoOf(c.a3);
           const tag = WHEN[c.a3] || labelOf(c.status);
           if (photo) {
             btn.className = "shot" + (selected === c.a3 ? " on" : "");
@@ -577,10 +610,43 @@
       map.flyToBounds(shape.getBounds(), { padding: [48, 48], maxZoom: 5, duration: 0.7 });
       const name = shape.feature.properties.name;
       const s = statusOf(a3);
-      const photo = photoOf(a3);
+      const photos = photosOf(a3);
       const when = WHEN[a3] ? ` · ${WHEN[a3]}` : "";
       const blurb = s === "visited" ? "Already been here." : s === "next" ? "On the list for the next stretch." : "Not part of this map yet.";
-      detail.innerHTML = `${photo ? imgTag(photo, "hero", true, 118) : ""}<div class="card-body"><div class="kicker">${labelOf(s)}${esc(when)}</div><h2>${esc(name)}</h2><p>${blurb}</p></div>`;
+      let media = "";
+      if (photos.length > 1) {
+        const thumbs = photos.map((p, i) =>
+          `<button type="button" class="${i === 0 ? "on" : ""}" data-photo="${i}" aria-label="Photo ${i + 1} of ${photos.length}: ${esc(p.alt)}"><img src="${esc(p.src)}" alt="" width="64" height="40"></button>`
+        ).join("");
+        media = `<div class="gallery" data-gallery>${imgTag(photos[0], "hero", true, 118)}<div class="gallery-thumbs" role="tablist" aria-label="Photos of ${esc(name)}">${thumbs}</div></div>`;
+      } else if (photos.length === 1) {
+        media = imgTag(photos[0], "hero", true, 118);
+      }
+      detail.innerHTML = `${media}<div class="card-body"><div class="kicker">${labelOf(s)}${esc(when)}</div><h2>${esc(name)}</h2><p>${blurb}</p></div>`;
+      const gallery = detail.querySelector("[data-gallery]");
+      if (gallery) {
+        const hero = gallery.querySelector(".hero");
+        const setPhoto = (index) => {
+          const photo = photos[index];
+          if (!photo) return;
+          hero.src = photo.src;
+          hero.alt = photo.alt;
+          gallery.querySelectorAll("[data-photo]").forEach((btn) => {
+            btn.classList.toggle("on", Number(btn.dataset.photo) === index);
+          });
+          gallery.dataset.index = String(index);
+        };
+        gallery.addEventListener("click", (event) => {
+          const btn = event.target.closest("[data-photo]");
+          if (btn) {
+            setPhoto(Number(btn.dataset.photo));
+            return;
+          }
+          if (event.target === hero) {
+            setPhoto((Number(gallery.dataset.index || 0) + 1) % photos.length);
+          }
+        });
+      }
       renderList();
     }
 
