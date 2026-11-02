@@ -331,7 +331,7 @@
       </div>
       <div class="stats">
         <div><b id="visited-count">0</b><span>visited</span></div>
-        <div><b id="next-count">0</b><span>going next</span></div>
+        <div><b id="next-count">0</b><span>on the list</span></div>
         <div><b>6</b><span>continents</span></div>
       </div>
       <input id="q" class="search" type="search" placeholder="Search a country" autocomplete="off">
@@ -359,7 +359,17 @@
   <script>
     // Insertion order is chronological (oldest → newest). 2026 SEA is last among visited.
     const VISITED = new Set(["ARG","CAN","GTM","PAN","COL","ECU","PER","BOL","BRA","PRY","URY","CHL","DOM","BRB","CUB","CUW","ISL","NOR","FIN","DNK","SWE","ENG","NLD","BEL","DEU","POL","FRA","CHE","AUT","HUN","SVK","SVN","ESP","PRT","ITA","CZE","ROU","SRB","ALB","GRC","BIH","HRV","MNE","MKD","KOS","BGR","KOR","JPN","MYS","TUR","EGY","MAR","SGP","BHS","PRI","SLV","MEX","USA","VNM","KHM","LAO","THA","IDN","PHL"]);
-    const NEXT = new Set(["LUX","ARM","GEO","AZE","ISR","JOR"]);
+    const NEXT = new Set([
+      "LUX","ARM","GEO","AZE","ISR","JOR",
+      "LVA","LTU","EST",
+      "CHN","LKA","NPL",
+      "TKM","KAZ","UZB","KGZ","TJK",
+      "ZAF","KEN","MUS","TUN","ZMB","ZWE","TZA",
+      "ARE","OMN","BHR","QAT","KWT",
+      "CRI","HND","NIC","BLZ",
+      "ABW","VEN",
+      "VIR","VGB","SXM","ATG","KNA","DMA"
+    ]);
     const WHEN = {
       ARG: "2020+",
       SGP: "Apr 2025",
@@ -465,17 +475,28 @@
       { id: "sgp", title: "Singapore", kicker: "Apr 2025", photo: "singapore", alt: "Helix Bridge and Marina Bay Sands in Singapore at night", codes: ["SGP"] },
       { id: "summer26", title: "Caribbean & North America", kicker: "Jul–Aug 2026", photo: "bahamas", alt: "Ocean Cay marine reserve in the Bahamas", codes: ["BHS","PRI","SLV","MEX","USA"] },
       { id: "sea26", title: "Southeast Asia", kicker: "Sep–Oct 2026", photo: "vietnam", alt: "Limestone karsts in Ha Long Bay, Vietnam", codes: ["VNM","KHM","LAO","THA","IDN","PHL"] },
-      { id: "next", title: "Going next", kicker: "Nov 2026+", photo: "luxembourg", alt: "The Grund district of Luxembourg City", codes: ["LUX","ARM","GEO","AZE","ISR","JOR"] }
+      { id: "next", title: "Going next", kicker: "Nov 2026+", photo: "luxembourg", alt: "The Grund district of Luxembourg City", codes: ["LUX","ARM","GEO","AZE","ISR","JOR"] },
+      { id: "bucket", title: "Bucket list", kicker: "Want to visit", photo: "europe", alt: "Geirangerfjord in Norway", codes: ["LVA","LTU","EST","CHN","LKA","NPL","TKM","KAZ","UZB","KGZ","TJK","ZAF","KEN","MUS","TUN","ZMB","ZWE","TZA","ARE","OMN","BHR","QAT","KWT","CRI","HND","NIC","BLZ","ABW","VEN","VIR","VGB","SXM","ATG","KNA","DMA"] }
     ];
+    const NEXT_TRIPS = new Set(["next", "bucket"]);
     const DOTS = [
       { a3: "BRB", name: "Barbados", lat: 13.19, lon: -59.54 },
       { a3: "CUW", name: "Curaçao", lat: 12.2, lon: -68.97 },
       { a3: "SGP", name: "Singapore", lat: 1.35, lon: 103.82 },
-      { a3: "LUX", name: "Luxembourg", lat: 49.75, lon: 6.13 }
+      { a3: "LUX", name: "Luxembourg", lat: 49.75, lon: 6.13 },
+      { a3: "MUS", name: "Mauritius", lat: -20.3, lon: 57.55 },
+      { a3: "BHR", name: "Bahrain", lat: 26.03, lon: 50.55 },
+      { a3: "ABW", name: "Aruba", lat: 12.52, lon: -69.97 },
+      { a3: "VIR", name: "United States Virgin Islands", lat: 18.34, lon: -64.93 },
+      { a3: "VGB", name: "British Virgin Islands", lat: 18.43, lon: -64.62 },
+      { a3: "SXM", name: "Sint Maarten", lat: 18.04, lon: -63.06 },
+      { a3: "ATG", name: "Antigua and Barbuda", lat: 17.12, lon: -61.85 },
+      { a3: "KNA", name: "Saint Kitts and Nevis", lat: 17.33, lon: -62.75 },
+      { a3: "DMA", name: "Dominica", lat: 15.42, lon: -61.37 }
     ];
 
     const statusOf = (a3) => VISITED.has(a3) ? "visited" : NEXT.has(a3) ? "next" : "other";
-    const labelOf = (s) => s === "visited" ? "Visited" : s === "next" ? "Going next" : "Not on this trip";
+    const labelOf = (s) => s === "visited" ? "Visited" : s === "next" ? "On the list" : "Not on this trip";
     const esc = (value) => String(value).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
     const asPhotos = (value) => {
       if (!value) return [];
@@ -570,8 +591,8 @@
       list.innerHTML = "";
       let firstImage = true;
       TRIPS.forEach((trip) => {
-        if (filter === "visited" && trip.id === "next") return;
-        if (filter === "next" && trip.id !== "next") return;
+        if (filter === "visited" && NEXT_TRIPS.has(trip.id)) return;
+        if (filter === "next" && !NEXT_TRIPS.has(trip.id)) return;
         const rows = catalog.filter((c) => trip.codes.includes(c.a3) && c.name.toLowerCase().includes(q));
         if (!rows.length) return;
 
@@ -612,7 +633,7 @@
       const s = statusOf(a3);
       const photos = photosOf(a3);
       const when = WHEN[a3] ? ` · ${WHEN[a3]}` : "";
-      const blurb = s === "visited" ? "Already been here." : s === "next" ? "On the list for the next stretch." : "Not part of this map yet.";
+      const blurb = s === "visited" ? "Already been here." : s === "next" ? (WHEN[a3] ? "On the list for the next stretch." : "On the bucket list.") : "Not part of this map yet.";
       let media = "";
       if (photos.length > 1) {
         const thumbs = photos.map((p, i) =>
