@@ -3,118 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Argentina — Aldo Escobar</title>
+  <title>Argentina — guía de Aldo Escobar</title>
+  <meta name="description" content="Guía práctica y navegable de Argentina: mapa de lugares visitados, transporte, comida, plata y cultura, en primera persona.">
   <link rel="alternate" hreflang="es" href="https://aoelvp94.github.io/argentina/">
   <link rel="alternate" hreflang="en" href="https://aoelvp94.github.io/argentina/en/">
   <link rel="alternate" hreflang="x-default" href="https://aoelvp94.github.io/argentina/">
-  <style>
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-      background: #071018;
-      color: #e8eef6;
-    }
-    a { color: #60a5fa; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 22px;
-      background: rgba(7, 16, 24, 0.9);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    header strong { letter-spacing: -0.02em; }
-    header nav a {
-      color: #b7c6d6;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 0.95rem;
-    }
-    header nav a:hover { color: #fff; }
-    .lang {
-      margin-left: 18px;
-      font-size: 0.9rem;
-      white-space: nowrap;
-    }
-    .lang a { color: #8ea0b3; margin-left: 0; }
-    .lang a:hover { color: #fff; text-decoration: none; }
-    .lang [aria-current="page"] {
-      color: #fff;
-      font-weight: 600;
-      pointer-events: none;
-    }
-    .lang .sep { color: #6b7c8d; margin: 0 6px; }
-    main {
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 48px 24px 80px;
-    }
-    h1 {
-      font-size: 2.2rem;
-      letter-spacing: -0.03em;
-      margin: 0 0 12px;
-    }
-    .intro {
-      color: #9fb0c2;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin: 0 0 48px;
-    }
-    .section {
-      background: #0c1620;
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 14px;
-      padding: 28px 32px;
-      margin-bottom: 24px;
-    }
-    .section h2 {
-      font-size: 1.5rem;
-      margin: 0 0 16px;
-      color: #fff;
-    }
-    .section h3 {
-      font-size: 1.15rem;
-      margin: 24px 0 10px;
-      color: #d5e0ea;
-    }
-    .section p, .section ul {
-      color: #b7c6d6;
-      line-height: 1.65;
-      margin: 0 0 12px;
-    }
-    .section ul {
-      padding-left: 24px;
-    }
-    .section li {
-      margin-bottom: 8px;
-    }
-    .note {
-      background: rgba(251, 191, 36, 0.08);
-      border-left: 3px solid #f59e0b;
-      padding: 14px 16px;
-      margin: 20px 0;
-      border-radius: 6px;
-      color: #fbbf24;
-      font-size: 0.92rem;
-    }
-    .note strong {
-      display: block;
-      margin-bottom: 6px;
-      color: #fcd34d;
-    }
-    @media (max-width: 768px) {
-      main { padding: 32px 18px 60px; }
-      h1 { font-size: 1.75rem; }
-      .intro { font-size: 1rem; }
-      .section { padding: 22px 20px; }
-    }
-  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="guide.css">
 </head>
 <body>
-  <header>
+  <header class="site">
     <strong>Aldo Escobar</strong>
     <nav>
       <a href="../">CV</a>
@@ -126,100 +24,417 @@
       </span>
     </nav>
   </header>
+  <nav class="toc" aria-label="Índice">
+    <div class="toc-inner">
+      <a href="#mapa">Mapa</a>
+      <a href="#lugares">Lugares</a>
+      <a href="#transporte">Transporte</a>
+      <a href="#plata">Plata</a>
+      <a href="#comida">Comida</a>
+      <a href="#mate">Mate y asado</a>
+      <a href="#seguridad">Seguridad</a>
+      <a href="#no-hacer">Qué no hacer</a>
+      <a href="#epoca">Época</a>
+      <a href="#voces">Voces</a>
+      <a href="#musica">Música</a>
+    </div>
+  </nav>
   <main>
     <h1>Guía para disfrutar Argentina</h1>
     <p class="intro">
-      Consejos prácticos para amigos y visitantes, desde un argentino que pasó años recorriendo el mundo y volvió a apreciar lo bueno que tiene su país. Esto no es una guía turística formal — es lo que le contaría a un conocido que viene de visita.
+      Consejos prácticos para amigos y visitantes, desde un argentino que pasó años recorriendo el mundo y volvió a apreciar lo bueno que tiene su país. Esto no es una guía turística formal — es lo que le contaría a un conocido que viene de visita, ahora con mapa, precios de orden de magnitud y fichas de los lugares que <strong>yo sí recorrí</strong>.
+    </p>
+    <p class="meta-line">
+      <span>Actualizado para quien pregunta «che, ¿y Argentina?»</span>
+      <span>Precios: rangos a fines de 2025 / 2026 · FX ~ARS 1.550/USD (BNA, nov. 2026)</span>
     </p>
 
-    <div class="section">
-      <h2>🚕 Cómo moverse</h2>
+    <div class="section" id="mapa">
+      <h2>Mapa de lo que recorrí</h2>
       <p>
-        Argentina es grande. <strong>Buenos Aires</strong> tiene subte (metro), colectivos (buses) y taxis/Uber relativamente baratos. Para moverte entre ciudades, el avión suele ser la mejor opción — las distancias son enormes. Los buses de larga distancia son cómodos y accesibles, pero prepárate para viajes largos (10-20 horas no es raro).
+        En azul, provincias donde estuve. Los puntos son ciudades o zonas concretas. Tocá un pin (o una provincia pintada) y saltás a la ficha. Las que están apagadas son «aún no»: no invento viajes.
       </p>
+      <div class="map-wrap">
+        <div id="map" role="application" aria-label="Mapa interactivo de Argentina"></div>
+      </div>
+      <p class="legend">
+        <span><i class="vis"></i> Visitado por Aldo</span>
+        <span><i class="not"></i> Aún no</span>
+      </p>
+      <p class="unvisited">Aún no: Catamarca, Chaco, Corrientes, Formosa, La Pampa, La Rioja, Neuquén, San Juan, San Luis. (Bariloche lo marco en Río Negro; Villa La Angostura ya sería Neuquén.)</p>
+    </div>
+
+    <div class="section" id="lugares">
+      <h2>Fichas de lugares</h2>
+      <p>Vibe, qué hacer, qué comer, cómo llegar y un par de excursiones con nombre sólo cuando el operador es conocido y verificable. El resto: tipo de salida + mirá reseñas de esta temporada.</p>
+      <div class="filters" role="group" aria-label="Filtrar por región">
+      <button type="button" data-region-filter="all" class="active">Todos</button>
+      <button type="button" data-region-filter="norte">Norte</button>
+      <button type="button" data-region-filter="litoral">Litoral</button>
+      <button type="button" data-region-filter="centro">Centro</button>
+      <button type="button" data-region-filter="amba">AMBA / costa</button>
+      <button type="button" data-region-filter="cuyo">Cuyo</button>
+      <button type="button" data-region-filter="patagonia">Patagonia</button>
+      </div>
+      <div class="place-grid">
+    <article class="place-card" id="lugar-jujuy" data-region="norte">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Jujuy</h3>
+      <p class="where">Provincia de Jujuy · NOA</p>
+      <p>El norte cambia el chip: cerros de colores, pueblos andinos y un ritmo más lento que Buenos Aires. La Quebrada de Humahuaca es Patrimonio de la UNESCO y se siente.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Purmamarca y el Cerro de los Siete Colores, Tilcara, Humahuaca, Salinas Grandes si el clima da. Subí con tiempo: la altura se nota.</dd>
+        <dt>Comer</dt><dd>Humita, tamales, empanadas jujeñas, locro, llama en algunas cartas. El api con pastelitos si coincidís con feria o invierno.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a JUJ (Horacio Guzmán) desde AEP/EZE, o micro desde Retiro (~20–22 h). Muchos combinan Salta + Jujuy en auto o tour.</dd>
+        <dt>Excursiones</dt><dd>Los clásicos son Quebrada + Salinas (día completo). Operadores salteños como <a href="https://movitrack.com.ar/" rel="noopener">Movitrack</a> cubren el norte; para un guía local en Jujuy, mirá reseñas recientes en TripAdvisor/Reddit antes de pagar seña.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-salta" data-region="norte">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Salta</h3>
+      <p class="where">Provincia de Salta · NOA</p>
+      <p>«Salta la linda» no es marketing vacío: centro colonial, cerros cerca y buena mesa. Base cómoda para valles calchaquíes y Cafayate.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Centro y Cerro San Bernardo, Cachi o Cafayate por Ruta 40/68, torrontés en bodegas, Museo de Arqueología de Alta Montaña si te interesa historia incaica.</dd>
+        <dt>Comer</dt><dd>Empanadas salteñas (jugosas, a menudo al horno), locro, tamales, cabrito. Un clásico del centro es <strong>Doña Salta</strong> (empanadas y comida regional; suele haber cola). Peña folklórica de noche si te late.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a SLA (~2 h desde Buenos Aires) o micro (~18–20 h). Auto o tour para Cafayate/Cachi: las distancias engañan.</dd>
+        <dt>Excursiones</dt><dd><a href="https://movitrack.com.ar/" rel="noopener">Movitrack</a> arma safaris 4×4 y valles. Tren a las Nubes es otra postal conocida (confirmá fechas: no corre todos los días). Para bodegas en Cafayate, una visita directa a la bodega suele alcanzar.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-tucuman" data-region="norte">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Tucumán</h3>
+      <p class="where">Provincia de Tucumán · NOA</p>
+      <p>La más chica de las provincias y una de las más densas: calor, historia independentista y una cultura de sánguche que es religión local.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Casa Histórica (la independencia, 1816), centro de San Miguel, Tafí del Valle si tenés un día extra, Ruinas de Quilmes hacia el oeste.</dd>
+        <dt>Comer</dt><dd><strong>Sánguche de milanesa</strong> (el clásico tucumano, en pan sanguchero) y <strong>empanadas tucumanas</strong>. Eso, antes que cualquier restaurante «de autor». Buscá sangucherías de barrio, no un templo gourmet.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a TUC (~2 h) o micro (~14–16 h) desde Buenos Aires. Tafí queda a ~2 h en auto por montaña.</dd>
+        <dt>Excursiones</dt><dd>Tafí del Valle y Quilmes se hacen con agencia local o auto. No te amarro a un operador puntual: chequeá reseñas recientes y que el vehículo esté en condiciones para la cuesta.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-santiago" data-region="norte">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Santiago del Estero</h3>
+      <p class="where">Provincia de Santiago del Estero · NOA</p>
+      <p>El folklore tiene casa acá. Menos circuito turístico internacional, más chamamé/chacarera, siestas largas y termas cerca.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Centro santiagueño, Termas de Río Hondo (a un rato), y si te late la música, preguntá por peñas. No esperes la infraestructura de Salta.</dd>
+        <dt>Comer</dt><dd>Empanadas, cabrito, locro, mazamorra. Comida de olla y de domingo.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a SDE o micro desde Buenos Aires (~12–14 h). Fácil de encadenar con Tucumán.</dd>
+        <dt>Excursiones</dt><dd>Las termas se resuelven en el destino. Para el resto, más que un tour armado, conviene un local que te oriente: no hay un operador «imprescindible» que yo pueda recomendar con nombre.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-misiones" data-region="litoral">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Misiones (Iguazú)</h3>
+      <p class="where">Provincia de Misiones · Litoral</p>
+      <p>Selva, humedad y el ruido blanco de las cataratas. Puerto Iguazú es la base; el show es el parque.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Parque Nacional Iguazú (circuitos superior, inferior y Garganta del Diablo). Cruzar a Foz do Iguaçu si tenés tiempo y papeles. Repelente, agua, zapatillas que se puedan mojar.</dd>
+        <dt>Comer</dt><dd>Influencia litoraleña y brasileña/paraguaya: pescado de río (surubí, dorado cuando hay), mandioca, chipá. El parque es caro para comer: llevá algo.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a IGR (~1 h 45 desde Buenos Aires) suele ganar al micro (~18 h). Desde el aeropuerto hay transfer al pueblo y al parque.</dd>
+        <dt>Excursiones</dt><dd>Las pasarelas se hacen por cuenta propia. Si querés lancha bajo las caídas, <a href="https://iguazujungle.com/" rel="noopener">Iguazú Jungle</a> opera Gran Aventura y paseos náuticos dentro del parque (entrada al parque aparte). Confirmá horarios: el río manda.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-entre-rios" data-region="litoral">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Entre Ríos</h3>
+      <p class="where">Provincia de Entre Ríos · Litoral</p>
+      <p>Ríos, islas, carnaval y termas. Es Argentina de fin de semana largo más que de postcard internacional.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Termas (Federación, Colón, Villa Elisa), carnaval de Gualeguaychú en temporada, Palacio San José cerca de Concepción del Uruguay, pesca y lanchas en el río.</dd>
+        <dt>Comer</dt><dd>Pescado de río, citricos, salames y quesos de la zona. Menos asado-de-guía, más mesa familiar.</dd>
+        <dt>Cómo llegar</dt><dd>Micro desde Retiro (unas 3–6 h según el destino) o auto por la RN14. Vuelos puntuales a Paraná (PRA) cuando hay.</dd>
+        <dt>Excursiones</dt><dd>Las termas y el carnaval se resuelven en el lugar. Para islas o pesca, contratá un lanchero local el día antes y pedí referencias en el alojamiento.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-rosario" data-region="centro">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Rosario</h3>
+      <p class="where">Santa Fe · Litoral / centro</p>
+      <p>Ciudad de río, banderas y una soberbia simpática. Menos vitrina turística que CABA, más escala humana y costanera.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Monumento a la Bandera, costanera, islas frente a la ciudad, centros culturales. Si hay clásico de fútbol, el clima cambia.</dd>
+        <dt>Comer</dt><dd>El <strong>carlito</strong> (sándwich de miga, jamón, queso, manteca y ketchup; patrimonio local — nació en bares tipo Cachito). También pescado de río y helado.</dd>
+        <dt>Cómo llegar</dt><dd>Micro desde Retiro (~4 h), tren a Rosario Norte cuando corre, o vuelo a ROS. Es el salto corto más lógico desde Buenos Aires.</dd>
+        <dt>Excursiones</dt><dd>La ciudad se camina. Para islas del Paraná hay salidas náuticas desde la costanera; preguntá en el muelle y mirá el parte del río.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-cordoba" data-region="centro">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Córdoba</h3>
+      <p class="where">Provincia de Córdoba · Sierras</p>
+      <p>Universidad, cuarteto, fernet con Coca y sierras a un rato. La ciudad es viva; el fin de semana se va a Carlos Paz o al valle.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Centro histórico y Manzana Jesuítica (UNESCO), Sierras Chicas o Calamuchita, Camino de las Altas Cumbres si manejás con calma.</dd>
+        <dt>Comer</dt><dd>Fernet con Coca (sí, es cultural), locro, empanadas cordobesas, asado. En las sierras, cabrito y comida de hostería.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a COR (hub doméstico fuerte, ~1 h 20) o micro (~9–11 h) desde Retiro. Auto tiene sentido si vas a las sierras varios días.</dd>
+        <dt>Excursiones</dt><dd>Estancias jesuíticas se pueden visitar por cuenta propia. Para las sierras, auto o combi turística; no hay un solo operador que mande el mercado.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-caba" data-region="amba">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>CABA</h3>
+      <p class="where">Ciudad Autónoma de Buenos Aires</p>
+      <p>La capital es enorme y contradictoria: cafés, protestas, tango, malbec y una energía que cansa y enamora. No es «Argentina»: es una capa.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Palermo (parques, bares), San Telmo (feria domingo), Recoleta (cementerio, museos), Puerto Madero para la foto, La Boca un rato corto con las cosas pegadas al cuerpo. Subte + caminar.</dd>
+        <dt>Comer</dt><dd>Parrilla (el famoso <strong>Don Julio</strong> en Palermo, con reserva), bodegón (<strong>El Preferido de Palermo</strong>), pizza al molde en <strong>Güerrín</strong>, café histórico en <strong>Café Tortoni</strong> y <strong>Los 36 Billares</strong>, choripán en ferias (La Choripanería en Mercado de San Telmo es un clásico citado). Helado de dulce de leche en cualquier heladería seria.</dd>
+        <dt>Cómo llegar</dt><dd>EZE (internacional) o AEP (doméstico y algunos regionales). Tienda León / Uber al centro. Dentro: SUBE, subte, colectivo, DiDi/Cabify/Uber.</dd>
+        <dt>Excursiones</dt><dd>Free walking tours en Plaza de Mayo/San Telmo (propina). Tango en milonga de verdad si te anima, no sólo dinner-show. Para el delta de Tigre, tren + lancha. Chequeá milongas actuales en foros: cambian.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-pba" data-region="amba">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Buenos Aires (provincia)</h3>
+      <p class="where">Interior bonaerense · PBA</p>
+      <p>La provincia no es sólo la costa: pueblos, campo, Tandil, sierras chicas y una escala más argentina de almacén. Mar del Plata tiene su propia ficha.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>La Plata si te interesa arquitectura y el Museo de Ciencias Naturales, Tandil o Sierra de la Ventana para aire, estancias de fin de semana. El conurbano es otra película: andá con local.</dd>
+        <dt>Comer</dt><dd>Queso y salame de Tandil, facturas de pueblo, asado de campo. Menos Instagram, más mostrador.</dd>
+        <dt>Cómo llegar</dt><dd>Tren, micro o auto desde CABA. Las distancias parecen cortas en el mapa y se estiran en la ruta.</dd>
+        <dt>Excursiones</dt><dd>Estancias bonaerenses se reservan directo. No hace falta un tour bus para el interior cercano.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-mdp" data-region="amba">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Mar del Plata</h3>
+      <p class="where">Costa Atlántica · Buenos Aires</p>
+      <p>El balneario masivo de los argentinos. En verano es un quilombo hermoso; fuera de temporada, puerto y viento.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Rambla y playas (Playa Grande, Bristol), puerto y lobos marinos, Barrio Los Troncos, un día de siesta porque el sol pega.</dd>
+        <dt>Comer</dt><dd>Mariscos y milanesa a la napolitana con papas en porción geológica. Papas fritas y churros en la rambla. El puerto para pescado más simple.</dd>
+        <dt>Cómo llegar</dt><dd>Micro desde Retiro (~5 h), tren desde Constitución (cuando hay servicio), o vuelo a MDQ. En enero el micro se llena: reservá.</dd>
+        <dt>Excursiones</dt><dd>La ciudad se recorre caminando y en taxi. Cruceros cortos o visita al puerto; no hace falta un paquete caro.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-mendoza" data-region="cuyo">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Mendoza</h3>
+      <p class="where">Provincia de Mendoza · Cuyo</p>
+      <p>Vino y montaña. La ciudad es chata y arbolada; el telón es la cordillera. Si te gusta el malbec, es parada obligatoria.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Bodegas en Luján de Cuyo, Maipú o Valle de Uco; Uspallata y alta montaña; Aconcagua desde el parque (mirar, no hace falta subir).</dd>
+        <dt>Comer</dt><dd>Asado, empanadas mendocinas, chivo, aceitunas. Brindá con malbec, torrontés si venís del norte, o un blanco de altura en Uco.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a MDZ (~1 h 50) o micro (~14–16 h). Auto o bici en Maipú; para Valle de Uco conviene tour o conductor: el vino no maneja.</dd>
+        <dt>Excursiones</dt><dd><a href="https://troutandwine.com/" rel="noopener">Trout &amp; Wine</a> es un operador conocido de wine tours chicos (inglés/español). También podés ir directo a bodegas con reserva. En Maipú, bici + remís de vuelta es el clásico económico.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-madryn" data-region="patagonia">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Puerto Madryn</h3>
+      <p class="where">Chubut · Patagonia atlántica</p>
+      <p>Mar frío, viento y fauna. La ciudad es una base; Península Valdés es el motivo.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Avistaje de ballena franca (junio–diciembre) desde Puerto Pirámides, pingüinos en temporada, elefantes marinos, Gaiman si querés té galés.</dd>
+        <dt>Comer</dt><dd>Cordero, merluza, centolla cuando hay, torta galesa en Gaiman. El marisco es más fresco que sofisticado.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a REL (Trelew) + transfer (~1 h) o micro largo desde Buenos Aires. Auto ayuda para la península.</dd>
+        <dt>Excursiones</dt><dd><a href="https://www.hydrosport.ar/" rel="noopener">Hydro Sport</a> hace avistaje de ballenas desde Pirámides y salidas de delfines desde Madryn (estacional; a veces cierran venta). Hay otras lanchas en el muelle: compará y no persigas a los animales. Península Valdés también se recorre en auto o excursión terrestre.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-bariloche" data-region="patagonia">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Bariloche</h3>
+      <p class="where">Río Negro · Patagonia de lagos</p>
+      <p>Lagos, bosque, chocolate y una ciudad que en temporada alta se llena de egresados. El paisaje perdona el resto.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Circuito Chico, Cerro Catedral (trekking o ski), navegación en Nahuel Huapi, Ruta de los Siete Lagos hacia Villa La Angostura si tenés auto (Neuquén ya es otra provincia: yo marqué Bariloche).</dd>
+        <dt>Comer</dt><dd>Chocolate (Rapa Nui en Mitre y Villegas es un clásico de vidriera), trucha, cordero, cerveza artesanal. El té chocolateado después de un cerro es parte del ritual.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a BRC (~2 h, muchas frecuencias) o micro de ~20–24 h. Auto para circuitos; en invierno, cadenas y paciencia.</dd>
+        <dt>Excursiones</dt><dd>Circuito Chico se hace en auto, bici o bus turístico. Cerro Catedral tiene medio oficial de montaña. Para navegación al bosque de arrayanes u otras islas, comprá en el muelle y mirá el clima. No invento un único «mejor» operador de lago: el parte meteorológico manda.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-calafate" data-region="patagonia">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>El Calafate</h3>
+      <p class="where">Santa Cruz · Patagonia de hielo</p>
+      <p>Pueblo-base para el Perito Moreno. El glaciar es el motivo; el pueblo es viento, souvenir y cordero.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Pasarelas del glaciar (imprescindible), navegación frente a la pared, trekking sobre hielo si estás en forma. El Chaltén queda a un viaje (yo no lo marqué como visitado acá).</dd>
+        <dt>Comer</dt><dd>Cordero patagónico, calafate en dulce o helado, trucha. Porciones de refugio, no de degustación.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a FTE (~3 h). No hay micro directo razonable desde Buenos Aires: si no volás, es un odisea de combinaciones.</dd>
+        <dt>Excursiones</dt><dd><a href="https://hieloyaventura.com/" rel="noopener">Hielo y Aventura</a> es concesionaria del parque: Safari Náutico, Minitrekking y variantes sobre/al lado del glaciar. Las pasarelas se hacen por tu cuenta + entrada al parque. Llevá abrigo aunque sea enero.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-ushuaia" data-region="patagonia">
+      <span class="badge">Visitado por Aldo</span>
+      <h3>Ushuaia</h3>
+      <p class="where">Tierra del Fuego · el fin del mundo</p>
+      <p>Montaña metida en el mar, viento que te ordena el pelo y una ciudad que vive del turismo y de ser el punto más austral que la mayoría va a pisar.</p>
+      <dl>
+        <dt>Qué hacer</dt><dd>Parque Nacional Tierra del Fuego, Canal Beagle (faros, lobos, cormoranes), Laguna Esmeralda, Cerro Martial. En invierno, ski; en verano, trekking largo.</dd>
+        <dt>Comer</dt><dd>Centolla, merluza negra, cordero fueguino. Es caro comparado con el norte: el flete se siente.</dd>
+        <dt>Cómo llegar</dt><dd>Vuelo a USH (~3 h 30). Por tierra son dos días y un cruce: casi nadie lo hace de visita. El aeropuerto está pegado a la ciudad.</dd>
+        <dt>Excursiones</dt><dd><a href="https://taunushuaia.com.ar/" rel="noopener">Taun</a> es una empresa local de guías de montaña (trekking, glaciar Vinciguerra, packrafting, Laguna Esmeralda). Para el Beagle, hay varias lanchas en el puerto: compará duración y si incluyen isla de pingüinos (estacional). Revisá el parte: el viento cancela.</dd>
+      </dl>
+    </article>
+      </div>
+    </div>
+
+    <div class="section" id="transporte">
+      <h2>Cómo moverse</h2>
+      <div class="note loud">
+        <strong>Los precios argentinos se mueven. En serio.</strong>
+        Inflación, temporada, tipo de cambio y «hay dos asientos en promo» cambian todo. Los rangos de abajo mezclan tarifas promo (JetSMART/Flybondi 2025–principios 2026) y precios más típicos de temporada alta (relevamientos de prensa, ene–nov 2026). USD al tipo oficial de referencia ~ARS 1.550 (BNA venta ~1.565 el 2 nov 2026). No uses esto para presupuestar al peso: usalo para saber si estás hablando de un café o de un sueldo. Chequeá <a href="https://www.aerolineas.com.ar/" rel="noopener">Aerolíneas</a>, <a href="https://www.flybondi.com/" rel="noopener">Flybondi</a>, <a href="https://jetsmart.com/ar/es/" rel="noopener">JetSMART</a>, <a href="https://www.plataforma10.com/" rel="noopener">Plataforma 10</a> o Central de Pasajes el día que compres.
+      </div>
+      <p>
+        Argentina es grande. <strong>Buenos Aires</strong> tiene subte, colectivos y taxis/Uber relativamente baratos. Entre ciudades, el avión suele ganar cuando el micro se va a 15–24 horas. Los buses de larga distancia son cómodos (semi cama / cama / suite): no es un Greyhound triste, pero el cuerpo lo siente.
+      </p>
+
+      <h3>Red aérea doméstica</h3>
+      <p>
+        Tres nombres: <strong>Aerolíneas Argentinas</strong> (la más completa), <strong>Flybondi</strong> y <strong>JetSMART</strong> (low cost, equipaje y asiento se pagan aparte). Hubs útiles:
+      </p>
+      <ul>
+        <li><strong>AEP</strong> (Aeroparque, Jorge Newbery) — la mayoría de los domésticos de Buenos Aires. Más cerca del centro que Ezeiza.</li>
+        <li><strong>EZE</strong> (Ezeiza) — internacional; algunos domésticos de conexión.</li>
+        <li><strong>COR</strong> Córdoba, <strong>MDZ</strong> Mendoza, <strong>BRC</strong> Bariloche, <strong>USH</strong> Ushuaia, más IGR (Iguazú), SLA (Salta), TUC, FTE (Calafate), REL (Trelew/Madryn), ROS, MDQ, JUJ, SDE.</li>
+      </ul>
+      <p>Low cost: leé la letra chica. Un «USD 40» sin mochila de cabina se parece a un precio normal cuando terminás de tildar.</p>
+
+      <h3>Micros de larga distancia</h3>
+      <p>
+        El corazón es la <strong>Terminal de Retiro</strong> en CABA (Retiro Mitre / terminal de ómnibus). Empresas como Andesmar, Chevallier, Flecha Bus, Via Bariloche y un montón más; compará en Plataforma 10 / Central de Pasajes / la web de la empresa. Llevá DNI o pasaporte. Cama vs semi cama vale la diferencia en tramos de +12 h.
+      </p>
+
+      <h3>Orden de magnitud — avión (ida, desde Buenos Aires)</h3>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead><tr><th>Ruta</th><th>Tiempo</th><th>ARS (rango)</th><th>~USD</th></tr></thead>
+          <tbody>
+            <tr><td>Córdoba (COR)</td><td>~1 h 20</td><td class="num">20.000–120.000</td><td class="num">13–80</td></tr>
+            <tr><td>Mendoza (MDZ)</td><td>~1 h 50</td><td class="num">25.000–150.000</td><td class="num">16–95</td></tr>
+            <tr><td>Bariloche (BRC)</td><td>~2 h</td><td class="num">25.000–200.000</td><td class="num">16–130</td></tr>
+            <tr><td>Iguazú (IGR)</td><td>~1 h 45</td><td class="num">40.000–160.000</td><td class="num">26–105</td></tr>
+            <tr><td>Salta (SLA) / Jujuy (JUJ)</td><td>~2 h</td><td class="num">40.000–160.000</td><td class="num">26–105</td></tr>
+            <tr><td>Tucumán (TUC)</td><td>~2 h</td><td class="num">40.000–140.000</td><td class="num">26–90</td></tr>
+            <tr><td>El Calafate (FTE)</td><td>~3 h</td><td class="num">55.000–250.000</td><td class="num">35–160</td></tr>
+            <tr><td>Ushuaia (USH)</td><td>~3 h 30</td><td class="num">70.000–250.000+</td><td class="num">45–160+</td></tr>
+            <tr><td>Trelew / Madryn (REL)</td><td>~2 h</td><td class="num">25.000–200.000</td><td class="num">16–130</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Ida y vuelta en temporada (Calafate/Ushuaia en enero) se puede ir a varios cientos de miles de pesos. CyberMonday y promos «desde $X» son cupos chicos.</p>
+
+      <h3>Orden de magnitud — micro (ida, desde Retiro)</h3>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead><tr><th>Ruta</th><th>Tiempo</th><th>ARS (rango)</th><th>~USD</th></tr></thead>
+          <tbody>
+            <tr><td>Rosario</td><td>~4 h</td><td class="num">15.000–40.000</td><td class="num">10–26</td></tr>
+            <tr><td>Córdoba</td><td>~9–11 h</td><td class="num">23.000–70.000</td><td class="num">15–45</td></tr>
+            <tr><td>Mar del Plata</td><td>~5 h</td><td class="num">25.000–75.000</td><td class="num">16–50</td></tr>
+            <tr><td>Mendoza</td><td>~14–16 h</td><td class="num">35.000–110.000</td><td class="num">23–70</td></tr>
+            <tr><td>Tucumán</td><td>~14–16 h</td><td class="num">50.000–90.000</td><td class="num">32–58</td></tr>
+            <tr><td>Salta</td><td>~18–20 h</td><td class="num">60.000–130.000</td><td class="num">40–85</td></tr>
+            <tr><td>Iguazú</td><td>~18 h</td><td class="num">125.000–165.000</td><td class="num">80–105</td></tr>
+            <tr><td>Jujuy</td><td>~20–22 h</td><td class="num">90.000–175.000</td><td class="num">58–115</td></tr>
+            <tr><td>Bariloche</td><td>~20–24 h</td><td class="num">95.000–180.000</td><td class="num">60–115</td></tr>
+            <tr><td>Puerto Madryn</td><td>~18–20 h</td><td class="num">150.000–220.000</td><td class="num">95–140</td></tr>
+            <tr><td>Ushuaia / Calafate</td><td>2+ días, combinaciones</td><td colspan="2">Volá. En serio.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>A veces el avión promo sale más barato que el cama a Iguazú, Tucumán o Madryn. A Córdoba/Mendoza el micro sigue siendo el plan económico. Fuentes de orden de magnitud: promos JetSMART 2025–2026, Infobae (ene 2026), Clarín micros verano, Turismocity/CyberMonday nov 2026.</p>
+
       <h3>Apps útiles</h3>
       <ul>
         <li><strong>Cómo Llego</strong> — transporte público en Buenos Aires</li>
-        <li><strong>BA Móvil / SUBE</strong> — para cargar la tarjeta de transporte</li>
-        <li><strong>Uber / Cabify / DiDi</strong> — funcionan bien en ciudades grandes</li>
-        <li><strong>Flybondi / JetSmart</strong> — aerolíneas low-cost para vuelos internos</li>
+        <li><strong>BA Móvil / SUBE</strong> — cargar la tarjeta; registrala, si no pagás más caro</li>
+        <li><strong>Uber / Cabify / DiDi</strong> — ciudades grandes; desde EZE preferí remís oficial o app, no el flaco del cartelito</li>
+        <li><strong>Aerolíneas / Flybondi / JetSMART</strong> — check-in y boarding pass</li>
+        <li><strong>Plataforma 10 / Central de Pasajes</strong> — micros</li>
+        <li><strong>Google Maps / offline</strong> — el interior no siempre tiene señal decente</li>
       </ul>
+
+      <h3>¿Cuándo alquilar auto?</h3>
       <p>
-        Si vas a la Patagonia, Mendoza o el norte, considera alquilar un auto. Las rutas son lindas, pero manejá con cuidado — muchas son de montaña.
+        Sí: Mendoza (bodegas), Salta–Jujuy (quebrada), Bariloche (circuitos), Península Valdés, sierras de Córdoba. No: CABA (tránsito, estacionamiento, vidrios). En Patagonia las distancias son enormes y hay ripio; el seguro contra granizo/viento a veces es el gasto escondido. Manejo a la defensiva: animales sueltos, camiones, y «ruta pintoresca» = banquina inexistente.
       </p>
     </div>
 
-    <div class="section">
-      <h2>💵 Plata y cambio</h2>
+    <div class="section" id="plata">
+      <h2>Plata y cambio</h2>
       <div class="note">
-        <strong>⚠️ Advertencia importante</strong>
+        <strong>Advertencia importante</strong>
         La situación cambiaria argentina cambia constantemente. Lo que está acá es una guía general, pero los tipos de cambio, regulaciones y apps pueden variar. Chequeá fuentes actuales antes de viajar.
       </div>
       <p>
-        Históricamente, Argentina tuvo un <strong>dólar oficial</strong> (el del banco/cajero) y un <strong>dólar blue</strong> (cambio informal, mejor tasa). La brecha fue enorme durante años. Dependiendo de cuándo leas esto, puede haber cambios políticos que unifiquen o cambien las reglas.
+        Históricamente, Argentina tuvo un <strong>dólar oficial</strong> (el del banco/cajero) y un <strong>dólar blue</strong> (cambio informal, mejor tasa). La brecha fue enorme durante años. A fines de 2026 el oficial BNA y el blue anduvieron mucho más cerca (ambos alrededor de ARS 1.500–1.570 a principios de noviembre). Dependiendo de cuándo leas esto, puede haber cambios políticos que unifiquen o cambien las reglas otra vez.
       </p>
       <h3>Consejo práctico</h3>
       <ul>
         <li>Traé dólares en efectivo si podés — siempre fueron útiles para conseguir mejor cambio</li>
         <li>Preguntale a un local de confianza dónde cambiar, o usá apps como <strong>Belo / Let'sBit</strong> que operan legal</li>
-        <li>Tarjetas de crédito internacionales aplican el tipo oficial, que no siempre es el mejor</li>
+        <li>Tarjetas de crédito internacionales aplican el tipo oficial (y a veces recargos tipo «dólar tarjeta»): no siempre es el mejor</li>
         <li>Muchos lugares aceptan pago con transferencia (Mercado Pago, Modo) — práctico si tenés cuenta local</li>
+        <li>No cambies todo en el aeropuerto. Averiguá primero.</li>
       </ul>
-      <p>
-        En resumen: no cambies todo en el aeropuerto. Averiguá primero.
-      </p>
     </div>
 
-    <div class="section">
-      <h2>🍖 Comida, asado y mate</h2>
+    <div class="section" id="comida">
+      <h2>Comida por región</h2>
+      <p>Más allá del asado nacional: cada zona tiene su obstinación gastronómica. Las fichas de arriba bajan al plato local; esto es el mapa mental.</p>
+      <div class="food-grid">
+        <article>
+          <h3>Asado y parrilla</h3>
+          <p>Religión laica. Vacío, tira de asado, chorizo, morcilla, chinchulines, molleja. Si te invitan, andá y quedate: es lento y social. En CABA hay parrillas de vidriera (Don Julio) y de barrio que alimentan mejor por menos.</p>
+        </article>
+        <article>
+          <h3>Empanadas (sí, cambian)</h3>
+          <ul>
+            <li>Salta/Jujuy: jugosas, a menudo al horno, carne cortada a cuchillo</li>
+            <li>Tucumán: otro culto; pedilas junto al sánguche</li>
+            <li>Cuyo: a veces más secas / al horno, con aceituna</li>
+            <li>Patagonia: cordero, a veces merluza</li>
+            <li>Humita (choclo) en el norte</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Milanesa y sánguche</h3>
+          <p>Milanesa napolitana con papas es el almuerzo argentino por defecto. En Tucumán el <strong>sánguche de milanesa</strong> es identidad. En Rosario, el <strong>carlito</strong>. En CABA, bodegón.</p>
+        </article>
+        <article>
+          <h3>Choripán</h3>
+          <p>Chorizo en pan, chimichurri, salsa criolla. Canchas, ferias, costaneras. Street food sin disfraz.</p>
+        </article>
+        <article>
+          <h3>Ollas del interior</h3>
+          <p><strong>Locro</strong> (feriados patrios, invierno), <strong>humita</strong> y tamales en el NOA, guisos, cabrito. Eso es domingo de familia, no menú degustación.</p>
+        </article>
+        <article>
+          <h3>Facturas y dulce de leche</h3>
+          <p>Medialunas (de grasa o de manteca), vigilantes, sacramentos. Helado de dulce de leche, alfajores. El desayuno argentino es café + factura, no avocado toast.</p>
+        </article>
+        <article>
+          <h3>Vino</h3>
+          <p>Mendoza = malbec y altura (Uco). Cafayate = torrontés. Patagonia (Río Negro/Neuquén) también vinifica, aunque yo marqué Mendoza como la parada. Pedí copa, no sólo botella.</p>
+        </article>
+        <article>
+          <h3>Mar y río</h3>
+          <p>Mar del Plata y Madryn: pescado y mariscos. Iguazú y Rosario/Entre Ríos: río (surubí, boga). Ushuaia: centolla y merluza negra, con precio de fin del mundo.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="section" id="mate">
+      <h2>Mate, asado y cafés</h2>
       <p>
-        La comida es una parte central de la cultura argentina. El <strong>asado</strong> (barbecue) es casi una religión — si te invitan a uno, andá. Es lento, social y con mucha carne.
+        La comida es una parte central de la cultura argentina. El <strong>asado</strong> es casi una religión — si te invitan a uno, andá. Es lento, social y con mucha carne. El asador manda: no pinches de más, no pidas el punto como en un steakhouse de Manhattan, y agradecé.
       </p>
-      <h3>Qué probar</h3>
-      <ul>
-        <li><strong>Asado</strong> — parrilladas, achuras (chinchulines, morcilla), vacío, chorizo</li>
-        <li><strong>Empanadas</strong> — de carne, jamón y queso, humita (norte), o lo que venga</li>
-        <li><strong>Milanesas</strong> — gigantes, con papas fritas. Un clásico</li>
-        <li><strong>Choripán</strong> — chorizo en pan, con chimichurri. Street food icónico</li>
-        <li><strong>Dulce de leche</strong> — en todo. Alfajores, helado, postres</li>
-        <li><strong>Vino</strong> — Mendoza es la capital. Malbec, por supuesto</li>
-      </ul>
       <h3>Mate</h3>
       <p>
-        El <strong>mate</strong> es la infusión compartida por excelencia. No es sólo una bebida — es un ritual social. Si te ofrecen, aceptá. Tomás lo que te pasan, decís "gracias" cuando no querés más, y devolvés el mate. No lo revuelvas, no digas "está muy caliente/frío", sólo tomá.
+        El <strong>mate</strong> es la infusión compartida por excelencia. No es sólo una bebida — es un ritual social. Si te ofrecen, aceptá. Tomás lo que te pasan, decís «gracias» cuando no querés más, y devolvés el mate. No lo revuelvas, no digas «está muy caliente/frío», sólo tomá. La bombilla no se toca con la mano. El cebador es el único que mueve la yerba.
       </p>
       <h3>Cafés y bares</h3>
       <p>
-        Buenos Aires tiene una cultura de café muy fuerte, con bares históricos (Café Tortoni, Los 36 Billares) y opciones modernas (cafés de especialidad en Palermo). El café es más estilo europeo que americano — cortado, café con leche, lágrima.
+        Buenos Aires tiene una cultura de café muy fuerte, con bares históricos (Café Tortoni, Los 36 Billares) y opciones modernas (cafés de especialidad en Palermo). El café es más estilo europeo que americano — cortado, café con leche, lágrima. Pedí «un café» a secas y te van a mirar raro: especificá.
       </p>
     </div>
 
-    <div class="section">
-      <h2>📍 Buenos Aires y más allá</h2>
-      <h3>Buenos Aires</h3>
-      <p>
-        La capital es enorme y diversa. <strong>Palermo</strong> (cafés, bares, parques), <strong>San Telmo</strong> (feria de antigüedades los domingos, tango), <strong>Recoleta</strong> (cementerio famoso, museos), <strong>Puerto Madero</strong> (renovado, caro, linda vista). La Boca es turística pero está bien para una visita rápida — cuidado con tus cosas.
-      </p>
-      <h3>Patagonia</h3>
-      <p>
-        El <strong>sur</strong> es espectacular. <strong>Bariloche</strong> (lagos, montañas, chocolate), <strong>El Calafate</strong> (Glaciar Perito Moreno), <strong>Ushuaia</strong> (fin del mundo), <strong>El Chaltén</strong> (trekking de clase mundial). Andá en verano (diciembre-marzo) si querés caminar; en invierno si querés esquiar.
-      </p>
-      <h3>Norte</h3>
-      <p>
-        <strong>Salta</strong>, <strong>Jujuy</strong>, <strong>Quebrada de Humahuaca</strong>, las <strong>Salinas Grandes</strong>. El paisaje cambia completamente — montañas de colores, cactus gigantes, pueblos coloniales. Probá empanadas salteñas y vino torrontés.
-      </p>
-      <h3>Mendoza</h3>
-      <p>
-        <strong>Vino</strong> y <strong>montaña</strong>. Tours por bodegas, Aconcagua (la montaña más alta de América), Uspallata. Si te gusta el vino, es parada obligatoria.
-      </p>
-      <h3>Iguazú</h3>
-      <p>
-        Las <strong>Cataratas del Iguazú</strong> están en el noreste (Misiones). Son impresionantes. Podés ver el lado argentino y cruzar a Brasil si tenés tiempo. Calor y humedad, llevá repelente.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>🔒 Seguridad y street smarts</h2>
+    <div class="section" id="seguridad">
+      <h2>Seguridad y street smarts</h2>
       <p>
         Argentina no es un país peligroso en general, pero como en cualquier ciudad grande, <strong>hay que tener cuidado</strong>. Robos de celulares y carteras ocurren, especialmente en zonas turísticas y transporte público.
       </p>
@@ -230,43 +445,93 @@
         <li><strong>Cuidado de noche</strong> — algunas zonas están bien (Belgrano, Núñez, Colegiales), otras no tanto. Preguntá antes de caminar solo de madrugada</li>
         <li><strong>No muestres guita en la calle</strong> — pagá discreto, guardá la billetera en un bolsillo delantero</li>
         <li><strong>Taxi desde el aeropuerto</strong> — usá remises oficiales o Uber, no taxis sueltos que te ofrecen el viaje</li>
+        <li>En Iguazú y el norte, el riesgo más realista a veces es el sol, la altura o el mosquito — no sólo la esquina</li>
       </ul>
       <p>
         Dicho eso, la mayoría de la gente es amable y servicial. Si te perdiste, preguntá — los argentinos suelen ayudar con direcciones (aunque a veces te manden para cualquier lado con total confianza).
       </p>
     </div>
 
-    <div class="section">
-      <h2>🚫 Qué NO hacer</h2>
+    <div class="section" id="no-hacer">
+      <h2>Qué NO hacer</h2>
       <ul>
         <li><strong>No hables de Malvinas/Falklands</strong> si no querés una discusión política</li>
         <li><strong>No compares Argentina con otros países de América Latina</strong> de forma condescendiente — a los argentinos les gusta diferenciarse (para bien o para mal)</li>
-        <li><strong>No esperes puntualidad británica</strong> — el "llego en 10 minutos" suele ser 30. Es cultural</li>
-        <li><strong>No pidas "un café"</strong> sin especificar — preguntá qué tienen. "Café americano" existe pero no es lo más común</li>
-        <li><strong>No dejes propina automática del 10%</strong> — revisá si ya está incluido el "cubierto" o servicio de mesa</li>
-        <li><strong>No te ofendas si te dicen "che" o "boludo"</strong> — son formas coloquiales de trato, no insultos (depende del tono, obvio)</li>
+        <li><strong>No esperes puntualidad británica</strong> — el «llego en 10 minutos» suele ser 30. Es cultural</li>
+        <li><strong>No pidas «un café»</strong> sin especificar — preguntá qué tienen. «Café americano» existe pero no es lo más común</li>
+        <li><strong>No dejes propina automática del 10%</strong> — revisá si ya está incluido el «cubierto» o servicio de mesa</li>
+        <li><strong>No te ofendas si te dicen «che» o «boludo»</strong> — son formas coloquiales de trato, no insultos (depende del tono, obvio)</li>
+        <li>No asumas que todo el país es Buenos Aires. Córdoba, Rosario y el norte te van a corregir</li>
       </ul>
     </div>
 
-    <div class="section">
-      <h2>🌦️ Mejor época para visitar</h2>
-      <p>
-        Depende de a dónde vayas. Argentina tiene climas opuestos en distintas zonas:
-      </p>
+    <div class="section" id="epoca">
+      <h2>Mejor época para visitar</h2>
+      <p>Depende de a dónde vayas. Argentina tiene climas opuestos en distintas zonas:</p>
       <ul>
-        <li><strong>Buenos Aires</strong> — primavera (sep-nov) y otoño (mar-may) son ideales. Verano (dic-feb) es caluroso y húmedo; invierno (jun-ago) es fresco pero no extremo</li>
-        <li><strong>Patagonia</strong> — verano (dic-mar) para trekking; invierno (jun-sep) para nieve y esquí</li>
-        <li><strong>Norte (Salta, Jujuy)</strong> — evitá el verano (dic-feb) si no te gusta el calor extremo. Otoño/primavera son mejores</li>
-        <li><strong>Mendoza</strong> — primavera y otoño son ideales para bodegas; invierno para ski en Las Leñas</li>
+        <li><strong>Buenos Aires</strong> — primavera (sep–nov) y otoño (mar–may) son ideales. Verano (dic–feb) es caluroso y húmedo; invierno (jun–ago) es fresco pero no extremo</li>
+        <li><strong>Patagonia</strong> — verano (dic–mar) para trekking; invierno (jun–sep) para nieve y esquí. Calafate «funciona» casi todo el año; Ushuaia en invierno es viento y pocas horas de luz</li>
+        <li><strong>Norte (Salta, Jujuy, Tucumán)</strong> — evitá el verano (dic–feb) si no te gusta el calor extremo. Otoño/primavera son mejores. Altura: abrigo para la noche aunque el mediodía queme</li>
+        <li><strong>Mendoza</strong> — primavera y otoño son ideales para bodegas; invierno para ski en Las Leñas (otra logística)</li>
         <li><strong>Iguazú</strong> — todo el año, pero es tropical — calor y humedad siempre. Primavera tiene más caudal de agua</li>
+        <li><strong>Madryn</strong> — ballenas aprox. junio–diciembre; pingüinos en otra ventana. No superpongas expectativas de safari todo el año</li>
+        <li><strong>Mar del Plata / costa</strong> — el argentino promedio va en enero. Si odiás las muchedumbres, noviembre o marzo</li>
       </ul>
+      <p>Recordá que las estaciones están invertidas (hemisferio sur) — diciembre es verano, julio es invierno.</p>
+    </div>
+
+    <div class="section" id="voces">
+      <h2>Voces para entender el país</h2>
       <p>
-        Recordá que las estaciones están invertidas (hemisferio sur) — diciembre es verano, julio es invierno.
+        Una lista corta de creadoras y creadores que explican cultura, humor o viaje. Cuentas reales, enlaces afuera. No es un ranking ni un auspicio — la puedo cambiar mañana.
       </p>
+      <div class="cards-2">
+        <article class="mini">
+          <h3>The Argentinian Dictionary</h3>
+          <p class="handle">Instagram · lunfardo para extranjeros</p>
+          <p>Moira Mc Intyre traduce frases argentinas al inglés (literal + significado). Ideal si «boludo» todavía te suena a insulto. <a href="https://www.instagram.com/theargentiniandictionary/" rel="noopener">@theargentiniandictionary</a></p>
+        </article>
+        <article class="mini">
+          <h3>Locos por el Asado</h3>
+          <p class="handle">YouTube / Instagram · fuego y cultura de parrilla</p>
+          <p>Luciano «Laucha» Luchetti. No es turismo: es cómo pensamos el asado. <a href="https://www.youtube.com/@LocosXelAsadoOficial" rel="noopener">YouTube</a> · <a href="https://www.instagram.com/locosxelasado/" rel="noopener">Instagram</a></p>
+        </article>
+        <article class="mini">
+          <h3>Sir Chandler</h3>
+          <p class="handle">YouTube + blog · viajero práctico desde Buenos Aires</p>
+          <p>Crónicas de vuelos, hoteles, supermercados y el tipo de detalle que una guía de brillos no te da. <a href="https://www.youtube.com/@sirchandler" rel="noopener">YouTube</a> · <a href="https://www.sirchandler.com.ar/" rel="noopener">sirchandler.com.ar</a></p>
+        </article>
+        <article class="mini">
+          <h3>Argentina y el mundo</h3>
+          <p class="handle">Instagram / YouTube · pareja viajera</p>
+          <p>Fede y Sol. Recortes de viaje por el país y afuera, tono de mochila más que de brochure. <a href="https://www.instagram.com/argentinayelmundo/" rel="noopener">@argentinayelmundo</a></p>
+        </article>
+        <article class="mini">
+          <h3>Modo Turista</h3>
+          <p class="handle">Blog + redes · escapadas argentinas</p>
+          <p>Peli y Eli: guías de viaje locales, más «finde en el interior» que influencer de aeropuerto. <a href="https://modoturista.com.ar/" rel="noopener">modoturista.com.ar</a></p>
+        </article>
+      </div>
+    </div>
+
+    <div class="section" id="musica">
+      <h2>Música para «entender» el oído</h2>
+      <p>
+        No hace falta una tesis. Pone esto de fondo un par de días y el país se explica solo: rock nacional, folklore, ska, y el trap/cumbia rioplatense que suena en cualquier colectivo. Enlaces a las páginas oficiales de artista en Spotify.
+      </p>
+      <div class="music">
+        <a href="https://open.spotify.com/artist/3jO7X5KupvwmWTHGtHgcgo" rel="noopener"><b>Charly García</b><span>Rock nacional en estado puro. De Sui Generis a Serú Girán y la carrera solista. Empezá por lo que te cante el algoritmo y quedate en Clics Modernos.</span></a>
+        <a href="https://open.spotify.com/artist/7An4yvF7hDYDolN4m5zKBp" rel="noopener"><b>Soda Stereo</b><span>El rock en español que cruzó el continente. Gustavo Cerati, Zeta, Charly Alberti. Después pasá a <em>Cerati</em> solista.</span></a>
+        <a href="https://open.spotify.com/artist/1QOmebWGB6FdFtW7Bo3F0W" rel="noopener"><b>Gustavo Cerati</b><span>Bocanada y Ahí vamos si querés la segunda capa después de Soda.</span></a>
+        <a href="https://open.spotify.com/artist/1bAftSH8umNcGZ0uyV7LMg" rel="noopener"><b>Duki</b><span>Trap argentino que ya no es «escena»: es pop de estadio. Para entender qué escuchan los veinteañeros en Palermo y en el conurbano.</span></a>
+        <a href="https://open.spotify.com/artist/2x7PC78TmgqpEIjaGAZ0Oz" rel="noopener"><b>Trueno</b><span>Rap de La Boca, freestyle y cumbia que se filtró al mainstream. Complemento de Duki, no clon.</span></a>
+        <a href="https://open.spotify.com/artist/2HvyR5FsU37QMqVzIbGwl7" rel="noopener"><b>Mercedes Sosa</b><span>Folklore y la voz del norte. Todo cambia, Alfonsina y el mar. Si vas a Jujuy/Salta/Tucumán, esto es el paisaje sonoro.</span></a>
+        <a href="https://open.spotify.com/artist/2FS22haX3FYbyOsUAkuYqZ" rel="noopener"><b>Los Fabulosos Cadillacs</b><span>Ska, rock latino, Matador. La banda que todavía llena cuando vuelve.</span></a>
+      </div>
     </div>
 
     <div class="section">
-      <h2>🤝 Un último consejo</h2>
+      <h2>Un último consejo</h2>
       <p>
         Los argentinos pueden ser intensos, directos y opinadores (sobre fútbol, política, asado, cualquier cosa). Pero también son cálidos, generosos con la comida y el tiempo, y te van a recibir bien si venís con buena onda.
       </p>
@@ -278,5 +543,7 @@
       </p>
     </div>
   </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="map.js"></script>
 </body>
 </html>

@@ -3,118 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Argentina — Aldo Escobar</title>
+  <title>Argentina — Aldo Escobar’s guide</title>
+  <meta name="description" content="A practical, navigable Argentina guide: visited-places map, transport, food, money and culture, in first person.">
   <link rel="alternate" hreflang="es" href="https://aoelvp94.github.io/argentina/">
   <link rel="alternate" hreflang="en" href="https://aoelvp94.github.io/argentina/en/">
   <link rel="alternate" hreflang="x-default" href="https://aoelvp94.github.io/argentina/">
-  <style>
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-      background: #071018;
-      color: #e8eef6;
-    }
-    a { color: #60a5fa; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 22px;
-      background: rgba(7, 16, 24, 0.9);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    header strong { letter-spacing: -0.02em; }
-    header nav a {
-      color: #b7c6d6;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 0.95rem;
-    }
-    header nav a:hover { color: #fff; }
-    .lang {
-      margin-left: 18px;
-      font-size: 0.9rem;
-      white-space: nowrap;
-    }
-    .lang a { color: #8ea0b3; margin-left: 0; }
-    .lang a:hover { color: #fff; text-decoration: none; }
-    .lang [aria-current="page"] {
-      color: #fff;
-      font-weight: 600;
-      pointer-events: none;
-    }
-    .lang .sep { color: #6b7c8d; margin: 0 6px; }
-    main {
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 48px 24px 80px;
-    }
-    h1 {
-      font-size: 2.2rem;
-      letter-spacing: -0.03em;
-      margin: 0 0 12px;
-    }
-    .intro {
-      color: #9fb0c2;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin: 0 0 48px;
-    }
-    .section {
-      background: #0c1620;
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 14px;
-      padding: 28px 32px;
-      margin-bottom: 24px;
-    }
-    .section h2 {
-      font-size: 1.5rem;
-      margin: 0 0 16px;
-      color: #fff;
-    }
-    .section h3 {
-      font-size: 1.15rem;
-      margin: 24px 0 10px;
-      color: #d5e0ea;
-    }
-    .section p, .section ul {
-      color: #b7c6d6;
-      line-height: 1.65;
-      margin: 0 0 12px;
-    }
-    .section ul {
-      padding-left: 24px;
-    }
-    .section li {
-      margin-bottom: 8px;
-    }
-    .note {
-      background: rgba(251, 191, 36, 0.08);
-      border-left: 3px solid #f59e0b;
-      padding: 14px 16px;
-      margin: 20px 0;
-      border-radius: 6px;
-      color: #fbbf24;
-      font-size: 0.92rem;
-    }
-    .note strong {
-      display: block;
-      margin-bottom: 6px;
-      color: #fcd34d;
-    }
-    @media (max-width: 768px) {
-      main { padding: 32px 18px 60px; }
-      h1 { font-size: 1.75rem; }
-      .intro { font-size: 1rem; }
-      .section { padding: 22px 20px; }
-    }
-  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../guide.css">
 </head>
 <body>
-  <header>
+  <header class="site">
     <strong>Aldo Escobar</strong>
     <nav>
       <a href="../../">CV</a>
@@ -126,149 +24,516 @@
       </span>
     </nav>
   </header>
+  <nav class="toc" aria-label="On this page">
+    <div class="toc-inner">
+      <a href="#mapa">Map</a>
+      <a href="#lugares">Places</a>
+      <a href="#transporte">Transport</a>
+      <a href="#plata">Money</a>
+      <a href="#comida">Food</a>
+      <a href="#mate">Mate & asado</a>
+      <a href="#seguridad">Safety</a>
+      <a href="#no-hacer">What not to do</a>
+      <a href="#epoca">When to go</a>
+      <a href="#voces">Voices</a>
+      <a href="#musica">Music</a>
+    </div>
+  </nav>
   <main>
     <h1>A guide to enjoying Argentina</h1>
     <p class="intro">
-      Practical tips for friends and visitors, from an Argentine who spent years traveling the world and came back to appreciate what's good about his country. This is not a formal tourist guide — it's what I'd tell someone I know who's coming to visit.
+      Practical tips for friends and visitors, from an Argentine who spent years traveling the world and came back to appreciate what’s good about his country. This is not a formal tourist guide — it’s what I’d tell someone I know who’s coming to visit, now with a map, order-of-magnitude prices, and cards for the places <strong>I actually went to</strong>.
+    </p>
+    <p class="meta-line">
+      <span>Built for the “so, Argentina?” text</span>
+      <span>Prices: late 2025 / 2026 ranges · FX ~ARS 1,550/USD (BNA, Nov 2026)</span>
     </p>
 
-    <div class="section">
-      <h2>🚕 Getting around</h2>
+    <div class="section" id="mapa">
+      <h2>Map of where I’ve been</h2>
       <p>
-        Argentina is big. <strong>Buenos Aires</strong> has the subte (subway), colectivos (buses), and relatively cheap taxis/Uber. To get between cities, flying is usually the best option — the distances are enormous. Long-distance buses are comfortable and affordable, but be ready for long trips (10–20 hours is not unusual).
+        Blue provinces are ones I visited. Dots are specific cities or areas. Tap a pin (or a painted province) to jump to its card. Dim provinces are “not yet”: I don’t invent trips.
       </p>
+      <div class="map-wrap">
+        <div id="map" role="application" aria-label="Interactive map of Argentina"></div>
+      </div>
+      <p class="legend">
+        <span><i class="vis"></i> Visited by Aldo</span>
+        <span><i class="not"></i> Not yet</span>
+      </p>
+      <p class="unvisited">Not yet: Catamarca, Chaco, Corrientes, Formosa, La Pampa, La Rioja, Neuquén, San Juan, San Luis. (Bariloche is marked in Río Negro; Villa La Angostura would be Neuquén.)</p>
+    </div>
+
+    <div class="section" id="lugares">
+      <h2>Place cards</h2>
+      <p>Vibe, what to do, what to eat, how to get there, and named tours only when the operator is well-known and checkable. Otherwise: the type of outing + look at this season’s reviews.</p>
+      <div class="filters" role="group" aria-label="Filter by region">
+      <button type="button" data-region-filter="all" class="active">All</button>
+      <button type="button" data-region-filter="norte">North</button>
+      <button type="button" data-region-filter="litoral">Litoral</button>
+      <button type="button" data-region-filter="centro">Centre</button>
+      <button type="button" data-region-filter="amba">AMBA / coast</button>
+      <button type="button" data-region-filter="cuyo">Cuyo</button>
+      <button type="button" data-region-filter="patagonia">Patagonia</button>
+      </div>
+      <div class="place-grid">
+    <article class="place-card" id="lugar-jujuy" data-region="norte">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Jujuy</h3>
+      <p class="where">Jujuy Province · Northwest</p>
+      <p>The north flips the script: colored hills, Andean towns, and a slower tempo than Buenos Aires. The Quebrada de Humahuaca is UNESCO-listed and it shows.</p>
+      <dl>
+        <dt>What to do</dt><dd>Purmamarca and Cerro de los Siete Colores, Tilcara, Humahuaca, Salinas Grandes if the weather plays along. Give yourself time: the altitude is real.</dd>
+        <dt>Eat</dt><dd>Humita, tamales, Jujuy-style empanadas, locro, llama on some menus. Api with pastelitos if you hit a market day or winter.</dd>
+        <dt>How to get there</dt><dd>Fly to JUJ (Horacio Guzmán) from AEP/EZE, or a long-distance bus from Retiro (~20–22 h). Plenty of people combine Salta + Jujuy by car or tour.</dd>
+        <dt>Tours</dt><dd>The classic is Quebrada + salt flats (full day). Salta operators such as <a href="https://movitrack.com.ar/" rel="noopener">Movitrack</a> cover the north; for a Jujuy-based guide, check recent TripAdvisor/Reddit threads before sending a deposit.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-salta" data-region="norte">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Salta</h3>
+      <p class="where">Salta Province · Northwest</p>
+      <p>“Salta la linda” is not empty marketing: colonial centre, hills close by, and a serious table. A comfortable base for the Calchaquí valleys and Cafayate.</p>
+      <dl>
+        <dt>What to do</dt><dd>The centre and Cerro San Bernardo, Cachi or Cafayate via Ruta 40/68, torrontés at wineries, and the High Mountain Archaeology Museum if Inca history pulls you in.</dd>
+        <dt>Eat</dt><dd>Salta empanadas (juicy, often baked), locro, tamales, goat. A downtown classic is <strong>Doña Salta</strong> (empanadas and regional food; queues are normal). A folklore peña at night if that’s your thing.</dd>
+        <dt>How to get there</dt><dd>Fly to SLA (~2 h from Buenos Aires) or take the bus (~18–20 h). Car or tour for Cafayate/Cachi: distances lie.</dd>
+        <dt>Tours</dt><dd><a href="https://movitrack.com.ar/" rel="noopener">Movitrack</a> runs 4×4 safaris and valley days. The Tren a las Nubes is another famous postcard (check dates: it does not run daily). For Cafayate wineries, going straight to the bodega is often enough.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-tucuman" data-region="norte">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Tucumán</h3>
+      <p class="where">Tucumán Province · Northwest</p>
+      <p>The smallest province and one of the densest: heat, independence-era history, and a sandwich culture that is local religion.</p>
+      <dl>
+        <dt>What to do</dt><dd>Casa Histórica (independence, 1816), downtown San Miguel, Tafí del Valle if you have an extra day, Quilmes Ruins to the west.</dd>
+        <dt>Eat</dt><dd>The <strong>sánguche de milanesa</strong> (the Tucumán classic, on sanguchero bread) and <strong>Tucumán empanadas</strong>. That, before any “auteur” restaurant. Look for neighborhood sandwich shops, not a gourmet temple.</dd>
+        <dt>How to get there</dt><dd>Fly to TUC (~2 h) or bus (~14–16 h) from Buenos Aires. Tafí is about 2 h by car on mountain roads.</dd>
+        <dt>Tours</dt><dd>Tafí del Valle and Quilmes work with a local agency or a rental car. I will not pin you to one operator: check recent reviews and that the vehicle can handle the climb.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-santiago" data-region="norte">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Santiago del Estero</h3>
+      <p class="where">Santiago del Estero Province · Northwest</p>
+      <p>Folklore lives here. Less of an international tourist circuit, more chacarera, long siestas, and hot springs nearby.</p>
+      <dl>
+        <dt>What to do</dt><dd>Downtown Santiago, Termas de Río Hondo (a short hop), and if you care about music, ask for peñas. Do not expect Salta-level tourist infrastructure.</dd>
+        <dt>Eat</dt><dd>Empanadas, goat, locro, mazamorra. Stew-and-Sunday food.</dd>
+        <dt>How to get there</dt><dd>Fly to SDE or bus from Buenos Aires (~12–14 h). Easy to chain with Tucumán.</dd>
+        <dt>Tours</dt><dd>The hot springs you can sort on the ground. For the rest, a local pointer beats a packaged tour: there is no must-book operator I can name with a straight face.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-misiones" data-region="litoral">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Misiones (Iguazú)</h3>
+      <p class="where">Misiones Province · Northeast</p>
+      <p>Jungle, humidity, and the white noise of the falls. Puerto Iguazú is the base; the park is the show.</p>
+      <dl>
+        <dt>What to do</dt><dd>Iguazú National Park (upper and lower circuits plus Garganta del Diablo). Cross to Foz do Iguaçu if you have time and papers. Bug spray, water, shoes that can get wet.</dd>
+        <dt>Eat</dt><dd>Litoral plus Brazilian/Paraguayan influence: river fish (surubí, dorado when available), cassava, chipá. Park food is pricey — bring snacks.</dd>
+        <dt>How to get there</dt><dd>A flight to IGR (~1 h 45 from Buenos Aires) usually beats the bus (~18 h). Airport transfers run to town and the park.</dd>
+        <dt>Tours</dt><dd>The walkways are self-guided. For a boat under the falls, <a href="https://iguazujungle.com/" rel="noopener">Iguazú Jungle</a> runs Gran Aventura and other park boat trips (park ticket sold separately). Check times: the river decides.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-entre-rios" data-region="litoral">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Entre Ríos</h3>
+      <p class="where">Entre Ríos Province · Litoral</p>
+      <p>Rivers, islands, carnival, and hot springs. Long-weekend Argentina more than an international postcard.</p>
+      <dl>
+        <dt>What to do</dt><dd>Hot springs (Federación, Colón, Villa Elisa), Gualeguaychú carnival in season, Palacio San José near Concepción del Uruguay, fishing and small boats on the river.</dd>
+        <dt>Eat</dt><dd>River fish, citrus, local salami and cheese. Less guidebook-asado, more family table.</dd>
+        <dt>How to get there</dt><dd>Bus from Retiro (about 3–6 h depending on the town) or drive RN14. Occasional flights to Paraná (PRA).</dd>
+        <dt>Tours</dt><dd>Hot springs and carnival you handle on the ground. For islands or fishing, hire a local boat the day before and ask your lodging for names.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-rosario" data-region="centro">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Rosario</h3>
+      <p class="where">Santa Fe · river / central</p>
+      <p>A river city with flags and a friendly swagger. Less of a tourist shop window than CABA, more human scale and waterfront.</p>
+      <dl>
+        <dt>What to do</dt><dd>National Flag Memorial, the costanera, islands across the water, cultural centres. If there is a football derby, the mood shifts.</dd>
+        <dt>Eat</dt><dd>The <strong>carlito</strong> (toasted sandwich of crustless bread, ham, cheese, butter, and ketchup; local heritage — it started in bars like Cachito). Also river fish and ice cream.</dd>
+        <dt>How to get there</dt><dd>Bus from Retiro (~4 h), the train to Rosario Norte when it is running, or a flight to ROS. The most logical short hop from Buenos Aires.</dd>
+        <dt>Tours</dt><dd>Walk the city. Island boats leave from the waterfront; ask at the pier and check the river conditions.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-cordoba" data-region="centro">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Córdoba</h3>
+      <p class="where">Córdoba Province · Sierras</p>
+      <p>University city, cuarteto music, fernet and Coke, hills a short drive away. The city is lively; weekends leak out to Carlos Paz or the valley.</p>
+      <dl>
+        <dt>What to do</dt><dd>Historic centre and the Jesuit Block (UNESCO), Sierras Chicas or Calamuchita, Camino de las Altas Cumbres if you drive calmly.</dd>
+        <dt>Eat</dt><dd>Fernet and Coke (yes, it is cultural), locro, Córdoba empanadas, asado. In the hills, goat and inn food.</dd>
+        <dt>How to get there</dt><dd>Fly to COR (a real domestic hub, ~1 h 20) or bus (~9–11 h) from Retiro. A car pays off if you will be in the sierras for several days.</dd>
+        <dt>Tours</dt><dd>Jesuit estancias work as self-guided visits. For the hills, a rental car or a tourist van; no single operator owns the market.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-caba" data-region="amba">
+      <span class="badge">Visited by Aldo</span>
+      <h3>CABA</h3>
+      <p class="where">City of Buenos Aires</p>
+      <p>The capital is huge and contradictory: cafés, protests, tango, malbec, and an energy that wears you out and wins you over. It is not “Argentina”: it is one layer.</p>
+      <dl>
+        <dt>What to do</dt><dd>Palermo (parks, bars), San Telmo (Sunday market), Recoleta (cemetery, museums), Puerto Madero for the photo, La Boca briefly with your bag in front. Subte + walking.</dd>
+        <dt>Eat</dt><dd>Parrilla (famous <strong>Don Julio</strong> in Palermo — book), bodegón (<strong>El Preferido de Palermo</strong>), pan pizza at <strong>Güerrín</strong>, historic coffee at <strong>Café Tortoni</strong> and <strong>Los 36 Billares</strong>, choripán at markets (La Choripanería in Mercado de San Telmo is a frequently cited classic). Dulce de leche ice cream at any serious heladería.</dd>
+        <dt>How to get there</dt><dd>EZE (international) or AEP (domestic and some regional). Tienda León / Uber downtown. Inside the city: SUBE, subway, buses, DiDi/Cabify/Uber.</dd>
+        <dt>Tours</dt><dd>Free walking tours at Plaza de Mayo/San Telmo (tip-based). Tango in a real milonga if you are game, not only a dinner show. For the Tigre delta, train + boat. Check current milongas on forums: they move.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-pba" data-region="amba">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Buenos Aires Province</h3>
+      <p class="where">Interior of Buenos Aires Province</p>
+      <p>The province is not only the coast: towns, farmland, Tandil, small hills, and a more almacén scale of Argentina. Mar del Plata has its own card.</p>
+      <dl>
+        <dt>What to do</dt><dd>La Plata if you care about architecture and the natural-history museum, Tandil or Sierra de la Ventana for air, weekend estancias. Greater Buenos Aires is a different movie: go with a local.</dd>
+        <dt>Eat</dt><dd>Tandil cheese and salami, town bakeries, countryside asado. Less Instagram, more counter.</dd>
+        <dt>How to get there</dt><dd>Train, bus, or car from CABA. Map distances look short and then the highway stretches them.</dd>
+        <dt>Tours</dt><dd>Book estancias directly. You do not need a tour bus for the nearby interior.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-mdp" data-region="amba">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Mar del Plata</h3>
+      <p class="where">Atlantic coast · Buenos Aires Province</p>
+      <p>The mass beach resort of Argentines. In summer it is a beautiful mess; off season, harbour and wind.</p>
+      <dl>
+        <dt>What to do</dt><dd>The rambla and beaches (Playa Grande, Bristol), the port and sea lions, Barrio Los Troncos, a siesta because the sun is no joke.</dd>
+        <dt>Eat</dt><dd>Seafood and milanesa napolitana with geological portions of fries. Fries and churros on the rambla. The port for simpler fish.</dd>
+        <dt>How to get there</dt><dd>Bus from Retiro (~5 h), train from Constitución when it is running, or a flight to MDQ. January buses sell out: book.</dd>
+        <dt>Tours</dt><dd>Walk and taxi. Short harbour hops if you want; you do not need an expensive package.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-mendoza" data-region="cuyo">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Mendoza</h3>
+      <p class="where">Mendoza Province · Cuyo</p>
+      <p>Wine and mountains. The city is flat and tree-lined; the Andes are the backdrop. If you like malbec, it is a required stop.</p>
+      <dl>
+        <dt>What to do</dt><dd>Wineries in Luján de Cuyo, Maipú, or Valle de Uco; Uspallata and high mountain roads; Aconcagua from the park (looking counts; you do not have to climb).</dd>
+        <dt>Eat</dt><dd>Asado, Mendoza empanadas, goat, olives. Toast with malbec, torrontés if you just came from the north, or a high-altitude white in Uco.</dd>
+        <dt>How to get there</dt><dd>Fly to MDZ (~1 h 50) or bus (~14–16 h). Car or bike in Maipú; for Valle de Uco use a tour or a driver: wine does not drive.</dd>
+        <dt>Tours</dt><dd><a href="https://troutandwine.com/" rel="noopener">Trout &amp; Wine</a> is a known small-group wine-tour operator (English/Spanish). You can also book bodegas directly. In Maipú, bike + a cab back is the cheap classic.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-madryn" data-region="patagonia">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Puerto Madryn</h3>
+      <p class="where">Chubut · Atlantic Patagonia</p>
+      <p>Cold sea, wind, and wildlife. The town is a base; Península Valdés is the reason.</p>
+      <dl>
+        <dt>What to do</dt><dd>Southern right whale watching (June–December) from Puerto Pirámides, penguins in season, elephant seals, Gaiman if you want Welsh tea.</dd>
+        <dt>Eat</dt><dd>Lamb, hake, king crab when it is in, Welsh cake in Gaiman. Seafood here is fresher than fancy.</dd>
+        <dt>How to get there</dt><dd>Fly to REL (Trelew) + transfer (~1 h) or a long bus from Buenos Aires. A car helps on the peninsula.</dd>
+        <dt>Tours</dt><dd><a href="https://www.hydrosport.ar/" rel="noopener">Hydro Sport</a> runs whale watching from Pirámides and dolphin trips from Madryn (seasonal; sales sometimes close). Other boats work the pier: compare, and do not chase the animals. You can also drive Península Valdés or take a land tour.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-bariloche" data-region="patagonia">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Bariloche</h3>
+      <p class="where">Río Negro · lake Patagonia</p>
+      <p>Lakes, forest, chocolate, and a town that fills with school leavers in high season. The landscape forgives the rest.</p>
+      <dl>
+        <dt>What to do</dt><dd>Circuito Chico, Cerro Catedral (hiking or skiing), a boat on Nahuel Huapi, the Seven Lakes road toward Villa La Angostura if you have a car (Neuquén is another province: I marked Bariloche).</dd>
+        <dt>Eat</dt><dd>Chocolate (Rapa Nui at Mitre and Villegas is a shop-window classic), trout, lamb, craft beer. A chocolate-thick tea after a hill is part of the ritual.</dd>
+        <dt>How to get there</dt><dd>Fly to BRC (~2 h, lots of frequencies) or a ~20–24 h bus. A car for the loops; in winter, snow chains and patience.</dd>
+        <dt>Tours</dt><dd>Circuito Chico works by car, bike, or tourist bus. Cerro Catedral has official mountain lifts. For boats to the arrayanes forest or other islands, buy at the pier and watch the weather. I will not invent a single “best” lake operator: the forecast decides.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-calafate" data-region="patagonia">
+      <span class="badge">Visited by Aldo</span>
+      <h3>El Calafate</h3>
+      <p class="where">Santa Cruz · ice Patagonia</p>
+      <p>A base town for Perito Moreno. The glacier is the reason; the town is wind, souvenirs, and lamb.</p>
+      <dl>
+        <dt>What to do</dt><dd>Glacier boardwalks (non-negotiable), a boat along the wall, ice trekking if you are fit. El Chaltén is a separate trip (I have not marked it as visited here).</dd>
+        <dt>Eat</dt><dd>Patagonian lamb, calafate berry in jam or ice cream, trout. Mountain-hut portions, not tasting-menu ones.</dd>
+        <dt>How to get there</dt><dd>Fly to FTE (~3 h). There is no reasonable direct bus from Buenos Aires: if you do not fly, it is a multi-leg odyssey.</dd>
+        <dt>Tours</dt><dd><a href="https://hieloyaventura.com/" rel="noopener">Hielo y Aventura</a> is the park concessionaire: Safari Náutico, Minitrekking, and other glacier-side trips. The boardwalks are self-guided plus the park ticket. Pack a jacket even in January.</dd>
+      </dl>
+    </article>
+    <article class="place-card" id="lugar-ushuaia" data-region="patagonia">
+      <span class="badge">Visited by Aldo</span>
+      <h3>Ushuaia</h3>
+      <p class="where">Tierra del Fuego · the end of the world</p>
+      <p>Mountains dropped into the sea, wind that restyles your hair, and a town that lives on tourism and on being the southernmost place most visitors will ever stand.</p>
+      <dl>
+        <dt>What to do</dt><dd>Tierra del Fuego National Park, Beagle Channel (lighthouses, sea lions, cormorants), Laguna Esmeralda, Cerro Martial. Ski in winter; long hikes in summer.</dd>
+        <dt>Eat</dt><dd>King crab, black hake, Fuegian lamb. It is pricey next to the north: freight shows up on the bill.</dd>
+        <dt>How to get there</dt><dd>Fly to USH (~3 h 30). Overland is two days and a crossing: almost nobody does that for a visit. The airport sits against the town.</dd>
+        <dt>Tours</dt><dd><a href="https://taunushuaia.com.ar/" rel="noopener">Taun</a> is a local mountain-guide company (trekking, Vinciguerra glacier, packrafting, Laguna Esmeralda). For the Beagle, several boats leave the port: compare length and whether they include the penguin island (seasonal). Check the forecast: wind cancels.</dd>
+      </dl>
+    </article>
+      </div>
+    </div>
+
+    <div class="section" id="transporte">
+      <h2>Getting around</h2>
+      <div class="note loud">
+        <strong>Argentine prices move. Really.</strong>
+        Inflation, season, the exchange rate, and “two seats left on promo” change everything. Ranges below mix promo fares (JetSMART/Flybondi 2025–early 2026) and more typical high-season prices (press surveys, Jan–Nov 2026). USD at a reference official rate of ~ARS 1,550 (BNA sell ~1,565 on 2 Nov 2026). Do not budget to the peso with this: use it to know whether you are talking about a coffee or a salary. Check <a href="https://www.aerolineas.com.ar/" rel="noopener">Aerolíneas</a>, <a href="https://www.flybondi.com/" rel="noopener">Flybondi</a>, <a href="https://jetsmart.com/ar/es/" rel="noopener">JetSMART</a>, <a href="https://www.plataforma10.com/" rel="noopener">Plataforma 10</a> or Central de Pasajes on the day you buy.
+      </div>
+      <p>
+        Argentina is big. <strong>Buenos Aires</strong> has the subte (subway), colectivos (buses), and relatively cheap taxis/Uber. Between cities, flying usually wins when the bus is 15–24 hours. Long-distance buses are comfortable (semi-cama / cama / suite): not a sad Greyhound, but your body will notice.
+      </p>
+
+      <h3>Domestic air network</h3>
+      <p>
+        Three names: <strong>Aerolíneas Argentinas</strong> (the fullest network), <strong>Flybondi</strong> and <strong>JetSMART</strong> (low-cost; bags and seats cost extra). Useful hubs:
+      </p>
+      <ul>
+        <li><strong>AEP</strong> (Aeroparque, Jorge Newbery) — most Buenos Aires domestic flights. Closer to the centre than Ezeiza.</li>
+        <li><strong>EZE</strong> (Ezeiza) — international; some connecting domestics.</li>
+        <li><strong>COR</strong> Córdoba, <strong>MDZ</strong> Mendoza, <strong>BRC</strong> Bariloche, <strong>USH</strong> Ushuaia, plus IGR (Iguazú), SLA (Salta), TUC, FTE (Calafate), REL (Trelew/Madryn), ROS, MDQ, JUJ, SDE.</li>
+      </ul>
+      <p>Low-cost: read the fine print. A “USD 40” fare with no cabin bag looks like a normal fare once you tick the boxes.</p>
+
+      <h3>Long-distance buses</h3>
+      <p>
+        The hub is <strong>Retiro bus terminal</strong> in CABA. Companies include Andesmar, Chevallier, Flecha Bus, Via Bariloche, and many others; compare on Plataforma 10 / Central de Pasajes / the company site. Bring ID or a passport. Cama vs semi-cama is worth it on 12+ hour legs.
+      </p>
+
+      <h3>Order of magnitude — flights (one-way, from Buenos Aires)</h3>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead><tr><th>Route</th><th>Time</th><th>ARS (range)</th><th>~USD</th></tr></thead>
+          <tbody>
+            <tr><td>Córdoba (COR)</td><td>~1 h 20</td><td class="num">20,000–120,000</td><td class="num">13–80</td></tr>
+            <tr><td>Mendoza (MDZ)</td><td>~1 h 50</td><td class="num">25,000–150,000</td><td class="num">16–95</td></tr>
+            <tr><td>Bariloche (BRC)</td><td>~2 h</td><td class="num">25,000–200,000</td><td class="num">16–130</td></tr>
+            <tr><td>Iguazú (IGR)</td><td>~1 h 45</td><td class="num">40,000–160,000</td><td class="num">26–105</td></tr>
+            <tr><td>Salta (SLA) / Jujuy (JUJ)</td><td>~2 h</td><td class="num">40,000–160,000</td><td class="num">26–105</td></tr>
+            <tr><td>Tucumán (TUC)</td><td>~2 h</td><td class="num">40,000–140,000</td><td class="num">26–90</td></tr>
+            <tr><td>El Calafate (FTE)</td><td>~3 h</td><td class="num">55,000–250,000</td><td class="num">35–160</td></tr>
+            <tr><td>Ushuaia (USH)</td><td>~3 h 30</td><td class="num">70,000–250,000+</td><td class="num">45–160+</td></tr>
+            <tr><td>Trelew / Madryn (REL)</td><td>~2 h</td><td class="num">25,000–200,000</td><td class="num">16–130</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Round trips in peak season (Calafate/Ushuaia in January) can run into several hundred thousand pesos. “From $X” CyberMonday fares are tiny allotments.</p>
+
+      <h3>Order of magnitude — bus (one-way, from Retiro)</h3>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead><tr><th>Route</th><th>Time</th><th>ARS (range)</th><th>~USD</th></tr></thead>
+          <tbody>
+            <tr><td>Rosario</td><td>~4 h</td><td class="num">15,000–40,000</td><td class="num">10–26</td></tr>
+            <tr><td>Córdoba</td><td>~9–11 h</td><td class="num">23,000–70,000</td><td class="num">15–45</td></tr>
+            <tr><td>Mar del Plata</td><td>~5 h</td><td class="num">25,000–75,000</td><td class="num">16–50</td></tr>
+            <tr><td>Mendoza</td><td>~14–16 h</td><td class="num">35,000–110,000</td><td class="num">23–70</td></tr>
+            <tr><td>Tucumán</td><td>~14–16 h</td><td class="num">50,000–90,000</td><td class="num">32–58</td></tr>
+            <tr><td>Salta</td><td>~18–20 h</td><td class="num">60,000–130,000</td><td class="num">40–85</td></tr>
+            <tr><td>Iguazú</td><td>~18 h</td><td class="num">125,000–165,000</td><td class="num">80–105</td></tr>
+            <tr><td>Jujuy</td><td>~20–22 h</td><td class="num">90,000–175,000</td><td class="num">58–115</td></tr>
+            <tr><td>Bariloche</td><td>~20–24 h</td><td class="num">95,000–180,000</td><td class="num">60–115</td></tr>
+            <tr><td>Puerto Madryn</td><td>~18–20 h</td><td class="num">150,000–220,000</td><td class="num">95–140</td></tr>
+            <tr><td>Ushuaia / Calafate</td><td>2+ days, connections</td><td colspan="2">Fly. Really.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Sometimes a promo flight beats a cama bus to Iguazú, Tucumán, or Madryn. On Córdoba/Mendoza the bus is still the cheap plan. Order-of-magnitude sources: JetSMART promos 2025–2026, Infobae (Jan 2026), Clarín summer buses, Turismocity/CyberMonday Nov 2026.</p>
+
       <h3>Useful apps</h3>
       <ul>
         <li><strong>Cómo Llego</strong> — public transit in Buenos Aires</li>
-        <li><strong>BA Móvil / SUBE</strong> — to top up the transit card</li>
-        <li><strong>Uber / Cabify / DiDi</strong> — work well in big cities</li>
-        <li><strong>Flybondi / JetSmart</strong> — low-cost airlines for domestic flights</li>
+        <li><strong>BA Móvil / SUBE</strong> — to top up the transit card; register it or you pay more</li>
+        <li><strong>Uber / Cabify / DiDi</strong> — big cities; from EZE prefer an official remise or the app, not the guy with a cardboard sign</li>
+        <li><strong>Aerolíneas / Flybondi / JetSMART</strong> — check-in and boarding pass</li>
+        <li><strong>Plataforma 10 / Central de Pasajes</strong> — long-distance buses</li>
+        <li><strong>Google Maps / offline</strong> — the interior does not always have decent signal</li>
       </ul>
+
+      <h3>When a rental car makes sense</h3>
       <p>
-        If you're going to Patagonia, Mendoza, or the north, consider renting a car. The roads are beautiful, but drive carefully — many are mountain routes.
+        Yes: Mendoza (wineries), Salta–Jujuy (the quebrada), Bariloche (the loops), Península Valdés, Córdoba’s sierras. No: CABA (traffic, parking, smashed windows). In Patagonia distances are huge and some roads are gravel; hail/wind insurance is the hidden line item. Drive defensively: loose animals, trucks, and “scenic” often means no shoulder.
       </p>
     </div>
 
-    <div class="section">
-      <h2>💵 Money and exchange</h2>
+    <div class="section" id="plata">
+      <h2>Money and exchange</h2>
       <div class="note">
-        <strong>⚠️ Important warning</strong>
-        Argentina's exchange situation changes constantly. What's here is a general guide, but rates, regulations, and apps can vary. Check current sources before you travel.
+        <strong>Important warning</strong>
+        Argentina’s exchange situation changes constantly. What’s here is a general guide, but rates, regulations, and apps can vary. Check current sources before you travel.
       </div>
       <p>
-        Historically, Argentina had an <strong>official dollar</strong> (the bank/ATM rate) and a <strong>blue dollar</strong> (informal exchange, a better rate). The gap was huge for years. Depending on when you read this, political changes may have unified or rewritten the rules.
+        Historically, Argentina had an <strong>official dollar</strong> (the bank/ATM rate) and a <strong>blue dollar</strong> (informal exchange, a better rate). The gap was huge for years. By late 2026 the official BNA rate and the blue were much closer (both around ARS 1,500–1,570 in early November). Depending on when you read this, political changes may have unified or rewritten the rules again.
       </p>
       <h3>Practical advice</h3>
       <ul>
-        <li>Bring cash dollars if you can — they've always been useful for getting a better rate</li>
+        <li>Bring cash dollars if you can — they’ve always been useful for getting a better rate</li>
         <li>Ask a local you trust where to exchange, or use apps like <strong>Belo / Let'sBit</strong> that operate legally</li>
-        <li>International credit cards apply the official rate, which isn't always the best</li>
+        <li>International credit cards apply the official rate (and sometimes “dólar tarjeta” surcharges): not always the best</li>
         <li>Many places accept payment by transfer (Mercado Pago, Modo) — handy if you have a local account</li>
+        <li>Don’t exchange everything at the airport. Find out first.</li>
       </ul>
-      <p>
-        Bottom line: don't exchange everything at the airport. Find out first.
-      </p>
     </div>
 
-    <div class="section">
-      <h2>🍖 Food, asado, and mate</h2>
+    <div class="section" id="comida">
+      <h2>Food by region</h2>
+      <p>Beyond the national asado: each zone has its own culinary stubbornness. The cards above go local; this is the mental map.</p>
+      <div class="food-grid">
+        <article>
+          <h3>Asado and parrilla</h3>
+          <p>A secular religion. Vacío, tira de asado, chorizo, blood sausage, chinchulines, sweetbreads. If you are invited, go and stay: it is slow and social. In CABA there are shop-window parrillas (Don Julio) and neighborhood ones that feed you better for less.</p>
+        </article>
+        <article>
+          <h3>Empanadas (yes, they change)</h3>
+          <ul>
+            <li>Salta/Jujuy: juicy, often baked, knife-cut beef</li>
+            <li>Tucumán: another cult; order them with the sandwich</li>
+            <li>Cuyo: sometimes drier / oven-baked, with olive</li>
+            <li>Patagonia: lamb, sometimes hake</li>
+            <li>Humita (corn) in the north</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Milanesa and sandwiches</h3>
+          <p>Milanesa napolitana with fries is the default Argentine lunch. In Tucumán the <strong>sánguche de milanesa</strong> is identity. In Rosario, the <strong>carlito</strong>. In CABA, the bodegón.</p>
+        </article>
+        <article>
+          <h3>Choripán</h3>
+          <p>Chorizo on bread, chimichurri, salsa criolla. Stadiums, markets, waterfronts. Street food with no costume.</p>
+        </article>
+        <article>
+          <h3>Interior stews</h3>
+          <p><strong>Locro</strong> (national holidays, winter), <strong>humita</strong> and tamales in the northwest, stews, goat. Sunday family food, not a tasting menu.</p>
+        </article>
+        <article>
+          <h3>Facturas and dulce de leche</h3>
+          <p>Medialunas (lard or butter), vigilantes, sacramentos. Dulce de leche ice cream, alfajores. Argentine breakfast is coffee + pastry, not avocado toast.</p>
+        </article>
+        <article>
+          <h3>Wine</h3>
+          <p>Mendoza = malbec and altitude (Uco). Cafayate = torrontés. Patagonia (Río Negro/Neuquén) makes wine too, though I marked Mendoza as the stop. Order a glass, not only a bottle.</p>
+        </article>
+        <article>
+          <h3>Sea and river</h3>
+          <p>Mar del Plata and Madryn: fish and shellfish. Iguazú and Rosario/Entre Ríos: river (surubí, boga). Ushuaia: king crab and black hake, at end-of-the-world prices.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="section" id="mate">
+      <h2>Mate, asado, and cafés</h2>
       <p>
-        Food is a central part of Argentine culture. <strong>Asado</strong> (barbecue) is almost a religion — if you're invited to one, go. It's slow, social, and there's a lot of meat.
+        Food is a central part of Argentine culture. <strong>Asado</strong> is almost a religion — if you’re invited to one, go. It’s slow, social, and there’s a lot of meat. The asador is in charge: don’t poke the meat to death, don’t order a Manhattan steakhouse doneness, and say thank you.
       </p>
-      <h3>What to try</h3>
-      <ul>
-        <li><strong>Asado</strong> — mixed grills, achuras (chinchulines, blood sausage), vacío, chorizo</li>
-        <li><strong>Empanadas</strong> — beef, ham and cheese, humita (from the north), or whatever they have</li>
-        <li><strong>Milanesas</strong> — huge, with fries. A classic</li>
-        <li><strong>Choripán</strong> — chorizo on bread, with chimichurri. Iconic street food</li>
-        <li><strong>Dulce de leche</strong> — in everything. Alfajores, ice cream, desserts</li>
-        <li><strong>Wine</strong> — Mendoza is the capital. Malbec, of course</li>
-      </ul>
       <h3>Mate</h3>
       <p>
-        <strong>Mate</strong> is the shared infusion par excellence. It's not just a drink — it's a social ritual. If they offer you some, accept. Drink what they pass you, say "gracias" when you don't want more, and hand the mate back. Don't stir it, don't say "it's too hot/cold," just drink.
+        <strong>Mate</strong> is the shared infusion par excellence. It’s not just a drink — it’s a social ritual. If they offer you some, accept. Drink what they pass you, say “gracias” when you don’t want more, and hand the mate back. Don’t stir it, don’t say “it’s too hot/cold,” just drink. Don’t touch the bombilla with your hand. Only the cebador moves the yerba.
       </p>
       <h3>Cafés and bars</h3>
       <p>
-        Buenos Aires has a strong café culture, with historic bars (Café Tortoni, Los 36 Billares) and modern spots (specialty coffee in Palermo). Coffee is more European than American — cortado, café con leche, lágrima.
+        Buenos Aires has a strong café culture, with historic bars (Café Tortoni, Los 36 Billares) and modern spots (specialty coffee in Palermo). Coffee is more European than American — cortado, café con leche, lágrima. Ask for “a coffee” and you will get a look: specify.
       </p>
     </div>
 
-    <div class="section">
-      <h2>📍 Buenos Aires and beyond</h2>
-      <h3>Buenos Aires</h3>
+    <div class="section" id="seguridad">
+      <h2>Safety and street smarts</h2>
       <p>
-        The capital is huge and diverse. <strong>Palermo</strong> (cafés, bars, parks), <strong>San Telmo</strong> (Sunday antique market, tango), <strong>Recoleta</strong> (famous cemetery, museums), <strong>Puerto Madero</strong> (renovated, expensive, nice views). La Boca is touristy but fine for a quick visit — watch your things.
-      </p>
-      <h3>Patagonia</h3>
-      <p>
-        The <strong>south</strong> is spectacular. <strong>Bariloche</strong> (lakes, mountains, chocolate), <strong>El Calafate</strong> (Perito Moreno Glacier), <strong>Ushuaia</strong> (the end of the world), <strong>El Chaltén</strong> (world-class trekking). Go in summer (December–March) if you want to hike; in winter if you want to ski.
-      </p>
-      <h3>The north</h3>
-      <p>
-        <strong>Salta</strong>, <strong>Jujuy</strong>, <strong>Quebrada de Humahuaca</strong>, the <strong>Salinas Grandes</strong>. The landscape changes completely — colored mountains, giant cacti, colonial towns. Try Salta-style empanadas and torrontés wine.
-      </p>
-      <h3>Mendoza</h3>
-      <p>
-        <strong>Wine</strong> and <strong>mountains</strong>. Winery tours, Aconcagua (the highest mountain in the Americas), Uspallata. If you like wine, it's a must-stop.
-      </p>
-      <h3>Iguazú</h3>
-      <p>
-        <strong>Iguazú Falls</strong> are in the northeast (Misiones). They're stunning. You can see the Argentine side and cross into Brazil if you have time. Hot and humid — bring insect repellent.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>🔒 Safety and street smarts</h2>
-      <p>
-        Argentina isn't a dangerous country in general, but as in any big city, <strong>you need to stay alert</strong>. Phone and wallet thefts happen, especially in tourist areas and on public transit.
+        Argentina isn’t a dangerous country in general, but as in any big city, <strong>you need to stay alert</strong>. Phone and wallet thefts happen, especially in tourist areas and on public transit.
       </p>
       <h3>Basic tips</h3>
       <ul>
-        <li><strong>Don't take your phone out on the street</strong> without paying attention. If you have to use it, do it quickly or somewhere quieter</li>
-        <li><strong>Don't use open backpacks</strong> on the subway or buses — pickpockets exist</li>
+        <li><strong>Don’t take your phone out on the street</strong> without paying attention. If you have to use it, do it quickly or somewhere quieter</li>
+        <li><strong>Don’t use open backpacks</strong> on the subway or buses — pickpockets exist</li>
         <li><strong>Be careful at night</strong> — some areas are fine (Belgrano, Núñez, Colegiales), others less so. Ask before walking alone late at night</li>
-        <li><strong>Don't flash cash on the street</strong> — pay discreetly, keep your wallet in a front pocket</li>
+        <li><strong>Don’t flash cash on the street</strong> — pay discreetly, keep your wallet in a front pocket</li>
         <li><strong>Taxi from the airport</strong> — use official remises or Uber, not random taxis that offer you a ride</li>
+        <li>In Iguazú and the north, the more realistic risks are sometimes sun, altitude, or mosquitoes — not only the street corner</li>
       </ul>
       <p>
-        That said, most people are kind and helpful. If you're lost, ask — Argentines usually help with directions (even if they sometimes send you the wrong way with total confidence).
+        That said, most people are kind and helpful. If you’re lost, ask — Argentines usually help with directions (even if they sometimes send you the wrong way with total confidence).
       </p>
     </div>
 
-    <div class="section">
-      <h2>🚫 What NOT to do</h2>
+    <div class="section" id="no-hacer">
+      <h2>What NOT to do</h2>
       <ul>
-        <li><strong>Don't talk about the Malvinas/Falklands</strong> if you don't want a political argument</li>
-        <li><strong>Don't compare Argentina with other Latin American countries</strong> in a condescending way — Argentines like to set themselves apart (for better or worse)</li>
-        <li><strong>Don't expect British punctuality</strong> — "I'll be there in 10 minutes" is usually 30. It's cultural</li>
-        <li><strong>Don't ask for "a coffee"</strong> without specifying — ask what they have. "Café americano" exists but isn't the most common</li>
-        <li><strong>Don't automatically leave a 10% tip</strong> — check whether the "cubierto" or table service is already included</li>
-        <li><strong>Don't take offense if they call you "che" or "boludo"</strong> — they're colloquial forms of address, not insults (depends on the tone, of course)</li>
+        <li><strong>Don’t talk about the Malvinas/Falklands</strong> if you don’t want a political argument</li>
+        <li><strong>Don’t compare Argentina with other Latin American countries</strong> in a condescending way — Argentines like to set themselves apart (for better or worse)</li>
+        <li><strong>Don’t expect British punctuality</strong> — “I’ll be there in 10 minutes” is usually 30. It’s cultural</li>
+        <li><strong>Don’t ask for “a coffee”</strong> without specifying — ask what they have. “Café americano” exists but isn’t the most common</li>
+        <li><strong>Don’t automatically leave a 10% tip</strong> — check whether the “cubierto” or table service is already included</li>
+        <li><strong>Don’t take offense if they call you “che” or “boludo”</strong> — they’re colloquial forms of address, not insults (depends on the tone, of course)</li>
+        <li>Don’t assume the whole country is Buenos Aires. Córdoba, Rosario, and the north will correct you</li>
       </ul>
     </div>
 
-    <div class="section">
-      <h2>🌦️ Best time to visit</h2>
-      <p>
-        It depends on where you're going. Argentina has opposite climates in different regions:
-      </p>
+    <div class="section" id="epoca">
+      <h2>Best time to visit</h2>
+      <p>It depends on where you’re going. Argentina has opposite climates in different regions:</p>
       <ul>
         <li><strong>Buenos Aires</strong> — spring (Sep–Nov) and fall (Mar–May) are ideal. Summer (Dec–Feb) is hot and humid; winter (Jun–Aug) is cool but not extreme</li>
-        <li><strong>Patagonia</strong> — summer (Dec–Mar) for trekking; winter (Jun–Sep) for snow and skiing</li>
-        <li><strong>The north (Salta, Jujuy)</strong> — avoid summer (Dec–Feb) if you don't like extreme heat. Fall/spring are better</li>
-        <li><strong>Mendoza</strong> — spring and fall are ideal for wineries; winter for skiing at Las Leñas</li>
-        <li><strong>Iguazú</strong> — year-round, but it's tropical — always hot and humid. Spring has a higher water volume</li>
+        <li><strong>Patagonia</strong> — summer (Dec–Mar) for trekking; winter (Jun–Sep) for snow and skiing. Calafate “works” most of the year; Ushuaia in winter is wind and short days</li>
+        <li><strong>The north (Salta, Jujuy, Tucumán)</strong> — avoid summer (Dec–Feb) if you don’t like extreme heat. Fall/spring are better. Altitude: a jacket for the night even if noon burns</li>
+        <li><strong>Mendoza</strong> — spring and fall are ideal for wineries; winter for skiing at Las Leñas (different logistics)</li>
+        <li><strong>Iguazú</strong> — year-round, but it’s tropical — always hot and humid. Spring has a higher water volume</li>
+        <li><strong>Madryn</strong> — whales roughly June–December; penguins on another window. Don’t expect a year-round safari</li>
+        <li><strong>Mar del Plata / the coast</strong> — the average Argentine goes in January. If you hate crowds, November or March</li>
       </ul>
+      <p>Remember that the seasons are reversed (Southern Hemisphere) — December is summer, July is winter.</p>
+    </div>
+
+    <div class="section" id="voces">
+      <h2>Voices that explain the country</h2>
       <p>
-        Remember that the seasons are reversed (Southern Hemisphere) — December is summer, July is winter.
+        A short list of creators who unpack culture, humor, or travel. Real accounts, outbound links. Not a ranking or a sponsorship — I can swap this tomorrow.
       </p>
+      <div class="cards-2">
+        <article class="mini">
+          <h3>The Argentinian Dictionary</h3>
+          <p class="handle">Instagram · slang for outsiders</p>
+          <p>Moira Mc Intyre translates Argentine phrases into English (literal + meaning). Ideal if “boludo” still sounds like an insult. <a href="https://www.instagram.com/theargentiniandictionary/" rel="noopener">@theargentiniandictionary</a></p>
+        </article>
+        <article class="mini">
+          <h3>Locos por el Asado</h3>
+          <p class="handle">YouTube / Instagram · fire and grill culture</p>
+          <p>Luciano “Laucha” Luchetti. Not tourism: how we think about asado. <a href="https://www.youtube.com/@LocosXelAsadoOficial" rel="noopener">YouTube</a> · <a href="https://www.instagram.com/locosxelasado/" rel="noopener">Instagram</a></p>
+        </article>
+        <article class="mini">
+          <h3>Sir Chandler</h3>
+          <p class="handle">YouTube + blog · practical traveler from Buenos Aires</p>
+          <p>Flight write-ups, hotels, supermarkets, and the kind of detail a glossy guide skips. <a href="https://www.youtube.com/@sirchandler" rel="noopener">YouTube</a> · <a href="https://www.sirchandler.com.ar/" rel="noopener">sirchandler.com.ar</a></p>
+        </article>
+        <article class="mini">
+          <h3>Argentina y el mundo</h3>
+          <p class="handle">Instagram / YouTube · traveling couple</p>
+          <p>Fede and Sol. Trip fragments around the country and abroad, backpack tone more than brochure. <a href="https://www.instagram.com/argentinayelmundo/" rel="noopener">@argentinayelmundo</a></p>
+        </article>
+        <article class="mini">
+          <h3>Modo Turista</h3>
+          <p class="handle">Blog + socials · Argentine getaways</p>
+          <p>Peli and Eli: local trip guides, more “weekend in the interior” than airport influencer. <a href="https://modoturista.com.ar/" rel="noopener">modoturista.com.ar</a></p>
+        </article>
+      </div>
+    </div>
+
+    <div class="section" id="musica">
+      <h2>Music that helps the place click</h2>
+      <p>
+        You don’t need a thesis. Leave this on for a couple of days and the country explains itself: rock nacional, folklore, ska, and the rioplatense trap/cumbia that leaks out of any bus. Links go to official Spotify artist pages.
+      </p>
+      <div class="music">
+        <a href="https://open.spotify.com/artist/3jO7X5KupvwmWTHGtHgcgo" rel="noopener"><b>Charly García</b><span>Rock nacional at the source. From Sui Generis to Serú Girán and the solo years. Start wherever the algorithm drops you and stay for Clics Modernos.</span></a>
+        <a href="https://open.spotify.com/artist/7An4yvF7hDYDolN4m5zKBp" rel="noopener"><b>Soda Stereo</b><span>The Spanish-language rock that crossed the continent. Gustavo Cerati, Zeta, Charly Alberti. Then go to Cerati solo.</span></a>
+        <a href="https://open.spotify.com/artist/1QOmebWGB6FdFtW7Bo3F0W" rel="noopener"><b>Gustavo Cerati</b><span>Bocanada and Ahí vamos if you want the second layer after Soda.</span></a>
+        <a href="https://open.spotify.com/artist/1bAftSH8umNcGZ0uyV7LMg" rel="noopener"><b>Duki</b><span>Argentine trap that is no longer a “scene”: it is stadium pop. Useful for what twenty-somethings play in Palermo and the suburbs.</span></a>
+        <a href="https://open.spotify.com/artist/2x7PC78TmgqpEIjaGAZ0Oz" rel="noopener"><b>Trueno</b><span>La Boca rap, freestyle, and cumbia that leaked into the mainstream. A complement to Duki, not a clone.</span></a>
+        <a href="https://open.spotify.com/artist/2HvyR5FsU37QMqVzIbGwl7" rel="noopener"><b>Mercedes Sosa</b><span>Folklore and the voice of the north. Todo cambia, Alfonsina y el mar. If you go to Jujuy/Salta/Tucumán, this is the soundtrack of the landscape.</span></a>
+        <a href="https://open.spotify.com/artist/2FS22haX3FYbyOsUAkuYqZ" rel="noopener"><b>Los Fabulosos Cadillacs</b><span>Ska, Latin rock, Matador. The band that still fills rooms when it comes back.</span></a>
+      </div>
     </div>
 
     <div class="section">
-      <h2>🤝 One last tip</h2>
+      <h2>One last tip</h2>
       <p>
-        Argentines can be intense, direct, and full of opinions (about soccer, politics, asado, anything). But they're also warm, generous with food and time, and they'll welcome you well if you come with good vibes.
+        Argentines can be intense, direct, and full of opinions (about soccer, politics, asado, anything). But they’re also warm, generous with food and time, and they’ll welcome you well if you come with good vibes.
       </p>
       <p>
         Argentina has its quilombos — inflation, chaotic politics, bureaucracy — but it also has incredible landscapes, excellent food, and people who will go out of their way to make you feel at home.
@@ -278,5 +543,7 @@
       </p>
     </div>
   </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../map.js"></script>
 </body>
 </html>
