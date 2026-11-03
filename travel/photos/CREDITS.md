@@ -66,6 +66,15 @@ License names and authors come from Commons file metadata.
 - Source: https://commons.wikimedia.org/wiki/File%3AJamaa%20El%20Fna%2C%20Marrakesh%2C%20Morocco%2C%2020250124%201804%207017.jpg
 - Bytes: 46278
 
+## oceania.webp
+- File: Sydney Opera House - Dec 2008.jpg
+- Description: A exposure blended photo of the Sydney Opera House, as viewed from the Sydney Harbour Bridge
+- Author: Diliff
+- License: CC BY-SA 3.0
+- Credit: Own work
+- Source: https://commons.wikimedia.org/wiki/File%3ASydney_Opera_House_-_Dec_2008.jpg
+- Bytes: 41954
+
 ## singapore.webp
 - File: Puente Helix, museo ArtScience y hotel Marina Bay Sands, Marina Bay, Singapur, 2023-08-17, DD 67-69 HDR.jpg
 - Description: Helix Bridge, ArtScience Museum and Marina Bay Sands, Singapore
