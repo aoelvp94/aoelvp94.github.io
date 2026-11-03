@@ -1,5 +1,6 @@
 (function () {
   const LANG = (document.documentElement.lang || "es").toLowerCase().startsWith("en") ? "en" : "es";
+  const ROOT = document.documentElement.getAttribute("data-guide-root") || "./";
   const t = LANG === "en"
     ? {
         visited: "Visited by Aldo",
@@ -15,53 +16,52 @@
       };
 
   const PLACES = [
-    { id: "jujuy", lat: -24.1858, lon: -65.2995, labelEs: "Jujuy", labelEn: "Jujuy", fullEs: "Jujuy", fullEn: "Jujuy", dir: "right" },
-    { id: "salta", lat: -24.7829, lon: -65.4232, labelEs: "Salta", labelEn: "Salta", fullEs: "Salta", fullEn: "Salta", dir: "left" },
-    { id: "tucuman", lat: -26.8083, lon: -65.2176, labelEs: "Tucumán", labelEn: "Tucumán", fullEs: "Tucumán", fullEn: "Tucumán", dir: "left" },
-    { id: "santiago", lat: -27.7834, lon: -64.2642, labelEs: "Sgo. Estero", labelEn: "Sgo. Estero", fullEs: "Santiago del Estero", fullEn: "Santiago del Estero", dir: "right" },
-    { id: "misiones", lat: -25.5972, lon: -54.5786, labelEs: "Iguazú", labelEn: "Iguazú", fullEs: "Misiones (Iguazú)", fullEn: "Misiones (Iguazú)", dir: "right" },
-    { id: "entre-rios", lat: -31.7319, lon: -60.5238, labelEs: "E. Ríos", labelEn: "E. Ríos", fullEs: "Entre Ríos", fullEn: "Entre Ríos", dir: "top" },
-    { id: "rosario", lat: -32.9442, lon: -60.6505, labelEs: "Rosario", labelEn: "Rosario", fullEs: "Rosario", fullEn: "Rosario", dir: "right" },
-    { id: "cordoba", lat: -31.4201, lon: -64.1888, labelEs: "Córdoba", labelEn: "Córdoba", fullEs: "Córdoba", fullEn: "Córdoba", dir: "left" },
-    { id: "caba", lat: -34.6037, lon: -58.3816, labelEs: "CABA", labelEn: "CABA", fullEs: "CABA", fullEn: "CABA", dir: "left" },
-    { id: "pba", lat: -34.9214, lon: -57.9544, labelEs: "PBA", labelEn: "PBA", fullEs: "Buenos Aires (provincia)", fullEn: "Buenos Aires Province", dir: "right" },
-    { id: "mdp", lat: -38.0055, lon: -57.5426, labelEs: "MdP", labelEn: "MdP", fullEs: "Mar del Plata", fullEn: "Mar del Plata", dir: "right" },
-    { id: "mendoza", lat: -32.8895, lon: -68.8458, labelEs: "Mendoza", labelEn: "Mendoza", fullEs: "Mendoza", fullEn: "Mendoza", dir: "left" },
-    { id: "madryn", lat: -42.7692, lon: -65.0385, labelEs: "Madryn", labelEn: "Madryn", fullEs: "Puerto Madryn", fullEn: "Puerto Madryn", dir: "right" },
-    { id: "bariloche", lat: -41.1335, lon: -71.3103, labelEs: "Bariloche", labelEn: "Bariloche", fullEs: "Bariloche", fullEn: "Bariloche", dir: "left" },
-    { id: "calafate", lat: -50.3379, lon: -72.2648, labelEs: "Calafate", labelEn: "Calafate", fullEs: "El Calafate", fullEn: "El Calafate", dir: "right" },
-    { id: "ushuaia", lat: -54.8019, lon: -68.3030, labelEs: "Ushuaia", labelEn: "Ushuaia", fullEs: "Ushuaia", fullEn: "Ushuaia", dir: "right" }
+    { id: "jujuy", slug: "jujuy", lat: -24.1858, lon: -65.2995, labelEs: "Jujuy", labelEn: "Jujuy", dir: "right" },
+    { id: "salta", slug: "salta", lat: -24.7829, lon: -65.4232, labelEs: "Salta", labelEn: "Salta", dir: "left" },
+    { id: "tucuman", slug: "tucuman", lat: -26.8083, lon: -65.2176, labelEs: "Tucumán", labelEn: "Tucumán", dir: "left" },
+    { id: "santiago", slug: "santiago-del-estero", lat: -27.7834, lon: -64.2642, labelEs: "Sgo. Estero", labelEn: "Sgo. Estero", dir: "right" },
+    { id: "misiones", slug: "misiones", lat: -25.5972, lon: -54.5786, labelEs: "Iguazú", labelEn: "Iguazú", dir: "right" },
+    { id: "entre-rios", slug: "entre-rios", lat: -31.7319, lon: -60.5238, labelEs: "E. Ríos", labelEn: "E. Ríos", dir: "top" },
+    { id: "rosario", slug: "santa-fe", lat: -32.9442, lon: -60.6505, labelEs: "Rosario", labelEn: "Rosario", dir: "right" },
+    { id: "cordoba", slug: "cordoba", lat: -31.4201, lon: -64.1888, labelEs: "Córdoba", labelEn: "Córdoba", dir: "left" },
+    { id: "caba", slug: "caba", lat: -34.6037, lon: -58.3816, labelEs: "CABA", labelEn: "CABA", dir: "left" },
+    { id: "pba", slug: "buenos-aires", lat: -34.9214, lon: -57.9544, labelEs: "PBA", labelEn: "PBA", dir: "right" },
+    { id: "mdp", slug: "buenos-aires", hash: "mar-del-plata", lat: -38.0055, lon: -57.5426, labelEs: "MdP", labelEn: "MdP", dir: "right" },
+    { id: "mendoza", slug: "mendoza", lat: -32.8895, lon: -68.8458, labelEs: "Mendoza", labelEn: "Mendoza", dir: "left" },
+    { id: "madryn", slug: "chubut", lat: -42.7692, lon: -65.0385, labelEs: "Madryn", labelEn: "Madryn", dir: "right" },
+    { id: "bariloche", slug: "rio-negro", lat: -41.1335, lon: -71.3103, labelEs: "Bariloche", labelEn: "Bariloche", dir: "left" },
+    { id: "calafate", slug: "santa-cruz", lat: -50.3379, lon: -72.2648, labelEs: "Calafate", labelEn: "Calafate", dir: "right" },
+    { id: "ushuaia", slug: "tierra-del-fuego", lat: -54.8019, lon: -68.3030, labelEs: "Ushuaia", labelEn: "Ushuaia", dir: "right" }
   ];
 
   const FIRST_PLACE = {
     "02": "caba",
-    "06": "pba",
+    "06": "buenos-aires",
     "14": "cordoba",
-    "26": "madryn",
+    "26": "chubut",
     "30": "entre-rios",
     "38": "jujuy",
     "50": "mendoza",
     "54": "misiones",
-    "62": "bariloche",
+    "62": "rio-negro",
     "66": "salta",
-    "78": "calafate",
-    "82": "rosario",
-    "86": "santiago",
+    "78": "santa-cruz",
+    "82": "santa-fe",
+    "86": "santiago-del-estero",
     "90": "tucuman",
-    "94": "ushuaia"
+    "94": "tierra-del-fuego"
   };
 
-  function jumpToPlace(id) {
-    const el = document.getElementById("lugar-" + id);
-    if (!el) return;
-    document.querySelectorAll(".place-card.is-target").forEach((n) => n.classList.remove("is-target"));
-    el.classList.add("is-target");
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-    if (history.replaceState) history.replaceState(null, "", "#lugar-" + id);
-    window.setTimeout(() => el.classList.remove("is-target"), 2200);
+  function goProvince(slug, hash) {
+    if (!slug) return;
+    const url = ROOT + slug + "/" + (hash ? "#" + hash : "");
+    window.location.href = url;
   }
 
-  window.jumpToArgentinaPlace = jumpToPlace;
+  window.jumpToArgentinaPlace = function (id) {
+    const place = PLACES.find((p) => p.id === id);
+    if (place) goProvince(place.slug, place.hash);
+  };
 
   const mapEl = document.getElementById("map");
   if (!mapEl || typeof L === "undefined") return;
@@ -106,8 +106,8 @@
           shape.on("mouseout", () => shape.setStyle(baseStyle(f)));
           shape.on("click", () => {
             if (f.properties.visited) {
-              const id = FIRST_PLACE[f.properties.id];
-              if (id) jumpToPlace(id);
+              const slug = FIRST_PLACE[f.properties.id];
+              if (slug) goProvince(slug);
             }
           });
         }
@@ -132,7 +132,7 @@
           className: "pin-label",
           opacity: 1
         });
-        marker.on("click", () => jumpToPlace(place.id));
+        marker.on("click", () => goProvince(place.slug, place.hash));
       });
     })
     .catch(() => {
@@ -142,20 +142,4 @@
       p.textContent = t.click;
       mapEl.appendChild(p);
     });
-
-  document.querySelectorAll("[data-region-filter]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const region = btn.getAttribute("data-region-filter");
-      document.querySelectorAll("[data-region-filter]").forEach((b) => b.classList.toggle("active", b === btn));
-      document.querySelectorAll(".place-card").forEach((card) => {
-        const show = region === "all" || card.getAttribute("data-region") === region;
-        card.hidden = !show;
-      });
-    });
-  });
-
-  if (location.hash && location.hash.indexOf("#lugar-") === 0) {
-    const id = location.hash.slice("#lugar-".length);
-    window.setTimeout(() => jumpToPlace(id), 400);
-  }
 })();
