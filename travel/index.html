@@ -146,6 +146,7 @@
       cursor: pointer;
     }
     .filters button.active { background: #1d4ed8; color: #fff; border-color: transparent; }
+    .filters button[data-filter="soon"].active { background: #0d9488; }
     .filters button[data-filter="next"].active { background: #d97706; }
     .card {
       background: #12202c;
@@ -220,6 +221,7 @@
       letter-spacing: 0.06em;
     }
     .list > .list-label:first-child { margin-top: 0; }
+    .list-label.soon-label { color: #5eead4; }
     .continent-head {
       display: flex;
       justify-content: space-between;
@@ -234,12 +236,13 @@
       letter-spacing: -0.01em;
     }
     .continent-head span {
-      color: #8ea0b3;
+      color: #fbbf24;
       font-size: 0.7rem;
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
+    .trip-head.soon-trip { border-color: rgba(20, 184, 166, 0.4); }
     .trip-head img {
       display: block;
       width: 100%;
@@ -316,6 +319,7 @@
     .list button.feature:hover, .list button.feature.on { background: #173044; }
     .dot { width: 8px; height: 8px; border-radius: 99px; display: inline-block; margin-right: 8px; }
     .dot.visited { background: #3b82f6; }
+    .dot.soon { background: #14b8a6; }
     .dot.next { background: #f59e0b; }
     .tag { color: #8ea0b3; font-size: 0.75rem; white-space: nowrap; }
     .credits {
@@ -359,14 +363,15 @@
       </div>
       <div class="stats">
         <div><b id="visited-count">0</b><span>visited</span></div>
+        <div><b id="soon-count">0</b><span>visiting soon</span></div>
         <div><b id="next-count">0</b><span>on the list</span></div>
-        <div><b>6</b><span>continents</span></div>
       </div>
       <input id="q" class="search" type="search" placeholder="Search a country" autocomplete="off">
       <div class="filters">
         <button type="button" data-filter="all" class="active">All</button>
         <button type="button" data-filter="visited">Visited</button>
-        <button type="button" data-filter="next">Next</button>
+        <button type="button" data-filter="soon">Soon</button>
+        <button type="button" data-filter="next">List</button>
       </div>
       <div class="card" id="detail">
         <div class="card-body">
@@ -387,16 +392,15 @@
   <script>
     // Insertion order is chronological (oldest → newest). 2026 SEA is last among visited.
     const VISITED = new Set(["ARG","CAN","GTM","PAN","COL","ECU","PER","BOL","BRA","PRY","URY","CHL","DOM","BRB","CUB","CUW","ISL","NOR","FIN","DNK","SWE","ENG","NLD","BEL","DEU","POL","FRA","CHE","AUT","HUN","SVK","SVN","ESP","PRT","ITA","CZE","ROU","SRB","ALB","GRC","BIH","HRV","MNE","MKD","KOS","BGR","KOR","JPN","MYS","TUR","EGY","MAR","SGP","BHS","PRI","SLV","MEX","USA","VNM","KHM","LAO","THA","IDN","PHL"]);
+    const SOON = new Set(["LUX","ARM","GEO","AZE","ISR","JOR"]);
     const NEXT = new Set([
-      // Scheduled (Going next) — keep separate from the wishlist.
-      "LUX","ARM","GEO","AZE","ISR","JOR",
-      // Wishlist by continent. Do not treat these as visited.
+      // Wishlist by continent. Do not treat these as visited or as visiting soon.
       "ZAF","KEN","MUS","TUN","ZMB","ZWE","TZA","NAM","ETH",
-      "CHN","IND","BGD","LKA","NPL","TKM","KAZ","UZB","KGZ","TJK","ARE","OMN","BHR","QAT","KWT",
-      "LVA","LTU","EST","MDA",
-      "CRI","HND","NIC","BLZ","ABW","VIR","VGB","SXM","ATG","KNA","DMA",
+      "CHN","TWN","IND","BGD","LKA","NPL","BTN","MMR","BRN","TKM","KAZ","UZB","KGZ","TJK","ARE","OMN","BHR","QAT","KWT",
+      "LVA","LTU","EST","MDA","CYP","MLT",
+      "CRI","HND","NIC","BLZ","ABW","BES","VIR","VGB","SXM","ATG","KNA","DMA",
       "VEN",
-      "AUS","NZL"
+      "AUS","NZL","PNG"
     ]);
     const WHEN = {
       ARG: "2020+",
@@ -503,16 +507,18 @@
       { id: "sgp", title: "Singapore", kicker: "Apr 2025", photo: "singapore", alt: "Helix Bridge and Marina Bay Sands in Singapore at night", codes: ["SGP"] },
       { id: "summer26", title: "Caribbean & North America", kicker: "Jul–Aug 2026", photo: "bahamas", alt: "Ocean Cay marine reserve in the Bahamas", codes: ["BHS","PRI","SLV","MEX","USA"] },
       { id: "sea26", title: "Southeast Asia", kicker: "Sep–Oct 2026", photo: "vietnam", alt: "Limestone karsts in Ha Long Bay, Vietnam", codes: ["VNM","KHM","LAO","THA","IDN","PHL"] },
-      { id: "next", title: "Going next", kicker: "Nov 2026+", photo: "luxembourg", alt: "The Grund district of Luxembourg City", codes: ["LUX","ARM","GEO","AZE","ISR","JOR"] },
+      { id: "next", title: "Going next", kicker: "Visiting soon", photo: "luxembourg", alt: "The Grund district of Luxembourg City", codes: ["LUX","ARM","GEO","AZE","ISR","JOR"] },
       // Wishlist grouped by continent. Antarctica (ATA) is not in countries.js.
       { id: "bucket-africa", title: "Africa", kicker: "Want to visit", photo: "med", alt: "Jemaa el-Fnaa square in Marrakesh", codes: ["ZAF","KEN","MUS","TUN","ZMB","ZWE","TZA","NAM","ETH"] },
-      { id: "bucket-asia", title: "Asia", kicker: "Want to visit", photo: "east-asia", alt: "Seoul skyline at night", codes: ["CHN","IND","BGD","LKA","NPL","TKM","KAZ","UZB","KGZ","TJK","ARE","OMN","BHR","QAT","KWT"] },
-      { id: "bucket-europe", title: "Europe", kicker: "Want to visit", photo: "europe", alt: "Geirangerfjord in Norway", codes: ["LVA","LTU","EST","MDA"] },
-      { id: "bucket-north-america", title: "North America", kicker: "Want to visit", photo: "caribbean", alt: "Beach on the coast of Barbados", codes: ["CRI","HND","NIC","BLZ","ABW","VIR","VGB","SXM","ATG","KNA","DMA"] },
+      { id: "bucket-asia", title: "Asia", kicker: "Want to visit", photo: "east-asia", alt: "Seoul skyline at night", codes: ["CHN","TWN","IND","BGD","LKA","NPL","BTN","MMR","BRN","TKM","KAZ","UZB","KGZ","TJK","ARE","OMN","BHR","QAT","KWT"] },
+      { id: "bucket-europe", title: "Europe", kicker: "Want to visit", photo: "europe", alt: "Geirangerfjord in Norway", codes: ["LVA","LTU","EST","MDA","CYP","MLT"] },
+      { id: "bucket-north-america", title: "North America", kicker: "Want to visit", photo: "caribbean", alt: "Beach on the coast of Barbados", codes: ["CRI","HND","NIC","BLZ","ABW","BES","VIR","VGB","SXM","ATG","KNA","DMA"] },
       { id: "bucket-south-america", title: "South America", kicker: "Want to visit", photo: "americas", alt: "Machu Picchu in the Andes, Peru", codes: ["VEN"] },
-      { id: "bucket-oceania", title: "Oceania", kicker: "Want to visit", photo: "oceania", alt: "Sydney Opera House on the harbour", codes: ["AUS","NZL"] }
+      { id: "bucket-oceania", title: "Oceania", kicker: "Want to visit", photo: "oceania", alt: "Sydney Opera House on the harbour", codes: ["AUS","NZL","PNG"] }
     ];
-    const NEXT_TRIPS = new Set(TRIPS.filter((trip) => trip.id === "next" || trip.id.startsWith("bucket-")).map((trip) => trip.id));
+    const SOON_TRIPS = new Set(["next"]);
+    const BUCKET_TRIPS = new Set(TRIPS.filter((trip) => trip.id.startsWith("bucket-")).map((trip) => trip.id));
+    const NEXT_TRIPS = new Set([...SOON_TRIPS, ...BUCKET_TRIPS]);
     const DOTS = [
       { a3: "BRB", name: "Barbados", lat: 13.19, lon: -59.54 },
       { a3: "CUW", name: "Curaçao", lat: 12.2, lon: -68.97 },
@@ -521,16 +527,18 @@
       { a3: "MUS", name: "Mauritius", lat: -20.3, lon: 57.55 },
       { a3: "BHR", name: "Bahrain", lat: 26.03, lon: 50.55 },
       { a3: "ABW", name: "Aruba", lat: 12.52, lon: -69.97 },
+      { a3: "BES", name: "Bonaire", lat: 12.20, lon: -68.26 },
       { a3: "VIR", name: "United States Virgin Islands", lat: 18.34, lon: -64.93 },
       { a3: "VGB", name: "British Virgin Islands", lat: 18.43, lon: -64.62 },
       { a3: "SXM", name: "Sint Maarten", lat: 18.04, lon: -63.06 },
       { a3: "ATG", name: "Antigua and Barbuda", lat: 17.12, lon: -61.85 },
       { a3: "KNA", name: "Saint Kitts and Nevis", lat: 17.33, lon: -62.75 },
-      { a3: "DMA", name: "Dominica", lat: 15.42, lon: -61.37 }
+      { a3: "DMA", name: "Dominica", lat: 15.42, lon: -61.37 },
+      { a3: "MLT", name: "Malta", lat: 35.94, lon: 14.38 }
     ];
 
-    const statusOf = (a3) => VISITED.has(a3) ? "visited" : NEXT.has(a3) ? "next" : "other";
-    const labelOf = (s) => s === "visited" ? "Visited" : s === "next" ? "On the list" : "Not on this trip";
+    const statusOf = (a3) => VISITED.has(a3) ? "visited" : SOON.has(a3) ? "soon" : NEXT.has(a3) ? "next" : "other";
+    const labelOf = (s) => s === "visited" ? "Visited" : s === "soon" ? "Visiting soon" : s === "next" ? "On the list" : "Not on this trip";
     const esc = (value) => String(value).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
     const asPhotos = (value) => {
       if (!value) return [];
@@ -547,6 +555,7 @@
     const baseStyle = (a3) => {
       const s = statusOf(a3);
       if (s === "visited") return { color: "#1d4ed8", weight: 0.7, fillColor: "#3b82f6", fillOpacity: 0.92 };
+      if (s === "soon") return { color: "#0f766e", weight: 0.7, fillColor: "#14b8a6", fillOpacity: 0.95 };
       if (s === "next") return { color: "#b45309", weight: 0.7, fillColor: "#f59e0b", fillOpacity: 0.95 };
       return { color: "#243246", weight: 0.4, fillColor: "#1c2b3a", fillOpacity: 0.9 };
     };
@@ -588,7 +597,7 @@
         radius: 6,
         color: "#fff",
         weight: 2,
-        fillColor: s === "next" ? "#f59e0b" : "#3b82f6",
+        fillColor: s === "soon" ? "#14b8a6" : s === "next" ? "#f59e0b" : "#3b82f6",
         fillOpacity: 1
       }).addTo(map);
       marker.bindTooltip(`${dot.name} · ${labelOf(s)}`, { sticky: true, className: "tip", opacity: 1 });
@@ -599,7 +608,7 @@
     let filter = "all";
     const detail = document.getElementById("detail");
     const list = document.getElementById("list");
-    const tripOrder = [...VISITED, ...NEXT];
+    const tripOrder = [...VISITED, ...SOON, ...NEXT];
     const orderOf = Object.fromEntries(tripOrder.map((a3, i) => [a3, i]));
     const catalog = window.COUNTRIES.features
       .map((f) => ({ a3: f.properties.a3, name: f.properties.name, status: statusOf(f.properties.a3) }))
@@ -607,6 +616,7 @@
       .sort((a, b) => (orderOf[a.a3] ?? 999) - (orderOf[b.a3] ?? 999));
 
     document.getElementById("visited-count").textContent = catalog.filter((c) => c.status === "visited").length;
+    document.getElementById("soon-count").textContent = catalog.filter((c) => c.status === "soon").length;
     document.getElementById("next-count").textContent = catalog.filter((c) => c.status === "next").length;
 
     function imgTag(photo, className, eager, height) {
@@ -624,12 +634,22 @@
       const keepScroll = list.scrollTop;
       list.innerHTML = "";
       let firstImage = true;
+      let wroteSoonLabel = false;
       let wroteBucketLabel = false;
       TRIPS.forEach((trip) => {
         if (filter === "visited" && NEXT_TRIPS.has(trip.id)) return;
-        if (filter === "next" && !NEXT_TRIPS.has(trip.id)) return;
+        if (filter === "soon" && !SOON_TRIPS.has(trip.id)) return;
+        if (filter === "next" && !BUCKET_TRIPS.has(trip.id)) return;
         const rows = catalog.filter((c) => trip.codes.includes(c.a3) && c.name.toLowerCase().includes(q));
         if (!rows.length) return;
+
+        if (trip.id === "next" && !wroteSoonLabel) {
+          wroteSoonLabel = true;
+          const label = document.createElement("div");
+          label.className = "list-label soon-label";
+          label.textContent = "Visiting soon";
+          list.appendChild(label);
+        }
 
         if (trip.id.startsWith("bucket-") && !wroteBucketLabel) {
           wroteBucketLabel = true;
@@ -644,7 +664,7 @@
           head.className = "continent-head";
           head.innerHTML = `<strong>${esc(trip.title)}</strong><span>${esc(trip.kicker)}</span>`;
         } else {
-          head.className = "trip-head";
+          head.className = "trip-head" + (trip.id === "next" ? " soon-trip" : "");
           head.innerHTML = `${imgTag({ src: `photos/${trip.photo}.webp`, alt: trip.alt }, "", firstImage, 78)}<div class="lbl"><strong>${esc(trip.title)}</strong><span>${esc(trip.kicker)}</span></div>`;
           firstImage = false;
         }
@@ -681,7 +701,7 @@
       const s = statusOf(a3);
       const photos = photosOf(a3);
       const when = WHEN[a3] ? ` · ${WHEN[a3]}` : "";
-      const blurb = s === "visited" ? "Already been here." : s === "next" ? (WHEN[a3] ? "On the list for the next stretch." : "On the bucket list.") : "Not part of this map yet.";
+      const blurb = s === "visited" ? "Already been here." : s === "soon" ? (WHEN[a3] ? "Visiting on the next stretch." : "Visiting soon.") : s === "next" ? "On the bucket list." : "Not part of this map yet.";
       let media = "";
       if (photos.length > 1) {
         const thumbs = photos.map((p, i) =>
