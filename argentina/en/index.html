@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-guide-root="./">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Argentina — Aldo Escobar’s guide</title>
-  <meta name="description" content="A practical, navigable Argentina guide: visited-places map, transport, food, money and culture, in first person.">
+  <meta name="description" content="A practical Argentina guide: province map, one page per place visited, transport, food and culture. First person.">
   <link rel="alternate" hreflang="es" href="https://aoelvp94.github.io/argentina/">
   <link rel="alternate" hreflang="en" href="https://aoelvp94.github.io/argentina/en/">
   <link rel="alternate" hreflang="x-default" href="https://aoelvp94.github.io/argentina/">
@@ -27,7 +27,7 @@
   <nav class="toc" aria-label="On this page">
     <div class="toc-inner">
       <a href="#mapa">Map</a>
-      <a href="#lugares">Places</a>
+      <a href="#provincias">Provinces</a>
       <a href="#transporte">Transport</a>
       <a href="#tiempos">Times</a>
       <a href="#micros">Buses</a>
@@ -45,7 +45,7 @@
   <main>
     <h1>A guide to enjoying Argentina</h1>
     <p class="intro">
-      Practical tips for friends and visitors, from an Argentine who spent years traveling the world and came back to appreciate what’s good about his country. This is not a formal tourist guide — it’s what I’d tell someone I know who’s coming to visit, now with a map, <a href="#tiempos">real travel times from Buenos Aires</a>, <a href="#hacks">hack trips</a>, order-of-magnitude prices, and cards for the places <strong>I actually went to</strong>.
+      Practical tips for friends and visitors, from an Argentine who spent years traveling the world and came back to appreciate what’s good about his country. This is not a formal tourist guide — it’s what I’d tell someone I know who’s coming to visit, now with a map, <a href="#tiempos">real travel times from Buenos Aires</a>, <a href="#hacks">hack trips</a>, and <strong>one page per province I actually went to</strong>.
     </p>
     <p class="meta-line">
       <span>Built for the “so, Argentina?” text</span>
@@ -55,7 +55,7 @@
     <div class="section" id="mapa">
       <h2>Map of where I’ve been</h2>
       <p>
-        Blue provinces are ones I visited. Dots are specific cities or areas. Tap a pin (or a painted province) to jump to its card. Dim provinces are “not yet”: I don’t invent trips. Watch the scale: Retiro to Rosario is 3–4 h and the accent already changed; to Ushuaia, ~3 h 30 by air or two days overland.
+        Blue provinces are ones I visited. Dots are specific cities or areas. Tap a pin (or a painted province) to open its page. Dim provinces are “not yet”: I don’t invent trips. Watch the scale: Retiro to Rosario is 3–4 h and the accent already changed; to Ushuaia, ~3 h 30 by air or two days overland.
       </p>
       <div class="map-wrap">
         <div id="map" role="application" aria-label="Interactive map of Argentina"></div>
@@ -67,231 +67,147 @@
       <p class="unvisited">Not yet: Catamarca, Chaco, Corrientes, Formosa, La Pampa, La Rioja, Neuquén, San Juan, San Luis. (Bariloche is marked in Río Negro; Villa La Angostura would be Neuquén.)</p>
     </div>
 
-    <div class="section" id="lugares">
-      <h2>Place cards</h2>
-      <p>Vibe, what to do, what to eat, how to get there, and named tours only when the operator is well-known and checkable. Otherwise: the type of outing + look at this season’s reviews. Each card has typical time <strong>from Buenos Aires</strong> (Retiro / AEP–EZE): “close” here can still be half a day.</p>
-      <div class="filters" role="group" aria-label="Filter by region">
-      <button type="button" data-region-filter="all" class="active">All</button>
-      <button type="button" data-region-filter="norte">North</button>
-      <button type="button" data-region-filter="litoral">Litoral</button>
-      <button type="button" data-region-filter="centro">Centre</button>
-      <button type="button" data-region-filter="amba">AMBA / coast</button>
-      <button type="button" data-region-filter="cuyo">Cuyo</button>
-      <button type="button" data-region-filter="patagonia">Patagonia</button>
+        <div class="section" id="provincias">
+      <h2>Provinces I actually went to</h2>
+      <p>One page each — seasons, how to get there, food, and tours with public prices. The map pins jump here. National transport, long-distance buses, money, and the hack trips that cross borders stay on this hub.</p>
+      <div class="prov-grid">
+      <a class="prov-card" href="jujuy/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Jujuy</h3>
+        <p class="where">Northwest · Quebrada de Humahuaca</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~20–22 h · overnight</span> <span class="leg air">Flight ~2 h</span></p>
+        <p>Colored hills, Andean towns, and a slower tempo than Buenos Aires.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="salta/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Salta</h3>
+        <p class="where">Northwest · Calchaquí valleys</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~18–20 h · overnight</span> <span class="leg air">Flight ~2 h</span></p>
+        <p>“Salta la linda”: colonial centre, hills close by, and a base for Cafayate.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="tucuman/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Tucumán</h3>
+        <p class="where">Northwest · smallest province, one of the densest</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~14–16 h · overnight</span> <span class="leg air">Flight ~2 h</span></p>
+        <p>Heat, 1816, and a sandwich culture that is a local religion.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="santiago-del-estero/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Santiago del Estero</h3>
+        <p class="where">Northwest · folklore and hot springs</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~12–14 h · overnight</span> <span class="leg air">Flight ~1 h 45</span></p>
+        <p>Less of an international circuit; more chacarera, siesta, and Termas de Río Hondo.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="misiones/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Misiones</h3>
+        <p class="where">Litoral · Iguazú and jungle</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~16–20 h · overnight</span> <span class="leg air">Flight ~1 h 45–2 h</span></p>
+        <p>Jungle, humidity, and the white noise of the falls. Puerto Iguazú is the base.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="entre-rios/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Entre Ríos</h3>
+        <p class="where">Litoral · rivers, hot springs, carnival</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~3–6 h</span> <span class="leg local">Depends on the town</span></p>
+        <p>Long-weekend Argentina: hot springs, carnival, and the corridor to Uruguay.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="santa-fe/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Santa Fe</h3>
+        <p class="where">Litoral / centre · Rosario</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~3–4 h</span> <span class="leg air">Flight ~1 h</span></p>
+        <p>Rosario: river, flags, the carlito sandwich, and the short hop that still feels like a city.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="cordoba/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Córdoba</h3>
+        <p class="where">Sierras · university city and fernet</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~9–11 h · often overnight</span> <span class="leg air">Flight ~1.5 h</span></p>
+        <p>A living city; the weekend leaves for Carlos Paz or the valley.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="caba/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>CABA</h3>
+        <p class="where">City of Buenos Aires</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg local">You are here</span> <span class="leg air">AEP 20–40 min · EZE 45–75 min</span></p>
+        <p>Cafés, protests, tango, and an energy that exhausts and charms. It is not “Argentina”: it is a layer.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="buenos-aires/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Buenos Aires Province</h3>
+        <p class="where">Province · hinterland, Tigre, coast</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">1–6 h from CABA</span> <span class="leg local">Train / bus / car</span></p>
+        <p>Not only the coast: Tandil, Tigre, La Plata. Mar del Plata has its own summer logic.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="mendoza/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Mendoza</h3>
+        <p class="where">Cuyo · wine and the Andes</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~14–16 h · overnight</span> <span class="leg air">Flight ~2 h</span></p>
+        <p>Malbec, high mountains, and the Santiago crossing when the pass is open.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="chubut/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Chubut</h3>
+        <p class="where">Atlantic Patagonia · Puerto Madryn</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~18–20 h · overnight</span> <span class="leg air">Flight ~2 h + 1 h transfer</span></p>
+        <p>Cold sea, wind, and wildlife. Madryn is the base; Península Valdés is the reason.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="rio-negro/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Río Negro</h3>
+        <p class="where">Lake Patagonia · Bariloche</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~20–24 h · overnight</span> <span class="leg air">Flight ~2 h</span></p>
+        <p>Lakes, forest, chocolate, and graduating-class crowds in season. Villa La Angostura would be Neuquén: I did not mark it.</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="santa-cruz/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Santa Cruz</h3>
+        <p class="where">Ice Patagonia · El Calafate</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg air">Flight ~3 h</span> <span class="leg warn">Bus: no (2+ days)</span></p>
+        <p>Base town for Perito Moreno. El Chaltén is another trip (I did not mark it as visited).</p>
+        <span class="more">Open the page →</span>
+      </a>
+      <a class="prov-card" href="tierra-del-fuego/">
+        <span class="badge">Visited by Aldo</span>
+        <h3>Tierra del Fuego</h3>
+        <p class="where">The end of the world · Ushuaia</p>
+        <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg air">Flight ~3 h 30</span> <span class="leg warn">Overland: 2 days</span></p>
+        <p>A mountain stuck in the sea, and wind that rearranges your hair.</p>
+        <span class="more">Open the page →</span>
+      </a>
       </div>
-      <div class="place-grid">
-    <article class="place-card" id="lugar-jujuy" data-region="norte">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Jujuy</h3>
-      <p class="where">Jujuy Province · Northwest</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~20–22 h · overnight</span> <span class="leg air">Flight ~2 h</span></p>
-      <p>The north flips the script: colored hills, Andean towns, and a slower tempo than Buenos Aires. The Quebrada de Humahuaca is UNESCO-listed and it shows.</p>
-      <dl>
-        <dt>What to do</dt><dd>Purmamarca and Cerro de los Siete Colores, Tilcara, Humahuaca, Salinas Grandes if the weather plays along. Give yourself time: the altitude is real.</dd>
-        <dt>Eat</dt><dd>Humita, tamales, Jujuy-style empanadas, locro, llama on some menus. Api with pastelitos if you hit a market day or winter.</dd>
-        <dt>How to get there</dt><dd>Fly to JUJ (Horacio Guzmán) from AEP/EZE, or a long-distance bus from Retiro (~20–22 h). Plenty of people combine Salta + Jujuy by car or tour. From Purmamarca the bus to San Pedro de Atacama runs the <a href="#hacks">Paso de Jama</a>.</dd>
-        <dt>Tours</dt><dd>The classic is Quebrada + salt flats (full day). Salta operators such as <a href="https://movitrack.com.ar/" rel="noopener">Movitrack</a> cover the north; for a Jujuy-based guide, check recent TripAdvisor/Reddit threads before sending a deposit.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-salta" data-region="norte">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Salta</h3>
-      <p class="where">Salta Province · Northwest</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~18–20 h · overnight</span> <span class="leg air">Flight ~2 h</span></p>
-      <p>“Salta la linda” is not empty marketing: colonial centre, hills close by, and a serious table. A comfortable base for the Calchaquí valleys and Cafayate.</p>
-      <dl>
-        <dt>What to do</dt><dd>The centre and Cerro San Bernardo, Cachi or Cafayate via Ruta 40/68, torrontés at wineries, and the High Mountain Archaeology Museum if Inca history pulls you in.</dd>
-        <dt>Eat</dt><dd>Salta empanadas (juicy, often baked), locro, tamales, goat. A downtown classic is <strong>Doña Salta</strong> (empanadas and regional food; queues are normal). A folklore peña at night if that’s your thing.</dd>
-        <dt>How to get there</dt><dd>Fly to SLA (~2 h from Buenos Aires) or take the bus (~18–20 h). Car or tour for Cafayate/Cachi: distances lie.</dd>
-        <dt>Tours</dt><dd><a href="https://movitrack.com.ar/" rel="noopener">Movitrack</a> runs 4×4 safaris and valley days. The Tren a las Nubes is another famous postcard (check dates: it does not run daily). For Cafayate wineries, going straight to the bodega is often enough.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-tucuman" data-region="norte">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Tucumán</h3>
-      <p class="where">Tucumán Province · Northwest</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~14–16 h · overnight</span> <span class="leg air">Flight ~2 h</span></p>
-      <p>The smallest province and one of the densest: heat, independence-era history, and a sandwich culture that is local religion.</p>
-      <dl>
-        <dt>What to do</dt><dd>Casa Histórica (independence, 1816), downtown San Miguel, Tafí del Valle if you have an extra day, Quilmes Ruins to the west.</dd>
-        <dt>Eat</dt><dd>The <strong>sánguche de milanesa</strong> (the Tucumán classic, on sanguchero bread) and <strong>Tucumán empanadas</strong>. That, before any “auteur” restaurant. Look for neighborhood sandwich shops, not a gourmet temple.</dd>
-        <dt>How to get there</dt><dd>Fly to TUC (~2 h) or bus (~14–16 h) from Buenos Aires. Tafí is about 2 h by car on mountain roads.</dd>
-        <dt>Tours</dt><dd>Tafí del Valle and Quilmes work with a local agency or a rental car. I will not pin you to one operator: check recent reviews and that the vehicle can handle the climb.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-santiago" data-region="norte">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Santiago del Estero</h3>
-      <p class="where">Santiago del Estero Province · Northwest</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~12–14 h · overnight</span> <span class="leg air">Flight ~1 h 45</span></p>
-      <p>Folklore lives here. Less of an international tourist circuit, more chacarera, long siestas, and hot springs nearby.</p>
-      <dl>
-        <dt>What to do</dt><dd>Downtown Santiago, Termas de Río Hondo (a short hop), and if you care about music, ask for peñas. Do not expect Salta-level tourist infrastructure.</dd>
-        <dt>Eat</dt><dd>Empanadas, goat, locro, mazamorra. Stew-and-Sunday food.</dd>
-        <dt>How to get there</dt><dd>Fly to SDE (~1 h 45) or an overnight bus from Buenos Aires (~12–14 h). Easy to chain with Tucumán.</dd>
-        <dt>Tours</dt><dd>The hot springs you can sort on the ground. For the rest, a local pointer beats a packaged tour: there is no must-book operator I can name with a straight face.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-misiones" data-region="litoral">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Misiones (Iguazú)</h3>
-      <p class="where">Misiones Province · Northeast</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~16–20 h · overnight</span> <span class="leg air">Flight ~1 h 45–2 h</span></p>
-      <p>Jungle, humidity, and the white noise of the falls. Puerto Iguazú is the base; the park is the show.</p>
-      <dl>
-        <dt>What to do</dt><dd>Iguazú National Park (upper and lower circuits plus Garganta del Diablo). Cross to Foz do Iguaçu if you have time and papers. Bug spray, water, shoes that can get wet.</dd>
-        <dt>Eat</dt><dd>Litoral plus Brazilian/Paraguayan influence: river fish (surubí, dorado when available), cassava, chipá. Park food is pricey — bring snacks.</dd>
-        <dt>How to get there</dt><dd>A flight to IGR (~1 h 45–2 h from Buenos Aires) usually beats the overnight bus (~16–20 h). Posadas is closer (~12–15 h by bus). Airport transfers run to town and the park.</dd>
-        <dt>Tours</dt><dd>The walkways are self-guided. For a boat under the falls, <a href="https://iguazujungle.com/" rel="noopener">Iguazú Jungle</a> runs Gran Aventura and other park boat trips (park ticket sold separately). Check times: the river decides.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-entre-rios" data-region="litoral">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Entre Ríos</h3>
-      <p class="where">Entre Ríos Province · Litoral</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~3–6 h</span> <span class="leg local">Depends on the town</span></p>
-      <p>Rivers, islands, carnival, and hot springs. Long-weekend Argentina more than an international postcard.</p>
-      <dl>
-        <dt>What to do</dt><dd>Hot springs (Federación, Colón, Villa Elisa), Gualeguaychú carnival in season, Palacio San José near Concepción del Uruguay, fishing and small boats on the river.</dd>
-        <dt>Eat</dt><dd>River fish, citrus, local salami and cheese. Less guidebook-asado, more family table.</dd>
-        <dt>How to get there</dt><dd>Bus from Retiro (about 3–6 h depending on the town) or drive RN14. Occasional flights to Paraná (PRA).</dd>
-        <dt>Tours</dt><dd>Hot springs and carnival you handle on the ground. For islands or fishing, hire a local boat the day before and ask your lodging for names.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-rosario" data-region="centro">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Rosario</h3>
-      <p class="where">Santa Fe · river / central</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~3–4 h</span> <span class="leg air">Flight ~1 h</span></p>
-      <p>A river city with flags and a friendly swagger. Less of a tourist shop window than CABA, more human scale and waterfront.</p>
-      <dl>
-        <dt>What to do</dt><dd>National Flag Memorial, the costanera, islands across the water, cultural centres. If there is a football derby, the mood shifts.</dd>
-        <dt>Eat</dt><dd>The <strong>carlito</strong> (toasted sandwich of crustless bread, ham, cheese, butter, and ketchup; local heritage — it started in bars like Cachito). Also river fish and ice cream.</dd>
-        <dt>How to get there</dt><dd>Bus from Retiro (~3–4 h), the train to Rosario Norte when it is running, or a flight to ROS (~1 h). The most logical short hop from Buenos Aires.</dd>
-        <dt>Tours</dt><dd>Walk the city. Island boats leave from the waterfront; ask at the pier and check the river conditions.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-cordoba" data-region="centro">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Córdoba</h3>
-      <p class="where">Córdoba Province · Sierras</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~9–11 h · often overnight</span> <span class="leg air">Flight ~1.5 h</span></p>
-      <p>University city, cuarteto music, fernet and Coke, hills a short drive away. The city is lively; weekends leak out to Carlos Paz or the valley.</p>
-      <dl>
-        <dt>What to do</dt><dd>Historic centre and the Jesuit Block (UNESCO), Sierras Chicas or Calamuchita, Camino de las Altas Cumbres if you drive calmly.</dd>
-        <dt>Eat</dt><dd>Fernet and Coke (yes, it is cultural), locro, Córdoba empanadas, asado. In the hills, goat and inn food.</dd>
-        <dt>How to get there</dt><dd>Fly to COR (a real domestic hub, ~1 h 20) or bus (~9–11 h) from Retiro. A car pays off if you will be in the sierras for several days.</dd>
-        <dt>Tours</dt><dd>Jesuit estancias work as self-guided visits. For the hills, a rental car or a tourist van; no single operator owns the market.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-caba" data-region="amba">
-      <span class="badge">Visited by Aldo</span>
-      <h3>CABA</h3>
-      <p class="where">City of Buenos Aires</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg local">You’re here</span> <span class="leg air">AEP 20–40 min · EZE 45–75 min</span></p>
-      <p>The capital is huge and contradictory: cafés, protests, tango, malbec, and an energy that wears you out and wins you over. It is not “Argentina”: it is one layer.</p>
-      <dl>
-        <dt>What to do</dt><dd>Palermo (parks, bars), San Telmo (Sunday market), Recoleta (cemetery, museums), Puerto Madero for the photo, La Boca briefly with your bag in front. Subte + walking.</dd>
-        <dt>Eat</dt><dd>Parrilla (famous <strong>Don Julio</strong> in Palermo — book), bodegón (<strong>El Preferido de Palermo</strong>), pan pizza at <strong>Güerrín</strong>, historic coffee at <strong>Café Tortoni</strong> and <strong>Los 36 Billares</strong>, choripán at markets (La Choripanería in Mercado de San Telmo is a frequently cited classic). Dulce de leche ice cream at any serious heladería.</dd>
-        <dt>How to get there</dt><dd>EZE (international) or AEP (domestic and some regional). Tienda León / Uber downtown. Inside the city: SUBE, subway, buses, DiDi/Cabify/Uber.</dd>
-        <dt>Tours</dt><dd>Free walking tours at Plaza de Mayo/San Telmo (tip-based). Tango in a real milonga if you are game, not only a dinner show. For the Tigre delta, train + boat. Check current milongas on forums: they move.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-pba" data-region="amba">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Buenos Aires Province</h3>
-      <p class="where">Interior of Buenos Aires Province</p>
-      <p class="from-ba"><span class="from-ba-k">From CABA</span> <span class="leg bus">1–6 h</span> <span class="leg local">Train / bus / car by town</span></p>
-      <p>The province is not only the coast: towns, farmland, Tandil, small hills, and a more almacén scale of Argentina. Mar del Plata has its own card.</p>
-      <dl>
-        <dt>What to do</dt><dd>La Plata if you care about architecture and the natural-history museum, Tandil or Sierra de la Ventana for air, weekend estancias. Greater Buenos Aires is a different movie: go with a local.</dd>
-        <dt>Eat</dt><dd>Tandil cheese and salami, town bakeries, countryside asado. Less Instagram, more counter.</dd>
-        <dt>How to get there</dt><dd>Train, bus, or car from CABA. Map distances look short and then the highway stretches them.</dd>
-        <dt>Tours</dt><dd>Book estancias directly. You do not need a tour bus for the nearby interior.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-mdp" data-region="amba">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Mar del Plata</h3>
-      <p class="where">Atlantic coast · Buenos Aires Province</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~5–6 h</span> <span class="leg air">Flight ~1 h</span></p>
-      <p>The mass beach resort of Argentines. In summer it is a beautiful mess; off season, harbour and wind.</p>
-      <dl>
-        <dt>What to do</dt><dd>The rambla and beaches (Playa Grande, Bristol), the port and sea lions, Barrio Los Troncos, a siesta because the sun is no joke.</dd>
-        <dt>Eat</dt><dd>Seafood and milanesa napolitana with geological portions of fries. Fries and churros on the rambla. The port for simpler fish.</dd>
-        <dt>How to get there</dt><dd>Bus from Retiro (~5–6 h), train from Constitución when it is running, or a flight to MDQ (~1 h). January buses sell out: book.</dd>
-        <dt>Tours</dt><dd>Walk and taxi. Short harbour hops if you want; you do not need an expensive package.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-mendoza" data-region="cuyo">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Mendoza</h3>
-      <p class="where">Mendoza Province · Cuyo</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~14–16 h · overnight</span> <span class="leg air">Flight ~2 h</span></p>
-      <p>Wine and mountains. The city is flat and tree-lined; the Andes are the backdrop. If you like malbec, it is a required stop.</p>
-      <dl>
-        <dt>What to do</dt><dd>Wineries in Luján de Cuyo, Maipú, or Valle de Uco; Uspallata and high mountain roads; Aconcagua from the park (looking counts; you do not have to climb).</dd>
-        <dt>Eat</dt><dd>Asado, Mendoza empanadas, goat, olives. Toast with malbec, torrontés if you just came from the north, or a high-altitude white in Uco.</dd>
-        <dt>How to get there</dt><dd>Fly to MDZ (~1 h 50) or bus (~14–16 h). Car or bike in Maipú; for Valle de Uco use a tour or a driver: wine does not drive.</dd>
-        <dt>Tours</dt><dd><a href="https://troutandwine.com/" rel="noopener">Trout &amp; Wine</a> is a known small-group wine-tour operator (English/Spanish). You can also book bodegas directly. In Maipú, bike + a cab back is the cheap classic.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-madryn" data-region="patagonia">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Puerto Madryn</h3>
-      <p class="where">Chubut · Atlantic Patagonia</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~18–20 h · overnight</span> <span class="leg air">Flight ~2 h + 1 h transfer</span></p>
-      <p>Cold sea, wind, and wildlife. The town is a base; Península Valdés is the reason.</p>
-      <dl>
-        <dt>What to do</dt><dd>Southern right whale watching (June–December) from Puerto Pirámides, penguins in season, elephant seals, Gaiman if you want Welsh tea.</dd>
-        <dt>Eat</dt><dd>Lamb, hake, king crab when it is in, Welsh cake in Gaiman. Seafood here is fresher than fancy.</dd>
-        <dt>How to get there</dt><dd>Fly to REL (Trelew, ~2 h) + transfer (~1 h) or an overnight bus from Buenos Aires (~18–20 h). A car helps on the peninsula.</dd>
-        <dt>Tours</dt><dd><a href="https://www.hydrosport.ar/" rel="noopener">Hydro Sport</a> runs whale watching from Pirámides and dolphin trips from Madryn (seasonal; sales sometimes close). Other boats work the pier: compare, and do not chase the animals. You can also drive Península Valdés or take a land tour.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-bariloche" data-region="patagonia">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Bariloche</h3>
-      <p class="where">Río Negro · lake Patagonia</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg bus">Bus ~20–24 h · overnight</span> <span class="leg air">Flight ~2 h</span></p>
-      <p>Lakes, forest, chocolate, and a town that fills with school leavers in high season. The landscape forgives the rest.</p>
-      <dl>
-        <dt>What to do</dt><dd>Circuito Chico, Cerro Catedral (hiking or skiing), a boat on Nahuel Huapi, the Seven Lakes road toward Villa La Angostura if you have a car (Neuquén is another province: I marked Bariloche).</dd>
-        <dt>Eat</dt><dd>Chocolate (Rapa Nui at Mitre and Villegas is a shop-window classic), trout, lamb, craft beer. A chocolate-thick tea after a hill is part of the ritual.</dd>
-        <dt>How to get there</dt><dd>Fly to BRC (~2 h, lots of frequencies) or a ~20–24 h bus. A car for the loops; in winter, snow chains and patience.</dd>
-        <dt>Tours</dt><dd>Circuito Chico works by car, bike, or tourist bus. Cerro Catedral has official mountain lifts. For boats to the arrayanes forest or other islands, buy at the pier and watch the weather. I will not invent a single “best” lake operator: the forecast decides.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-calafate" data-region="patagonia">
-      <span class="badge">Visited by Aldo</span>
-      <h3>El Calafate</h3>
-      <p class="where">Santa Cruz · ice Patagonia</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg air">Flight ~3 h</span> <span class="leg warn">Bus: no (2+ days)</span></p>
-      <p>A base town for Perito Moreno. The glacier is the reason; the town is wind, souvenirs, and lamb.</p>
-      <dl>
-        <dt>What to do</dt><dd>Glacier boardwalks (non-negotiable), a boat along the wall, ice trekking if you are fit. El Chaltén is a separate trip (I have not marked it as visited here).</dd>
-        <dt>Eat</dt><dd>Patagonian lamb, calafate berry in jam or ice cream, trout. Mountain-hut portions, not tasting-menu ones.</dd>
-        <dt>How to get there</dt><dd>Fly to FTE (~3 h). There is no reasonable direct bus from Buenos Aires: if you do not fly, it is a multi-leg odyssey.</dd>
-        <dt>Tours</dt><dd><a href="https://hieloyaventura.com/" rel="noopener">Hielo y Aventura</a> is the park concessionaire: Safari Náutico, Minitrekking, and other glacier-side trips. The boardwalks are self-guided plus the park ticket. Pack a jacket even in January.</dd>
-      </dl>
-    </article>
-    <article class="place-card" id="lugar-ushuaia" data-region="patagonia">
-      <span class="badge">Visited by Aldo</span>
-      <h3>Ushuaia</h3>
-      <p class="where">Tierra del Fuego · the end of the world</p>
-      <p class="from-ba"><span class="from-ba-k">From BA</span> <span class="leg air">Flight ~3 h 30</span> <span class="leg warn">Overland: 2 days</span></p>
-      <p>Mountains dropped into the sea, wind that restyles your hair, and a town that lives on tourism and on being the southernmost place most visitors will ever stand.</p>
-      <dl>
-        <dt>What to do</dt><dd>Tierra del Fuego National Park, Beagle Channel (lighthouses, sea lions, cormorants), Laguna Esmeralda, Cerro Martial. Ski in winter; long hikes in summer.</dd>
-        <dt>Eat</dt><dd>King crab, black hake, Fuegian lamb. It is pricey next to the north: freight shows up on the bill.</dd>
-        <dt>How to get there</dt><dd>Fly to USH (~3 h 30). Overland is two days and a crossing: almost nobody does that for a visit. The airport sits against the town.</dd>
-        <dt>Tours</dt><dd><a href="https://taunushuaia.com.ar/" rel="noopener">Taun</a> is a local mountain-guide company (trekking, Vinciguerra glacier, packrafting, Laguna Esmeralda). For the Beagle, several boats leave the port: compare length and whether they include the penguin island (seasonal). Check the forecast: wind cancels.</dd>
-      </dl>
-    </article>
+      <h3>Not yet</h3>
+      <p>Short notes, not fake itineraries. Neuquén would be Villa La Angostura; I marked Bariloche in Río Negro.</p>
+      <div class="unvisited-grid">
+        <article><h3>Catamarca</h3><p>Northwest neighbour of Salta/Tucumán; not yet for me.</p></article>
+        <article><h3>Chaco</h3><p>Impenetrable forest and Resistencia: not yet.</p></article>
+        <article><h3>Corrientes</h3><p>Esteros and Iberá; carnival. I have not been.</p></article>
+        <article><h3>Formosa</h3><p>Northern border. Not yet.</p></article>
+        <article><h3>La Pampa</h3><p>Interior pampas. Not yet.</p></article>
+        <article><h3>La Rioja</h3><p>Talampaya is here. Not yet.</p></article>
+        <article><h3>Neuquén</h3><p>Villa La Angostura and San Martín de los Andes: I marked Bariloche in Río Negro.</p></article>
+        <article><h3>San Juan</h3><p>Northern Cuyo, Ischigualasto. Not yet.</p></article>
+        <article><h3>San Luis</h3><p>Puntano sierras. Not yet.</p></article>
       </div>
     </div>
 
-    <div class="section" id="transporte">
+<div class="section" id="transporte">
       <h2>Getting around</h2>
       <div class="note loud">
         <strong>Argentine prices move. Really.</strong>
@@ -319,43 +235,43 @@
           </thead>
           <tbody>
             <tr>
-              <td><a href="#lugar-caba">CABA</a></td>
+              <td><a href="caba/">CABA</a></td>
               <td>—</td>
               <td>You’re here. AEP 20–40 min downtown; EZE 45–75 min</td>
               <td>Subway / Uber / Tienda León</td>
             </tr>
             <tr>
-              <td><a href="#lugar-pba">Buenos Aires Province</a></td>
+              <td><a href="buenos-aires/">Buenos Aires Province</a></td>
               <td>~1–6 h (train/bus/car)</td>
               <td>Occasional (MDQ if you are coast-bound)</td>
               <td>Overland. “Close” still stretches on the highway</td>
             </tr>
             <tr>
-              <td><a href="#lugar-rosario">Rosario</a></td>
+              <td><a href="santa-fe/">Rosario</a></td>
               <td>~3–4 h</td>
               <td>~1 h (ROS)</td>
               <td>Daytime bus</td>
             </tr>
             <tr>
-              <td><a href="#lugar-entre-rios">Entre Ríos</a> (Colón, Gualeguaychú, Paraná…)</td>
+              <td><a href="entre-rios/">Entre Ríos</a> (Colón, Gualeguaychú, Paraná…)</td>
               <td>~3–6 h depending on the town</td>
               <td>Occasional to PRA</td>
               <td>Bus or car on RN14</td>
             </tr>
             <tr>
-              <td><a href="#lugar-mdp">Mar del Plata</a></td>
+              <td><a href="buenos-aires/#mar-del-plata">Mar del Plata</a></td>
               <td>~5–6 h</td>
               <td>~1 h (MDQ)</td>
               <td>Bus (Tony Tur / Plusmar). Fly if you are travelling light</td>
             </tr>
             <tr>
-              <td><a href="#lugar-cordoba">Córdoba</a></td>
+              <td><a href="cordoba/">Córdoba</a></td>
               <td>~9–11 h (often overnight)</td>
               <td>~1 h 20–1 h 30 (COR)</td>
               <td>Toss-up: overnight cama vs short hop</td>
             </tr>
             <tr>
-              <td><a href="#lugar-santiago">Santiago del Estero</a></td>
+              <td><a href="santiago-del-estero/">Santiago del Estero</a></td>
               <td>~12–14 h · overnight</td>
               <td>~1 h 45 (SDE)</td>
               <td>Fly, or bus if you are chaining Tucumán</td>
@@ -367,55 +283,55 @@
               <td>Fly, or bus onward toward Iguazú</td>
             </tr>
             <tr>
-              <td><a href="#lugar-mendoza">Mendoza</a></td>
+              <td><a href="mendoza/">Mendoza</a></td>
               <td>~14–16 h · overnight</td>
               <td>~1 h 50–2 h (MDZ)</td>
               <td>Fly, unless you want the overnight</td>
             </tr>
             <tr>
-              <td><a href="#lugar-tucuman">Tucumán</a></td>
+              <td><a href="tucuman/">Tucumán</a></td>
               <td>~14–16 h · overnight</td>
               <td>~2 h (TUC)</td>
               <td>Fly. The bus is a long night</td>
             </tr>
             <tr>
-              <td><a href="#lugar-misiones">Iguazú</a></td>
+              <td><a href="misiones/">Iguazú</a></td>
               <td>~16–20 h · overnight</td>
               <td>~1 h 45–2 h (IGR)</td>
               <td>Fly, unless you like the bus</td>
             </tr>
             <tr>
-              <td><a href="#lugar-salta">Salta</a></td>
+              <td><a href="salta/">Salta</a></td>
               <td>~18–20 h · overnight</td>
               <td>~2 h (SLA)</td>
               <td>Fly. Cama if the fare works</td>
             </tr>
             <tr>
-              <td><a href="#lugar-madryn">Puerto Madryn</a></td>
+              <td><a href="chubut/">Puerto Madryn</a></td>
               <td>~18–20 h · overnight</td>
               <td>~2 h to REL + ~1 h transfer</td>
               <td>Fly. The bus is 20 h of pampa</td>
             </tr>
             <tr>
-              <td><a href="#lugar-jujuy">Jujuy</a></td>
+              <td><a href="jujuy/">Jujuy</a></td>
               <td>~20–22 h · overnight</td>
               <td>~2 h (JUJ)</td>
               <td>Fly. Plenty of people fly to Salta and continue by car</td>
             </tr>
             <tr>
-              <td><a href="#lugar-bariloche">Bariloche</a></td>
+              <td><a href="rio-negro/">Bariloche</a></td>
               <td>~20–24 h · overnight</td>
               <td>~2 h (BRC)</td>
               <td>Fly. Bus only if you can do 20 h+</td>
             </tr>
             <tr>
-              <td><a href="#lugar-calafate">El Calafate</a></td>
+              <td><a href="santa-cruz/">El Calafate</a></td>
               <td>No reasonable direct (2+ days, connections)</td>
               <td>~3 h (FTE)</td>
               <td>Fly. Really</td>
             </tr>
             <tr>
-              <td><a href="#lugar-ushuaia">Ushuaia</a></td>
+              <td><a href="tierra-del-fuego/">Ushuaia</a></td>
               <td>Two days and a crossing</td>
               <td>~3 h 30 (USH)</td>
               <td>Fly. Almost nobody arrives overland for a visit</td>
@@ -825,17 +741,47 @@
 
     <div class="section" id="epoca">
       <h2>Best time to visit</h2>
-      <p>It depends on where you’re going. Argentina has opposite climates in different regions:</p>
+      <div class="note">
+        <strong>Southern Hemisphere: the seasons are reversed</strong>
+        December is summer, July is winter. If you are coming from the north, do not pack as if Christmas meant snow: here it is heat, beach, and asado. One trip will not hit “the perfect month” for both Iguazú and Ushuaia — pick a region.
+      </div>
+      <p>It depends on where you’re going. One line per place <a href="#provincias">I actually went to</a>: ideal months and what to avoid.</p>
+
+      <h3>AMBA and the coast</h3>
       <ul>
-        <li><strong>Buenos Aires</strong> — spring (Sep–Nov) and fall (Mar–May) are ideal. Summer (Dec–Feb) is hot and humid; winter (Jun–Aug) is cool but not extreme</li>
-        <li><strong>Patagonia</strong> — summer (Dec–Mar) for trekking; winter (Jun–Sep) for snow and skiing. Calafate “works” most of the year; Ushuaia in winter is wind and short days</li>
-        <li><strong>The north (Salta, Jujuy, Tucumán)</strong> — avoid summer (Dec–Feb) if you don’t like extreme heat. Fall/spring are better. Altitude: a jacket for the night even if noon burns</li>
-        <li><strong>Mendoza</strong> — spring and fall are ideal for wineries; winter for skiing at Las Leñas (different logistics)</li>
-        <li><strong>Iguazú</strong> — year-round, but it’s tropical — always hot and humid. Spring has a higher water volume</li>
-        <li><strong>Madryn</strong> — whales roughly June–December; penguins on another window. Don’t expect a year-round safari</li>
-        <li><strong>Mar del Plata / the coast</strong> — the average Argentine goes in January. If you hate crowds, November or March</li>
+        <li><strong><a href="caba/">CABA / Buenos Aires</a></strong> — Ideal Sep–Nov and Mar–May. Avoid Dec–Feb if you don’t like humid heat and storms; Jun–Aug is cool and grey, not extreme.</li>
+        <li><strong><a href="buenos-aires/">Buenos Aires (province)</a></strong> — Tigre almost year-round; Tandil and the small sierras better Oct–Nov and Mar–Apr. Avoid January if the plan is the coast road: RN2 fills up.</li>
+        <li><strong><a href="buenos-aires/#mar-del-plata">Mar del Plata</a></strong> — Ideal Nov or Mar: beach without the crush. Avoid January (the average Argentine goes then; book the bus). Winter: harbour and wind, many hotels shuttered.</li>
       </ul>
-      <p>Remember that the seasons are reversed (Southern Hemisphere) — December is summer, July is winter.</p>
+
+      <h3>Centre, Cuyo, and the Paraná</h3>
+      <ul>
+        <li><strong><a href="santa-fe/">Rosario</a></strong> — Ideal Sep–Nov and Mar–May, walkable waterfront. Avoid Dec–Feb if you don’t like humid river heat.</li>
+        <li><strong><a href="cordoba/">Córdoba</a></strong> — The city works almost year-round; the sierras are better Sep–Nov and Mar–May. Avoid January in Carlos Paz (heat + crowds). Winter is dry in town, cold at night in the hills.</li>
+        <li><strong><a href="mendoza/">Mendoza</a></strong> — Ideal Oct–Nov and Mar–Apr (wineries; harvest festival around March). Avoid Dec–Feb if you don’t like 35–40 °C. Winter = skiing at Las Leñas/Penitentes: different logistics, not the wine plan.</li>
+        <li><strong><a href="entre-rios/">Entre Ríos</a></strong> — Hot springs year-round. Ideal Sep–Nov and Mar–May for the river without the steam. Gualeguaychú carnival: Jan–Feb, that’s the point. Avoid January if you want quiet (and hate mosquitoes).</li>
+      </ul>
+
+      <h3>The north</h3>
+      <ul>
+        <li><strong><a href="santiago-del-estero/">Santiago del Estero</a></strong> — Ideal May–Sep: the heat eases and the hot springs pay off. Avoid Dec–Feb — one of the hottest provinces in the country (40 °C+ and a mandatory siesta).</li>
+        <li><strong><a href="tucuman/">Tucumán</a></strong> — Ideal Apr–Jun and Aug–Oct. Avoid Dec–Feb: humid heat and afternoon storms. Tafí del Valle is cooler year-round.</li>
+        <li><strong><a href="salta/">Salta</a></strong> — Ideal Apr–Jun and Sep–Nov (dry, clear days). Avoid Dec–Mar if you don’t want the wet season and valley heat; Cafayate in summer hits hard.</li>
+        <li><strong><a href="jujuy/">Jujuy</a></strong> — Ideal May–Oct in the Quebrada: clear skies, freezing nights, altitude. Avoid Dec–Mar if you want dry roads (rain, occasional closures). A jacket after 6 p.m. is not optional.</li>
+      </ul>
+
+      <h3>Misiones</h3>
+      <ul>
+        <li><strong><a href="misiones/">Misiones / Iguazú</a></strong> — Year-round (the jungle is always humid). Ideal Apr–Jun and Aug–Oct: less of an oven, solid water volume. Don’t skip it “because it’s winter”: the park is open. Dec–Feb is hottest, with more storms.</li>
+      </ul>
+
+      <h3>Patagonia</h3>
+      <ul>
+        <li><strong><a href="chubut/">Puerto Madryn</a></strong> — Southern right whales Jun–Dec (peak Sep–Oct). Penguins more like Sep–Mar. Don’t plan a Feb–May safari expecting whales: they aren’t there.</li>
+        <li><strong><a href="rio-negro/">Bariloche</a></strong> — Lakes/trekking Dec–Mar (best Jan–Mar; Nov–Dec is school-leavers). Ski Jun–Sep. Don’t expect both in one trip. Autumn (Apr–May) is quieter and wetter.</li>
+        <li><strong><a href="santa-cruz/">El Calafate</a></strong> — Perito Moreno “works” most of the year. Ideal Nov–Mar for daylight (and Chaltén nearby). Avoid May–Aug if you want long treks: cold, short days, some outings get cut. January is expensive and packed.</li>
+        <li><strong><a href="tierra-del-fuego/">Ushuaia</a></strong> — Trekking and the Beagle: Dec–Mar. Ski: Jun–Aug. Avoid Jun–Jul if the idea is a trail: wind and ~7 h of light. A jacket, every month.</li>
+      </ul>
     </div>
 
     <div class="section" id="voces">
