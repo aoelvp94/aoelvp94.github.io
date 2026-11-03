@@ -212,6 +212,34 @@
       background: #12202c;
     }
     .list > .trip-head:first-child { margin-top: 0; }
+    .list-label {
+      margin: 12px 8px 4px;
+      color: #8ea0b3;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .list > .list-label:first-child { margin-top: 0; }
+    .continent-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin: 8px 8px 2px;
+      padding: 6px 0 4px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: #e8eef6;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .continent-head span {
+      color: #8ea0b3;
+      font-size: 0.7rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
     .trip-head img {
       display: block;
       width: 100%;
@@ -360,15 +388,15 @@
     // Insertion order is chronological (oldest → newest). 2026 SEA is last among visited.
     const VISITED = new Set(["ARG","CAN","GTM","PAN","COL","ECU","PER","BOL","BRA","PRY","URY","CHL","DOM","BRB","CUB","CUW","ISL","NOR","FIN","DNK","SWE","ENG","NLD","BEL","DEU","POL","FRA","CHE","AUT","HUN","SVK","SVN","ESP","PRT","ITA","CZE","ROU","SRB","ALB","GRC","BIH","HRV","MNE","MKD","KOS","BGR","KOR","JPN","MYS","TUR","EGY","MAR","SGP","BHS","PRI","SLV","MEX","USA","VNM","KHM","LAO","THA","IDN","PHL"]);
     const NEXT = new Set([
+      // Scheduled (Going next) — keep separate from the wishlist.
       "LUX","ARM","GEO","AZE","ISR","JOR",
-      "LVA","LTU","EST",
-      "CHN","LKA","NPL",
-      "TKM","KAZ","UZB","KGZ","TJK",
-      "ZAF","KEN","MUS","TUN","ZMB","ZWE","TZA",
-      "ARE","OMN","BHR","QAT","KWT",
-      "CRI","HND","NIC","BLZ",
-      "ABW","VEN",
-      "VIR","VGB","SXM","ATG","KNA","DMA"
+      // Wishlist by continent. Do not treat these as visited.
+      "ZAF","KEN","MUS","TUN","ZMB","ZWE","TZA","NAM","ETH",
+      "CHN","LKA","NPL","TKM","KAZ","UZB","KGZ","TJK","ARE","OMN","BHR","QAT","KWT",
+      "LVA","LTU","EST","MDA",
+      "CRI","HND","NIC","BLZ","ABW","VIR","VGB","SXM","ATG","KNA","DMA",
+      "VEN",
+      "AUS","NZL"
     ]);
     const WHEN = {
       ARG: "2020+",
@@ -476,9 +504,15 @@
       { id: "summer26", title: "Caribbean & North America", kicker: "Jul–Aug 2026", photo: "bahamas", alt: "Ocean Cay marine reserve in the Bahamas", codes: ["BHS","PRI","SLV","MEX","USA"] },
       { id: "sea26", title: "Southeast Asia", kicker: "Sep–Oct 2026", photo: "vietnam", alt: "Limestone karsts in Ha Long Bay, Vietnam", codes: ["VNM","KHM","LAO","THA","IDN","PHL"] },
       { id: "next", title: "Going next", kicker: "Nov 2026+", photo: "luxembourg", alt: "The Grund district of Luxembourg City", codes: ["LUX","ARM","GEO","AZE","ISR","JOR"] },
-      { id: "bucket", title: "Bucket list", kicker: "Want to visit", photo: "europe", alt: "Geirangerfjord in Norway", codes: ["LVA","LTU","EST","CHN","LKA","NPL","TKM","KAZ","UZB","KGZ","TJK","ZAF","KEN","MUS","TUN","ZMB","ZWE","TZA","ARE","OMN","BHR","QAT","KWT","CRI","HND","NIC","BLZ","ABW","VEN","VIR","VGB","SXM","ATG","KNA","DMA"] }
+      // Wishlist grouped by continent. Antarctica (ATA) is not in countries.js.
+      { id: "bucket-africa", title: "Africa", kicker: "Want to visit", photo: "med", alt: "Jemaa el-Fnaa square in Marrakesh", codes: ["ZAF","KEN","MUS","TUN","ZMB","ZWE","TZA","NAM","ETH"] },
+      { id: "bucket-asia", title: "Asia", kicker: "Want to visit", photo: "east-asia", alt: "Seoul skyline at night", codes: ["CHN","LKA","NPL","TKM","KAZ","UZB","KGZ","TJK","ARE","OMN","BHR","QAT","KWT"] },
+      { id: "bucket-europe", title: "Europe", kicker: "Want to visit", photo: "europe", alt: "Geirangerfjord in Norway", codes: ["LVA","LTU","EST","MDA"] },
+      { id: "bucket-north-america", title: "North America", kicker: "Want to visit", photo: "caribbean", alt: "Beach on the coast of Barbados", codes: ["CRI","HND","NIC","BLZ","ABW","VIR","VGB","SXM","ATG","KNA","DMA"] },
+      { id: "bucket-south-america", title: "South America", kicker: "Want to visit", photo: "americas", alt: "Machu Picchu in the Andes, Peru", codes: ["VEN"] },
+      { id: "bucket-oceania", title: "Oceania", kicker: "Want to visit", photo: "oceania", alt: "Sydney Opera House on the harbour", codes: ["AUS","NZL"] }
     ];
-    const NEXT_TRIPS = new Set(["next", "bucket"]);
+    const NEXT_TRIPS = new Set(TRIPS.filter((trip) => trip.id === "next" || trip.id.startsWith("bucket-")).map((trip) => trip.id));
     const DOTS = [
       { a3: "BRB", name: "Barbados", lat: 13.19, lon: -59.54 },
       { a3: "CUW", name: "Curaçao", lat: 12.2, lon: -68.97 },
@@ -590,16 +624,30 @@
       const keepScroll = list.scrollTop;
       list.innerHTML = "";
       let firstImage = true;
+      let wroteBucketLabel = false;
       TRIPS.forEach((trip) => {
         if (filter === "visited" && NEXT_TRIPS.has(trip.id)) return;
         if (filter === "next" && !NEXT_TRIPS.has(trip.id)) return;
         const rows = catalog.filter((c) => trip.codes.includes(c.a3) && c.name.toLowerCase().includes(q));
         if (!rows.length) return;
 
+        if (trip.id.startsWith("bucket-") && !wroteBucketLabel) {
+          wroteBucketLabel = true;
+          const label = document.createElement("div");
+          label.className = "list-label";
+          label.textContent = "Bucket list by continent";
+          list.appendChild(label);
+        }
+
         const head = document.createElement("div");
-        head.className = "trip-head";
-        head.innerHTML = `${imgTag({ src: `photos/${trip.photo}.webp`, alt: trip.alt }, "", firstImage, 78)}<div class="lbl"><strong>${esc(trip.title)}</strong><span>${esc(trip.kicker)}</span></div>`;
-        firstImage = false;
+        if (trip.id.startsWith("bucket-")) {
+          head.className = "continent-head";
+          head.innerHTML = `<strong>${esc(trip.title)}</strong><span>${esc(trip.kicker)}</span>`;
+        } else {
+          head.className = "trip-head";
+          head.innerHTML = `${imgTag({ src: `photos/${trip.photo}.webp`, alt: trip.alt }, "", firstImage, 78)}<div class="lbl"><strong>${esc(trip.title)}</strong><span>${esc(trip.kicker)}</span></div>`;
+          firstImage = false;
+        }
         list.appendChild(head);
 
         rows.forEach((c) => {
