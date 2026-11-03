@@ -124,6 +124,30 @@ PROVINCES = [
                 "note_en": "general fee (foreign visitors); Argentine residents ~ARS 12,000",
             }
         ],
+        "operators": [
+            {
+                "url": "https://movitrack.com.ar/excursiones-clasicas",
+                "es_name": "Movitrack — Quebrada y Salinas",
+                "en_name": "Movitrack — Quebrada and salt flats",
+                "rec_es": "Recomendación · operador salteño/jujeño de toda la vida",
+                "rec_en": "Recommendation · long-standing Salta/Jujuy operator",
+                "rec_kind": "rec",
+                "es": "La misma hoja que en Salta: Humahuaca ARS 94.500 y Salinas Grandes ARS 97.500 desde Salta (12–13 h). También tienen oficina en San Salvador. Los safaris jujeños (Salinas y Barrancas / Tren Solar y Hornocal) están a ARS 200.000 en movitrack.com.ar/movitrack-jujuy. Si ya dormís en la Quebrada, un auto rinde más que volver a Salta.",
+                "en": "The same sheet as Salta: Humahuaca ARS 94,500 and Salinas Grandes ARS 97,500 from Salta (12–13 h). They also have a San Salvador office. Jujuy safaris (salt flats and Barrancas / solar train and Hornocal) are ARS 200,000 on movitrack.com.ar/movitrack-jujuy. If you already sleep in the Quebrada, a car beats bouncing back to Salta.",
+                "season_es": "mejor may–oct (seco, altura)",
+                "season_en": "better May–Oct (dry, altitude)",
+                "duration_es": "día completo desde Salta; safaris jujeños según ficha",
+                "duration_en": "full day from Salta; Jujuy safaris per the card",
+                "includes_es": "traslado y guía; comidas y entradas aparte",
+                "includes_en": "transfer and guide; meals and tickets extra",
+                "ars": 94500,
+                "ars_high": 200000,
+                "note_es": "clásicas 94.500–97.500 · safaris jujeños 200.000",
+                "note_en": "classics 94,500–97,500 · Jujuy safaris 200,000",
+                "asof": "movitrack.com.ar, nov. 2026",
+                "asof_en": "movitrack.com.ar, Nov 2026",
+            },
+        ],
     },
     {
         "slug": "salta",
@@ -228,6 +252,50 @@ PROVINCES = [
                 "asof_en": "APN from 1 Jun 2026",
                 "note_es": "tarifa general",
                 "note_en": "general fee",
+            },
+        ],
+        "operators": [
+            {
+                "url": "https://movitrack.com.ar/excursiones-clasicas",
+                "es_name": "Movitrack — valles y Quebrada",
+                "en_name": "Movitrack — valleys and Quebrada",
+                "rec_es": "Recomendación · operador salteño de toda la vida",
+                "rec_en": "Recommendation · long-standing Salta operator",
+                "rec_kind": "rec",
+                "es": "La hoja clásica cubre city tour ARS 44.500, Cafayate/Cachi ARS 77.500, Humahuaca ARS 94.500 y Salinas ARS 97.500. Safari a las Nubes ARS 230.000 y MoviTren ARS 227.000 en movitrack.com.ar/movitrack-salta. Clark Expediciones y Socompa son pares de puna/Atacama: no vi hoja pública de día — no invento tarifa.",
+                "en": "The classic sheet covers city tour ARS 44,500, Cafayate/Cachi ARS 77,500, Humahuaca ARS 94,500 and salt flats ARS 97,500. Safari a las Nubes ARS 230,000 and MoviTren ARS 227,000 on movitrack.com.ar/movitrack-salta. Clark Expediciones and Socompa are puna/Atacama peers: I have not seen a public day sheet — I am not inventing a fare.",
+                "season_es": "mejor abr–jun y sep–nov",
+                "season_en": "better Apr–Jun and Sep–Nov",
+                "duration_es": "3 h (city) a 12–13 h (Quebrada / salinas)",
+                "duration_en": "3 h (city) to 12–13 h (Quebrada / salt flats)",
+                "includes_es": "traslado y guía; comidas y bodega aparte",
+                "includes_en": "transfer and guide; meals and winery extra",
+                "ars": 44500,
+                "ars_high": 230000,
+                "note_es": "rango de la hoja pública; confirmá el producto",
+                "note_en": "public-sheet range; confirm the product",
+                "asof": "movitrack.com.ar, nov. 2026",
+                "asof_en": "movitrack.com.ar, Nov 2026",
+            },
+            {
+                "url": "https://www.clarkexpediciones.com/expedic2.htm",
+                "es_name": "Clark Expediciones",
+                "en_name": "Clark Expediciones",
+                "rec_es": "Recomendación · naturalistas de Salta, sin hoja de día",
+                "rec_en": "Recommendation · Salta naturalists, no day sheet",
+                "rec_kind": "rec",
+                "es": "Emprendimiento salteño de historia natural (puna, yungas, Quebrada). Programas de 2–6 días, no un city tour. El sitio describe itinerarios y no publica tarifa 2026: preguntá en clarkexpediciones.com, no en un número inventado.",
+                "en": "A Salta natural-history outfit (puna, yungas, Quebrada). 2–6 day programmes, not a city tour. The site describes itineraries and does not publish a 2026 fare: ask on clarkexpediciones.com, not an invented number.",
+                "season_es": "mejor en seca (abr–nov); altura todo el año",
+                "season_en": "better in the dry (Apr–Nov); altitude year-round",
+                "duration_es": "2–6 días según programa",
+                "duration_en": "2–6 days depending on the programme",
+                "includes_es": "guía en inglés, vehículo, reservas; tren a las Nubes aparte",
+                "includes_en": "English guide, vehicle, bookings; Train to the Clouds extra",
+                "note_es": "sin tarifa pública 2026",
+                "note_en": "no public 2026 fare",
+                "asof": "clarkexpediciones.com, nov. 2026",
+                "asof_en": "clarkexpediciones.com, Nov 2026",
             },
         ],
     },
@@ -421,6 +489,49 @@ PROVINCES = [
                 "note_en": "excursion only; park extra",
             },
         ],
+        "operators": [
+            {
+                "url": "https://iguazuargentina.com/planifica-tu-visita/compra-tus-entradas/",
+                "es_name": "Iguazú Argentina — concesionaria del Área Cataratas",
+                "en_name": "Iguazú Argentina — Cataratas area concessionaire",
+                "rec_es": "Recomendación · operador oficial del parque",
+                "rec_en": "Recommendation · official park operator",
+                "rec_kind": "rec",
+                "es": "Concesionaria de servicios del Área Cataratas (tren ecológico, pasarelas, boletería). Comprá acá o en ventaweb.apn.gob.ar — no en un revendedor de la avenida. La lancha no es de ellos: es Iguazú Jungle. Garganta a veces cierra por caudal.",
+                "en": "Concessionaire for the Cataratas area (ecological train, boardwalks, ticket office). Buy here or on ventaweb.apn.gob.ar — not from an avenida reseller. The boat is not theirs: that is Iguazú Jungle. Garganta sometimes closes with high water.",
+                "season_es": "todo el año · ideal abr–jun y ago–oct",
+                "season_en": "year-round · ideal Apr–Jun and Aug–Oct",
+                "includes_es": "ingreso + tren ecológico; lancha y lockers aparte",
+                "includes_en": "admission + ecological train; boat and lockers extra",
+                "ars": APN["iguazu_gen"],
+                "note_es": "tarifa general; nacionales ARS 25.000",
+                "note_en": "general fee; Argentine residents ARS 25,000",
+                "asof": "iguazuargentina.com / APN desde 1 jun 2026",
+                "asof_en": "iguazuargentina.com / APN from 1 Jun 2026",
+            },
+            {
+                "url": "https://tickets.iguazujungle.com/",
+                "es_name": "Iguazú Jungle — Gran Aventura y náutica",
+                "en_name": "Iguazú Jungle — Gran Aventura and boats",
+                "rec_es": "Recomendación · concesionaria náutica del parque",
+                "rec_en": "Recommendation · park boat concessionaire",
+                "rec_kind": "rec",
+                "es": "La lancha del lado argentino desde 1994. Gran Aventura (selva + rápidos, 12+, te empapás) ARS 100.000; Paseo Ecológico ARS 40.000; Travesía Iguazú ARS 50.000 (termina en el puerto de la ciudad). Parque y traslado aparte. El Paseo Ecológico a veces cierra si Garganta no opera.",
+                "en": "The Argentine-side boat since 1994. Gran Aventura (jungle + rapids, 12+, you get soaked) ARS 100,000; Ecological ride ARS 40,000; Travesía Iguazú ARS 50,000 (ends at the town port). Park and transfer extra. The ecological ride sometimes closes if Garganta is shut.",
+                "season_es": "todo el año si el río navega",
+                "season_en": "year-round if the river is navigable",
+                "duration_es": "Gran Aventura ~2 h",
+                "duration_en": "Gran Aventura ~2 h",
+                "includes_es": "guía, vehículo y/o lancha; no capa ni ticket APN",
+                "includes_en": "guide, vehicle and/or boat; no poncho or APN ticket",
+                "ars": 40000,
+                "ars_high": 100000,
+                "note_es": "rango náutico del operador; Gran Aventura es el techo",
+                "note_en": "operator boat range; Gran Aventura is the top",
+                "asof": "iguazujungle.com, nov. 2026",
+                "asof_en": "iguazujungle.com, Nov 2026",
+            },
+        ],
     },
     {
         "slug": "entre-rios",
@@ -568,6 +679,51 @@ PROVINCES = [
                 "note_es": "tarifa general",
                 "note_en": "general fee",
             }
+        ],
+        "operators": [
+            {
+                "url": "https://polylepis.tur.ar/product/balcon-sur-pn-quebrada-del-condorito/",
+                "es_name": "Polylepis — Quebrada del Condorito",
+                "en_name": "Polylepis — Quebrada del Condorito",
+                "rec_es": "Recomendación · prestador habilitado del parque",
+                "rec_en": "Recommendation · authorised park provider",
+                "rec_kind": "rec",
+                "es": "Trekking de día al Balcón Sur (cóndores si el día da). Listados en prestadores del parque. Encuentro en el centro de visitantes — no incluye traslado desde la capital ni vianda. APN aparte (ARS 25.000). Si no querés caminar 16 km, el micro a Punilla alcanza.",
+                "en": "A day trek to Balcón Sur (condors if the day plays along). Listed among park providers. Meet at the visitor centre — no transfer from the capital and no packed lunch. APN extra (ARS 25,000). If you do not want 16 km on foot, the Punilla bus is enough.",
+                "season_es": "mejor sep–nov y mar–may; verano es horno en las sierras",
+                "season_en": "better Sep–Nov and Mar–May; summer is an oven in the sierras",
+                "duration_es": "~8 h · 16 km · encuentro en el parque",
+                "duration_en": "~8 h · 16 km · meet at the park",
+                "includes_es": "guía y seguro; traslado y comida no",
+                "includes_en": "guide and insurance; transfer and food extra",
+                "ars": 55000,
+                "note_es": "trekking solo; APN y combi desde Córdoba aparte",
+                "note_en": "trek only; APN and a Córdoba transfer extra",
+                "asof": "polylepis.tur.ar, nov. 2026",
+                "asof_en": "polylepis.tur.ar, Nov 2026",
+            },
+            {
+                "url": "https://chavotur.com.ar/excursiones-en-la-provincia-de-cordoba/",
+                "es_name": "Chavotur — sierras desde la capital",
+                "en_name": "Chavotur — sierras from the capital",
+                "rec_es": "Recomendación · day trips desde Córdoba",
+                "rec_en": "Recommendation · day trips from Córdoba",
+                "rec_kind": "rec",
+                "es": "Agencia de la capital para valles: Condorito ARS 130.000 (8–19), Capilla del Monte / Punilla ARS 90.000, Calamuchita / Villa General Belgrano ARS 60.000 en su hoja. El micro interurbano sigue siendo más barato si no querés guía. Confirmá en chavotur.com.ar el día que pagás.",
+                "en": "A capital-city desk for the valleys: Condorito ARS 130,000 (8–19), Capilla del Monte / Punilla ARS 90,000, Calamuchita / Villa General Belgrano ARS 60,000 on their sheet. The intercity bus is still cheaper if you do not want a guide. Confirm on chavotur.com.ar the day you pay.",
+                "season_es": "mejor sep–nov y mar–may; enero es gente y calor",
+                "season_en": "better Sep–Nov and Mar–May; January is crowds and heat",
+                "duration_es": "día completo o medio día según valle",
+                "duration_en": "full or half day depending on the valley",
+                "includes_es": "salida desde Córdoba; entradas y comidas suelen ir aparte",
+                "includes_en": "departure from Córdoba; tickets and meals usually extra",
+                "ars": 60000,
+                "ars_high": 130000,
+                "note_es": "rango de la hoja; Punilla 90.000 · Condorito 130.000",
+                "note_en": "sheet range; Punilla 90,000 · Condorito 130,000",
+                "asof": "chavotur.com.ar/excursiones-en-la-provincia-de-cordoba/, nov. 2026",
+                "asof_en": "chavotur.com.ar/excursiones-en-la-provincia-de-cordoba/, Nov 2026",
+            },
         ],
         "city_extra": {
             "es_title": "Ciudad: comida, cultura, noche",
@@ -785,6 +941,52 @@ PROVINCES = [
                 "note_en": "confirm on GetYourGuide/Viator, not here",
             },
         ],
+        "operators": [
+            {
+                "url": "https://www.guruwalk.com/buenos-aires",
+                "es_name": "Free walking tours (GuruWalk y pares)",
+                "en_name": "Free walking tours (GuruWalk and peers)",
+                "rec_es": "Recomendación · propina, no un operador único",
+                "rec_en": "Recommendation · tip-based, no single operator",
+                "rec_kind": "rec",
+                "es": "Plaza de Mayo / San Telmo, 2–3 h, español e inglés. No amarro una marca: mirá reseñas de esta semana. Se propina al final (~USD 10–20). BA Free Tour y otras fichas de GuruWalk/GetYourGuide cubren el mismo piso. No es un city tour de micro.",
+                "en": "Plaza de Mayo / San Telmo, 2–3 h, Spanish and English. I am not locking one brand: read this week’s reviews. You tip at the end (~USD 10–20). BA Free Tour and other GuruWalk/GetYourGuide cards cover the same ground. Not a coach city tour.",
+                "season_es": "todo el año · mejor sep–nov y mar–may",
+                "season_en": "year-round · better Sep–Nov and Mar–May",
+                "duration_es": "2–3 h",
+                "duration_en": "2–3 h",
+                "includes_es": "guía a pie; propina al final, no un boleto",
+                "includes_en": "walking guide; a tip at the end, not a ticket",
+                "price_es": "propina típica ~USD 10–20",
+                "price_en": "typical tip ~USD 10–20",
+                "note_es": "no hay hoja de operador único",
+                "note_en": "no single operator sheet",
+                "asof": "modelo tip-based, nov. 2026",
+                "asof_en": "tip-based model, Nov 2026",
+            },
+            {
+                "url": "https://sturlaviajes.tur.ar/",
+                "es_name": "Sturla — Tigre y Delta",
+                "en_name": "Sturla — Tigre and the Delta",
+                "rec_es": "Recomendación · lancha clásica del Delta",
+                "rec_en": "Recommendation · classic Delta boat",
+                "rec_kind": "rec",
+                "es": "El day trip que sí rinde desde CABA: tren Mitre a Tigre (~50 min, ~ARS 790 con SUBE) y lancha en el Delta. Sturla publica 5 ríos ARS 27.500 y 6 ríos ARS 36.000; Martín García desde Tigre ARS 132.000. Un city tour pago BA→Tigre sobra si el tren sale cada rato. Tandil no es este plan.",
+                "en": "The day trip that does work from CABA: Mitre train to Tigre (~50 min, ~ARS 790 with SUBE) and a Delta boat. Sturla lists 5 rivers ARS 27,500 and 6 rivers ARS 36,000; Martín García from Tigre ARS 132,000. A paid BA→Tigre city tour is surplus if the train leaves every few minutes. Tandil is not this plan.",
+                "season_es": "todo el año · el río no cierra",
+                "season_en": "year-round · the river does not close",
+                "duration_es": "1–2 h de navegación; Martín García es día completo",
+                "duration_en": "1–2 h on the water; Martín García is a full day",
+                "includes_es": "lancha desde Tigre o Madero; tren SUBE aparte",
+                "includes_en": "boat from Tigre or Madero; SUBE train extra",
+                "ars": 27500,
+                "ars_high": 132000,
+                "note_es": "5 ríos 27.500 · 6 ríos 36.000 · Martín García 132.000",
+                "note_en": "5 rivers 27,500 · 6 rivers 36,000 · Martín García 132,000",
+                "asof": "sturlaviajes.tur.ar, nov. 2026",
+                "asof_en": "sturlaviajes.tur.ar, Nov 2026",
+            },
+        ],
     },
     {
         "slug": "buenos-aires",
@@ -886,6 +1088,52 @@ PROVINCES = [
                 "note_en": "listed in USD; ask if you want ARS",
             }
         ],
+        "operators": [
+            {
+                "url": "https://troutandwine.com/tours/lujan-de-cuyo-wine/",
+                "es_name": "Trout & Wine",
+                "en_name": "Trout & Wine",
+                "rec_es": "Recomendación · grupos chicos, hoja en USD",
+                "rec_en": "Recommendation · small groups, USD sheet",
+                "rec_kind": "rec",
+                "es": "Operador mendocino conocido: Luján desde USD 220 y Uco desde USD 230 (hoja). Deluxe privado otra tarifa (USD 360/370). Recogida ~8:30. Pesos: contactalos antes. En Maipú, bici + remís de vuelta sigue siendo el clásico económico — no le pongo un número de alquiler que no vi.",
+                "en": "A known Mendoza operator: Luján from USD 220 and Uco from USD 230 (sheet). Private deluxe is another fare (USD 360/370). Pickup ~8:30. Pesos: contact them first. In Maipú, bike + a remise back is still the cheap classic — I am not inventing a rental number I have not seen.",
+                "season_es": "mejor oct–nov y mar–abr (vendimia ~marzo)",
+                "season_en": "better Oct–Nov and Mar–Apr (harvest ~March)",
+                "duration_es": "~8 h",
+                "duration_en": "~8 h",
+                "includes_es": "pickup, guía en inglés, catas, almuerzo; propina aparte",
+                "includes_en": "pickup, English guide, tastings, lunch; tip extra",
+                "usd_only": "desde USD 220 (Luján) / 230 (Uco) · ~ARS 341.000 / 356.500 al FX de esta guía",
+                "usd_only_en": "from USD 220 (Luján) / 230 (Uco) · ~ARS 341,000 / 356,500 at this guide’s FX",
+                "note_es": "publicado en USD; ARS a consultar",
+                "note_en": "listed in USD; ask if you want ARS",
+                "asof": "troutandwine.com, nov. 2026",
+                "asof_en": "troutandwine.com, Nov 2026",
+            },
+            {
+                "url": "https://www.mendozawinetours.com/",
+                "es_name": "Ampora Wine Tours",
+                "en_name": "Ampora Wine Tours",
+                "rec_es": "Recomendación · grupos chicos (máx. 7)",
+                "rec_en": "Recommendation · small groups (max. 7)",
+                "rec_kind": "rec",
+                "es": "Otro local establecido: Luján USD 215 y Valle de Uco USD 230 en grupos chicos. Privados (Malbec Masterclass) USD 290–330 según ocupación. Pickup en centro / Chacras. Compará con Trout & Wine: mismo tipo de día, no un duplicado obligatorio.",
+                "en": "Another established local: Luján USD 215 and Uco Valley USD 230 in small groups. Private (Malbec Masterclass) USD 290–330 depending on occupancy. Pickup in the centre / Chacras. Compare with Trout & Wine: the same kind of day, not a required duplicate.",
+                "season_es": "mejor oct–nov y mar–abr",
+                "season_en": "better Oct–Nov and Mar–Apr",
+                "duration_es": "día completo (~8:30–17:30 en las fichas privadas)",
+                "duration_en": "full day (~8:30–17:30 on the private cards)",
+                "includes_es": "pickup, anfitrión de vino, catas, almuerzo según tour",
+                "includes_en": "pickup, wine host, tastings, lunch depending on the tour",
+                "usd_only": "desde USD 215 (Luján) / 230 (Uco) · ~ARS 333.000 / 356.500",
+                "usd_only_en": "from USD 215 (Luján) / 230 (Uco) · ~ARS 333,000 / 356,500",
+                "note_es": "publicado en USD en mendozawinetours.com",
+                "note_en": "listed in USD on mendozawinetours.com",
+                "asof": "mendozawinetours.com, nov. 2026",
+                "asof_en": "mendozawinetours.com, Nov 2026",
+            },
+        ],
     },
     {
         "slug": "chubut",
@@ -956,6 +1204,91 @@ PROVINCES = [
                 "asof_en": "2026 season",
                 "note_es": "extranjeros; residentes ~ARS 20.000",
                 "note_en": "foreign visitors; residents ~ARS 20,000",
+            },
+        ],
+        "operators": [
+            {
+                "url": "https://darwin-expeditions.com/",
+                "es_name": "Darwin Expediciones",
+                "en_name": "Darwin Expediciones",
+                "rec_es": "Aldo lo nombró — info pública, no aviso pago",
+                "rec_en": "Aldo named this — public info, not a paid ad",
+                "rec_kind": "named",
+                "es": "Aldo lo nombró en el circuito Madryn. La base oficial es <strong>Puerto Deseado</strong> (Santa Cruz), no el muelle de Pirámides: Isla Pingüino (penacho amarillo), Ría Deseado, toninas. ~6–8 h al sur de Madryn; no lo armes como day trip desde acá. El sitio no publica tarifa 2026: no invento un número.",
+                "en": "Aldo named them on the Madryn circuit. The official base is <strong>Puerto Deseado</strong> (Santa Cruz), not the Pirámides pier: Isla Pingüino (rockhopper penguins), Ría Deseado, Commerson’s dolphins. ~6–8 h south of Madryn; not a day trip from here. The site has no 2026 fare sheet: I am not inventing a number.",
+                "season_es": "Isla Pingüino: mediados de oct–Semana Santa · ~6 h",
+                "season_en": "Isla Pingüino: mid-Oct–Easter · ~6 h",
+                "includes_es": "navegación y guía; transfers y almuerzo según ficha",
+                "includes_en": "boat and guide; transfers and lunch per the card",
+                "note_es": "sin hoja pública 2026 — confirmá en darwin-expeditions.com",
+                "note_en": "no public 2026 sheet — confirm on darwin-expeditions.com",
+                "asof": "darwin-expeditions.com, nov. 2026",
+                "asof_en": "darwin-expeditions.com, Nov 2026",
+            },
+            {
+                "url": "https://madrynbuceo.com/",
+                "es_name": "Madrynbuceo",
+                "en_name": "Madrynbuceo",
+                "rec_es": "Aldo lo nombró — buceo / snorkel, info pública",
+                "rec_en": "Aldo named this — diving / snorkel, public info",
+                "rec_kind": "named",
+                "es": "Centro de buceo de Madryn (más de 40 años en su propio texto). Buceo certificado y snorkeling con lobos en Punta Loma, todo el año si el mar da. La hoja pública que sí cotiza es <strong>1 inmersión certificada ARS 150.000</strong>. El snorkel no tiene precio en esa ficha: madryn.org (ago. 2026) estima ~ARS 230.000; listados terceros ~USD 135–156. Viento cancela. Sólo la web: no pongo mail ni teléfono.",
+                "en": "A Madryn dive centre (40+ years on their own copy). Certified dives and sea-lion snorkel at Punta Loma, year-round if the sea allows. The public sheet that does quote a fare is <strong>1 certified dive ARS 150,000</strong>. Snorkel is unpriced there: madryn.org (Aug 2026) estimates ~ARS 230,000; third-party listings ~USD 135–156. Wind cancels. Website only: no email or phone here.",
+                "season_es": "todo el año · lobos en Punta Loma; ballenas de paso jun–nov",
+                "season_en": "year-round · sea lions at Punta Loma; whales in passing Jun–Nov",
+                "duration_es": "snorkel ~2 h 30 (ficha de terceros); buceo según sitio",
+                "duration_en": "snorkel ~2 h 30 (third-party card); dive per the site",
+                "includes_es": "equipo de agua; traslado de hotel no está en la hoja",
+                "includes_en": "water kit; hotel pickup is not on the sheet",
+                "ars": 150000,
+                "ars_high": 230000,
+                "note_es": "150.000 = 1 buceo certificado (madrynbuceo.com); 230.000 = snorkel estimativo madryn.org",
+                "note_en": "150,000 = 1 certified dive (madrynbuceo.com); 230,000 = snorkel estimate on madryn.org",
+                "asof": "madrynbuceo.com/buceo/buceo-certificado + madryn.org ago. 2026",
+                "asof_en": "madrynbuceo.com/buceo/buceo-certificado + madryn.org Aug 2026",
+            },
+            {
+                "url": "https://www.hydrosport.ar/eng/tarifas",
+                "es_name": "Hydro Sport — ballenas (Pirámides)",
+                "en_name": "Hydro Sport — whales (Pirámides)",
+                "rec_es": "Recomendación local · tarifa pública unificada",
+                "rec_en": "Local recommendation · public unified fare",
+                "rec_kind": "rec",
+                "es": "Lancha desde Puerto Pirámides, no desde Madryn. Temporada 2026 de ballena franca. Southern Spirit y Tito Bottazzi publican la misma escala (prensa/hojas 2026): compará el muelle, no persigas a los animales. Traslado Madryn–Pirámides y entrada a Valdés aparte. El puerto cierra con viento.",
+                "en": "Boat from Puerto Pirámides, not from Madryn. 2026 southern-right-whale season. Southern Spirit and Tito Bottazzi publish the same scale (2026 sheets/press): compare the pier, do not chase the animals. Madryn–Pirámides transfer and Valdés ticket extra. The port closes in wind.",
+                "season_es": "jun–dic (2026 desde el 9 de jun.; alta desde 1/9)",
+                "season_en": "Jun–Dec (2026 from 9 Jun; high from 1 Sep)",
+                "duration_es": "1 h 30 de navegación",
+                "duration_en": "1 h 30 on the water",
+                "includes_es": "embarque en Pirámides; no incluye traslado ni ANP",
+                "includes_en": "boarding at Pirámides; transfer and protected-area ticket extra",
+                "ars": 150000,
+                "ars_high": 195000,
+                "note_es": "baja ARS 150.000 · alta ARS 195.000 adultos; misma escala en southernspirit.com.ar y titobottazzi.com",
+                "note_en": "low ARS 150,000 · high ARS 195,000 adults; same scale on southernspirit.com.ar and titobottazzi.com",
+                "asof": "hydrosport.ar/eng/tarifas + southernspirit.com.ar/tarifas, 2026",
+                "asof_en": "hydrosport.ar/eng/tarifas + southernspirit.com.ar/tarifas, 2026",
+            },
+            {
+                "url": "https://cuyunco.tur.ar/?page_id=828",
+                "es_name": "Cuyun Co — Península Valdés / Punta Tombo",
+                "en_name": "Cuyun Co — Península Valdés / Punta Tombo",
+                "rec_es": "Agencia local de Madryn · hoja pública",
+                "rec_en": "Local Madryn agency · public sheet",
+                "rec_kind": "rec",
+                "es": "Receptivo de Avenida Roca, listado por la Secretaría de Turismo de Madryn. Día terrestre a Valdés o Punta Tombo. No incluye almuerzo ni entrada al área protegida; el avistaje embarcado en Pirámides es opcional (y se paga aparte, en la tarifa unificada de las lanchas).",
+                "en": "An Avenida Roca incoming desk, listed by Madryn’s tourism office. Land day to Valdés or Punta Tombo. Lunch and the protected-area ticket extra; the Pirámides boat is optional (and paid separately, at the boats’ unified fare).",
+                "season_es": "Valdés todo el año; ballenas jun–dic; Tombo sep–mar",
+                "season_en": "Valdés year-round; whales Jun–Dec; Tombo Sep–Mar",
+                "duration_es": "día completo (~7–18, +400 km en Valdés)",
+                "duration_en": "full day (~7–18, 400+ km on Valdés)",
+                "includes_es": "traslado hotel y guía; ANP, comida y lancha aparte",
+                "includes_en": "hotel transfer and guide; protected-area ticket, food, and boat extra",
+                "ars": 88000,
+                "note_es": "Valdés o Tombo en la hoja; ANP extranjeros ~ARS 50.000 aparte",
+                "note_en": "Valdés or Tombo on the sheet; foreign protected-area ticket ~ARS 50,000 extra",
+                "asof": "cuyunco.tur.ar excursiones, nov. 2026",
+                "asof_en": "cuyunco.tur.ar tours, Nov 2026",
             },
         ],
         "tips": {
@@ -1100,6 +1433,70 @@ PROVINCES = [
                 "note_en": "adult 4+; infant 0–3 free",
             },
         ],
+        "operators": [
+            {
+                "url": "https://www.turisur.com.ar/?c=inicio&lang=es&v=tarifas",
+                "es_name": "Turisur — lagos y tierra",
+                "en_name": "Turisur — lakes and land",
+                "rec_es": "Recomendación · operador clásico de Bariloche",
+                "rec_en": "Recommendation · classic Bariloche operator",
+                "rec_kind": "rec",
+                "es": "Circuito Chico ARS 40.500, Tronador ARS 81.000, Isla Victoria y Arrayanes ARS 140.000 (tasa de embarque ARS 7.600 y parque aparte). Hoja terrestre y náutica 2026. Tangol y otros resellers cotizan más caro: la hoja del barco/bus es esta.",
+                "en": "Circuito Chico ARS 40,500, Tronador ARS 81,000, Isla Victoria and Arrayanes ARS 140,000 (boarding tax ARS 7,600 and park extra). 2026 land and lake sheet. Tangol and other resellers quote higher: the boat/bus sheet is this one.",
+                "season_es": "lagos dic–mar; tierra todo el año si la ruta da",
+                "season_en": "lakes Dec–Mar; land year-round if the road allows",
+                "includes_es": "bus o catamarán según producto; APN aparte",
+                "includes_en": "bus or catamaran depending on the product; APN extra",
+                "ars": 40500,
+                "ars_high": 140000,
+                "note_es": "Chico 40.500 · Tronador 81.000 · Victoria 140.000",
+                "note_en": "Chico 40,500 · Tronador 81,000 · Victoria 140,000",
+                "asof": "turisur.com.ar tarifas 2026",
+                "asof_en": "turisur.com.ar 2026 fares",
+            },
+            {
+                "url": "https://www.cruceandino.com/",
+                "es_name": "Cruce Andino",
+                "en_name": "Cruce Andino",
+                "rec_es": "Recomendación · el cruce de tres lagos, no el micro",
+                "rec_en": "Recommendation · the three-lake crossing, not the bus",
+                "rec_kind": "rec",
+                "es": "Nahuel Huapi–Frías–Todos los Santos hacia Peulla / Puerto Varas. No es el micro por Samoré. ~12 h. USD 355 no residente / 277 residente en la hoja 2026–28. Parques y almuerzo aparte. El lago manda.",
+                "en": "Nahuel Huapi–Frías–Todos los Santos toward Peulla / Puerto Varas. It is not the Samoré bus. ~12 h. USD 355 non-resident / 277 resident on the 2026–28 sheet. Parks and lunch extra. The lake decides.",
+                "season_es": "casi todos los días; invierno más viento",
+                "season_en": "most days; more wind in winter",
+                "duration_es": "~12 h",
+                "duration_en": "~12 h",
+                "includes_es": "buses + barcos del cruce; parques y almuerzo aparte",
+                "includes_en": "crossing buses + boats; parks and lunch extra",
+                "usd_only": "USD 355 no residente / 277 residente · ~ARS 550.000 / 429.000",
+                "usd_only_en": "USD 355 non-resident / 277 resident · ~ARS 550,000 / 429,000",
+                "note_es": "publicado por el operador en USD",
+                "note_en": "published by the operator in USD",
+                "asof": "cruceandino.com tarifa 2026–28",
+                "asof_en": "cruceandino.com 2026–28 fare",
+            },
+            {
+                "url": "https://www.extremosur.com/",
+                "es_name": "Extremo Sur / Aguas Blancas — rafting",
+                "en_name": "Extremo Sur / Aguas Blancas — rafting",
+                "rec_es": "Recomendación · río Manso; sin hoja 2026",
+                "rec_en": "Recommendation · Río Manso; no 2026 sheet",
+                "rec_kind": "rec",
+                "es": "Dos locales del Manso (más de 30 temporadas entre los dos). Villegas medio día (familias, +5) o Frontera día largo (+14). extremosur.com y aguasblancas.com.ar no publican tarifa 2026: no copio la prensa de 2024. Confirmá en el sitio. Parque Nahuel Huapi aparte si aplica.",
+                "en": "Two Manso locals (30+ seasons between them). Half-day Villegas (families, 5+) or the long Frontera day (14+). extremosur.com and aguasblancas.com.ar do not publish a 2026 fare: I am not copying 2024 press. Confirm on the site. Nahuel Huapi park extra if it applies.",
+                "season_es": "mejor dic–mar (agua y sol); el río corre más meses",
+                "season_en": "better Dec–Mar (water and sun); the river runs more months",
+                "duration_es": "medio día (Villegas) o ~9–19 (Frontera)",
+                "duration_en": "half day (Villegas) or ~9–19 (Frontera)",
+                "includes_es": "equipo de río y, según ficha, traslado; almuerzo extra",
+                "includes_en": "river kit and, per the card, transfer; lunch extra",
+                "note_es": "sin tarifa pública 2026 — confirmá en extremosur.com o aguasblancas.com.ar",
+                "note_en": "no public 2026 fare — confirm on extremosur.com or aguasblancas.com.ar",
+                "asof": "extremosur.com / aguasblancas.com.ar, nov. 2026",
+                "asof_en": "extremosur.com / aguasblancas.com.ar, Nov 2026",
+            },
+        ],
         "tips": {
             "es_title": "Para cuando vayas — Trevelin / Esquel",
             "en_title": "For when you go — Trevelin / Esquel",
@@ -1210,6 +1607,68 @@ PROVINCES = [
                 "asof_en": "patagoniachic.com card + cancellation policy, Nov 2026",
                 "note_es": "adulto 14+ desde el parque; 370.000 era promo en pantalla (27% off) vs lista 510.000 — no es un precio eterno",
                 "note_en": "adult 14+ starting at the park; 370,000 was an on-screen promo (27% off) vs 510,000 list — not a forever fare",
+            },
+        ],
+        "operators": [
+            {
+                "url": "https://www.patagoniachic.com/el-calafate/excursiones/perito-moreno-kayak",
+                "es_name": "Patagonia Chic",
+                "en_name": "Patagonia Chic",
+                "rec_es": "Lo reservé — agregador/operador local, ficha pública",
+                "rec_en": "I booked this — local aggregator/operator, public card",
+                "rec_kind": "used",
+                "es": "La que usé para kayak frente a la pared. También venden pasarelas con traslado (ARS 90.000 en la ficha de balcones). Cancelación ~24 h en su política pública — verificá en el checkout. No publico voucher, ID ni mail.",
+                "en": "The one I used for kayak in front of the wall. They also sell boardwalks with transfer (ARS 90,000 on the balconies card). Free cancel ~24 h on their public policy — verify at checkout. No voucher, ID, or email here.",
+                "season_es": "mejor nov–mar para kayak; pasarelas casi todo el año",
+                "season_en": "better Nov–Mar for kayak; boardwalks most of the year",
+                "includes_es": "según producto (kayak o traslado a pasarelas); APN a veces extra",
+                "includes_en": "depends on the product (kayak or boardwalk transfer); APN sometimes extra",
+                "ars": 90000,
+                "ars_high": 510000,
+                "note_es": "balcones 90.000 · kayak 370.000–510.000 (promo vs lista)",
+                "note_en": "balconies 90,000 · kayak 370,000–510,000 (promo vs list)",
+                "asof": "patagoniachic.com, nov. 2026",
+                "asof_en": "patagoniachic.com, Nov 2026",
+            },
+            {
+                "url": "https://hieloyaventura.com/tarifas/",
+                "es_name": "Hielo y Aventura",
+                "en_name": "Hielo y Aventura",
+                "rec_es": "Recomendación · concesionaria del parque",
+                "rec_en": "Recommendation · park concessionaire",
+                "rec_kind": "rec",
+                "es": "Crampones y lancha del Perito Moreno. Minitrekking ARS 420.000 (500.000 con traslado), Safari Náutico ARS 80.000, Big Ice desde ARS 550.000–630.000 según ficha, Safari Azul desde ARS 220.000. Parque y comida aparte. Otro músculo que el kayak: no los dos el mismo día.",
+                "en": "Crampons and the Perito Moreno boat. Mini trekking ARS 420,000 (500,000 with transfer), nautical safari ARS 80,000, Big Ice from ARS 550,000–630,000 depending on the card, Safari Azul from ARS 220,000. Park and food extra. A different muscle from kayak: not both the same day.",
+                "season_es": "náutico todo el año; Big Ice 15 sep–30 abr",
+                "season_en": "boat year-round; Big Ice 15 Sep–30 Apr",
+                "includes_es": "navegación y/o equipo técnico; APN aparte",
+                "includes_en": "boat and/or technical kit; APN extra",
+                "ars": 80000,
+                "ars_high": 630000,
+                "note_es": "rango de la concesionaria 2026/27",
+                "note_en": "concessionaire 2026/27 range",
+                "asof": "hieloyaventura.com, nov. 2026",
+                "asof_en": "hieloyaventura.com, Nov 2026",
+            },
+            {
+                "url": "https://en.alwaysglaciers.com/",
+                "es_name": "Always Glaciers",
+                "en_name": "Always Glaciers",
+                "rec_es": "Recomendación · local de Calafate, hoja en USD",
+                "rec_en": "Recommendation · Calafate local, USD sheet",
+                "rec_kind": "rec",
+                "es": "Receptivo de Calafate: micro a pasarelas desde USD 49–50, minitrekking USD 290, navegación All Glaciers USD 170, Calafate–Chaltén USD 45. Transfer FTE desde USD 8. Parque aparte. Compará con el micro Caltur/Taqsa en pesos (~ARS 56.000–60.000) antes de pagar en dólares.",
+                "en": "A Calafate incoming desk: boardwalk bus from USD 49–50, mini trekking USD 290, All Glaciers navigation USD 170, Calafate–Chaltén USD 45. FTE transfer from USD 8. Park extra. Compare with the Caltur/Taqsa bus in pesos (~ARS 56,000–60,000) before you pay in dollars.",
+                "season_es": "pasarelas casi todo el año; hielo mejor nov–mar",
+                "season_en": "boardwalks most of the year; ice better Nov–Mar",
+                "includes_es": "según producto; APN no viene en el micro barato",
+                "includes_en": "depends on the product; APN is not in the cheap bus",
+                "usd_only": "pasarelas desde USD 49–50 · minitrekking USD 290 · ~ARS 76.000–450.000",
+                "usd_only_en": "boardwalks from USD 49–50 · mini trekking USD 290 · ~ARS 76,000–450,000",
+                "note_es": "publicado en USD en alwaysglaciers.com",
+                "note_en": "listed in USD on alwaysglaciers.com",
+                "asof": "alwaysglaciers.com, nov. 2026",
+                "asof_en": "alwaysglaciers.com, Nov 2026",
             },
         ],
         "city_extra": {
@@ -1374,6 +1833,70 @@ PROVINCES = [
                 "note_en": "per person, tax included; ages 4–11 pay 50%",
             },
         ],
+        "operators": [
+            {
+                "url": "https://taunushuaia.com.ar/",
+                "es_name": "Taun",
+                "en_name": "Taun",
+                "rec_es": "Lo hice — operadora local de montaña",
+                "rec_en": "I did this — local mountain operator",
+                "rec_kind": "used",
+                "es": "La que usé para Vinciguerra. Guías de montaña de Ushuaia (EPGAMT/AAGM). Esmeralda ARS 140.000; Vinciguerra ARS 190.000 en ficha (terceros a veces ~235.000). Packrafting y Cinco Hermanos en el mismo sitio. Sólo páginas públicas: no pongo teléfono, mail ni reserva.",
+                "en": "The operator I used for Vinciguerra. Ushuaia mountain guides (EPGAMT/AAGM). Esmeralda ARS 140,000; Vinciguerra ARS 190,000 on the card (third parties sometimes ~235,000). Packrafting and Cinco Hermanos on the same site. Public pages only: no phone, email, or booking here.",
+                "season_es": "trekking todo el año; mini-hielo en verano según ficha",
+                "season_en": "trekking year-round; mini ice in summer per the card",
+                "includes_es": "traslados, guía certificado, vianda, equipo técnico",
+                "includes_en": "transfers, certified guide, packed lunch, technical kit",
+                "ars": 140000,
+                "ars_high": 235000,
+                "note_es": "Esmeralda 140.000 · Vinciguerra 190.000–235.000",
+                "note_en": "Esmeralda 140,000 · Vinciguerra 190,000–235,000",
+                "asof": "taunushuaia.com.ar, nov. 2026",
+                "asof_en": "taunushuaia.com.ar, Nov 2026",
+            },
+            {
+                "url": "https://www.canoerocatamaranes.com.ar/tarifas/",
+                "es_name": "Canoero Catamaranes",
+                "en_name": "Canoero Catamaranes",
+                "rec_es": "Recomendación · Beagle de catamarán",
+                "rec_en": "Recommendation · Beagle catamaran",
+                "rec_kind": "rec",
+                "es": "Catamarán del muelle: pingüinera Isla Martillo ARS 213.000 (oct–mar, tasa incluida) y corto a lobos/faro ARS 123.000 todo el año. Vigencia de hoja hasta 31/12/2026. No se baja a Martillo. Viento cancela. Tolkeyen y Tres Marías en el mismo puerto: compará.",
+                "en": "Catamaran from the pier: Isla Martillo penguins ARS 213,000 (Oct–Mar, tax included) and the short sea-lion/lighthouse run ARS 123,000 year-round. Sheet valid through 31 Dec 2026. No landing on Martillo. Wind cancels. Tolkeyen and Tres Marías at the same port: compare.",
+                "season_es": "pingüinos oct–mar; lobos/faro todo el año",
+                "season_en": "penguins Oct–Mar; sea lions/lighthouse year-round",
+                "duration_es": "~5 h pingüinera · ~3 h corto",
+                "duration_en": "~5 h penguins · ~3 h short run",
+                "includes_es": "navegación + tasa de puerto ARS 6.000; no desembarco",
+                "includes_en": "navigation + ARS 6,000 port tax; no landing",
+                "ars": 123000,
+                "ars_high": 213000,
+                "note_es": "corto 123.000 · pingüinera 213.000; 4–11 años 50%",
+                "note_en": "short 123,000 · penguins 213,000; ages 4–11 pay 50%",
+                "asof": "canoerocatamaranes.com.ar, vigencia hasta 31/12/2026",
+                "asof_en": "canoerocatamaranes.com.ar, valid through 31 Dec 2026",
+            },
+            {
+                "url": "https://tolkeyenpatagonia.com/",
+                "es_name": "Tolkeyen Patagonia",
+                "en_name": "Tolkeyen Patagonia",
+                "rec_es": "Recomendación · receptivo fueguino",
+                "rec_en": "Recommendation · Fuegian incoming desk",
+                "rec_kind": "rec",
+                "es": "Agencia local (San Martín 409). Beagle al faro ARS 120.000 (promo 102.000 en la ficha de invierno), city tour + Martial ARS 100.000, parque en invierno ARS 120.000. No reemplaza a Taun para glaciar de trekking ni a Canoero si querés la hoja náutica del muelle.",
+                "en": "A local agency (San Martín 409). Beagle to the lighthouse ARS 120,000 (102,000 promo on the winter card), city tour + Martial ARS 100,000, winter park ARS 120,000. It does not replace Taun for glacier trekking or Canoero if you want the pier’s boat sheet.",
+                "season_es": "Beagle todo el año; pingüinos oct–mar en otras lanchas",
+                "season_en": "Beagle year-round; penguins Oct–Mar on other boats",
+                "includes_es": "según producto; APN y tren aparte",
+                "includes_en": "depends on the product; APN and train extra",
+                "ars": 100000,
+                "ars_high": 120000,
+                "note_es": "city 100.000 · Beagle 102.000–120.000",
+                "note_en": "city 100,000 · Beagle 102,000–120,000",
+                "asof": "tolkeyenpatagonia.com, nov. 2026",
+                "asof_en": "tolkeyenpatagonia.com, Nov 2026",
+            },
+        ],
         "city_extra": {
             "toc_es": "Ushuaia",
             "toc_en": "Ushuaia",
@@ -1430,14 +1953,122 @@ PROVINCES = [
 ]
 
 NOT_YET = [
-    ("Chaco", "Impenetrable y Resistencia: aún no.", "Impenetrable forest and Resistencia: not yet."),
-    ("Corrientes", "Esteros del Iberá / Colonia Carlos Pellegrini, carnaval. Aún no pisé: 4×4, mosquitos, mejor en seca (abr–oct). Tip, no pin.", "Iberá wetlands / Colonia Carlos Pellegrini, carnival. I have not been: 4×4, mosquitoes, better in the dry (Apr–Oct). A tip, not a pin."),
-    ("Formosa", "Bañado La Estrella y frontera con Paraguay. Aún no. Humedal, calor, logística propia. Tip, no pin.", "Bañado La Estrella and the Paraguay border. Not yet. Wetland, heat, its own logistics. A tip, not a pin."),
-    ("La Pampa", "Pampa interior. Aún no.", "Interior pampas. Not yet."),
-    ("La Rioja", "Talampaya queda acá. Aún no.", "Talampaya is here. Not yet."),
-    ("Neuquén", "Villa La Angostura y San Martín de los Andes: yo marqué Bariloche en Río Negro.", "Villa La Angostura and San Martín de los Andes: I marked Bariloche in Río Negro."),
-    ("San Juan", "Cuyo norte, Ischigualasto. Aún no.", "Northern Cuyo, Ischigualasto. Not yet."),
-    ("San Luis", "Sierras puntanas. Aún no.", "Puntano sierras. Not yet."),
+    ("Chaco", "Impenetrable y Resistencia: aún no.", "Impenetrable forest and Resistencia: not yet.", None),
+    ("Corrientes", "Esteros del Iberá / Colonia Carlos Pellegrini, carnaval. Aún no pisé: 4×4, mosquitos, mejor en seca (abr–oct). Tip, no pin.", "Iberá wetlands / Colonia Carlos Pellegrini, carnival. I have not been: 4×4, mosquitoes, better in the dry (Apr–Oct). A tip, not a pin.", None),
+    ("Formosa", "Bañado La Estrella y frontera con Paraguay. Aún no. Humedal, calor, logística propia. Tip, no pin.", "Bañado La Estrella and the Paraguay border. Not yet. Wetland, heat, its own logistics. A tip, not a pin.", None),
+    ("La Pampa", "Pampa interior. Aún no.", "Interior pampas. Not yet.", None),
+    ("La Rioja", "Talampaya queda acá. Aún no.", "Talampaya is here. Not yet.", None),
+    ("Neuquén", "Villa La Angostura y San Martín de los Andes: yo marqué Bariloche en Río Negro.", "Villa La Angostura and San Martín de los Andes: I marked Bariloche in Río Negro.", None),
+    ("San Juan", "Cuyo norte, Ischigualasto / Valle de la Luna. Aún no. Tip en <a href=\"#maravillas\">maravillas</a>.", "Northern Cuyo, Ischigualasto / Valle de la Luna. Not yet. Tip on <a href=\"#maravillas\">wonders</a>.", "san-juan"),
+    ("San Luis", "Sierras puntanas. Aún no.", "Puntano sierras. Not yet.", None),
+]
+
+WONDERS = [
+    {
+        "href_es": "misiones/",
+        "href_en": "misiones/",
+        "visited": True,
+        "es_name": "Cataratas del Iguazú",
+        "en_name": "Iguazú Falls",
+        "es_where": "Misiones · Parque Nacional Iguazú",
+        "en_where": "Misiones · Iguazú National Park",
+        "es_why": "Selva y el ruido blanco de la Garganta. El lado argentino es pasarelas; el brasileño es la postal. No apretés los dos parques en un día.",
+        "en_why": "Jungle and the white noise of Garganta. The Argentine side is boardwalks; the Brazilian side is the postcard. Do not squeeze both parks into one day.",
+        "es_season": "Todo el año. Ideal abr–jun y ago–oct: menos horno, buen caudal. Dic–feb es calor y tormentas.",
+        "en_season": "Year-round. Ideal Apr–Jun and Aug–Oct: less of an oven, solid water. Dec–Feb is heat and storms.",
+        "es_more": "Página de Misiones →",
+        "en_more": "Misiones page →",
+    },
+    {
+        "href_es": "santa-cruz/",
+        "href_en": "santa-cruz/",
+        "visited": True,
+        "es_name": "Glaciar Perito Moreno",
+        "en_name": "Perito Moreno Glacier",
+        "es_where": "Santa Cruz · El Calafate",
+        "en_where": "Santa Cruz · El Calafate",
+        "es_why": "Una pared de hielo a la que se llega en micro. Pasarelas casi todo el año; kayak o crampón es el segundo día, no el mismo.",
+        "en_why": "An ice wall you reach by bus. Boardwalks most of the year; kayak or crampons are the second day, not the same one.",
+        "es_season": "Pasarelas todo el año. Ideal nov–mar para luz, kayak y hielo. May–ago: frío y pocas horas.",
+        "en_season": "Boardwalks year-round. Ideal Nov–Mar for light, kayak and ice. May–Aug: cold and short days.",
+        "es_more": "Página de Santa Cruz →",
+        "en_more": "Santa Cruz page →",
+    },
+    {
+        "href_es": "santa-cruz/#tips",
+        "href_en": "santa-cruz/#tips",
+        "visited": False,
+        "es_name": "Fitz Roy / El Chaltén",
+        "en_name": "Fitz Roy / El Chaltén",
+        "es_where": "Santa Cruz · tip, no pin visitado",
+        "en_where": "Santa Cruz · a tip, not a visited pin",
+        "es_why": "El trekking largo de la misma provincia que el glaciar. Fitz Roy es la postal; Chaltén es el pueblo. Yo no lo marqué: reservá 2–3 noches después del Perito Moreno.",
+        "en_why": "The long trekking in the same province as the glacier. Fitz Roy is the postcard; Chaltén is the town. I did not mark it: book 2–3 nights after Perito Moreno.",
+        "es_season": "Mejor oct–abr para senderos. Mayo–agosto es frío y poca luz. No es day trip desde Calafate (~2 h 40).",
+        "en_season": "Better Oct–Apr for trails. May–August is cold and short on light. Not a day trip from Calafate (~2 h 40).",
+        "es_more": "Tip en Santa Cruz →",
+        "en_more": "Tip on Santa Cruz →",
+    },
+    {
+        "href_es": "mendoza/",
+        "href_en": "mendoza/",
+        "visited": True,
+        "es_name": "Aconcagua",
+        "en_name": "Aconcagua",
+        "es_where": "Mendoza · Parque Provincial",
+        "en_where": "Mendoza · Provincial Park",
+        "es_why": "El techo de América. Se mira desde el parque o la ruta a Chile; no hace falta cumbre. El vino de Mendoza es otro plan, más abajo.",
+        "en_why": "The roof of the Americas. You look from the park or the Chile road; you do not have to summit. Mendoza wine is a different, lower plan.",
+        "es_season": "Mirar: nov–mar. Cumbre (otro deporte): dic–feb. Invierno: el Cristo Redentor cierra a menudo.",
+        "en_season": "Looking: Nov–Mar. Summit (another sport): Dec–Feb. Winter: Cristo Redentor often closes.",
+        "es_more": "Página de Mendoza →",
+        "en_more": "Mendoza page →",
+    },
+    {
+        "href_es": "jujuy/",
+        "href_en": "jujuy/",
+        "visited": True,
+        "es_name": "Quebrada de Humahuaca",
+        "en_name": "Quebrada de Humahuaca",
+        "es_where": "Jujuy · UNESCO",
+        "en_where": "Jujuy · UNESCO",
+        "es_why": "Cerros de colores, pueblos andinos y un ritmo más lento que Buenos Aires. Purmamarca, Tilcara, Humahuaca. La altura se nota: subí con tiempo.",
+        "en_why": "Colored hills, Andean towns, and a slower tempo than Buenos Aires. Purmamarca, Tilcara, Humahuaca. The altitude is real: give yourself time.",
+        "es_season": "Ideal may–oct: cielo claro, noches heladas. Evitá dic–mar si la idea es ruta seca.",
+        "en_season": "Ideal May–Oct: clear skies, freezing nights. Avoid Dec–Mar if you want dry roads.",
+        "es_more": "Página de Jujuy →",
+        "en_more": "Jujuy page →",
+    },
+    {
+        "href_es": "jujuy/#tours",
+        "href_en": "jujuy/#tours",
+        "visited": True,
+        "es_name": "Salinas Grandes",
+        "en_name": "Salinas Grandes",
+        "es_where": "Jujuy / Salta · puna",
+        "en_where": "Jujuy / Salta · puna",
+        "es_why": "El salar de altura vía Purmamarca y la Cuesta de Lipán. Se combina con la Quebrada; no es un day trip desde CABA. Abrigo y agua.",
+        "en_why": "The high-altitude salt flat via Purmamarca and Cuesta de Lipán. Combine it with the Quebrada; it is not a day trip from CABA. Jacket and water.",
+        "es_season": "Misma ventana que la Quebrada: may–oct. Lluvia de verano deja el salar blando.",
+        "en_season": "Same window as the Quebrada: May–Oct. Summer rain leaves the salt soft.",
+        "es_more": "Tours en Jujuy →",
+        "en_more": "Tours on Jujuy →",
+    },
+    {
+        "href_es": "#san-juan",
+        "href_en": "#san-juan",
+        "visited": False,
+        "es_name": "Valle de la Luna (Ischigualasto)",
+        "en_name": "Valle de la Luna (Ischigualasto)",
+        "es_where": "San Juan · tip, no pin visitado",
+        "en_where": "San Juan · a tip, not a visited pin",
+        "es_why": "Paisaje lunar y fósiles; suele ir con Talampaya (La Rioja). Yo no lo marqué. No hay página de provincia: San Juan sigue en «aún no».",
+        "en_why": "Moonscape and fossils; often paired with Talampaya (La Rioja). I did not mark it. No province page: San Juan is still “not yet”.",
+        "es_season": "Mejor abr–nov (seco, menos horno). El verano puneño pega fuerte. Confirmá parque y 4×4 en el lugar.",
+        "en_season": "Better Apr–Nov (dry, less of an oven). High-altitude summer hits hard. Confirm the park and 4×4 on the ground.",
+        "es_more": "San Juan en «aún no» →",
+        "en_more": "San Juan under “not yet” →",
+    },
 ]
 
 SLUG_BY = {p["slug"]: p for p in PROVINCES}
@@ -1477,6 +2108,10 @@ def tour_html(t, lang):
         price_line = note or ("confirm with the operator" if lang == "en" else "confirmá en el operador")
     asof_html = f' <span class="asof">({asof})</span>' if asof else ""
     meta = []
+    season = t.get("season_en") if lang == "en" else t.get("season_es")
+    if season:
+        sk = "Season" if lang == "en" else "Temporada"
+        meta.append(f'<p class="tour-meta"><span>{sk}</span> {season}</p>')
     if duration:
         dk = "Duration" if lang == "en" else "Duración"
         meta.append(f'<p class="tour-meta"><span>{dk}</span> {duration}</p>')
@@ -1485,12 +2120,37 @@ def tour_html(t, lang):
         meta.append(f'<p class="tour-meta"><span>{ik}</span> {includes}</p>')
     meta_html = ("\n          " + "\n          ".join(meta) + "\n          ") if meta else "\n          "
     rec = t.get("rec_en") if lang == "en" else t.get("rec_es")
-    rec_html = f'\n          <p class="tour-rec">{rec}</p>' if rec else ""
+    rec_kind = t.get("rec_kind", "")
+    rec_class = f" tour-rec-{rec_kind}" if rec_kind else ""
+    rec_html = f'\n          <p class="tour-rec{rec_class}">{rec}</p>' if rec else ""
     url = t["url"]
     return f"""        <article class="tour">
           <h3><a href="{url}" rel="noopener">{name}</a></h3>{rec_html}
           <p>{body}</p>{meta_html}<p class="price">{price_line}{asof_html}</p>
         </article>"""
+
+
+def operators_section(p, lang):
+    ops = p.get("operators") or []
+    if not ops:
+        return "", ""
+    if lang == "en":
+        title = "Operators and local outfits"
+        kicker = "Recommendations and public info — not paid ads. Fares from official sheets or press; no private booking emails, phones, or invoices. Confirm the card the day you pay."
+        toc = "Operators"
+    else:
+        title = "Operadores y emprendimientos"
+        kicker = "Recomendaciones e info pública — no son avisos pagos. Tarifas de hojas oficiales o de prensa; sin mails, teléfonos de reserva privada ni facturas. Confirmá la ficha el día que pagás."
+        toc = "Operadores"
+    block = "\n".join(tour_html(t, lang) for t in ops)
+    section = f"""    <div class="section" id="operadores">
+      <h2>{title}</h2>
+      <p class="kicker">{kicker}</p>
+      <div class="tour-list">
+{block}
+      </div>
+    </div>"""
+    return section, f'\n      <a href="#operadores">{toc}</a>'
 
 
 def nearby_html(slugs, lang, prefix):
@@ -1619,6 +2279,7 @@ def province_page(p, lang):
       <h2>{h_tours}</h2>
       <p>{tours_empty}</p>
     </div>"""
+    ops_section, toc_ops_link = operators_section(p, lang)
 
     city = p.get("city_extra")
     if city:
@@ -1687,7 +2348,7 @@ def province_page(p, lang):
       <a href="#epoca">{toc_season}</a>
       <a href="#llegar">{toc_arrive}</a>
       <a href="#hacer">{toc_do}</a>{toc_city_link}{toc_tips_link}
-      <a href="#tours">{toc_tours}</a>
+      <a href="#tours">{toc_tours}</a>{toc_ops_link}
       <a href="#comer">{toc_eat}</a>
       <a href="#hack">{toc_hack}</a>
     </div>
@@ -1726,6 +2387,7 @@ def province_page(p, lang):
 {extra_section}
 {tips_section}
 {tours_section}
+{ops_section}
 
     <div class="section" id="comer">
       <h2>{h_eat}</h2>
@@ -1750,6 +2412,48 @@ def province_page(p, lang):
 """
 
 
+def wonders_html(lang):
+    cards = []
+    for w in WONDERS:
+        href = w["href_en"] if lang == "en" else w["href_es"]
+        name = w["en_name"] if lang == "en" else w["es_name"]
+        where = w["en_where"] if lang == "en" else w["es_where"]
+        why = w["en_why"] if lang == "en" else w["es_why"]
+        season = w["en_season"] if lang == "en" else w["es_season"]
+        more = w["en_more"] if lang == "en" else w["es_more"]
+        if w["visited"]:
+            badge = "Visited by Aldo" if lang == "en" else "Visitado por Aldo"
+            badge_class = "badge"
+        else:
+            badge = "Tip only — not a visited pin" if lang == "en" else "Sólo tip — no es un pin visitado"
+            badge_class = "badge badge-tip"
+        sk = "When" if lang == "en" else "Época"
+        cards.append(
+            f"""      <article class="wonder">
+        <span class="{badge_class}">{badge}</span>
+        <h3>{name}</h3>
+        <p class="where">{where}</p>
+        <p>{why}</p>
+        <p class="wonder-season"><span>{sk}</span> {season}</p>
+        <a class="more" href="{href}">{more}</a>
+      </article>"""
+        )
+    if lang == "en":
+        title = "Wonder landscapes"
+        lead = "The postcards Aldo wants on the table: some he marked as visited, two are tips only (Fitz Roy / El Chaltén and Valle de la Luna / Ischigualasto). Short cards — why they matter, a season tip, and the province page. Not a paid list."
+    else:
+        title = "Paisajes maravilla"
+        lead = "Las postales que Aldo quiere sobre la mesa: algunas las marcó como visitadas; dos son sólo tip (Fitz Roy / El Chaltén y Valle de la Luna / Ischigualasto). Fichas cortas — por qué importan, una época, y la página de provincia. No es una lista paga."
+    return f"""    <div class="section" id="maravillas">
+      <h2>{title}</h2>
+      <p>{lead}</p>
+      <div class="wonder-grid">
+{chr(10).join(cards)}
+      </div>
+    </div>
+"""
+
+
 def hub_grid(lang):
     cards = []
     for p in PROVINCES:
@@ -1768,17 +2472,19 @@ def hub_grid(lang):
       </a>"""
         )
     notyet = []
-    for name, es, en in NOT_YET:
+    for name, es, en, *rest in NOT_YET:
         blurb = en if lang == "en" else es
-        notyet.append(f"        <article><h3>{name}</h3><p>{blurb}</p></article>")
+        aid = rest[0] if rest else None
+        id_attr = f' id="{aid}"' if aid else ""
+        notyet.append(f"        <article{id_attr}><h3>{name}</h3><p>{blurb}</p></article>")
     if lang == "en":
         h2 = "Provinces I actually went to"
-        lead = "One page each — seasons, how to get there, food, and tours with public prices. The map pins jump here. National transport, long-distance buses, money, and the hack trips that cross borders stay on this hub."
+        lead = "One page each — seasons, how to get there, food, public-price tours, and recommended local operators (public info, not paid ads). The map pins jump here. National transport, long-distance buses, money, and the hack trips that cross borders stay on this hub."
         h3 = "Not yet"
         ny_lead = "Short notes, not fake itineraries. Neuquén would be Villa La Angostura; I marked Bariloche in Río Negro."
     else:
         h2 = "Provincias que yo sí recorrí"
-        lead = "Una página cada una: época, cómo llegar, comida y tours con precios públicos. Los pines del mapa saltan acá. Transporte nacional, micros, plata y los hacks que cruzan frontera se quedan en esta hub."
+        lead = "Una página cada una: época, cómo llegar, comida, tours con precios públicos y operadores locales recomendados (info pública, no avisos pagos). Los pines del mapa saltan acá. Transporte nacional, micros, plata y los hacks que cruzan frontera se quedan en esta hub."
         h3 = "Aún no"
         ny_lead = "Notas cortas, no itinerarios inventados. Neuquén sería Villa La Angostura; Bariloche lo marqué en Río Negro."
     return f"""    <div class="section" id="provincias">
@@ -1793,6 +2499,7 @@ def hub_grid(lang):
 {chr(10).join(notyet)}
       </div>
     </div>
+{wonders_html(lang)}
 """
 
 
@@ -1822,6 +2529,12 @@ def patch_hub(path: Path, lang: str):
     if lang == "es":
         text = text.replace("<html lang=\"es-AR\">", "<html lang=\"es-AR\" data-guide-root=\"./\">", 1)
         text = text.replace("<a href=\"#lugares\">Lugares</a>", "<a href=\"#provincias\">Provincias</a>", 1)
+        if 'href="#maravillas"' not in text:
+            text = text.replace(
+                '<a href="#provincias">Provincias</a>',
+                '<a href="#provincias">Provincias</a>\n      <a href="#maravillas">Maravillas</a>',
+                1,
+            )
         text = text.replace(
             "ahora con mapa, <a href=\"#tiempos\">tiempos reales desde Buenos Aires</a>, <a href=\"#hacks\">hack trips</a>, precios de orden de magnitud y fichas de los lugares que <strong>yo sí recorrí</strong>.",
             "ahora con mapa, <a href=\"#tiempos\">tiempos reales desde Buenos Aires</a>, <a href=\"#hacks\">hack trips</a> y <strong>una página por provincia que yo sí recorrí</strong>.",
@@ -1837,6 +2550,12 @@ def patch_hub(path: Path, lang: str):
     else:
         text = text.replace("<html lang=\"en\">", "<html lang=\"en\" data-guide-root=\"./\">", 1)
         text = text.replace("<a href=\"#lugares\">Places</a>", "<a href=\"#provincias\">Provinces</a>", 1)
+        if 'href="#maravillas"' not in text:
+            text = text.replace(
+                '<a href="#provincias">Provinces</a>',
+                '<a href="#provincias">Provinces</a>\n      <a href="#maravillas">Wonders</a>',
+                1,
+            )
         text = text.replace(
             "now with a map, <a href=\"#tiempos\">real travel times from Buenos Aires</a>, <a href=\"#hacks\">hack trips</a>, order-of-magnitude prices, and cards for the places <strong>I actually went to</strong>.",
             "now with a map, <a href=\"#tiempos\">real travel times from Buenos Aires</a>, <a href=\"#hacks\">hack trips</a>, and <strong>one page per province I actually went to</strong>.",
@@ -1845,6 +2564,16 @@ def patch_hub(path: Path, lang: str):
             'content="A practical, navigable Argentina guide: visited-places map, transport, food, money and culture, in first person."',
             'content="A practical Argentina guide: province map, one page per place visited, transport, food and culture. First person."',
         )
+
+    # Hub Madryn card: point at the Chubut operators desk (survives grid rewrite).
+    text = text.replace(
+        "El avistaje embarcado se paga aparte y el puerto cierra con viento.</p>",
+        "El avistaje embarcado se paga aparte y el puerto cierra con viento. Operadores que nombré (Darwin Expediciones, Madrynbuceo) y pares locales: <a href=\"chubut/#operadores\">ficha en Chubut</a> — recomendaciones e info pública, no avisos pagos.</p>",
+    )
+    text = text.replace(
+        "The boat trip is extra, and the harbour closes in wind.</p>",
+        "The boat trip is extra, and the harbour closes in wind. Operators I named (Darwin Expediciones, Madrynbuceo) and local peers: <a href=\"chubut/#operadores\">card on Chubut</a> — recommendations and public info, not paid ads.</p>",
+    )
 
     start = text.find('<div class="section" id="lugares">')
     if start == -1:

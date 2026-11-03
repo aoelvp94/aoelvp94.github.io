@@ -690,6 +690,70 @@ a.prov-card .more {
   font-weight: 650;
   letter-spacing: 0.01em;
 }
+.tour-rec-named {
+  background: #1e3a5f;
+  color: #93c5fd;
+}
+.tour-rec-rec {
+  background: #3b2f14;
+  color: #fcd34d;
+}
+.tour-rec-used {
+  background: #14532d;
+  color: #bbf7d0;
+}
+.badge-tip {
+  background: rgba(251, 191, 36, 0.12);
+  color: #fcd34d;
+  border-color: rgba(251, 191, 36, 0.35);
+}
+.wonder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+.wonder {
+  background: #12202c;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+.wonder h3 {
+  margin: 8px 0 4px;
+  font-size: 1.12rem;
+  color: #fff;
+}
+.wonder .where {
+  color: #8ea0b3;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 8px;
+}
+.wonder p { color: #b7c6d6; font-size: 0.9rem; line-height: 1.5; margin: 0 0 8px; }
+.wonder-season {
+  color: #c5d2df !important;
+  font-size: 0.86rem !important;
+}
+.wonder-season span {
+  display: inline-block;
+  min-width: 4.5rem;
+  color: #8ea0b3;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.72rem;
+}
+.wonder .more {
+  display: inline-block;
+  margin-top: 4px;
+  color: #93c5fd;
+  font-size: 0.85rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+.wonder .more:hover { text-decoration: underline; }
 .tour p { margin: 0 0 8px; color: #b7c6d6; font-size: 0.9rem; line-height: 1.5; }
 .tour .price {
   margin: 0;
