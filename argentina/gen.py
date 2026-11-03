@@ -486,7 +486,8 @@ PROVINCES = [
             "season": "Ideal sep–nov y mar–may, costanera caminable. Evitá dic–feb si no te gusta el calor húmedo de río.",
             "arrive": "Micro desde Retiro (~3–4 h), tren a Rosario Norte cuando corre, o vuelo a ROS (~1 h). Es el salto corto más lógico desde Buenos Aires.",
             "do": [
-                "Monumento a la Bandera, costanera, islas frente a la ciudad.",
+                "Monumento Nacional a la Bandera (Belgrano; Santa Fe 581). Sala y cripta suelen ser gratis, el mirador se paga — confirmá en <a href=\"https://www.monumentoalabandera.gob.ar/visita\" rel=\"noopener\">monumentoalabandera.gob.ar</a>. La cripta es homenaje; los restos están en Santo Domingo, CABA. Ficha en la <a href=\"../#proceres\">hub</a>.",
+                "Costanera e islas frente a la ciudad.",
                 "Centros culturales. Si hay clásico de fútbol, el clima cambia.",
             ],
             "eat": "El carlito (sándwich de miga, jamón, queso, manteca y ketchup; patrimonio local — nació en bares tipo Cachito). También pescado de río y helado.",
@@ -500,7 +501,8 @@ PROVINCES = [
             "season": "Ideal Sep–Nov and Mar–May, walkable waterfront. Avoid Dec–Feb if you don’t like humid river heat.",
             "arrive": "Bus from Retiro (~3–4 h), the train to Rosario Norte when it runs, or a flight to ROS (~1 h). The most logical short hop from Buenos Aires.",
             "do": [
-                "National Flag Memorial, the waterfront, islands across the river.",
+                "National Flag Memorial (Belgrano; Santa Fe 581). The hall and crypt are usually free, the tower is paid — confirm at <a href=\"https://www.monumentoalabandera.gob.ar/visita\" rel=\"noopener\">monumentoalabandera.gob.ar</a>. The crypt is a tribute; the remains are at Santo Domingo, CABA. Card on the <a href=\"../#proceres\">hub</a>.",
+                "The waterfront and islands across the river.",
                 "Cultural centres. If there is a football derby, the mood shifts.",
             ],
             "eat": "The carlito (thin-bread sandwich with ham, cheese, butter, and ketchup — local heritage, born in bars like Cachito). Also river fish and ice cream.",
@@ -704,6 +706,7 @@ PROVINCES = [
             "arrive": "EZE (internacional) o AEP (doméstico y algunos regionales). AEP 20–40 min al centro; EZE 45–75 min. Tienda León / Uber. Dentro: SUBE, subte, colectivo, DiDi/Cabify/Uber.",
             "do": [
                 "Palermo (parques, bares), San Telmo (feria domingo), Recoleta (cementerio, museos).",
+                "Plaza de Mayo y la Catedral Metropolitana: el mausoleo de San Martín está adentro (nave derecha). El walking tour suele pasar; no hace falta un ticket aparte. Fichas de próceres en la <a href=\"../#proceres\">hub</a>.",
                 "Puerto Madero para la foto, La Boca un rato corto con las cosas pegadas al cuerpo.",
                 "Free walking tours en Plaza de Mayo/San Telmo (propina). Tango en milonga de verdad si te anima, no sólo dinner-show.",
             ],
@@ -719,6 +722,7 @@ PROVINCES = [
             "arrive": "EZE (international) or AEP (domestic and some regional). AEP 20–40 min to the centre; EZE 45–75 min. Tienda León / Uber. Inside the city: SUBE, subway, buses, DiDi/Cabify/Uber.",
             "do": [
                 "Palermo (parks, bars), San Telmo (Sunday fair), Recoleta (cemetery, museums).",
+                "Plaza de Mayo and the Metropolitan Cathedral: San Martín’s tomb is inside (right aisle). The walking tour usually passes; no separate ticket. Short historical cards on the <a href=\"../#proceres\">hub</a>.",
                 "Puerto Madero for the photo, La Boca briefly with your things zipped.",
                 "Free walking tours at Plaza de Mayo/San Telmo (tip). Tango in a real milonga if you are up for it, not only a dinner show.",
             ],
@@ -837,6 +841,7 @@ PROVINCES = [
             "arrive": "Vuelo a MDZ (~1 h 50) o micro (~14–16 h). Auto o bici en Maipú; para Valle de Uco conviene tour o conductor: el vino no maneja.",
             "do": [
                 "Bodegas en Luján de Cuyo, Maipú o Valle de Uco.",
+                "Cerro de la Gloria, en el Parque San Martín: el monumento al Ejército de los Andes. Subida en auto o a pie; es el San Martín de esta ciudad, no sólo bodega. Ficha en la <a href=\"../#proceres\">hub</a>.",
                 "Uspallata y alta montaña; Aconcagua desde el parque (mirar, no hace falta subir).",
                 "Cruce a Santiago por Cristo Redentor cuando el paso está abierto.",
             ],
@@ -852,6 +857,7 @@ PROVINCES = [
             "arrive": "Fly to MDZ (~1 h 50) or bus (~14–16 h). Car or bike in Maipú; for Valle de Uco you want a tour or a driver: the wine does not drive.",
             "do": [
                 "Wineries in Luján de Cuyo, Maipú, or Valle de Uco.",
+                "Cerro de la Gloria, in Parque San Martín: the Army of the Andes monument. Drive or walk up; this city’s San Martín, not only wine. Card on the <a href=\"../#proceres\">hub</a>.",
                 "Uspallata and the high Andes; Aconcagua from the park (look, you do not have to climb).",
                 "The Santiago crossing via Cristo Redentor when the pass is open.",
             ],
@@ -1107,32 +1113,32 @@ PROVINCES = [
         "es": {
             "name": "Santa Cruz",
             "where": "Patagonia de hielo · El Calafate",
-            "teaser": "Pueblo-base para el Perito Moreno. El Chaltén es otro viaje (yo no lo marqué como visitado).",
-            "vibe": "Pueblo-base para el Perito Moreno. El glaciar es el motivo; el pueblo es viento, souvenir y cordero. El trekking largo es Chaltén: yo no lo marqué como visitado acá.",
-            "season": "El Perito Moreno «funciona» casi todo el año. Ideal nov–mar para luz (y Chaltén cerca). Evitá may–ago si querés trekking largo: frío, pocas horas de luz, algunas salidas se cortan. Enero es caro y lleno.",
-            "arrive": "Vuelo a FTE (~3 h). No hay micro directo razonable desde Buenos Aires: si no volás, es un odisea de combinaciones.",
+            "teaser": "Pueblo-base para el Perito Moreno. Kayak o hielo, no los dos el mismo día. El Chaltén es otro viaje (yo no lo marqué).",
+            "vibe": "Pueblo-base para el Perito Moreno. El glaciar es el motivo; el pueblo es viento, souvenir y cordero. Estuve en El Calafate. El kayak frente a la pared lo armé con Patagonia Chic — agregador/operador local, ficha pública. El trekking largo es Chaltén: yo no lo marqué.",
+            "season": "El Perito Moreno «funciona» casi todo el año: las pasarelas no dependen de un crampón. Ideal nov–mar para luz (y para kayak o hielo). May–ago: frío, ~7–8 h de luz, algunas salidas se cortan por viento. Enero es caro y lleno. Febrero sigue alta: hay paquetes de verano que suman traslado de aeropuerto. Mar–abr afloja un poco y todavía hay día. Pueblo y operadores en <a href=\"#ciudad\">Calafate</a>.",
+            "arrive": "Vuelo a FTE (~3 h desde Buenos Aires). No hay micro directo razonable desde BA: si no volás, es odisea de combinaciones. El aeropuerto (Comandante Armando Tola) queda ~20 km al este, ~20 min. Taxi/remís o transfer de hotel. Si reservás una excursión con <a href=\"https://www.patagoniachic.com/el-calafate/excursiones/perito-moreno-kayak\" rel=\"noopener\">Patagonia Chic</a>, la ficha pública de nov. 2026 regala el tramo de <em>llegada</em> FTE→hotel — no el regreso. El glaciar está al otro lado: ~80 km al oeste.",
             "do": [
-                "Pasarelas del glaciar (imprescindible) + entrada al parque.",
-                "Navegación frente a la pared o trekking sobre hielo si estás en forma.",
-                "El Chaltén queda a ~2 h 40 / 215 km si seguís (yo no lo marqué).",
+                "Pasarelas del glaciar (imprescindible) + entrada APN. Micro Caltur / Taqsa / Always Glaciers desde la terminal: ~ARS 56.000–60.000 el tramo (Plataforma10, 3 nov. 2026); parque aparte.",
+                "Un segundo plan, no tres el mismo día: kayak (<a href=\"#tours\">Patagonia Chic</a>), minitrekking/safari (Hielo y Aventura) o sólo pasarelas.",
+                "El Chaltén queda a ~2 h 40 / 215 km si seguís — <a href=\"#tips\">tip, no pin</a>.",
             ],
-            "eat": "Cordero patagónico, calafate en dulce o helado, trucha. Porciones de refugio, no de degustación.",
-            "hack": "Micros Cal Tur / Chaltén Travel / TAQSA a El Chaltén, ~ARS 70.000 / ~USD 45 el tramo (oct. 2026) + tasa de terminal. Reservá 2–3 noches en Chaltén después del Perito Moreno. No es day trip de trekking.",
+            "eat": "Cordero patagónico, calafate en dulce o helado, trucha. Porciones de refugio, no de degustación. Libertador es la calle: parrilla y menú de glaciar. No amarro un restaurante que puede cerrar mañana.",
+            "hack": "Si el plan es hielo + sendero: dos noches Calafate (pasarelas o kayak) y después micro a Chaltén (Cal Tur / Chaltén Travel / TAQSA, ~ARS 70.000 / ~USD 45 el tramo, oct. 2026 + tasa). Chaltén no tiene aeropuerto. No es day trip de trekking.",
         },
         "en": {
             "name": "Santa Cruz",
             "where": "Ice Patagonia · El Calafate",
-            "teaser": "Base town for Perito Moreno. El Chaltén is another trip (I did not mark it as visited).",
-            "vibe": "Base town for Perito Moreno. The glacier is the reason; the town is wind, souvenirs, and lamb. The long trekking is El Chaltén: I did not mark it as visited here.",
-            "season": "Perito Moreno “works” most of the year. Ideal Nov–Mar for daylight (and Chaltén nearby). Avoid May–Aug if you want long treks: cold, short days, some outings get cut. January is expensive and packed.",
-            "arrive": "Fly to FTE (~3 h). There is no reasonable direct bus from Buenos Aires: if you don’t fly, it is a multi-day odyssey.",
+            "teaser": "Base town for Perito Moreno. Kayak or ice, not both the same day. El Chaltén is another trip (I did not mark it).",
+            "vibe": "Base town for Perito Moreno. The glacier is the reason; the town is wind, souvenirs, and lamb. I was in El Calafate. The kayak in front of the wall I booked with Patagonia Chic — a local aggregator/operator, public card. The long trekking is El Chaltén: I did not mark it.",
+            "season": "Perito Moreno “works” most of the year: the boardwalks do not need crampons. Ideal Nov–Mar for daylight (and for kayak or ice). May–Aug: cold, ~7–8 h of light, some outings get cut by wind. January is expensive and packed. February is still high: summer packages often add an airport transfer. Mar–Apr eases a bit and you still have daylight. Town and operators in <a href=\"#ciudad\">Calafate</a>.",
+            "arrive": "Fly to FTE (~3 h from Buenos Aires). There is no reasonable direct bus from BA: if you don’t fly, it is a multi-day odyssey. The airport (Comandante Armando Tola) sits ~20 km east, ~20 min. Taxi/remis or a hotel transfer. If you book an outing with <a href=\"https://www.patagoniachic.com/el-calafate/excursiones/perito-moreno-kayak\" rel=\"noopener\">Patagonia Chic</a>, the Nov 2026 public card gives the <em>arrival</em> FTE→hotel leg — not the return. The glacier is the other way: ~80 km west.",
             "do": [
-                "Glacier boardwalks (non-negotiable) plus the park ticket.",
-                "A boat along the wall, or ice trekking if you are fit.",
-                "El Chaltén is ~2 h 40 / 215 km if you continue (I did not mark it).",
+                "Glacier boardwalks (non-negotiable) plus the APN ticket. Caltur / Taqsa / Always Glaciers buses from the terminal: ~ARS 56,000–60,000 one way (Plataforma10, 3 Nov 2026); park extra.",
+                "One second plan, not three the same day: kayak (<a href=\"#tours\">Patagonia Chic</a>), mini trekking/safari (Hielo y Aventura), or boardwalks only.",
+                "El Chaltén is ~2 h 40 / 215 km if you continue — <a href=\"#tips\">a tip, not a pin</a>.",
             ],
-            "eat": "Patagonian lamb, calafate in jam or ice cream, trout. Mountain-refuge portions, not a tasting menu.",
-            "hack": "Cal Tur / Chaltén Travel / TAQSA buses to El Chaltén, ~ARS 70,000 / ~USD 45 (Oct 2026) plus terminal tax. Book 2–3 nights in Chaltén after Perito Moreno. Not a trekking day trip.",
+            "eat": "Patagonian lamb, calafate in jam or ice cream, trout. Mountain-refuge portions, not a tasting menu. Libertador is the street: grill and glacier-menu. I am not locking a restaurant that may close tomorrow.",
+            "hack": "If the plan is ice + trail: two nights in Calafate (boardwalks or kayak) and then the bus to Chaltén (Cal Tur / Chaltén Travel / TAQSA, ~ARS 70,000 / ~USD 45 one way, Oct 2026 plus tax). Chaltén has no airport. Not a trekking day trip.",
         },
         "legs_es": [("air", "Avión ~3 h"), ("warn", "Micro: no (2+ días)")],
         "legs_en": [("air", "Flight ~3 h"), ("warn", "Bus: no (2+ days)")],
@@ -1190,20 +1196,76 @@ PROVINCES = [
                 "url": "https://www.patagoniachic.com/el-calafate/excursiones/perito-moreno-kayak",
                 "es_name": "Patagonia Chic — Kayak Perito Moreno",
                 "en_name": "Patagonia Chic — Perito Moreno kayak",
-                "es": "Kayak doble en el Canal de los Témpanos, la pared de frente. 14 años o más; no hace falta experiencia. Agregador/operador de Calafate: si el plan es crampón sobre hielo, compará con Hielo y Aventura. La ficha pública ofrece cancelación gratis ~24 h — confirmala en el checkout.",
-                "en": "Double kayak on the Canal de los Témpanos, the wall in front of you. Age 14+; no experience required. Calafate aggregator/operator: if the plan is crampons on ice, compare with Hielo y Aventura. The public card offers free cancellation ~24 h — confirm it at checkout.",
-                "duration_es": "~1 h 30 de kayak (9:45–13:30 desde el parque); con traslado y pasarelas el día se va a la tarde",
-                "duration_en": "~1 h 30 of kayaking (9:45–13:30 from the park); with transfer and boardwalks the day runs into the afternoon",
-                "includes_es": "kayak, traje seco, guía, snack; la ficha dice ticket APN incluido — confirmá al pagar. Traslado hotel + pasarelas ARS 90.000 extra",
-                "includes_en": "kayak, dry suit, guide, snack; the card says the APN ticket is included — confirm at payment. Hotel transfer + boardwalks ARS 90,000 extra",
+                "rec_es": "Lo reservé — ficha pública, sin códigos",
+                "rec_en": "I booked this — public card, no codes",
+                "es": "Agregador/operador de Calafate. Kayak doble en el Canal de los Témpanos, la pared de frente. 14 años o más; no hace falta experiencia. Lo armé como kayak de temporada alta (paquete de verano / febrero, con opción de traslado de aeropuerto). Si el plan es crampón sobre hielo, compará con Hielo y Aventura: son días distintos. La <a href=\"https://www.patagoniachic.com/politica-de-cancelacion\" rel=\"noopener\">política pública</a> y la ficha del kayak dicen cancelación gratis hasta 24 h antes; confirmala en el checkout, no en un mail. No publico vouchers ni IDs.",
+                "en": "Calafate aggregator/operator. Double kayak on the Canal de los Témpanos, the wall in front of you. Age 14+; no experience required. I booked it as a high-season kayak (a summer / February package, with an airport-transfer option). If the plan is crampons on ice, compare with Hielo y Aventura: those are different days. The <a href=\"https://www.patagoniachic.com/politica-de-cancelacion\" rel=\"noopener\">public policy</a> and the kayak card say free cancel until 24 h before; confirm it at checkout, not in an email. I am not publishing vouchers or IDs.",
+                "duration_es": "~1 h 30 de kayak (9:45–13:30 desde el parque); con traslado y pasarelas el día se va a las ~17:30",
+                "duration_en": "~1 h 30 of kayaking (9:45–13:30 from the park); with transfer and boardwalks the day runs to ~17:30",
+                "includes_es": "kayak, traje seco, guía, snack; la ficha de nov. 2026 dice ticket APN incluido — confirmá al pagar. Traslado hotel + pasarelas ARS 90.000 extra. Llegada FTE→hotel: la ficha lo ofrece gratis al reservar una excursión (no el regreso)",
+                "includes_en": "kayak, dry suit, guide, snack; the Nov 2026 card says the APN ticket is included — confirm at payment. Hotel transfer + boardwalks ARS 90,000 extra. FTE→hotel arrival: the card offers it free when you book an outing (not the return)",
                 "ars": 370000,
                 "ars_high": 510000,
-                "asof": "patagoniachic.com, nov. 2026 (pantalla 370.000 vs lista 510.000)",
-                "asof_en": "patagoniachic.com, Nov 2026 (on-screen 370,000 vs 510,000 list)",
-                "note_es": "adulto 14+ desde el parque; el 370.000 era promo en pantalla, no un precio eterno",
-                "note_en": "adult 14+ starting at the park; 370,000 was an on-screen promo, not a forever fare",
+                "asof": "patagoniachic.com ficha + política de cancelación, nov. 2026",
+                "asof_en": "patagoniachic.com card + cancellation policy, Nov 2026",
+                "note_es": "adulto 14+ desde el parque; 370.000 era promo en pantalla (27% off) vs lista 510.000 — no es un precio eterno",
+                "note_en": "adult 14+ starting at the park; 370,000 was an on-screen promo (27% off) vs 510,000 list — not a forever fare",
             },
         ],
+        "city_extra": {
+            "toc_es": "Calafate",
+            "toc_en": "Calafate",
+            "es_title": "El Calafate: pueblo, glaciar, cómo elegir el día",
+            "en_title": "El Calafate: town, glacier, how to pick the day",
+            "es": """<p>Calafate es un pueblo-base, no un destino de vereda. Libertador concentra parrilla, souvenir y agencia. El motivo está a ~80 km: el Perito Moreno. Un día rinde pasarelas; un segundo día rinde <em>o</em> kayak <em>o</em> hielo, no los dos.</p>
+      <h3>Cómo ir al glaciar</h3>
+      <ul class="season-list">
+        <li><strong>Micro</strong> — Caltur, Taqsa, Always Glaciers desde la terminal. Plataforma10 el 3 nov. 2026: ~ARS 56.000–60.000 / ~USD 36–39 el tramo, ~1 h 15–1 h 30. Ida y vuelta el mismo día; confirmá el último regreso antes de perderte en las pasarelas. Parque APN aparte (ARS 50.000 / ~USD 32 general, desde 1 jun 2026).</li>
+        <li><strong>Excursión con traslado</strong> — Hielo y Aventura cobra el minitrekking sin traslado ARS 420.000 y con traslado ARS 500.000 (desde 1 nov 2026). Patagonia Chic suma hotel + pasarelas a ARS 90.000 sobre el kayak.</li>
+        <li><strong>Auto</strong> — Tiene sentido si encadenás un segundo punto; para un solo día al glaciar el micro alcanza.</li>
+      </ul>
+      <h3>Kayak vs hielo vs sólo pasarelas</h3>
+      <ul class="season-list">
+        <li><strong>Pasarelas</strong> — El plan que no falla. Caminás, mirás la pared, volvés. Abrigo aunque sea enero.</li>
+        <li><strong>Patagonia Chic — kayak</strong> — La que usé. Agregador/operador de Calafate, ficha en <a href=\"https://www.patagoniachic.com/el-calafate/excursiones/perito-moreno-kayak\" rel=\"noopener\">patagoniachic.com</a>. Doble, 14+, ~1 h 30 en el Canal de los Témpanos. Paquetes de verano (febrero incluido) suelen ofrecer traslado de aeropuerto; la ficha de nov. 2026 lo deja gratis en la <em>llegada</em>. Cancelación gratis ~24 h en su <a href=\"https://www.patagoniachic.com/politica-de-cancelacion\" rel=\"noopener\">política pública</a> — verificá en vivo. No pongo voucher, ID ni mail.</li>
+        <li><strong>Hielo y Aventura</strong> — Concesionaria del parque. Crampones (Minitrekking / Big Ice) o lancha corta (Safari Náutico). Otro músculo, otra tarifa. Fichas en <a href=\"#tours\">tours</a>.</li>
+      </ul>
+      <h3>Un circuito corto que cierra</h3>
+      <ul class="season-list">
+        <li><strong>Día 1</strong> — FTE, pueblo, temprano a dormir. Si el vuelo llega de día, no armes kayak esa misma tarde: el viento y el jet lag no se llevan.</li>
+        <li><strong>Día 2</strong> — Glaciar: pasarelas en micro, o kayak, o minitrekking. Uno.</li>
+        <li><strong>Día 3</strong> — El otro producto, o vuelo, o micro a Chaltén (eso ya es otro viaje: <a href=\"#tips\">tip</a>).</li>
+      </ul>
+      <p>Precios de orden de magnitud, as-of nov. 2026, ~ARS 1.550/USD. El peso se mueve: confirmá la ficha el día que pagás.</p>""",
+            "en": """<p>Calafate is a base town, not a sidewalk destination. Libertador holds the grills, souvenirs, and agencies. The reason sits ~80 km away: Perito Moreno. One day covers the boardwalks; a second day covers <em>either</em> kayak <em>or</em> ice, not both.</p>
+      <h3>How to reach the glacier</h3>
+      <ul class="season-list">
+        <li><strong>Bus</strong> — Caltur, Taqsa, Always Glaciers from the terminal. Plataforma10 on 3 Nov 2026: ~ARS 56,000–60,000 / ~USD 36–39 one way, ~1 h 15–1 h 30. Out and back the same day; confirm the last return before you disappear on the boardwalks. APN park extra (ARS 50,000 / ~USD 32 general, from 1 Jun 2026).</li>
+        <li><strong>Tour with transfer</strong> — Hielo y Aventura charges mini trekking without transfer at ARS 420,000 and with transfer at ARS 500,000 (from 1 Nov 2026). Patagonia Chic adds hotel + boardwalks at ARS 90,000 on top of the kayak.</li>
+        <li><strong>Car</strong> — Makes sense if you chain a second stop; for a single glacier day the bus is enough.</li>
+      </ul>
+      <h3>Kayak vs ice vs boardwalks only</h3>
+      <ul class="season-list">
+        <li><strong>Boardwalks</strong> — The plan that does not fail. You walk, you look at the wall, you go back. A jacket even in January.</li>
+        <li><strong>Patagonia Chic — kayak</strong> — The one I used. Calafate aggregator/operator, card on <a href=\"https://www.patagoniachic.com/el-calafate/excursiones/perito-moreno-kayak\" rel=\"noopener\">patagoniachic.com</a>. Doubles, 14+, ~1 h 30 on the Canal de los Témpanos. Summer packages (February included) often offer an airport transfer; the Nov 2026 card leaves the <em>arrival</em> free. Free cancel ~24 h on their <a href=\"https://www.patagoniachic.com/politica-de-cancelacion\" rel=\"noopener\">public policy</a> — verify live. No voucher, ID, or email here.</li>
+        <li><strong>Hielo y Aventura</strong> — Park concessionaire. Crampons (Mini trekking / Big Ice) or the short boat (Nautical safari). A different muscle, a different fare. Cards under <a href=\"#tours\">tours</a>.</li>
+      </ul>
+      <h3>A short circuit that closes</h3>
+      <ul class="season-list">
+        <li><strong>Day 1</strong> — FTE, town, early to bed. If the flight lands in daylight, do not stack kayak that same afternoon: wind and jet lag do not mix.</li>
+        <li><strong>Day 2</strong> — Glacier: boardwalks by bus, or kayak, or mini trekking. One.</li>
+        <li><strong>Day 3</strong> — The other product, or a flight, or the bus to Chaltén (that is already another trip: <a href=\"#tips\">tip</a>).</li>
+      </ul>
+      <p>Order-of-magnitude prices, as-of Nov 2026, ~ARS 1,550/USD. Pesos move: confirm the card the day you pay.</p>""",
+        },
+        "tips": {
+            "toc_es": "Chaltén",
+            "toc_en": "Chaltén",
+            "es_title": "Para cuando vayas — El Chaltén",
+            "en_title": "For when you go — El Chaltén",
+            "es": """<p>El glaciar es Calafate; el trekking largo es Chaltén. ~2 h 40 / 215 km, micros todos los días (Cal Tur, Chaltén Travel, TAQSA), ~ARS 70.000 / ~USD 45 el tramo (oct. 2026) + tasa de terminal. <strong>Yo no lo marqué como visitado.</strong> Reservá 2–3 noches <em>después</em> del Perito Moreno. No tiene aeropuerto. Mejor oct–abr para senderos; mayo–agosto es frío y poca luz. No es day trip: el micro se come la luz.</p>""",
+            "en": """<p>The glacier is Calafate; the long trekking is Chaltén. ~2 h 40 / 215 km, buses every day (Cal Tur, Chaltén Travel, TAQSA), ~ARS 70,000 / ~USD 45 one way (Oct 2026) plus terminal tax. <strong>I did not mark it as visited.</strong> Book 2–3 nights <em>after</em> Perito Moreno. No airport. Better Oct–Apr for trails; May–August is cold and short on light. Not a day trip: the bus eats the daylight.</p>""",
+        },
     },
     {
         "slug": "tierra-del-fuego",
@@ -1211,31 +1273,33 @@ PROVINCES = [
         "es": {
             "name": "Tierra del Fuego",
             "where": "El fin del mundo · Ushuaia",
-            "teaser": "Montaña metida en el mar y viento que te ordena el pelo.",
-            "vibe": "Montaña metida en el mar, viento que te ordena el pelo y una ciudad que vive del turismo y de ser el punto más austral que la mayoría va a pisar.",
-            "season": "Trekking y Beagle: dic–mar. Ski: jun–ago. Evitá jun–jul si la idea es sendero: viento y ~7 h de luz. Abrigo todo el año.",
-            "arrive": "Vuelo a USH (~3 h 30). Por tierra son dos días y un cruce: casi nadie lo hace de visita. El aeropuerto está pegado a la ciudad.",
+            "teaser": "Montaña metida en el mar. Taun para glaciar de trekking; Beagle para el agua.",
+            "vibe": "Montaña metida en el mar, viento que te ordena el pelo y una ciudad que vive del turismo y de ser el punto más austral que la mayoría va a pisar. Para glaciar de trekking usé Taun, operadora local de Ushuaia: Vinciguerra es el día largo; Esmeralda el clásico más fácil.",
+            "season": "Trekking y Beagle: dic–mar (pingüinos oct–mar). Ski (Cerro Castor): jun–ago. Jun–jul si la idea es sendero: viento y ~7 h de luz — se puede (Vinciguerra corre todo el año) pero el día es corto. Verano ~6–14 °C; abrigo los doce meses. Agosto es invierno fueguino: nieve en el sendero, crampones o raquetas. Pueblo y Taun en <a href=\"#ciudad\">Ushuaia</a>.",
+            "arrive": "Vuelo a USH (~3 h 30). Por tierra son dos días y un cruce: casi nadie lo hace de visita. El aeropuerto (Malvinas Argentinas) está a ~4 km / 10–15 min del centro. No hay colectivo urbano que entre a la península del aeropuerto (dato oct. 2026): taxi o remís en arribos, o un transfer reservado. Listados públicos de transfer compartido andan ~ARS 20.000 por persona (mín. 2, oct. 2026–abr. 2027) — confirmá esa semana, no es un taxímetro.",
             "do": [
-                "Parque Nacional Tierra del Fuego.",
-                "Canal Beagle (faros, lobos, cormoranes).",
-                "Laguna Esmeralda, Cerro Martial. En invierno, ski; en verano, trekking largo.",
+                "Parque Nacional Tierra del Fuego (senderos costeros; el Tren del Fin del Mundo es otro boleto).",
+                "Trekking con Taun: Vinciguerra (glaciar, día largo) o Laguna Esmeralda (más fácil). Fichas públicas en <a href=\"https://taunushuaia.com.ar/\" rel=\"noopener\">taunushuaia.com.ar</a>.",
+                "Canal Beagle (faro, lobos; pingüinos oct–mar en Isla Martillo, sin desembarco).",
+                "Cerro Martial. En invierno, ski en Castor; en verano, trekking largo.",
             ],
-            "eat": "Centolla, merluza negra, cordero fueguino. Es caro comparado con el norte: el flete se siente.",
+            "eat": "Centolla, merluza negra, cordero fueguino. Es caro comparado con el norte: el flete se siente. No amarro un restaurante de puerto que cambia de dueño.",
             "hack": "Ushuaia ↔ Punta Arenas: Bus-Sur / Tecni Austral, dos fronteras y un ferry de ~30 min por el Estrecho (Punta Delgada). ~USD 40–70 / CLP 58–68 mil (catálogo 2026). No hay ferry directo. No vale si tenés dos días en Ushuaia.",
         },
         "en": {
             "name": "Tierra del Fuego",
             "where": "The end of the world · Ushuaia",
-            "teaser": "A mountain stuck in the sea, and wind that rearranges your hair.",
-            "vibe": "A mountain stuck in the sea, wind that rearranges your hair, and a town that lives off tourism and being the southernmost point most people will ever stand on.",
-            "season": "Trekking and the Beagle: Dec–Mar. Ski: Jun–Aug. Avoid Jun–Jul if the idea is a trail: wind and ~7 h of light. A jacket, every month.",
-            "arrive": "Fly to USH (~3 h 30). Overland is two days and a border: almost nobody does it as a visit. The airport is next to town.",
+            "teaser": "A mountain stuck in the sea. Taun for glacier trekking; the Beagle for the water.",
+            "vibe": "A mountain stuck in the sea, wind that rearranges your hair, and a town that lives off tourism and being the southernmost point most people will ever stand on. For glacier trekking I used Taun, a local Ushuaia operator: Vinciguerra is the long day; Esmeralda is the easier classic.",
+            "season": "Trekking and the Beagle: Dec–Mar (penguins Oct–Mar). Ski (Cerro Castor): Jun–Aug. Jun–Jul if the idea is a trail: wind and ~7 h of light — it is possible (Vinciguerra runs year-round) but the day is short. Summer ~6–14 °C; a jacket, twelve months. August is Fuegian winter: snow on the trail, crampons or snowshoes. Town and Taun in <a href=\"#ciudad\">Ushuaia</a>.",
+            "arrive": "Fly to USH (~3 h 30). Overland is two days and a border: almost nobody does it as a visit. The airport (Malvinas Argentinas) is ~4 km / 10–15 min from the centre. No city bus enters the airport peninsula (Oct 2026 note): taxi or remis at arrivals, or a booked transfer. Public shared-transfer listings sit around ARS 20,000 per person (min. 2, Oct 2026–Apr 2027) — confirm that week; it is not a meter.",
             "do": [
-                "Tierra del Fuego National Park.",
-                "Beagle Channel (lighthouses, sea lions, cormorants).",
-                "Laguna Esmeralda, Cerro Martial. In winter, skiing; in summer, long treks.",
+                "Tierra del Fuego National Park (coastal trails; the End of the World Train is a different ticket).",
+                "Trekking with Taun: Vinciguerra (glacier, long day) or Laguna Esmeralda (easier). Public cards on <a href=\"https://taunushuaia.com.ar/\" rel=\"noopener\">taunushuaia.com.ar</a>.",
+                "Beagle Channel (lighthouse, sea lions; penguins Oct–Mar on Isla Martillo, no landing).",
+                "Cerro Martial. In winter, ski at Castor; in summer, long treks.",
             ],
-            "eat": "King crab, black hake, Fuegian lamb. It is expensive compared with the north: you feel the freight.",
+            "eat": "King crab, black hake, Fuegian lamb. It is expensive compared with the north: you feel the freight. I am not locking a harbour restaurant that changes hands.",
             "hack": "Ushuaia ↔ Punta Arenas: Bus-Sur / Tecni Austral, two borders and a ~30 min Magellan Strait ferry (Punta Delgada). ~USD 40–70 / CLP 58–68k (2026 catalogue). There is no direct ferry. Skip it if you only have two days in Ushuaia.",
         },
         "legs_es": [("air", "Avión ~3 h 30"), ("warn", "Tierra: 2 días")],
@@ -1262,15 +1326,15 @@ PROVINCES = [
                 "url": "https://taunushuaia.com.ar/excursion/laguna-esmeralda/",
                 "es_name": "Taun — Laguna Esmeralda",
                 "en_name": "Taun — Laguna Esmeralda",
-                "es": "Guías de montaña locales (EPGAMT/AAGM). El clásico de trekking fácil: 9 km, 300 m. Vinciguerra es otra ficha, más exigente. Packrafting: confirmá en el sitio. El viento cancela.",
-                "en": "Local mountain guides (EPGAMT/AAGM). The easy trekking classic: 9 km, 300 m. Vinciguerra is a different, harder card. Packrafting: confirm on the site. Wind cancels.",
-                "duration_es": "5 h · 9 km · 300 m · todo el año",
-                "duration_en": "5 h · 9 km · 300 m · year-round",
+                "es": "La misma operadora local que recomiendo para Vinciguerra. El clásico fácil: 9 km, 300 m, 5 h, todo el año. Guías de montaña (EPGAMT/AAGM). Packrafting y otras fichas: mirá <a href=\"https://taunushuaia.com.ar/\" rel=\"noopener\">taunushuaia.com.ar</a>, no un teléfono. El viento cancela.",
+                "en": "The same local operator I recommend for Vinciguerra. The easy classic: 9 km, 300 m, 5 h, year-round. Mountain guides (EPGAMT/AAGM). Packrafting and other cards: look at <a href=\"https://taunushuaia.com.ar/\" rel=\"noopener\">taunushuaia.com.ar</a>, not a phone number. Wind cancels.",
+                "duration_es": "5 h · 9 km · 300 m · baja · todo el año",
+                "duration_en": "5 h · 9 km · 300 m · easy · year-round",
                 "includes_es": "traslados hotel, guía certificado, vianda, seguro, bastones y crampones/raquetas; ropa y calzado no",
                 "includes_en": "hotel transfers, certified guide, packed lunch, insurance, poles and crampons/snowshoes; clothes and boots extra",
                 "ars": 140000,
-                "asof": "taunushuaia.com.ar, nov. 2026",
-                "asof_en": "taunushuaia.com.ar, Nov 2026",
+                "asof": "taunushuaia.com.ar/excursion/laguna-esmeralda/, nov. 2026",
+                "asof_en": "taunushuaia.com.ar/excursion/laguna-esmeralda/, Nov 2026",
                 "note_es": "publicado en ARS en la ficha; el sitio también muestra USD",
                 "note_en": "listed in ARS on the card; the site also shows USD",
             },
@@ -1278,17 +1342,20 @@ PROVINCES = [
                 "url": "https://taunushuaia.com.ar/excursion/glaciar-vinciguerra/",
                 "es_name": "Taun — Trekking Glaciar Vinciguerra",
                 "en_name": "Taun — Vinciguerra Glacier trek",
-                "es": "La misma operadora local que Laguna Esmeralda. Día largo: Valle de Andorra, turbal, bosque nativo, Laguna de los Témpanos y el glaciar. Nivel medio: hay que mantener ritmo, no sprint. El hielo retrocede y las cuevas cambian — confirmá qué está abierto ese día. El viento cancela.",
-                "en": "The same local operator as Laguna Esmeralda. A long day: Valle de Andorra, peat bog, native forest, Laguna de los Témpanos and the glacier. Moderate grade: a steady pace, not a sprint. The ice is receding and the caves change — confirm what is open that day. Wind cancels.",
+                "rec_es": "Lo hice — operadora local, ficha pública",
+                "rec_en": "I did this — local operator, public card",
+                "es": "Operadora local de Ushuaia (guías de montaña nacidos acá). La recomiendo para glaciar de trekking: hice el Vinciguerra un agosto (invierno fueguino). Día largo: Valle de Andorra, turbal RAMSAR, bosque, Laguna de los Témpanos y el glaciar. Nivel medio: ritmo constante, no sprint. El hielo retrocede y las cuevas cambian — confirmá qué está abierto ese día. Mini-trekking sobre el hielo: temporada de verano, según la ficha. El viento cancela. Sólo páginas públicas: no pongo teléfono, mail ni reserva.",
+                "en": "A local Ushuaia operator (mountain guides born here). I recommend them for glacier trekking: I did Vinciguerra one August (Fuegian winter). A long day: Valle de Andorra, RAMSAR peat bog, forest, Laguna de los Témpanos and the glacier. Moderate grade: a steady pace, not a sprint. The ice is receding and the caves change — confirm what is open that day. Mini glacier trek: summer season, per the card. Wind cancels. Public pages only: no phone, email, or booking on this site.",
                 "duration_es": "8 h · 14 km · 650 m · media · todo el año",
                 "duration_en": "8 h · 14 km · 650 m · moderate · year-round",
                 "includes_es": "traslados, equipo técnico (bastones, crampones/raquetas, casco), comida, guía certificado, seguro; abrigo, calzado y botella aparte",
                 "includes_en": "transfers, technical kit (poles, crampons/snowshoes, helmet), food, certified guide, insurance; warm clothes, boots and bottle extra",
                 "ars": 190000,
-                "asof": "taunushuaia.com.ar/excursion/glaciar-vinciguerra/, nov. 2026",
-                "asof_en": "taunushuaia.com.ar/excursion/glaciar-vinciguerra/, Nov 2026",
-                "note_es": "publicado en la ficha del operador; listados de terceros a veces muestran otro número",
-                "note_en": "listed on the operator card; third-party listings sometimes show another number",
+                "ars_high": 235000,
+                "asof": "taunushuaia.com.ar/excursion/glaciar-vinciguerra/, nov. 2026 (listados terceros oct. 2026–abr. 2027)",
+                "asof_en": "taunushuaia.com.ar/excursion/glaciar-vinciguerra/, Nov 2026 (third-party listings Oct 2026–Apr 2027)",
+                "note_es": "ficha Taun ARS 190.000; agencias terceras a veces ~ARS 235.000. En 2025 este día se movía en el orden de unos pocos cientos de miles de ARS (rango, no factura)",
+                "note_en": "Taun card ARS 190,000; third-party agencies sometimes ~ARS 235,000. In 2025 this day sat on the order of a few hundred thousand ARS (a range, not an invoice)",
             },
             {
                 "url": "https://www.canoerocatamaranes.com.ar/product/navegacion-pinguinera/",
@@ -1307,6 +1374,58 @@ PROVINCES = [
                 "note_en": "per person, tax included; ages 4–11 pay 50%",
             },
         ],
+        "city_extra": {
+            "toc_es": "Ushuaia",
+            "toc_en": "Ushuaia",
+            "es_title": "Ushuaia: pueblo, glaciar, cómo armar los días",
+            "en_title": "Ushuaia: town, glacier, how to stack the days",
+            "es": """<p>Ushuaia es chica y cara. El centro se camina: Maipú al puerto, las cuestas al norte. El viento manda más que el reloj. Un día de glaciar + un Beagle + el parque ya es un viaje; no apiles Vinciguerra y Martillo el mismo día.</p>
+      <h3>Taun, la que usé para glaciar</h3>
+      <p>Operadora local de Ushuaia — guías de montaña nacidos acá, no un mostrador de hotel. Fichas públicas en <a href=\"https://taunushuaia.com.ar/\" rel=\"noopener\">taunushuaia.com.ar</a>. Hice el <a href=\"https://taunushuaia.com.ar/excursion/glaciar-vinciguerra/\" rel=\"noopener\">Trekking Glaciar Vinciguerra</a> un agosto (invierno fueguino): hay nieve, luz corta y el viento puede cancelar. La recomiendo para glaciar de trekking. <a href=\"https://taunushuaia.com.ar/excursion/laguna-esmeralda/\" rel=\"noopener\">Laguna Esmeralda</a> es la hermana fácil si el grupo no está para 14 km y 650 m. Ojo del Albino y packrafting existen en el mismo sitio; no los cotizo si no vi la ficha ese día. No pongo teléfono, mail, dirección ni código de reserva.</p>
+      <h3>Qué sale, en rangos</h3>
+      <ul class="season-list">
+        <li><strong>Vinciguerra</strong> — Ficha Taun nov. 2026: ARS 190.000 / ~USD 123. Agencias terceras a veces piden ~ARS 235.000 (listados oct. 2026–abr. 2027). En 2025 este tipo de día se movía en el orden de unos pocos cientos de miles de ARS — rango, no factura. Confirmá en la ficha el día que pagás.</li>
+        <li><strong>Laguna Esmeralda</strong> — ARS 140.000 / ~USD 90 en la ficha de nov. 2026.</li>
+        <li><strong>Parque nacional</strong> — APN ARS 40.000 / ~USD 26 general (desde 1 jun 2026). El tren es otro boleto.</li>
+        <li><strong>Beagle pingüinera</strong> — Canoero ARS 213.000 / ~USD 137 con tasa, oct–mar (vigencia hasta 31/12/2026). El corto a lobos/faro corre más meses.</li>
+      </ul>
+      <h3>Cómo moverse</h3>
+      <ul class="season-list">
+        <li><strong>Aeropuerto</strong> — ~4 km, 10–15 min. No hay colectivo urbano a la península (oct. 2026). Taxi/remís en arribos; transfer compartido listado ~ARS 20.000 por persona (mín. 2). No invento el total del taxímetro.</li>
+        <li><strong>Pueblo</strong> — A pie. Taxi si llueve o si el hotel está arriba de la cuesta.</li>
+        <li><strong>Parque / Martial / Castor</strong> — Transfer de la excursión, remís o auto. El parque al oeste no es una cuadra.</li>
+      </ul>
+      <h3>Un circuito que cierra</h3>
+      <ul class="season-list">
+        <li><strong>Día 1</strong> — USH, pueblo, Martial o nada. No armes Vinciguerra el mismo día del vuelo.</li>
+        <li><strong>Día 2</strong> — Vinciguerra (largo) o Esmeralda (más corto). Uno.</li>
+        <li><strong>Día 3</strong> — Beagle, o parque nacional, o ski si es invierno. El cruce a Punta Arenas se come un día entero: no lo metas en una visita de 48 h (ver <a href=\"#hack\">hack</a>).</li>
+      </ul>
+      <p>Precios de orden de magnitud, as-of nov. 2026, ~ARS 1.550/USD. El peso se mueve.</p>""",
+            "en": """<p>Ushuaia is small and expensive. The centre is walkable: Maipú to the port, the hills to the north. Wind outranks the clock. One glacier day + one Beagle + the park is already a trip; do not stack Vinciguerra and Martillo on the same day.</p>
+      <h3>Taun, the operator I used for glacier</h3>
+      <p>A local Ushuaia operator — mountain guides born here, not a hotel desk. Public cards on <a href=\"https://taunushuaia.com.ar/\" rel=\"noopener\">taunushuaia.com.ar</a>. I did the <a href=\"https://taunushuaia.com.ar/excursion/glaciar-vinciguerra/\" rel=\"noopener\">Vinciguerra Glacier trek</a> one August (Fuegian winter): snow, short light, and wind can cancel. I recommend them for glacier trekking. <a href=\"https://taunushuaia.com.ar/excursion/laguna-esmeralda/\" rel=\"noopener\">Laguna Esmeralda</a> is the easier sibling if the group is not up for 14 km and 650 m. Ojo del Albino and packrafting live on the same site; I do not quote them if I have not seen that day’s card. No phone, email, address, or booking code here.</p>
+      <h3>What it costs, in ranges</h3>
+      <ul class="season-list">
+        <li><strong>Vinciguerra</strong> — Taun card Nov 2026: ARS 190,000 / ~USD 123. Third-party agencies sometimes ask ~ARS 235,000 (listings Oct 2026–Apr 2027). In 2025 this kind of day sat on the order of a few hundred thousand ARS — a range, not an invoice. Confirm on the card the day you pay.</li>
+        <li><strong>Laguna Esmeralda</strong> — ARS 140,000 / ~USD 90 on the Nov 2026 card.</li>
+        <li><strong>National park</strong> — APN ARS 40,000 / ~USD 26 general (from 1 Jun 2026). The train is a different ticket.</li>
+        <li><strong>Beagle penguins</strong> — Canoero ARS 213,000 / ~USD 137 with tax, Oct–Mar (valid through 31 Dec 2026). The short sea-lion/lighthouse run covers more months.</li>
+      </ul>
+      <h3>Getting around</h3>
+      <ul class="season-list">
+        <li><strong>Airport</strong> — ~4 km, 10–15 min. No city bus onto the peninsula (Oct 2026). Taxi/remis at arrivals; shared-transfer listings ~ARS 20,000 per person (min. 2). I am not inventing a meter total.</li>
+        <li><strong>Town</strong> — On foot. A taxi if it rains or if the hotel sits up the hill.</li>
+        <li><strong>Park / Martial / Castor</strong> — Tour transfer, remis, or a car. The park to the west is not a block away.</li>
+      </ul>
+      <h3>A circuit that closes</h3>
+      <ul class="season-list">
+        <li><strong>Day 1</strong> — USH, town, Martial or nothing. Do not stack Vinciguerra on the flight day.</li>
+        <li><strong>Day 2</strong> — Vinciguerra (long) or Esmeralda (shorter). One.</li>
+        <li><strong>Day 3</strong> — Beagle, or the national park, or ski if it is winter. The crossing to Punta Arenas eats a whole day: do not fold it into a 48 h visit (see the <a href=\"#hack\">hack</a>).</li>
+      </ul>
+      <p>Order-of-magnitude prices, as-of Nov 2026, ~ARS 1,550/USD. Pesos move.</p>""",
+        },
     },
 ]
 
@@ -1365,9 +1484,11 @@ def tour_html(t, lang):
         ik = "Includes" if lang == "en" else "Incluye"
         meta.append(f'<p class="tour-meta"><span>{ik}</span> {includes}</p>')
     meta_html = ("\n          " + "\n          ".join(meta) + "\n          ") if meta else "\n          "
+    rec = t.get("rec_en") if lang == "en" else t.get("rec_es")
+    rec_html = f'\n          <p class="tour-rec">{rec}</p>' if rec else ""
     url = t["url"]
     return f"""        <article class="tour">
-          <h3><a href="{url}" rel="noopener">{name}</a></h3>
+          <h3><a href="{url}" rel="noopener">{name}</a></h3>{rec_html}
           <p>{body}</p>{meta_html}<p class="price">{price_line}{asof_html}</p>
         </article>"""
 
@@ -1503,7 +1624,10 @@ def province_page(p, lang):
     if city:
         ctitle = city["en_title"] if lang == "en" else city["es_title"]
         cbody = city["en"] if lang == "en" else city["es"]
-        toc_city_link = f'\n      <a href="#ciudad">{"City" if lang == "en" else "Ciudad"}</a>'
+        toc_city = city.get("toc_en" if lang == "en" else "toc_es") or (
+            "City" if lang == "en" else "Ciudad"
+        )
+        toc_city_link = f'\n      <a href="#ciudad">{toc_city}</a>'
         extra_section = f"""    <div class="section" id="ciudad">
       <h2>{ctitle}</h2>
       {cbody}
