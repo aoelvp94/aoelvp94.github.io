@@ -143,7 +143,7 @@ h1 {
   color: #fbbf24;
   font-size: 0.92rem;
 }
-.note strong {
+.note > strong:first-child {
   display: block;
   margin-bottom: 6px;
   color: #fcd34d;
@@ -153,13 +153,13 @@ h1 {
   border-left-color: #f87171;
   color: #fca5a5;
 }
-.note.loud strong { color: #fecaca; }
+.note.loud > strong:first-child { color: #fecaca; }
 .note.wifi {
   background: rgba(56, 189, 248, 0.08);
   border-left-color: #38bdf8;
   color: #7dd3fc;
 }
-.note.wifi strong { color: #bae6fd; }
+.note.wifi > strong:first-child { color: #bae6fd; }
 .note.wifi ul {
   color: inherit;
   margin: 8px 0 10px;
@@ -180,7 +180,7 @@ h1 {
 .tag-maybe { background: rgba(251,191,36,0.15); color: #fcd34d; }
 .note.wifi .tag { margin: 10px 8px 4px 0; vertical-align: middle; }
 table.prices .tag { white-space: normal; line-height: 1.35; }
-#micros, #transporte h3 { scroll-margin-top: 132px; }
+#micros, #tiempos, #transporte h3 { scroll-margin-top: 132px; }
 
 .map-wrap {
   position: relative;
@@ -310,7 +310,50 @@ table.prices .tag { white-space: normal; line-height: 1.35; }
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
+}
+.from-ba {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin: 0 0 12px;
+}
+.from-ba-k {
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8ea0b3;
+  margin-right: 2px;
+}
+.leg {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  line-height: 1.3;
+}
+.leg.bus {
+  background: rgba(251, 191, 36, 0.12);
+  color: #fcd34d;
+  border: 1px solid rgba(251, 191, 36, 0.25);
+}
+.leg.air {
+  background: rgba(56, 189, 248, 0.12);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.28);
+}
+.leg.local {
+  background: rgba(148, 163, 184, 0.12);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+.leg.warn {
+  background: rgba(248, 113, 113, 0.12);
+  color: #fca5a5;
+  border: 1px solid rgba(248, 113, 113, 0.25);
 }
 .place-card p, .place-card li, .place-card dt, .place-card dd {
   color: #b7c6d6;
@@ -318,6 +361,7 @@ table.prices .tag { white-space: normal; line-height: 1.35; }
   line-height: 1.55;
 }
 .place-card p { margin: 0 0 10px; }
+.place-card .from-ba { margin: 0 0 12px; }
 .place-card dl { margin: 0; }
 .place-card dt {
   color: #d5e0ea;
@@ -345,6 +389,7 @@ table.prices {
   font-size: 0.9rem;
   min-width: 560px;
 }
+table.prices.times { min-width: 720px; }
 table.prices th, table.prices td {
   text-align: left;
   padding: 8px 10px;
@@ -415,6 +460,7 @@ table.prices td.num { white-space: nowrap; color: #e8eef6; }
 .food-grid li { margin-bottom: 4px; }
 
 .kicker { color: #8ea0b3; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 6px; }
+.kicker a { color: #93c5fd; }
 
 @media (max-width: 768px) {
   html { scroll-padding-top: 168px; }
