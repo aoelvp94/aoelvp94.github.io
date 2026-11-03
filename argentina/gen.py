@@ -136,7 +136,7 @@ PROVINCES = [
             "season": "Ideal abr–jun y sep–nov (seco, días claros). Evitá dic–mar si no querés lluvia de temporada y calor en el valle; Cafayate en verano pega fuerte.",
             "arrive": "Vuelo a SLA (~2 h desde Buenos Aires) o micro (~18–20 h). Auto o tour para Cafayate/Cachi: las distancias engañan.",
             "do": [
-                "Centro y Cerro San Bernardo.",
+                "Centro y Cerro San Bernardo. El monumento a Güemes está al pie del cerro (Av. Uruguay y Paseo Güemes); las escaleras suben atrás. Ficha en la <a href=\"../#proceres\">hub</a>.",
                 "Cachi o Cafayate por Ruta 40/68; torrontés en bodegas.",
                 "Museo de Arqueología de Alta Montaña si te interesa historia incaica.",
                 "Parque Nacional Los Cardones en el camino a Cachi.",
@@ -152,7 +152,7 @@ PROVINCES = [
             "season": "Ideal Apr–Jun and Sep–Nov (dry, clear days). Avoid Dec–Mar if you don’t want the wet season and valley heat; Cafayate in summer hits hard.",
             "arrive": "Fly to SLA (~2 h from Buenos Aires) or take the bus (~18–20 h). Car or tour for Cafayate/Cachi: distances lie.",
             "do": [
-                "The centre and Cerro San Bernardo.",
+                "The centre and Cerro San Bernardo. The Güemes monument sits at the foot of the hill (Av. Uruguay and Paseo Güemes); the stairs start behind it. Card on the <a href=\"../#proceres\">hub</a>.",
                 "Cachi or Cafayate via Ruta 40/68; torrontés at wineries.",
                 "High Mountain Archaeology Museum if Inca history pulls you in.",
                 "Los Cardones National Park on the way to Cachi.",
@@ -526,7 +526,7 @@ PROVINCES = [
             "do": [
                 "Centro histórico y Manzana Jesuítica (UNESCO): iglesia de la Compañía, Universidad Nacional, Colegio Monserrat. Se camina.",
                 "Nueva Córdoba (estudiantes, bares) y Güemes (bares, diseño, feria). Parque Sarmiento si querés verde sin salir de la ciudad.",
-                "Cuarteto de noche si te late: es cultura local, no un dinner-show. Quality Espacio y boliches de la capital; confirmá la cartelera.",
+                "Cuarteto de noche si te late: tunga-tunga, baile de a dos, no dinner-show. Quality Espacio, Plaza de la Música; confirmá cartelera. Rodrigo y La Mona en la <a href=\"../#musica\">hub</a>.",
                 "Las sierras no son un barrio: son otro viaje de 40–180 km. Circuitos y micros en <a href=\"#tips\">sierras</a>.",
             ],
             "eat": "En la capital: fernet con Coca (sí, es cultural; el vaso largo es el default), empanadas cordobesas, locro, asado, pizza y comida de estudiante en Nueva Córdoba. No amarro un restaurante que puede cerrar mañana. En las sierras — si vas — cabrito, humita, comida de hostería; Carlos Paz es más parrilla de fin de semana que pueblo de olla.",
@@ -542,7 +542,7 @@ PROVINCES = [
             "do": [
                 "Historic centre and the Jesuit Block (UNESCO): Compañía church, the national university, Colegio Monserrat. Walkable.",
                 "Nueva Córdoba (students, bars) and Güemes (bars, design, a fair). Parque Sarmiento if you want green without leaving town.",
-                "Cuarteto at night if that’s your thing: local culture, not a dinner-show. Quality Espacio and capital clubs; confirm that week’s bill.",
+                "Cuarteto at night if that’s your thing: tunga-tunga, couple-dancing, not a dinner-show. Quality Espacio, Plaza de la Música; confirm the bill. Rodrigo and La Mona on the <a href=\"../#musica\">hub</a>.",
                 "The sierras are not a neighbourhood: they are another 40–180 km trip. Circuits and buses in <a href=\"#tips\">sierras</a>.",
             ],
             "eat": "In the capital: fernet and Coke (yes, it is cultural; the long glass is the default), Córdoba empanadas, locro, asado, pizza and student food in Nueva Córdoba. I am not locking a restaurant that may close tomorrow. In the sierras — if you go — goat, humita, inn food; Carlos Paz is more a weekend grill than a pot-food village.",
@@ -581,7 +581,7 @@ PROVINCES = [
         <li><strong>Cerro de las Rosas / zona norte</strong> — Más residencial, más auto, otra franja de edad. No es el primer barrio si venís dos noches.</li>
       </ul>
       <h3>Noche y oído</h3>
-      <p>Fernet Branca con Coca, vaso largo, es el trago de la ciudad — no un gag de turismo. Cuarteto (La Mona, Ulises Bueno, Q’Lokura) es la música que llena: Quality Espacio y boliches de la capital, no un dinner-show. El <a href="../#musica">mapa de música</a> de la hub tiene la lista. Si no te late el cuarteto, hay bares de rock y electrónico; no son el default. La noche arranca tarde: antes de las 00 mucha puerta está tibia.</p>
+      <p>Fernet Branca con Coca, vaso largo, es el trago de la ciudad — no un gag de turismo. El oído de la noche es <strong>cuarteto</strong>: tunga-tunga, baile de a dos, no un dinner-show. Quality Espacio (Circunvalación) es la sala grande; La Plaza de la Música y boliches de Nueva Córdoba completan. La Mona es el piso; Rodrigo «El Potro» es el que lo hizo nacional; Ulises, Q’Lokura y La Konga llenan ahora. El Festival Nacional del Cuarteto existe desde 2023 — confirmá sede. Ficha larga en el <a href="../#musica">mapa de música</a>. Si no te late, hay rock y electrónico; no son el default. La noche arranca tarde: antes de las 00 mucha puerta está tibia.</p>
       <h3>Cultura de día</h3>
       <p>Manzana Jesuítica (UNESCO). Palacio Ferreyra / Emilio Caraffa si querés museo. Teatro del Libertador si hay función (confirmá cartelera). Parque Sarmiento para un rato de verde. No armo un ranking de restaurantes: el peso se mueve y las puertas cambian. Pedí empanadas y un fernet; el resto es boca a boca del día.</p>""",
             "en": """<p>The capital is a university city: UNC, more than three hundred thousand students in a normal year. That explains the density of bars, the fernet, and why Nueva Córdoba at 11 p.m. does not look like a sleepy inland town. It is not Buenos Aires and does not want to be.</p>
@@ -593,7 +593,7 @@ PROVINCES = [
         <li><strong>Cerro de las Rosas / north</strong> — More residential, more car, another age band. Not the first neighbourhood if you have two nights.</li>
       </ul>
       <h3>Night and ear</h3>
-      <p>Fernet Branca and Coke, long glass, is the city’s drink — not a tourism gag. Cuarteto (La Mona, Ulises Bueno, Q’Lokura) is the music that fills rooms: Quality Espacio and capital clubs, not a dinner-show. The hub <a href="../#musica">music map</a> has the list. If cuarteto is not your thing, there are rock and electronic bars; they are not the default. The night starts late: before midnight a lot of doors are still warm.</p>
+      <p>Fernet Branca and Coke, long glass, is the city’s drink — not a tourism gag. The night’s ear is <strong>cuarteto</strong>: tunga-tunga, couple-dancing, not a dinner-show. Quality Espacio (ring road) is the big room; La Plaza de la Música and Nueva Córdoba clubs fill the rest. La Mona is the floor; Rodrigo “El Potro” is the one who made it national; Ulises, Q’Lokura, and La Konga fill rooms now. The National Cuarteto Festival has existed since 2023 — confirm the venue. Longer card on the hub <a href="../#musica">music map</a>. If it is not your thing, there is rock and electronic; they are not the default. The night starts late: before midnight a lot of doors are still warm.</p>
       <h3>Daytime culture</h3>
       <p>Jesuit Block (UNESCO). Palacio Ferreyra / Emilio Caraffa if you want a museum. Teatro del Libertador if there is a show (confirm the bill). Parque Sarmiento for a stretch of green. I am not ranking restaurants: pesos move and doors change. Ask for empanadas and a fernet; the rest is that day’s word of mouth.</p>""",
         },
@@ -705,7 +705,7 @@ PROVINCES = [
             "season": "Ideal sep–nov y mar–may. Evitá dic–feb si no bancás calor húmedo y tormentas; jun–ago es fresco y gris, no extremo.",
             "arrive": "EZE (internacional) o AEP (doméstico y algunos regionales). AEP 20–40 min al centro; EZE 45–75 min. Tienda León / Uber. Dentro: SUBE, subte, colectivo, DiDi/Cabify/Uber.",
             "do": [
-                "Palermo (parques, bares), San Telmo (feria domingo), Recoleta (cementerio, museos).",
+                "Palermo (parques, bares), San Telmo (feria domingo), Recoleta (cementerio: Sarmiento está ahí; ficha en la <a href=\"../#proceres\">hub</a>).",
                 "Plaza de Mayo y la Catedral Metropolitana: el mausoleo de San Martín está adentro (nave derecha). El walking tour suele pasar; no hace falta un ticket aparte. Fichas de próceres en la <a href=\"../#proceres\">hub</a>.",
                 "Puerto Madero para la foto, La Boca un rato corto con las cosas pegadas al cuerpo.",
                 "Free walking tours en Plaza de Mayo/San Telmo (propina). Tango en milonga de verdad si te anima, no sólo dinner-show.",
@@ -721,7 +721,7 @@ PROVINCES = [
             "season": "Ideal Sep–Nov and Mar–May. Avoid Dec–Feb if you don’t like humid heat and storms; Jun–Aug is cool and grey, not extreme.",
             "arrive": "EZE (international) or AEP (domestic and some regional). AEP 20–40 min to the centre; EZE 45–75 min. Tienda León / Uber. Inside the city: SUBE, subway, buses, DiDi/Cabify/Uber.",
             "do": [
-                "Palermo (parks, bars), San Telmo (Sunday fair), Recoleta (cemetery, museums).",
+                "Palermo (parks, bars), San Telmo (Sunday fair), Recoleta (cemetery: Sarmiento is there; card on the <a href=\"../#proceres\">hub</a>).",
                 "Plaza de Mayo and the Metropolitan Cathedral: San Martín’s tomb is inside (right aisle). The walking tour usually passes; no separate ticket. Short historical cards on the <a href=\"../#proceres\">hub</a>.",
                 "Puerto Madero for the photo, La Boca briefly with your things zipped.",
                 "Free walking tours at Plaza de Mayo/San Telmo (tip). Tango in a real milonga if you are up for it, not only a dinner show.",
