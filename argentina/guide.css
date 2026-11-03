@@ -724,6 +724,69 @@ a.prov-card .more {
   color: #fcd34d;
   border-color: rgba(251, 191, 36, 0.35);
 }
+.must-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  margin: 12px 0 8px;
+}
+.must-list > li {
+  background: #12202c;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 0;
+}
+.must-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 8px;
+}
+.must-head strong {
+  color: #fff;
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+.must-head strong a { color: #fff; }
+.must-head strong a:hover { color: #93c5fd; }
+.must-list .why {
+  margin: 0;
+  color: #b7c6d6;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.must-list .why-k {
+  display: inline-block;
+  color: #93c5fd;
+  font-weight: 650;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-right: 6px;
+}
+.must-list .price {
+  margin: 8px 0 0;
+  color: #e8eef6;
+  font-size: 0.88rem;
+}
+.kicker .badge {
+  margin: 0 2px;
+  vertical-align: middle;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+#siosisi { scroll-margin-top: 132px; }
+#siosisi .kicker {
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  color: #9fb0c2;
+}
 .wonder-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

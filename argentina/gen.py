@@ -2,9 +2,14 @@
 """Generate bilingual Argentina hub teasers + one page per visited province."""
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from must_try import build as build_must  # noqa: E402
 FX = 1550  # ~ARS per USD, BNA early Nov 2026
 
 
@@ -49,11 +54,13 @@ PROVINCES = [
             "season": "Ideal may–oct en la Quebrada: cielo claro, noches heladas, altura. Evitá dic–mar si la idea es ruta seca (lluvia y a veces cortes). Abrigo sí o sí después de las 18.",
             "arrive": "Vuelo a JUJ (Horacio Guzmán) desde AEP/EZE (~2 h) o micro desde Retiro (~20–22 h). Muchos combinan Salta + Jujuy en auto o tour. Desde Purmamarca sale el micro a San Pedro de Atacama por el Paso de Jama.",
             "do": [
-                "Purmamarca y el Cerro de los Siete Colores, Tilcara, Humahuaca.",
-                "Salinas Grandes si el clima da (día completo con la Quebrada).",
-                "Calilegua si querés selva de yungas en vez de puna (Parque Nacional, tarifa general APN).",
+                "Purmamarca y el Cerro de los Siete Colores; Tilcara (pueblo, pucará, Garganta del Diablo); Humahuaca.",
+                "Maimará / Paleta del Pintor y Uquía (ángeles arcabuceros) en el mismo corredor: altos, no destinos aparte.",
+                "Salinas Grandes si el clima da (día completo con la Quebrada, Cuesta de Lipán, altura seria).",
+                "Calilegua si querés selva de yungas en vez de puna (Parque Nacional; cobro APN confirmá en la hoja).",
             ],
-            "eat": "Humita, tamales, empanadas jujeñas, locro, llama en algunas cartas. El api con pastelitos si coincidís con feria o invierno.",
+            "eat": """<p>Mesa andina, no un lomo de Palermo: humita, tamales, locro, empanadas jujeñas, llama cuando hay. Pedí regional. La altura corta el apetito — comé igual y caminá despacio.</p>
+      <p>El api con pastelitos si coincidís con feria o invierno. En Purmamarca o Tilcara el mercado es sal, lana, condimentos: efectivo o QR del día, no un shopping.</p>""",
             "hack": "El cruce a Chile no es Cristo Redentor: es el Paso de Jama. Andesmar sale de Salta ~1:00, terminal de Jujuy ~2:45, Purmamarca ~3:40, San Pedro ~11:30 (oct. 2026). ~USD 75–100 el tramo. No es un day trip. Detalle en la <a href=\"../#hacks\">hub de hacks</a>.",
         },
         "en": {
@@ -64,11 +71,13 @@ PROVINCES = [
             "season": "Ideal May–Oct in the Quebrada: clear skies, freezing nights, altitude. Avoid Dec–Mar if you want dry roads (rain, occasional closures). A jacket after 6 p.m. is not optional.",
             "arrive": "Fly to JUJ (Horacio Guzmán) from AEP/EZE (~2 h) or a long-distance bus from Retiro (~20–22 h). Plenty of people combine Salta + Jujuy by car or tour. From Purmamarca the bus to San Pedro de Atacama runs Paso de Jama.",
             "do": [
-                "Purmamarca and Cerro de los Siete Colores, Tilcara, Humahuaca.",
-                "Salinas Grandes if the weather plays along (full day with the Quebrada).",
-                "Calilegua if you want yungas jungle instead of puna (national park, APN general fee).",
+                "Purmamarca and Cerro de los Siete Colores; Tilcara (town, pucará, Garganta del Diablo); Humahuaca.",
+                "Maimará / Paleta del Pintor and Uquía (arquebusier angels) on the same corridor: stops, not separate destinations.",
+                "Salinas Grandes if the weather plays along (full day with the Quebrada, Cuesta de Lipán, real altitude).",
+                "Calilegua if you want yungas jungle instead of puna (national park; confirm APN charging on the sheet).",
             ],
-            "eat": "Humita, tamales, Jujuy-style empanadas, locro, llama on some menus. Api with pastelitos if you hit a market day or winter.",
+            "eat": """<p>Andean table, not a Palermo steak: humita, tamales, locro, Jujuy empanadas, llama when it is on the menu. Order regional. Altitude cuts the appetite — eat anyway and walk slowly.</p>
+      <p>Api with pastelitos if you hit a market day or winter. In Purmamarca or Tilcara the market is salt, wool, spices: cash or that day’s QR, not a mall.</p>""",
             "hack": "The Chile crossing from here is Paso de Jama, not Cristo Redentor. Andesmar leaves Salta ~1:00, Jujuy ~2:45, Purmamarca ~3:40, San Pedro ~11:30 (Oct 2026). ~USD 75–100. Not a day trip. Detail on the <a href=\"../#hacks\">hub hacks</a>.",
         },
         "legs_es": [("bus", "Micro ~20–22 h · noche"), ("air", "Avión ~2 h")],
@@ -160,12 +169,13 @@ PROVINCES = [
             "season": "Ideal abr–jun y sep–nov (seco, días claros). Evitá dic–mar si no querés lluvia de temporada y calor en el valle; Cafayate en verano pega fuerte.",
             "arrive": "Vuelo a SLA (~2 h desde Buenos Aires) o micro (~18–20 h). Auto o tour para Cafayate/Cachi: las distancias engañan.",
             "do": [
-                "Centro y Cerro San Bernardo. El monumento a Güemes está al pie del cerro (Av. Uruguay y Paseo Güemes); las escaleras suben atrás. Ficha en la <a href=\"../#proceres\">hub</a>.",
+                "Centro (Plaza 9 de Julio, Iglesia San Francisco, mercado) y Cerro San Bernardo. El monumento a Güemes está al pie del cerro (Av. Uruguay y Paseo Güemes); las escaleras suben atrás. Ficha en la <a href=\"../#proceres\">hub</a>.",
                 "Cachi o Cafayate por Ruta 40/68; torrontés en bodegas.",
                 "Museo de Arqueología de Alta Montaña si te interesa historia incaica.",
                 "Parque Nacional Los Cardones en el camino a Cachi.",
             ],
-            "eat": "Empanadas salteñas (jugosas, a menudo al horno), locro, tamales, cabrito. Un clásico del centro es Doña Salta (empanadas y comida regional; suele haber cola). Peña folklórica de noche si te late.",
+            "eat": """<p>Empanadas salteñas (jugosas, a menudo al horno, carne a cuchillo), locro, tamales, cabrito. Un clásico del centro es Doña Salta (cola normal); no es el único. Eso, antes que un pairing de brochure.</p>
+      <p>Peña folklórica de noche si te late: mesa, guitarra, bombo — no dinner-show de micro. El vino local acompaña; el torrontés de Cafayate es el blanco de este valle.</p>""",
             "hack": "Combo sólido: Salta + Quebrada + Salinas, 4–5 días. Si seguís a Bolivia: micro Salta→La Quiaca (~7 h, Andesmar/Balut, desde ~ARS 35.000 / ~USD 23, oct. 2026) y el puente a Villazón. Jama a Chile sale de acá de madrugada.",
         },
         "en": {
@@ -176,12 +186,13 @@ PROVINCES = [
             "season": "Ideal Apr–Jun and Sep–Nov (dry, clear days). Avoid Dec–Mar if you don’t want the wet season and valley heat; Cafayate in summer hits hard.",
             "arrive": "Fly to SLA (~2 h from Buenos Aires) or take the bus (~18–20 h). Car or tour for Cafayate/Cachi: distances lie.",
             "do": [
-                "The centre and Cerro San Bernardo. The Güemes monument sits at the foot of the hill (Av. Uruguay and Paseo Güemes); the stairs start behind it. Card on the <a href=\"../#proceres\">hub</a>.",
+                "The centre (Plaza 9 de Julio, San Francisco church, the market) and Cerro San Bernardo. The Güemes monument sits at the foot of the hill (Av. Uruguay and Paseo Güemes); the stairs start behind it. Card on the <a href=\"../#proceres\">hub</a>.",
                 "Cachi or Cafayate via Ruta 40/68; torrontés at wineries.",
                 "High Mountain Archaeology Museum if Inca history pulls you in.",
                 "Los Cardones National Park on the way to Cachi.",
             ],
-            "eat": "Salta empanadas (juicy, often baked), locro, tamales, goat. A downtown classic is Doña Salta (queues are normal). A folklore peña at night if that’s your thing.",
+            "eat": """<p>Salta empanadas (juicy, often baked, knife-cut beef), locro, tamales, goat. A downtown classic is Doña Salta (queues are normal); it is not the only one. That, before a brochure pairing.</p>
+      <p>A folklore peña at night if that’s your thing: a table, guitar, bombo — not a coach dinner-show. Local wine with it; Cafayate torrontés is this valley’s white.</p>""",
             "hack": "The solid combo is Salta + Quebrada + salt flats, 4–5 days. Onward to Bolivia: bus Salta→La Quiaca (~7 h, Andesmar/Balut, from ~ARS 35,000 / ~USD 23, Oct 2026) and the bridge into Villazón. The Chile bus via Jama leaves from here before dawn.",
         },
         "legs_es": [("bus", "Micro ~18–20 h · noche"), ("air", "Avión ~2 h")],
@@ -316,10 +327,13 @@ PROVINCES = [
             "season": "Ideal abr–jun y ago–oct. Evitá dic–feb: calor húmedo y tormentas de tarde. Tafí del Valle es más fresco todo el año.",
             "arrive": "Vuelo a TUC (~2 h) o micro (~14–16 h) desde Buenos Aires. Tafí queda a ~2 h en auto por montaña.",
             "do": [
-                "Casa Histórica (la independencia, 1816) y el centro de San Miguel.",
-                "Sangucherías de barrio: eso es Tucumán más que un tour.",
+                "Casa Histórica (la independencia, 1816) y Plaza Independencia / el centro de San Miguel.",
+                "Parque 9 de Julio cuando el centro hierve: lago, sombra, aire de capital.",
+                "Sangucherías de barrio: eso es Tucumán más que un tour. Yerba Buena para cena más fresca.",
+                "Tafí del Valle, Quilmes, San Javier y El Cadillal son otro salto — <a href=\"#tips\">tips, no pines</a>.",
             ],
-            "eat": "Sánguche de milanesa (el clásico tucumano, en pan sanguchero) y empanadas tucumanas. Eso, antes que cualquier restaurante «de autor». Buscá sangucherías de barrio.",
+            "eat": """<p>Sánguche de milanesa en pan sanguchero — completo — es religión local. Buscá sanguchería de barrio, no un food-court del centro. Eso, antes que cualquier restaurante «de autor».</p>
+      <p>Empanadas tucumanas: más chicas, a menudo fritas, un plato no un snack. Combinan con el sánguche; no lo reemplazan. Locro si hay domingo o frío.</p>""",
             "hack": "Fácil de encadenar con Santiago del Estero, Catamarca o Salta.",
         },
         "en": {
@@ -330,10 +344,13 @@ PROVINCES = [
             "season": "Ideal Apr–Jun and Aug–Oct. Avoid Dec–Feb: humid heat and afternoon storms. Tafí del Valle is cooler year-round.",
             "arrive": "Fly to TUC (~2 h) or bus (~14–16 h) from Buenos Aires. Tafí is ~2 h by car into the mountains.",
             "do": [
-                "Casa Histórica (independence, 1816) and downtown San Miguel.",
-                "Neighbourhood sandwich shops: that is Tucumán more than a tour.",
+                "Casa Histórica (independence, 1816) and Plaza Independencia / downtown San Miguel.",
+                "Parque 9 de Julio when the centre is boiling: lake, shade, capital air.",
+                "Neighbourhood sandwich shops: that is Tucumán more than a tour. Yerba Buena for a cooler dinner.",
+                "Tafí del Valle, Quilmes, San Javier, and El Cadillal are another hop — <a href=\"#tips\">tips, not pins</a>.",
             ],
-            "eat": "Milanesa sandwich (the Tucumán classic, in sanguchero bread) and Tucumán empanadas. That, before any “auteur” restaurant. Look for neighbourhood sandwich shops.",
+            "eat": """<p>Milanesa sandwich in sanguchero bread — complete — is a local religion. Look for a neighbourhood shop, not a downtown food court. That, before any “auteur” restaurant.</p>
+      <p>Tucumán empanadas: smaller, often fried, a plate not a snack. They sit next to the sandwich; they do not replace it. Locro if it is Sunday or cold.</p>""",
             "hack": "Easy to chain with Santiago del Estero, Catamarca, or Salta.",
         },
         "legs_es": [("bus", "Micro ~14–16 h · noche"), ("air", "Avión ~2 h")],
@@ -360,11 +377,13 @@ PROVINCES = [
             "season": "Valle: calor fuerte dic–feb (fácil 35–40 °C). Mejor abr–jun y sep–nov. El oeste es seco, noches frías, altura de verdad: abrigo después de las 18 aunque el valle hierva. Dic–mar hay lluvia en sierras y a veces cortes. Misma lógica NOA: seco = otoño–primavera.",
             "arrive": "Vuelo a CTC (Coronel Felipe Varela, ~2 h desde Buenos Aires) o micro (~16–18 h). Fácil de encadenar con Tucumán. El Paso de San Francisco a Chile existe; no te armo horarios que no chequeé.",
             "do": [
-                "Centro de San Fernando del Valle del Catamarca.",
-                "Si el plan es montaña o desierto: Belén, Tinogasta, Fiambalá. Son distancias largas: auto o agencia, no un day trip improvisado desde el valle.",
-                "Campo de Piedra Pómez y lagunas de altura son el cliché del oeste. Confirmá operación y permisos en el lugar; no hay un operador único que yo nombre con tarifa pública.",
+                "Centro de San Fernando del Valle: catedral, plaza, Museo Adán Quiroga.",
+                "Santuario de la Virgen del Valle — el piso cultural de la ciudad, aunque no seas de misa.",
+                "Dique El Jumeal al atardecer si el valle hierve; El Rodeo (~35 km) si querés sierra más fresca.",
+                "Oeste largo, no day trip: Belén, Ruta del Adobe, Tinogasta, Fiambalá (termas y dunas), Campo de Piedra Pómez. Auto o agencia; clima y permisos en el lugar.",
             ],
-            "eat": "Empanadas, locro, cabrito, vino de altura del oeste. Mesa de norte, no de brochure mendocino.",
+            "eat": """<p>Mesa de norte, no de brochure mendocino: empanadas, locro, cabrito. El vino de altura del oeste (Belén / Tinogasta) aparece en algunas cartas de la capital.</p>
+      <p>En verano el valle pide siesta y comida de mediodía temprano. No amarro un restaurante: las puertas cambian y yo no armé un diario de mesas.</p>""",
             "hack": "No amarro un operador. Se entiende en combo con Tucumán o Salta, no como un salto de dos noches «porque queda en el mapa».",
         },
         "en": {
@@ -375,11 +394,13 @@ PROVINCES = [
             "season": "Valley: hard heat Dec–Feb (easily 35–40 °C). Better Apr–Jun and Sep–Nov. The west is dry, cold nights, real altitude: a jacket after 6 p.m. even if the valley is boiling. Dec–Mar means rain in the hills and occasional closures. Same northwest logic: dry = autumn–spring.",
             "arrive": "Fly to CTC (Coronel Felipe Varela, ~2 h from Buenos Aires) or take the bus (~16–18 h). Easy to chain with Tucumán. Paso de San Francisco into Chile exists; I am not inventing timetables I have not checked.",
             "do": [
-                "Downtown San Fernando del Valle de Catamarca.",
-                "If the plan is mountain or desert: Belén, Tinogasta, Fiambalá. Long distances: car or agency, not an improvised day trip from the valley.",
-                "Campo de Piedra Pómez and high lagoons are the western cliché. Confirm operations and permits on the ground; there is no single operator I can name with a public rate.",
+                "Downtown San Fernando del Valle: cathedral, square, Adán Quiroga museum.",
+                "Virgen del Valle shrine — the city’s cultural floor, even if you are not a mass person.",
+                "El Jumeal dam at dusk if the valley is boiling; El Rodeo (~35 km) if you want cooler sierra.",
+                "A long west, not a day trip: Belén, the Adobe Route, Tinogasta, Fiambalá (springs and dunes), Campo de Piedra Pómez. Car or agency; weather and permits on the ground.",
             ],
-            "eat": "Empanadas, locro, goat, high-altitude wine from the west. Northern table, not a Mendoza brochure.",
+            "eat": """<p>Northern table, not a Mendoza brochure: empanadas, locro, goat. High-altitude wine from the west (Belén / Tinogasta) shows up on some capital menus.</p>
+      <p>In summer the valley wants a siesta and an early midday meal. I am not locking a restaurant: doors change, and I did not keep a table diary.</p>""",
             "hack": "I am not locking an operator. It makes sense as a combo with Tucumán or Salta, not as a two-night hop “because it is on the map.”",
         },
         "legs_es": [("bus", "Micro ~16–18 h · noche"), ("air", "Avión ~2 h")],
@@ -398,11 +419,13 @@ PROVINCES = [
             "season": "Ideal may–sep: el calor afloja y las termas rinden. Evitá dic–feb — es de las provincias más calientes del país (40 °C+ y siesta obligatoria).",
             "arrive": "Vuelo a SDE (~1 h 45) o micro de noche desde Buenos Aires (~12–14 h). Fácil de encadenar con Tucumán.",
             "do": [
-                "Centro santiagueño.",
-                "Termas de Río Hondo (a un rato).",
-                "Si te late la música, preguntá por peñas. No esperes la infraestructura de Salta.",
+                "Centro y Plaza Libertad: catedral basílica, Convento de Santo Domingo, unas cuadras que alcanzan.",
+                "Mercado Armonía a la mañana; costanera del Río Dulce y Parque Aguirre al atardecer.",
+                "Termas de Río Hondo (a un rato): agua y, si hay fecha, el autódromo. Se resuelve en el destino.",
+                "Si te late la música, preguntá por peñas de chacarera. No esperes la infraestructura de Salta. En enero no armes un city tour a las 14.",
             ],
-            "eat": "Empanadas, cabrito, locro, mazamorra. Comida de olla y de domingo.",
+            "eat": """<p>Empanadas, cabrito, locro, mazamorra si hay. Comida de olla y de domingo, no asado-de-guía. Pedí regional.</p>
+      <p>En verano (40 °C+) el mediodía no es hora de mesa larga al sol: siesta, y la cena cuando afloja. Las peñas a veces sirven lo mismo que se baila: bombo, guitarra, plato.</p>""",
             "hack": "Las termas se resuelven en el destino. Para el resto, más que un tour armado, conviene un local que te oriente: no hay un operador «imprescindible» que yo pueda recomendar con nombre.",
         },
         "en": {
@@ -413,11 +436,13 @@ PROVINCES = [
             "season": "Ideal May–Sep: the heat eases and the hot springs pay off. Avoid Dec–Feb — one of the hottest provinces in the country (40 °C+ and a mandatory siesta).",
             "arrive": "Fly to SDE (~1 h 45) or an overnight bus from Buenos Aires (~12–14 h). Easy to chain with Tucumán.",
             "do": [
-                "Downtown Santiago del Estero.",
-                "Termas de Río Hondo (a short hop).",
-                "If music is the point, ask about peñas. Do not expect Salta’s infrastructure.",
+                "Centre and Plaza Libertad: basilica cathedral, Santo Domingo convent, a few blocks that are enough.",
+                "Mercado Armonía in the morning; Río Dulce waterfront and Parque Aguirre at dusk.",
+                "Termas de Río Hondo (a short hop): water and, on a race weekend, the track. You sort it out on the ground.",
+                "If music is the point, ask about chacarera peñas. Do not expect Salta’s infrastructure. In January do not book a 2 p.m. city tour.",
             ],
-            "eat": "Empanadas, goat, locro, mazamorra. Pot food and Sunday tables.",
+            "eat": """<p>Empanadas, goat, locro, mazamorra if it is on. Pot food and Sunday tables, not guidebook asado. Order regional.</p>
+      <p>In summer (40 °C+) midday is not a long table in the sun: siesta, then dinner when it eases. Peñas sometimes serve the same thing you dance to: bombo, guitar, a plate.</p>""",
             "hack": "The hot springs you sort out on the ground. For the rest, a local pointing you is more useful than a packaged tour: there is no must-book operator I can name.",
         },
         "legs_es": [("bus", "Micro ~12–14 h · noche"), ("air", "Avión ~1 h 45")],
@@ -436,11 +461,13 @@ PROVINCES = [
             "season": "Todo el año (selva siempre húmeda). Ideal abr–jun y ago–oct: menos horno, buen caudal. Evitá no ir «porque es invierno»: el parque abre. Dic–feb es el más caluroso y con más tormentas.",
             "arrive": "Vuelo a IGR (~1 h 45–2 h desde Buenos Aires) suele ganar al micro (~16–20 h, noche). Posadas queda más cerca (~12–15 h de micro). Desde el aeropuerto hay transfer al pueblo y al parque.",
             "do": [
-                "Parque Nacional Iguazú: circuitos superior, inferior y Garganta del Diablo (las pasarelas se hacen por cuenta propia).",
-                "Cruzar al parque brasileño si tenés tiempo y papeles: es la postal panorámica, no un reemplazo del lado argentino.",
-                "Si ya estás en Posadas, Encarnación (Paraguay) está al otro lado del puente: chipá y otra moneda, no reemplaza las cataratas.",
+                "Parque Nacional Iguazú: circuitos superior, inferior y Garganta del Diablo (las pasarelas se hacen por cuenta propia). Abrí temprano.",
+                "Puerto Iguazú y el Hito Tres Fronteras al atardecer: el pueblo-base, no un reemplazo del parque.",
+                "Cruzar al parque brasileño si tenés tiempo y papeles: es la postal panorámica, no un reemplazo del lado argentino. No apretés los dos en un día.",
+                "San Ignacio Miní queda cerca de Posadas, no de las cataratas — <a href=\"#siosisi\">tip, no pin</a>. Si ya estás en Posadas, Encarnación (Paraguay) está al otro lado del puente.",
             ],
-            "eat": "Influencia litoraleña y brasileña/paraguaya: pescado de río (surubí, dorado cuando hay), mandioca, chipá. El parque es caro para comer: llevá algo.",
+            "eat": """<p>Influencia litoraleña y brasileña/paraguaya: pescado de río (surubí, dorado cuando hay), mandioca, chipá. Pedí eso en el pueblo, no un bife que podrías comer en cualquier lado.</p>
+      <p>El parque es caro para comer y las colas largas: llevá agua y algo. Chipá en Puerto Iguazú rinde más que el sandwich de la pasarela.</p>""",
             "hack": "Micro Rio Uruguay / Crucero del Norte a «Cataratas Brasil», cada hora desde ~7:30. Pasaporte. Pedile al chofer que pare en migraciones de Brasil. No apretés los dos parques en un día. Ciudad del Este no es este cruce.",
         },
         "en": {
@@ -451,11 +478,13 @@ PROVINCES = [
             "season": "Year-round (the jungle is always humid). Ideal Apr–Jun and Aug–Oct: less of an oven, solid water volume. Don’t skip it “because it’s winter”: the park is open. Dec–Feb is hottest, with more storms.",
             "arrive": "A flight to IGR (~1 h 45–2 h from Buenos Aires) usually beats the bus (~16–20 h, overnight). Posadas is closer by bus (~12–15 h). Transfers run from the airport to town and the park.",
             "do": [
-                "Iguazú National Park: upper and lower circuits plus Garganta del Diablo (the walkways you do on your own).",
-                "Cross to the Brazilian park if you have time and papers: it is the panoramic postcard, not a replacement for the Argentine side.",
-                "If you are already in Posadas, Encarnación (Paraguay) is across the bridge: chipá and another currency, not a substitute for the falls.",
+                "Iguazú National Park: upper and lower circuits plus Garganta del Diablo (the walkways you do on your own). Go early.",
+                "Puerto Iguazú and the Triple Frontier marker at sunset: the base town, not a replacement for the park.",
+                "Cross to the Brazilian park if you have time and papers: it is the panoramic postcard, not a replacement for the Argentine side. Do not squeeze both into one day.",
+                "San Ignacio Miní sits near Posadas, not the falls — <a href=\"#siosisi\">a tip, not a pin</a>. If you are already in Posadas, Encarnación (Paraguay) is across the bridge.",
             ],
-            "eat": "Litoral plus Brazilian/Paraguayan influence: river fish (surubí, dorado when available), mandioca, chipá. Food inside the park is expensive: bring something.",
+            "eat": """<p>Litoral plus Brazilian/Paraguayan influence: river fish (surubí, dorado when available), mandioca, chipá. Order that in town, not a steak you could eat anywhere.</p>
+      <p>Food inside the park is expensive and the queues are long: bring water and something. Chipá in Puerto Iguazú beats the boardwalk sandwich.</p>""",
             "hack": "Rio Uruguay / Crucero del Norte bus to “Cataratas Brasil”, about hourly from ~7:30. Passport. Ask the driver to stop at Brazilian immigration. Do not squeeze both parks into one day. Ciudad del Este is a different crossing.",
         },
         "legs_es": [("bus", "Micro ~16–20 h · noche"), ("air", "Avión ~1 h 45–2 h")],
@@ -550,12 +579,15 @@ PROVINCES = [
             "season": "Termas todo el año. Ideal sep–nov y mar–may para río sin vapor. Carnaval de Gualeguaychú: ene–feb, va con eso. Evitá enero si buscás silencio (y odiás mosquitos).",
             "arrive": "Micro desde Retiro (unas 3–6 h según el destino) o auto por la RN14. Vuelos puntuales a Paraná (PRA) cuando hay.",
             "do": [
-                "Termas (Federación, Colón, Villa Elisa).",
-                "Carnaval de Gualeguaychú en temporada.",
+                "Termas (Federación, Colón, Villa Elisa): un complejo, no tres. Federación es pueblo nuevo sobre el lago; Colón es costanera.",
+                "Colón: costanera y playas de río; San José si Colón está lleno; base lógica para El Palmar.",
+                "Concepción del Uruguay: casco y puerto; base para Palacio San José.",
+                "Carnaval de Gualeguaychú en temporada (ene–feb); fuera de temporada es pueblo de río y puente a Uruguay.",
                 "Palacio San José cerca de Concepción del Uruguay.",
-                "Parque Nacional El Palmar si estás por Colón (yatay y palmares).",
+                "Parque Nacional El Palmar si estás por Colón (yatay, vizcachas al atardecer).",
             ],
-            "eat": "Pescado de río, cítricos, salames y quesos de la zona. Menos asado-de-guía, más mesa familiar.",
+            "eat": """<p>Pescado de río (sábalo, surubí cuando hay), cítricos de la costa del Uruguay, salames y quesos de chacra. Menos asado-de-guía, más mesa familiar.</p>
+      <p>En Colón el helado de costanera cierra el día. Carnaval es otra dieta (y otro horario): si vas por eso, no armes un día termal a la mañana siguiente como si nada.</p>""",
             "hack": "El micro EGA Buenos Aires→Montevideo pisa este corredor (Gualeguaychú / Fray Bentos). Si ya estás en la provincia, Uruguay queda a un puente, no a un vuelo.",
         },
         "en": {
@@ -566,12 +598,15 @@ PROVINCES = [
             "season": "Hot springs year-round. Ideal Sep–Nov and Mar–May for the river without the steam. Gualeguaychú carnival: Jan–Feb, that’s the point. Avoid January if you want quiet (and hate mosquitoes).",
             "arrive": "Bus from Retiro (~3–6 h depending on the town) or drive RN14. Occasional flights to Paraná (PRA).",
             "do": [
-                "Hot springs (Federación, Colón, Villa Elisa).",
-                "Gualeguaychú carnival in season.",
+                "Hot springs (Federación, Colón, Villa Elisa): one complex, not three. Federación is a new town on the lake; Colón is a waterfront.",
+                "Colón: waterfront and river beaches; San José if Colón is packed; a logical base for El Palmar.",
+                "Concepción del Uruguay: old town and port; the base for Palacio San José.",
+                "Gualeguaychú carnival in season (Jan–Feb); off season it is a river town and a bridge to Uruguay.",
                 "Palacio San José near Concepción del Uruguay.",
-                "El Palmar National Park if you are near Colón (yatay palms).",
+                "El Palmar National Park if you are near Colón (yatay palms, viscachas at dusk).",
             ],
-            "eat": "River fish, citrus, local salami and cheese. Less guidebook asado, more family table.",
+            "eat": """<p>River fish (sábalo, surubí when available), citrus from the Uruguay shore, farm salami and cheese. Less guidebook asado, more family table.</p>
+      <p>In Colón, waterfront ice cream closes the day. Carnival is another diet (and another timetable): if that is why you came, do not stack a thermal morning after as if nothing happened.</p>""",
             "hack": "The EGA Buenos Aires→Montevideo bus uses this corridor (Gualeguaychú / Fray Bentos). If you are already in the province, Uruguay is a bridge, not a flight.",
         },
         "legs_es": [("bus", "Micro ~3–6 h"), ("local", "Según el pueblo")],
@@ -605,9 +640,11 @@ PROVINCES = [
             "do": [
                 "Monumento Nacional a la Bandera (Belgrano; Santa Fe 581). Sala y cripta suelen ser gratis, el mirador se paga — confirmá en <a href=\"https://www.monumentoalabandera.gob.ar/visita\" rel=\"noopener\">monumentoalabandera.gob.ar</a>. La cripta es homenaje; los restos están en Santo Domingo, CABA. Ficha en la <a href=\"../#proceres\">hub</a>.",
                 "Costanera e islas frente a la ciudad.",
-                "Centros culturales. Si hay clásico de fútbol, el clima cambia.",
+                "Parque de España / MACRO sobre el río, Paseo del Siglo y barrio Pichincha: vereda, no un itinerario de iglesias.",
+                "Casa Natal de Che (Entre Ríos 480). Si hay clásico Newell’s–Central, el clima cambia.",
             ],
-            "eat": "El carlito (sándwich de miga, jamón, queso, manteca y ketchup; patrimonio local — nació en bares tipo Cachito). También pescado de río y helado.",
+            "eat": """<p>El carlito (sándwich de miga, jamón, queso, manteca y ketchup; patrimonio local — nació en bares tipo Cachito). Pedilo en un bar de verdá, no como souvenir empaquetado.</p>
+      <p>Pescado de río (sábalo, surubí, boga cuando hay) y helado en cualquier cuadra seria: Rosario se toma el postre en serio. Completá con eso, no con un tasting menú.</p>""",
             "hack": "Rosario es parada lógica hacia el litoral, no un «hub aéreo» para Iguazú: si tu vuelo es BA–IGR, dormir acá «porque queda de paso» no ahorra nada.",
         },
         "en": {
@@ -620,9 +657,11 @@ PROVINCES = [
             "do": [
                 "National Flag Memorial (Belgrano; Santa Fe 581). The hall and crypt are usually free, the tower is paid — confirm at <a href=\"https://www.monumentoalabandera.gob.ar/visita\" rel=\"noopener\">monumentoalabandera.gob.ar</a>. The crypt is a tribute; the remains are at Santo Domingo, CABA. Card on the <a href=\"../#proceres\">hub</a>.",
                 "The waterfront and islands across the river.",
-                "Cultural centres. If there is a football derby, the mood shifts.",
+                "Parque de España / MACRO on the river, Paseo del Siglo, and Pichincha: sidewalk, not a church itinerary.",
+                "Che’s birth house (Entre Ríos 480). If there is a Newell’s–Central derby, the mood shifts.",
             ],
-            "eat": "The carlito (thin-bread sandwich with ham, cheese, butter, and ketchup — local heritage, born in bars like Cachito). Also river fish and ice cream.",
+            "eat": """<p>The carlito (thin-bread sandwich with ham, cheese, butter, and ketchup — local heritage, born in bars like Cachito). Order it in a real bar, not as a packaged souvenir.</p>
+      <p>River fish (sábalo, surubí, boga when available) and ice cream on any serious block: Rosario takes dessert seriously. Finish with that, not a tasting menu.</p>""",
             "hack": "Rosario is a logical stop toward the litoral, not an “air hub” for Iguazú: if your flight is BA–IGR, sleeping here “because it is on the way” saves nothing.",
         },
         "legs_es": [("bus", "Micro ~3–4 h"), ("air", "Avión ~1 h")],
@@ -646,7 +685,8 @@ PROVINCES = [
                 "Cuarteto de noche si te late: tunga-tunga, baile de a dos, no dinner-show. Quality Espacio, Plaza de la Música; confirmá cartelera. Rodrigo y La Mona en la <a href=\"../#musica\">hub</a>.",
                 "Las sierras no son un barrio: son otro viaje de 40–180 km. Circuitos y micros en <a href=\"#tips\">sierras</a>.",
             ],
-            "eat": "En la capital: fernet con Coca (sí, es cultural; el vaso largo es el default), empanadas cordobesas, locro, asado, pizza y comida de estudiante en Nueva Córdoba. No amarro un restaurante que puede cerrar mañana. En las sierras — si vas — cabrito, humita, comida de hostería; Carlos Paz es más parrilla de fin de semana que pueblo de olla.",
+            "eat": """<p>En la capital: fernet con Coca (sí, es cultural; el vaso largo es el default), empanadas cordobesas, locro, asado, pizza y comida de estudiante en Nueva Córdoba. No amarro un restaurante que puede cerrar mañana.</p>
+      <p>En las sierras — si vas — cabrito, humita, comida de hostería; Carlos Paz es más parrilla de fin de semana que pueblo de olla. Villa General Belgrano en octubre es otra dieta (Oktoberfest).</p>""",
             "hack": "Empate clásico CABA–Córdoba: cama nocturno vs vuelo corto. Si el plan es un valle, no duermas en Ezeiza: llegá a Córdoba, terminal, micro. Un día rinde Carlos Paz o Alta Gracia; Punilla norte (La Cumbre / Capilla) pide salir temprano; Calamuchita + Cumbrecita es día largo; Traslasierra no es day trip. Boletos en <a href=\"#tips\">la tabla</a>.",
         },
         "en": {
@@ -662,7 +702,8 @@ PROVINCES = [
                 "Cuarteto at night if that’s your thing: tunga-tunga, couple-dancing, not a dinner-show. Quality Espacio, Plaza de la Música; confirm the bill. Rodrigo and La Mona on the <a href=\"../#musica\">hub</a>.",
                 "The sierras are not a neighbourhood: they are another 40–180 km trip. Circuits and buses in <a href=\"#tips\">sierras</a>.",
             ],
-            "eat": "In the capital: fernet and Coke (yes, it is cultural; the long glass is the default), Córdoba empanadas, locro, asado, pizza and student food in Nueva Córdoba. I am not locking a restaurant that may close tomorrow. In the sierras — if you go — goat, humita, inn food; Carlos Paz is more a weekend grill than a pot-food village.",
+            "eat": """<p>In the capital: fernet and Coke (yes, it is cultural; the long glass is the default), Córdoba empanadas, locro, asado, pizza and student food in Nueva Córdoba. I am not locking a restaurant that may close tomorrow.</p>
+      <p>In the sierras — if you go — goat, humita, inn food; Carlos Paz is more a weekend grill than a pot-food village. Villa General Belgrano in October is another diet (Oktoberfest).</p>""",
             "hack": "Classic CABA–Córdoba tie: overnight cama vs a short flight. If a valley is the plan, do not sleep at Ezeiza: reach Córdoba, terminal, bus. One day covers Carlos Paz or Alta Gracia; northern Punilla (La Cumbre / Capilla) wants an early start; Calamuchita + Cumbrecita is a long day; Traslasierra is not a day trip. Tickets in <a href=\"#tips\">the table</a>.",
         },
         "legs_es": [("bus", "Micro ~9–11 h · suele noche"), ("air", "Avión ~1,5 h")],
@@ -869,7 +910,8 @@ PROVINCES = [
             "do": [
                 "Palermo (parques, bares), San Telmo (feria domingo), Recoleta (cementerio: Sarmiento está ahí; ficha en la <a href=\"../#proceres\">hub</a>).",
                 "Plaza de Mayo y la Catedral Metropolitana: el mausoleo de San Martín está adentro (nave derecha). El walking tour suele pasar; no hace falta un ticket aparte. Fichas de próceres en la <a href=\"../#proceres\">hub</a>.",
-                "Puerto Madero para la foto, La Boca un rato corto con las cosas pegadas al cuerpo.",
+                "Teatro Colón (visita o función), El Ateneo Grand Splendid y el MALBA: interiores que sí importan.",
+                "Puerto Madero para la foto y la Reserva Ecológica al lado; La Boca un rato corto con las cosas pegadas al cuerpo.",
                 "Free walking tours en Plaza de Mayo/San Telmo (propina). Tango en milonga de verdad si te anima, no sólo dinner-show.",
             ],
             "eat": "Parrilla (Don Julio en Palermo, con reserva), bodegón (El Preferido de Palermo), pizza al molde en Güerrín, café histórico en Café Tortoni y Los 36 Billares, choripán en ferias (La Choripanería en Mercado de San Telmo). Helado de dulce de leche en cualquier heladería seria.",
@@ -885,7 +927,8 @@ PROVINCES = [
             "do": [
                 "Palermo (parks, bars), San Telmo (Sunday fair), Recoleta (cemetery: Sarmiento is there; card on the <a href=\"../#proceres\">hub</a>).",
                 "Plaza de Mayo and the Metropolitan Cathedral: San Martín’s tomb is inside (right aisle). The walking tour usually passes; no separate ticket. Short historical cards on the <a href=\"../#proceres\">hub</a>.",
-                "Puerto Madero for the photo, La Boca briefly with your things zipped.",
+                "Teatro Colón (a visit or a show), El Ateneo Grand Splendid, and MALBA: interiors that actually matter.",
+                "Puerto Madero for the photo and the Ecological Reserve next door; La Boca briefly with your things zipped.",
                 "Free walking tours at Plaza de Mayo/San Telmo (tip). Tango in a real milonga if you are up for it, not only a dinner show.",
             ],
             "eat": "Parrilla (Don Julio in Palermo, book ahead), bodegón (El Preferido de Palermo), thick-crust pizza at Güerrín, historic cafés Tortoni and Los 36 Billares, choripán at fairs (La Choripanería in Mercado de San Telmo). Dulce de leche ice cream at any serious heladería.",
@@ -1005,12 +1048,14 @@ PROVINCES = [
             "season": "Tigre casi todo el año; Tandil y sierras mejor oct–nov y mar–abr. Mar del Plata: ideal nov o mar. Evitá enero en la costa (el argentino promedio va entonces; la RN2 se llena). Invierno en MdP: puerto y viento, muchos hoteles abajo.",
             "arrive": "Tren, micro o auto desde CABA. MdP: micro desde Retiro (~5–6 h, Tony Tur / Plusmar), tren desde Constitución cuando hay, o vuelo a MDQ (~1 h). En enero el micro se llena: reservá.",
             "do": [
-                "Tigre: Puerto de Frutos y lancha al Delta (volvé a cenar).",
-                "La Plata: arquitectura y el Museo de Ciencias Naturales.",
-                "Tandil o Sierra de la Ventana para aire; estancias de fin de semana.",
-                "Mar del Plata: rambla y playas (Playa Grande, Bristol), puerto y lobos marinos, Barrio Los Troncos.",
+                "Tigre: Puerto de Frutos y lancha al Delta (volvé a cenar). El Mitre desde Retiro alcanza; un city tour pago sobra.",
+                "La Plata: catedral, trazado en diagonal y el Museo de Ciencias Naturales — día de arquitectura, no de playa.",
+                "Tandil para aire de sierra bonaerense (queso, piedra, almacén). No entra en el día (~5 h).",
+                "Mar del Plata: rambla y playas (Playa Grande no es Bristol), Torreón del Monje, puerto y lobos, Barrio Los Troncos, Laguna de los Padres si la rambla está llena.",
+                "Sierra de la Ventana, San Antonio de Areco y Pinamar/Cariló son otro salto — <a href=\"#siosisi\">tips, no pines</a>.",
             ],
-            "eat": "Queso y salame de Tandil, facturas de pueblo, asado de campo. En MdP: mariscos y milanesa a la napolitana con papas en porción geológica; churros en la rambla; el puerto para pescado más simple.",
+            "eat": """<p>Queso y salame de Tandil, facturas de pueblo, asado de campo: el almacén bonaerense es el souvenir que sí pesa. Llevá fiambre de vuelta, no un imán.</p>
+      <p>En MdP: mariscos y milanesa a la napolitana con papas en porción geológica; churros en la rambla; el puerto para pescado más simple, menos souvenir.</p>""",
             "hack": "Tandil no entra en el día (~5 h de micro). Un city tour pago a Tigre sobra si el tren sale cada rato. El conurbano es otra película: andá con local.",
         },
         "en": {
@@ -1021,12 +1066,14 @@ PROVINCES = [
             "season": "Tigre almost year-round; Tandil and the small sierras better Oct–Nov and Mar–Apr. Mar del Plata: ideal Nov or Mar. Avoid January on the coast (the average Argentine goes then; RN2 fills up). Winter in MdP: harbour and wind, many hotels shuttered.",
             "arrive": "Train, bus, or car from CABA. MdP: bus from Retiro (~5–6 h, Tony Tur / Plusmar), train from Constitución when it runs, or a flight to MDQ (~1 h). In January the bus fills: book.",
             "do": [
-                "Tigre: Puerto de Frutos and a boat into the Delta (back for dinner).",
-                "La Plata: architecture and the natural-science museum.",
-                "Tandil or Sierra de la Ventana for air; weekend estancias.",
-                "Mar del Plata: rambla and beaches (Playa Grande, Bristol), the port and sea lions, Barrio Los Troncos.",
+                "Tigre: Puerto de Frutos and a boat into the Delta (back for dinner). The Mitre from Retiro is enough; a paid city tour is surplus.",
+                "La Plata: cathedral, the diagonal grid, and the natural-science museum — an architecture day, not a beach day.",
+                "Tandil for Buenos Aires sierra air (cheese, rock, corner store). Not a day trip (~5 h).",
+                "Mar del Plata: rambla and beaches (Playa Grande is not Bristol), Torreón del Monje, the port and sea lions, Barrio Los Troncos, Laguna de los Padres if the rambla is packed.",
+                "Sierra de la Ventana, San Antonio de Areco, and Pinamar/Cariló are another hop — <a href=\"#siosisi\">tips, not pins</a>.",
             ],
-            "eat": "Tandil cheese and salami, town bakeries, countryside asado. In MdP: seafood and a geological portion of milanesa napolitana; churros on the rambla; the port for simpler fish.",
+            "eat": """<p>Tandil cheese and salami, town bakeries, countryside asado: the Buenos Aires corner store is the souvenir that actually weighs something. Take cured meat home, not a magnet.</p>
+      <p>In MdP: seafood and a geological milanesa napolitana with fries; churros on the rambla; the port for simpler fish, less souvenir.</p>""",
             "hack": "Tandil is not a day trip (~5 h by bus). A paid city tour to Tigre is surplus if the train leaves every few minutes. Greater Buenos Aires is a different film: go with a local.",
         },
         "legs_es": [("bus", "1–6 h desde CABA"), ("local", "Tren / micro / auto")],
@@ -1053,7 +1100,8 @@ PROVINCES = [
                 "Uspallata y alta montaña; Aconcagua desde el parque (mirar, no hace falta subir).",
                 "Cruce a Santiago por Cristo Redentor cuando el paso está abierto.",
             ],
-            "eat": "Asado, empanadas mendocinas, chivo, aceitunas. Brindá con malbec, torrontés si venís del norte, o un blanco de altura en Uco.",
+            "eat": """<p>Asado, empanadas mendocinas al horno, chivo, aceitunas y aceite. Mesa de Cuyo, no un steakhouse genérico. Una bodega con almuerzo rinde más que cinco catas de pie.</p>
+      <p>Brindá con malbec; torrontés si venís del norte; un blanco de altura en Uco si el calor pega. El vino no maneja: bici en Maipú, tour o conductor en Uco.</p>""",
             "hack": "Micros Andesmar / CATA / El Rápido: Mendoza → Terminal Sur de Santiago, ~7–8 h, desde ~ARS 45.000–70.000 (~USD 30–45, prensa nov. 2026). Avión MDZ–SCL (~1 h, JetSMART/SKY/LATAM) cuando el paso cierra. En 2026 el Cristo Redentor acumuló ~90 días cerrado. No es un tour de compras del día.",
         },
         "en": {
@@ -1069,7 +1117,8 @@ PROVINCES = [
                 "Uspallata and the high Andes; Aconcagua from the park (look, you do not have to climb).",
                 "The Santiago crossing via Cristo Redentor when the pass is open.",
             ],
-            "eat": "Asado, Mendoza empanadas, goat, olives. Toast with malbec, torrontés if you came from the north, or a high-altitude white in Uco.",
+            "eat": """<p>Asado, baked Mendoza empanadas, goat, olives and oil. Cuyo table, not a generic steakhouse. One winery with lunch beats five standing tastings.</p>
+      <p>Toast with malbec; torrontés if you came from the north; a high-altitude white in Uco if the heat hits. The wine does not drive: bike in Maipú, a tour or a driver in Uco.</p>""",
             "hack": "Andesmar / CATA / El Rápido buses: Mendoza → Santiago Terminal Sur, ~7–8 h, from ~ARS 45,000–70,000 (~USD 30–45, press Nov 2026). MDZ–SCL flight (~1 h, JetSMART/SKY/LATAM) when the pass shuts. In 2026 Cristo Redentor was closed ~90 days. Not a same-day shopping tour.",
         },
         "legs_es": [("bus", "Micro ~14–16 h · noche"), ("air", "Avión ~2 h")],
@@ -1152,11 +1201,13 @@ PROVINCES = [
             "season": "Ballena franca jun–dic (temporada 2026 desde el 9 de jun.; pico sep–oct). Pingüinos más bien sep–mar. El Doradillo, costa, jun–oct. Evitá armar un safari en feb–may pensando en ballenas: no están.",
             "arrive": "Vuelo a REL (Trelew, ~2 h) + transfer (~1 h) o micro de noche desde Buenos Aires (~18–20 h). Auto ayuda para la península.",
             "do": [
-                "Avistaje de ballena franca desde Puerto Pirámides (el puerto cierra con viento).",
-                "Pingüinos en temporada, elefantes marinos.",
-                "Gaiman si querés té galés.",
+                "Península Valdés: estepa y fauna lejos — auto o día terrestre, no media mañana sin coche.",
+                "Avistaje de ballena franca desde Puerto Pirámides (jun–dic; el puerto cierra con viento). El Doradillo, desde la costa, cuando hay marea.",
+                "Punta Loma (lobos) cerca de Madryn; Gaiman para té galés (Atlántico, no Trevelin).",
+                "Punta Tombo (pingüinos) y Trevelin son otro salto — <a href=\"#siosisi\">tips, no pines</a>.",
             ],
-            "eat": "Cordero, merluza, centolla cuando hay, torta galesa en Gaiman. El marisco es más fresco que sofisticado.",
+            "eat": """<p>Cordero, merluza, centolla cuando hay. El marisco es más fresco que sofisticado: pedí pescado del golfo, no un sushi de brochure. Porciones patagónicas.</p>
+      <p>Torta galesa y té en Gaiman (pueblo cerca de Trelew). No lo confundás con Trevelin, que es cordillera y otro viaje.</p>""",
             "hack": "Auto (lo más sano) o micro Mar y Valle a Pirámides. No apretés toda la península en media mañana sin auto: la fauna está lejos.",
         },
         "en": {
@@ -1167,11 +1218,13 @@ PROVINCES = [
             "season": "Southern right whales Jun–Dec (2026 season from 9 Jun; peak Sep–Oct). Penguins more like Sep–Mar. El Doradillo, from the coast, Jun–Oct. Don’t plan a Feb–May safari expecting whales: they aren’t there.",
             "arrive": "Fly to REL (Trelew, ~2 h) + transfer (~1 h) or an overnight bus from Buenos Aires (~18–20 h). A car helps on the peninsula.",
             "do": [
-                "Southern right whale watching from Puerto Pirámides (the port closes in wind).",
-                "Penguins in season, elephant seals.",
-                "Gaiman if you want Welsh tea.",
+                "Península Valdés: steppe and wildlife far apart — a car or a land day, not a morning without one.",
+                "Southern right whale watching from Puerto Pirámides (Jun–Dec; the port closes in wind). El Doradillo, from the shore, when the tide is right.",
+                "Punta Loma (sea lions) near Madryn; Gaiman for Welsh tea (Atlantic, not Trevelin).",
+                "Punta Tombo (penguins) and Trevelin are another hop — <a href=\"#siosisi\">tips, not pins</a>.",
             ],
-            "eat": "Lamb, hake, king crab when it is around, Welsh cake in Gaiman. The seafood is fresher than fancy.",
+            "eat": """<p>Lamb, hake, king crab when it is around. The seafood is fresher than fancy: order gulf fish, not brochure sushi. Patagonian portions.</p>
+      <p>Welsh cake and tea in Gaiman (a town near Trelew). Do not mix it up with Trevelin, which is Andes and another trip.</p>""",
             "hack": "A car (the sane option) or the Mar y Valle bus to Pirámides. Do not squeeze the whole peninsula into a morning without a car: the animals are far apart.",
         },
         "legs_es": [("bus", "Micro ~18–20 h · noche"), ("air", "Avión ~2 h + 1 h transfer")],
@@ -1315,11 +1368,13 @@ PROVINCES = [
             "season": "Lagos/trekking dic–mar (mejor ene–mar; nov–dic hay egresados). Ski jun–sep. Evitá esperar ambos en el mismo viaje. Otoño (abr–may) es más quieto y más lluvia.",
             "arrive": "Vuelo a BRC (~2 h, muchas frecuencias) o micro de ~20–24 h. Auto para circuitos; en invierno, cadenas y paciencia.",
             "do": [
-                "Circuito Chico, Cerro Catedral (trekking o ski).",
-                "Navegación en Nahuel Huapi.",
-                "Ruta de los Siete Lagos hacia Villa La Angostura si tenés auto (Neuquén: yo no la marqué).",
+                "Circuito Chico (Campanario, Llao Llao, Bahía López) — auto, bici o bus; el paseo que explica Bariloche en una mañana.",
+                "Cerro Catedral: trekking o ski, no ambos en el mismo viaje. Colonia Suiza si coincidís con curanto.",
+                "Navegación en Nahuel Huapi (Isla Victoria y Arrayanes).",
+                "Cerro Tronador es día largo, otro valle. Siete Lagos / Villa La Angostura ya sería Neuquén: yo no la marqué.",
             ],
-            "eat": "Chocolate (Rapa Nui en Mitre y Villegas es un clásico de vidriera), trucha, cordero, cerveza artesanal. El té chocolateado después de un cerro es parte del ritual.",
+            "eat": """<p>Chocolate (Rapa Nui en Mitre y Villegas es el clásico de vidriera) y té chocolateado después de un cerro: es ritual, no postre de más. Cordero y trucha en la carta seria.</p>
+      <p>Cerveza artesanal de lago a la noche. Curanto en Colonia Suiza cuando hay. Porciones de refugio; el pueblo en temporada alta se llena de egresados — reservá mesa.</p>""",
             "hack": "Dos productos distintos hacia Chile: el micro por Paso Cardenal Samoré a Osorno / Puerto Montt (~6–8 h, ~USD 25–45) es traslado. El Cruce Andino es el paseo de tres lagos (~12 h).",
         },
         "en": {
@@ -1330,11 +1385,13 @@ PROVINCES = [
             "season": "Lakes/trekking Dec–Mar (best Jan–Mar; Nov–Dec is school-leavers). Ski Jun–Sep. Don’t expect both in one trip. Autumn (Apr–May) is quieter and wetter.",
             "arrive": "Fly to BRC (~2 h, many frequencies) or a ~20–24 h bus. A car for the loops; in winter, chains and patience.",
             "do": [
-                "Circuito Chico, Cerro Catedral (trekking or skiing).",
-                "A boat on Nahuel Huapi.",
-                "Seven Lakes road toward Villa La Angostura if you have a car (Neuquén: I did not mark it).",
+                "Circuito Chico (Campanario, Llao Llao, Bahía López) — car, bike, or bus; the outing that explains Bariloche in a morning.",
+                "Cerro Catedral: trekking or skiing, not both in one trip. Colonia Suiza if you hit a curanto day.",
+                "A boat on Nahuel Huapi (Isla Victoria and Arrayanes).",
+                "Cerro Tronador is a long day, another valley. Seven Lakes / Villa La Angostura would already be Neuquén: I did not mark it.",
             ],
-            "eat": "Chocolate (Rapa Nui at Mitre and Villegas is a shop-window classic), trout, lamb, craft beer. Chocolate tea after a hill is part of the ritual.",
+            "eat": """<p>Chocolate (Rapa Nui at Mitre and Villegas is the shop-window classic) and chocolate tea after a hill: ritual, not extra dessert. Lamb and trout on a serious menu.</p>
+      <p>Lake craft beer at night. Curanto in Colonia Suiza when it is on. Refuge portions; in high season the town fills with graduating-class trips — book a table.</p>""",
             "hack": "Two different Chile products: the bus via Paso Cardenal Samoré to Osorno / Puerto Montt (~6–8 h, ~USD 25–45) is transport. Cruce Andino is the three-lake outing (~12 h).",
         },
         "legs_es": [("bus", "Micro ~20–24 h · noche"), ("air", "Avión ~2 h")],
@@ -1525,7 +1582,8 @@ PROVINCES = [
                 "Un segundo plan, no tres el mismo día: kayak (<a href=\"#tours\">Patagonia Chic</a>), minitrekking/safari (Hielo y Aventura) o sólo pasarelas.",
                 "El Chaltén queda a ~2 h 40 / 215 km si seguís — <a href=\"#tips\">tip, no pin</a>.",
             ],
-            "eat": "Cordero patagónico, calafate en dulce o helado, trucha. Porciones de refugio, no de degustación. Libertador es la calle: parrilla y menú de glaciar. No amarro un restaurante que puede cerrar mañana.",
+            "eat": """<p>Cordero patagónico, calafate en dulce o helado, trucha. Porciones de refugio, no de degustación. Libertador es la calle: parrilla y menú de glaciar. No amarro un restaurante que puede cerrar mañana.</p>
+      <p>El pueblo es caro y chico: reservá mesa en temporada. Un helado de calafate cierra el día de pasarelas mejor que un segundo postre de agencia.</p>""",
             "hack": "Si el plan es hielo + sendero: dos noches Calafate (pasarelas o kayak) y después micro a Chaltén (Cal Tur / Chaltén Travel / TAQSA, ~ARS 70.000 / ~USD 45 el tramo, oct. 2026 + tasa). Chaltén no tiene aeropuerto. No es day trip de trekking.",
         },
         "en": {
@@ -1540,7 +1598,8 @@ PROVINCES = [
                 "One second plan, not three the same day: kayak (<a href=\"#tours\">Patagonia Chic</a>), mini trekking/safari (Hielo y Aventura), or boardwalks only.",
                 "El Chaltén is ~2 h 40 / 215 km if you continue — <a href=\"#tips\">a tip, not a pin</a>.",
             ],
-            "eat": "Patagonian lamb, calafate in jam or ice cream, trout. Mountain-refuge portions, not a tasting menu. Libertador is the street: grill and glacier-menu. I am not locking a restaurant that may close tomorrow.",
+            "eat": """<p>Patagonian lamb, calafate in jam or ice cream, trout. Mountain-refuge portions, not a tasting menu. Libertador is the street: grill and glacier-menu. I am not locking a restaurant that may close tomorrow.</p>
+      <p>The town is expensive and small: book a table in season. Calafate ice cream closes a boardwalk day better than a second agency dessert.</p>""",
             "hack": "If the plan is ice + trail: two nights in Calafate (boardwalks or kayak) and then the bus to Chaltén (Cal Tur / Chaltén Travel / TAQSA, ~ARS 70,000 / ~USD 45 one way, Oct 2026 plus tax). Chaltén has no airport. Not a trekking day trip.",
         },
         "legs_es": [("air", "Avión ~3 h"), ("warn", "Micro: no (2+ días)")],
@@ -1748,7 +1807,8 @@ PROVINCES = [
                 "Canal Beagle (faro, lobos; pingüinos oct–mar en Isla Martillo, sin desembarco).",
                 "Cerro Martial. En invierno, ski en Castor; en verano, trekking largo.",
             ],
-            "eat": "Centolla, merluza negra, cordero fueguino. Es caro comparado con el norte: el flete se siente. No amarro un restaurante de puerto que cambia de dueño.",
+            "eat": """<p>Centolla, merluza negra, cordero fueguino. Es caro comparado con el norte: el flete se siente. Pedí mar en el puerto. No amarro un restaurante que cambia de dueño.</p>
+      <p>Maipú es la calle de la mesa. Un día de glaciar pide cena temprana: el viento y las 7 h de luz en invierno no perdonan. Cerveza y chocolate existen; no son el plato.</p>""",
             "hack": "Ushuaia ↔ Punta Arenas: Bus-Sur / Tecni Austral, dos fronteras y un ferry de ~30 min por el Estrecho (Punta Delgada). ~USD 40–70 / CLP 58–68 mil (catálogo 2026). No hay ferry directo. No vale si tenés dos días en Ushuaia.",
         },
         "en": {
@@ -1764,7 +1824,8 @@ PROVINCES = [
                 "Beagle Channel (lighthouse, sea lions; penguins Oct–Mar on Isla Martillo, no landing).",
                 "Cerro Martial. In winter, ski at Castor; in summer, long treks.",
             ],
-            "eat": "King crab, black hake, Fuegian lamb. It is expensive compared with the north: you feel the freight. I am not locking a harbour restaurant that changes hands.",
+            "eat": """<p>King crab, black hake, Fuegian lamb. It is expensive compared with the north: you feel the freight. Order sea at the harbour. I am not locking a restaurant that changes hands.</p>
+      <p>Maipú is the table street. A glacier day wants an early dinner: winter wind and 7 h of light do not forgive. Beer and chocolate exist; they are not the plate.</p>""",
             "hack": "Ushuaia ↔ Punta Arenas: Bus-Sur / Tecni Austral, two borders and a ~30 min Magellan Strait ferry (Punta Delgada). ~USD 40–70 / CLP 58–68k (2026 catalogue). There is no direct ferry. Skip it if you only have two days in Ushuaia.",
         },
         "legs_es": [("air", "Avión ~3 h 30"), ("warn", "Tierra: 2 días")],
@@ -2078,6 +2139,11 @@ WONDERS = [
 ]
 
 SLUG_BY = {p["slug"]: p for p in PROVINCES}
+MUST_BY_SLUG = build_must(APN)
+for _p in PROVINCES:
+    _n = len(MUST_BY_SLUG.get(_p["slug"], []))
+    if _n < 6 or _n > 12:
+        raise SystemExit(f"must-try count for {_p['slug']} is {_n} (want 6–12)")
 
 # Side-trip / “para cuando vayas” pins. Not new visited provinces.
 # {p} = relative prefix to a province page ("" on the hub, "../" on this subpage).
@@ -2354,6 +2420,92 @@ def tour_html(t, lang):
         </article>"""
 
 
+def eat_block(loc):
+    eat = loc["eat"]
+    if eat.lstrip().startswith("<"):
+        return eat
+    return f"<p>{eat}</p>"
+
+
+def must_price_line(it, lang):
+    note = it.get("note_en") if lang == "en" else it.get("note_es")
+    asof = it.get("asof_en") if lang == "en" else it.get("asof")
+    if it.get("ars") is None:
+        return ""
+    lo, hi = it["ars"], it.get("ars_high")
+    ars_bit = f"ARS {ars_fmt(lo, lang)}–{ars_fmt(hi, lang)}" if hi else f"ARS {ars_fmt(lo, lang)}"
+    line = f"{ars_bit} / {usd_span(lo, hi)}"
+    if note:
+        line = f"{line} · {note}"
+    asof_html = f' <span class="asof">({asof})</span>' if asof else ""
+    return f'<p class="price">{line}{asof_html}</p>'
+
+
+def must_section(p, lang):
+    items = p.get("must") or MUST_BY_SLUG.get(p["slug"]) or []
+    if not items:
+        return "", ""
+    if lang == "en":
+        title = "Must-try"
+        kicker = (
+            "A local cheat sheet, not a paid list. <span class=\"badge\">Aldo was here</span> "
+            "is the visited pin for this page. <span class=\"badge badge-tip\">Tip only — not a map pin</span> "
+            "is a reader tip: existing tip blocks below stay tips. Public fares only when a sheet is known; "
+            "otherwise no invented number."
+        )
+        toc = "Must-try"
+        why_k = "Why it matters"
+    else:
+        title = "Sí o sí"
+        kicker = (
+            "Una cheat sheet local, no una lista paga. <span class=\"badge\">Aldo estuvo</span> "
+            "es el pin visitado de esta página. <span class=\"badge badge-tip\">Sólo tip — no es un pin</span> "
+            "es tip para lectores: los bloques de tips de abajo siguen siendo tips. Tarifas públicas "
+            "sólo cuando hay hoja; si no, no invento un número."
+        )
+        toc = "Sí o sí"
+        why_k = "Por qué importa"
+    cards = []
+    for it in items:
+        kind = it.get("kind", "visited")
+        if kind == "tip":
+            badge = (
+                '<span class="badge badge-tip">Tip only — not a map pin</span>'
+                if lang == "en"
+                else '<span class="badge badge-tip">Sólo tip — no es un pin</span>'
+            )
+        else:
+            badge = (
+                '<span class="badge">Aldo was here</span>'
+                if lang == "en"
+                else '<span class="badge">Aldo estuvo</span>'
+            )
+        name = it["en_name"] if lang == "en" else it["es_name"]
+        why = it["en"] if lang == "en" else it["es"]
+        url = it.get("url")
+        heading = f'<a href="{url}" rel="noopener">{name}</a>' if url else name
+        price = must_price_line(it, lang)
+        price_html = f"\n          {price}" if price else ""
+        cards.append(
+            f"""        <li>
+          <div class="must-head">
+            <strong>{heading}</strong>
+            {badge}
+          </div>
+          <p class="why"><span class="why-k">{why_k}</span> {why}</p>{price_html}
+        </li>"""
+        )
+    body = "\n".join(cards)
+    section = f"""    <div class="section" id="siosisi">
+      <h2>{title}</h2>
+      <p class="kicker">{kicker}</p>
+      <ul class="must-list">
+{body}
+      </ul>
+    </div>"""
+    return section, f'\n      <a href="#siosisi">{toc}</a>'
+
+
 def operators_section(p, lang):
     ops = p.get("operators") or []
     if not ops:
@@ -2504,6 +2656,7 @@ def province_page(p, lang):
       <p>{tours_empty}</p>
     </div>"""
     ops_section, toc_ops_link = operators_section(p, lang)
+    must_html, toc_must_link = must_section(p, lang)
 
     city = p.get("city_extra")
     if city:
@@ -2571,7 +2724,7 @@ def province_page(p, lang):
       <a href="{hub}">{toc_hub}</a>
       <a href="#epoca">{toc_season}</a>
       <a href="#llegar">{toc_arrive}</a>
-      <a href="#hacer">{toc_do}</a>{toc_city_link}{toc_tips_link}
+      <a href="#hacer">{toc_do}</a>{toc_must_link}{toc_city_link}{toc_tips_link}
       <a href="#tours">{toc_tours}</a>{toc_ops_link}
       <a href="#comer">{toc_eat}</a>
       <a href="#hack">{toc_hack}</a>
@@ -2608,6 +2761,7 @@ def province_page(p, lang):
       </ul>
     </div>
 
+{must_html}
 {extra_section}
 {tips_section}
 {tours_section}
@@ -2615,7 +2769,7 @@ def province_page(p, lang):
 
     <div class="section" id="comer">
       <h2>{h_eat}</h2>
-      <p>{loc['eat']}</p>
+      {eat_block(loc)}
     </div>
 
     <div class="section" id="hack">
