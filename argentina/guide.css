@@ -489,6 +489,23 @@ table.prices .mute { color: #8ea0b3; font-size: 0.82rem; }
 .season-list li { margin: 0 0 10px; line-height: 1.5; }
 .tip-not-visited { border-color: rgba(251, 191, 36, 0.35); }
 .curiosidades .mini h3 { font-size: 1.02rem; }
+.curiosidades-cta {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #1d4ed8;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+.curiosidades-cta:hover {
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+}
+.curiosidades .mini { scroll-margin-top: 132px; }
 .wx { color: #8ea0b3; font-size: 0.88rem; }
 table.season-cal th, table.season-cal td {
   text-align: center;
