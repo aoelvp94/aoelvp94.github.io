@@ -2073,6 +2073,210 @@ WONDERS = [
 
 SLUG_BY = {p["slug"]: p for p in PROVINCES}
 
+# Side-trip / “para cuando vayas” pins. Not new visited provinces.
+# {p} = relative prefix to a province page ("" on the hub, "../" on this subpage).
+CURIOSIDADES = [
+    {
+        "id": "tafi",
+        "group": "norte",
+        "teaser": True,
+        "es": {
+            "title": "Tafí del Valle (Tucumán)",
+            "handle": "Tip · ~2.000 m · no visitado por Aldo",
+            "teaser": "~2 h 30 de micro desde San Miguel (Aconquija, ARS 18.000–20.000 / ~USD 12–13). Fresco cuando el valle hierve. <a href=\"{p}tucuman/#tips\">Tucumán</a>.",
+            "body": "~107–126 km / ~2 h 30 de micro desde San Miguel por RN38 y RP307 (Quebrada de los Sosa). Transporte Aconquija, ARS 18.000–20.000 / ~USD 12–13 el tramo (jul–nov. 2026, ficha pública). Fresco cuando el valle hierve. Desde oct. 2026 el provincial se paga con tarjeta/QR. Detalle en la <a href=\"{p}tucuman/#tips\">página de Tucumán</a>.",
+        },
+        "en": {
+            "title": "Tafí del Valle (Tucumán)",
+            "handle": "Tip · ~2,000 m · not visited by Aldo",
+            "teaser": "~2 h 30 by bus from San Miguel (Aconquija, ARS 18,000–20,000 / ~USD 12–13). Cool when the valley boils. <a href=\"{p}tucuman/#tips\">Tucumán</a>.",
+            "body": "~107–126 km / ~2 h 30 by bus from San Miguel via RN38 and RP307 (Quebrada de los Sosa). Transporte Aconquija, ARS 18,000–20,000 / ~USD 12–13 one-way (Jul–Nov 2026, public card). Cool when the valley boils. From Oct 2026 the provincial bus is card/QR. Detail on the <a href=\"{p}tucuman/#tips\">Tucumán page</a>.",
+        },
+    },
+    {
+        "id": "cafayate-cachi",
+        "group": "norte",
+        "es": {
+            "title": "Cafayate / Cachi (Salta)",
+            "handle": "Matiz · dos valles, no un pin aparte",
+            "body": "Salta ciudad sí. Cafayate (~190 km por RN68, Quebrada de las Conchas, torrontés) y Cachi (~160 km por RN33 / Cuesta del Obispo, Cardones) son días distintos: la hoja clásica de Movitrack los cobra igual (ARS 77.500 / ~USD 50, nov. 2026), el paisaje no. No los apretés en un solo día «porque quedan en el mapa». Tours y Cardones en la <a href=\"{p}salta/\">página de Salta</a> — acá no repito el operador.",
+        },
+        "en": {
+            "title": "Cafayate / Cachi (Salta)",
+            "handle": "Nuance · two valleys, not an extra pin",
+            "body": "Salta city, yes. Cafayate (~190 km on RN68, Quebrada de las Conchas, torrontés) and Cachi (~160 km on RN33 / Cuesta del Obispo, Cardones) are different days: Movitrack’s classic sheet prices them the same (ARS 77,500 / ~USD 50, Nov 2026); the landscape does not. Do not squeeze both into one day “because they are on the map.” Tours and Cardones on the <a href=\"{p}salta/\">Salta page</a> — I am not repeating the operator here.",
+        },
+    },
+    {
+        "id": "purmamarca-salinas",
+        "group": "norte",
+        "es": {
+            "title": "Purmamarca vs Salinas Grandes",
+            "handle": "Matiz · Quebrada ≠ puna",
+            "body": "Purmamarca es el pueblo y el cerro (~65 km desde San Salvador). Salinas Grandes es otro día: Cuesta de Lipán, ~3.450 m, abrigo y agua. No es «el mismo postcard». El cruce a Chile por Jama sale de Purmamarca de madrugada: eso es un hack, no un day trip a las salinas. Fichas en <a href=\"{p}jujuy/\">Jujuy</a> y en la <a href=\"{p}#hacks\">hub de hacks</a>.",
+        },
+        "en": {
+            "title": "Purmamarca vs Salinas Grandes",
+            "handle": "Nuance · Quebrada ≠ puna",
+            "body": "Purmamarca is the town and the hill (~65 km from San Salvador). Salinas Grandes is another day: Cuesta de Lipán, ~3,450 m, jacket and water. Not “the same postcard.” The Chile bus via Jama leaves Purmamarca before dawn: that is a hack, not a salt-flat day trip. Cards on <a href=\"{p}jujuy/\">Jujuy</a> and the <a href=\"{p}#hacks\">hub hacks</a>.",
+        },
+    },
+    {
+        "id": "catamarca-oeste",
+        "group": "norte",
+        "es": {
+            "title": "Catamarca oeste (Belén / Fiambalá)",
+            "handle": "Valle visitado · el oeste es otro salto",
+            "body": "Estuve en Catamarca. San Fernando del Valle es la base calurosa; Belén, Tinogasta, Fiambalá y Campo de Piedra Pómez son desierto de altura, distancias largas, operación local. No es un day trip desde el valle ni un pin aparte. Confirmá permisos y clima en el lugar; no amarro un lodge. <a href=\"{p}catamarca/\">Página de Catamarca</a>.",
+        },
+        "en": {
+            "title": "Western Catamarca (Belén / Fiambalá)",
+            "handle": "Valley visited · the west is another hop",
+            "body": "I have been to Catamarca. San Fernando del Valle is the hot base; Belén, Tinogasta, Fiambalá and Campo de Piedra Pómez are high desert, long distances, local operations. Not a day trip from the valley and not an extra pin. Confirm permits and weather on the ground; I am not locking a lodge. <a href=\"{p}catamarca/\">Catamarca page</a>.",
+        },
+    },
+    {
+        "id": "sierras-cordoba",
+        "group": "centro",
+        "es": {
+            "title": "Sierras de Córdoba",
+            "handle": "Tip · Punilla, Calamuchita, Traslasierra",
+            "body": "La capital sí la marqué; cada pueblo de sierra no. Carlos Paz ~36–40 km / ARS 6.500 / ~USD 4 (ERSEP 1 oct. 2026). Un día rinde Carlos Paz o Alta Gracia (~ARS 5.700 / ~USD 4, confirmá boletería); Traslasierra (~3 h, ~ARS 36.000 / ~USD 23 a Mina Clavero) no es day trip. Tabla de distancias y boletos en <a href=\"{p}cordoba/#tips\">Córdoba</a>.",
+        },
+        "en": {
+            "title": "Córdoba sierras",
+            "handle": "Tip · Punilla, Calamuchita, Traslasierra",
+            "body": "I marked the capital; not every hill town. Carlos Paz ~36–40 km / ARS 6,500 / ~USD 4 (ERSEP 1 Oct 2026). One day covers Carlos Paz or Alta Gracia (~ARS 5,700 / ~USD 4, confirm at the window); Traslasierra (~3 h, ~ARS 36,000 / ~USD 23 to Mina Clavero) is not a day trip. Distances and fares on <a href=\"{p}cordoba/#tips\">Córdoba</a>.",
+        },
+    },
+    {
+        "id": "ibera",
+        "group": "litoral",
+        "teaser": True,
+        "es": {
+            "title": "Iberá (Corrientes)",
+            "handle": "Aún no · Esteros",
+            "teaser": "Colonia Carlos Pellegrini, 4×4, carpinchos, yacarés. Mejor en seca (abr–oct). Tip, no pin.",
+            "body": "Colonia Carlos Pellegrini es la base clásica, no Corrientes capital. 4×4, carpinchos, yacarés, mosquitos. Mejor en seca (abr–oct). El carnaval de Corrientes es otra película urbana. Yo no pisé la provincia: tip, no pin. No invento un safari ni un lodge.",
+        },
+        "en": {
+            "title": "Iberá (Corrientes)",
+            "handle": "Not yet · wetlands",
+            "teaser": "Colonia Carlos Pellegrini, 4×4, capybaras, caimans. Better in the dry (Apr–Oct). A tip, not a pin.",
+            "body": "Colonia Carlos Pellegrini is the classic base, not Corrientes city. 4×4, capybaras, caimans, mosquitoes. Better in the dry (Apr–Oct). Corrientes carnival is a different, urban film. I have not been to the province: a tip, not a pin. I am not inventing a safari or a lodge.",
+        },
+    },
+    {
+        "id": "formosa",
+        "group": "litoral",
+        "es": {
+            "title": "Formosa / Bañado La Estrella",
+            "handle": "Aún no · frontera norte",
+            "body": "Humedal, calor, logística propia, Paraguay al lado. Exótico para el circuito clásico; yo no fui. Confirmá operadores locales / GetYourGuide si insistís — no invento un safari ni un teléfono.",
+        },
+        "en": {
+            "title": "Formosa / Bañado La Estrella",
+            "handle": "Not yet · northern border",
+            "body": "Wetland, heat, its own logistics, Paraguay next door. Exotic for the classic circuit; I have not been. Confirm local operators / GetYourGuide if you insist — I am not inventing a safari or a phone number.",
+        },
+    },
+    {
+        "id": "ischigualasto",
+        "group": "cuyo",
+        "es": {
+            "title": "Ischigualasto / Talampaya",
+            "handle": "Aún no · Cuyo norte",
+            "body": "Valle de la Luna (San Juan) y Talampaya (La Rioja) se suelen hacer juntos; yo no pisé ninguna de las dos provincias. Misma lógica seca que Mendoza: mejor otoño–primavera que el horno de enero. Un parque es provincial y el otro nacional: confirmá tarifa y turno en el lugar — no invento un boleto.",
+        },
+        "en": {
+            "title": "Ischigualasto / Talampaya",
+            "handle": "Not yet · northern Cuyo",
+            "body": "Valle de la Luna (San Juan) and Talampaya (La Rioja) are usually done together; I have not been to either province. Same dry logic as Mendoza: autumn–spring beats January heat. One park is provincial and the other national: confirm the fee and time slot on the ground — I am not inventing a ticket.",
+        },
+    },
+    {
+        "id": "trevelin",
+        "group": "patagonia",
+        "es": {
+            "title": "Trevelin / Esquel",
+            "handle": "Tip · Chubut andino · no visitado",
+            "body": "El otro galés: cordillera, no Madryn. ~25 km de Esquel; ~4–5 h / ~280–320 km desde Bariloche por RN40. Gaiman (té cerca de Trelew) es el lado atlántico. Confirmá micro Bariloche–Esquel en Plataforma10 / Vía Bariloche — no publico un carrito que no vi. <a href=\"{p}chubut/#tips\">Chubut</a> y <a href=\"{p}rio-negro/#tips\">Bariloche</a>.",
+        },
+        "en": {
+            "title": "Trevelin / Esquel",
+            "handle": "Tip · Andean Chubut · not visited",
+            "body": "The other Welsh town: Andes, not Madryn. ~25 km from Esquel; ~4–5 h / ~280–320 km from Bariloche on RN40. Gaiman (tea near Trelew) is the Atlantic side. Confirm the Bariloche–Esquel bus on Plataforma10 / Vía Bariloche — I am not publishing a cart I have not seen. <a href=\"{p}chubut/#tips\">Chubut</a> and <a href=\"{p}rio-negro/#tips\">Bariloche</a>.",
+        },
+    },
+    {
+        "id": "valdes-madryn",
+        "group": "patagonia",
+        "es": {
+            "title": "Península Valdés vs Madryn",
+            "handle": "Matiz · la base no es la península",
+            "body": "Yo marqué <strong>Puerto Madryn</strong>. Península Valdés / Puerto Pirámides queda a ~95 km: ahí está la lancha (jun–dic; pico sep–oct). El Doradillo es ballena desde la costa, más barato, cuando hay temporada. Entrada al área protegida ~ARS 50.000 / ~USD 32 (extranjeros, temporada 2026) más la lancha. No confundir con Trevelin. Fichas en <a href=\"{p}chubut/\">Chubut</a> — no copio el bloque de Hydro Sport.",
+        },
+        "en": {
+            "title": "Península Valdés vs Madryn",
+            "handle": "Nuance · the base is not the peninsula",
+            "body": "I marked <strong>Puerto Madryn</strong>. Península Valdés / Puerto Pirámides is ~95 km away: that is where the boat is (Jun–Dec; peak Sep–Oct). El Doradillo is whales from the shore, cheaper, when the season lines up. Protected-area ticket ~ARS 50,000 / ~USD 32 (foreign visitors, 2026 season) plus the boat. Do not mix it up with Trevelin. Cards on <a href=\"{p}chubut/\">Chubut</a> — I am not copying the Hydro Sport block.",
+        },
+    },
+    {
+        "id": "chalten",
+        "group": "patagonia",
+        "teaser": True,
+        "es": {
+            "title": "El Chaltén / Fitz Roy",
+            "handle": "Tip · Santa Cruz · no visitado",
+            "teaser": "~2 h 40 / 215 km desde Calafate, ~ARS 70.000 / ~USD 45. Yo no lo marqué. <a href=\"{p}santa-cruz/#tips\">Santa Cruz</a>.",
+            "body": "El glaciar es Calafate; el trekking largo es Chaltén. ~2 h 40 / 215 km, micros todos los días (Cal Tur, Chaltén Travel, TAQSA), ~ARS 70.000 / ~USD 45 el tramo (oct. 2026) + tasa de terminal. <strong>Yo no lo marqué.</strong> No es day trip: el micro se come la luz. Mejor oct–abr para senderos. Detalle en <a href=\"{p}santa-cruz/#tips\">Santa Cruz</a>.",
+        },
+        "en": {
+            "title": "El Chaltén / Fitz Roy",
+            "handle": "Tip · Santa Cruz · not visited",
+            "teaser": "~2 h 40 / 215 km from Calafate, ~ARS 70,000 / ~USD 45. I did not mark it. <a href=\"{p}santa-cruz/#tips\">Santa Cruz</a>.",
+            "body": "The glacier is Calafate; the long trekking is Chaltén. ~2 h 40 / 215 km, buses every day (Cal Tur, Chaltén Travel, TAQSA), ~ARS 70,000 / ~USD 45 one way (Oct 2026) plus terminal tax. <strong>I did not mark it.</strong> Not a day trip: the bus eats the daylight. Better Oct–Apr for trails. Detail on <a href=\"{p}santa-cruz/#tips\">Santa Cruz</a>.",
+        },
+    },
+    {
+        "id": "angostura",
+        "group": "patagonia",
+        "es": {
+            "title": "Villa La Angostura / San Martín de los Andes",
+            "handle": "Aún no · Neuquén",
+            "body": "Yo marqué Bariloche en Río Negro. Villa La Angostura (~80 km) y San Martín de los Andes (Ruta de los Siete Lagos) ya son Neuquén: no se pintan de azul. Auto ayuda; en invierno, cadenas. Confirmá micros en Plataforma10 — no invento tarifa de esa semana. <a href=\"{p}rio-negro/\">Bariloche</a>.",
+        },
+        "en": {
+            "title": "Villa La Angostura / San Martín de los Andes",
+            "handle": "Not yet · Neuquén",
+            "body": "I marked Bariloche in Río Negro. Villa La Angostura (~80 km) and San Martín de los Andes (Seven Lakes road) are already Neuquén: they stay unpainted. A car helps; in winter, chains. Confirm buses on Plataforma10 — I am not inventing that week’s fare. <a href=\"{p}rio-negro/\">Bariloche</a>.",
+        },
+    },
+    {
+        "id": "alerces",
+        "group": "patagonia",
+        "es": {
+            "title": "Parque Nacional Los Alerces",
+            "handle": "Tip · Chubut andino · no visitado",
+            "body": "Al lado de Esquel, no de Madryn. Lagos y alerces milenarios; Trevelin (té galés de cordillera) queda a un rato. <strong>Yo no lo marqué.</strong> Entrada APN: confirmá la tarifa del año en parquesnacionales — no copio un número que no tengo en esta guía. Encadena con Trevelin/Esquel, no con ballenas. <a href=\"{p}chubut/#tips\">Chubut</a>.",
+        },
+        "en": {
+            "title": "Los Alerces National Park",
+            "handle": "Tip · Andean Chubut · not visited",
+            "body": "Next to Esquel, not Madryn. Lakes and ancient alerce trees; Trevelin (mountain Welsh tea) is a short hop. <strong>I did not mark it.</strong> APN gate: confirm this year’s fee on the parks site — I am not copying a number I do not have in this guide. Chain it with Trevelin/Esquel, not with whales. <a href=\"{p}chubut/#tips\">Chubut</a>.",
+        },
+    },
+]
+
+CURIOSIDAD_GROUPS = [
+    ("norte", "Norte / NOA", "Northwest"),
+    ("centro", "Centro", "Centre"),
+    ("litoral", "Litoral / norte húmedo", "Litoral / humid north"),
+    ("cuyo", "Cuyo (aún no)", "Cuyo (not yet)"),
+    ("patagonia", "Patagonia", "Patagonia"),
+]
+
 
 def esc(s: str) -> str:
     return s.replace("&", "&amp;") if s else s
@@ -2587,7 +2791,188 @@ def patch_hub(path: Path, lang: str):
         text = text.replace(old, new)
 
     # filters JS was in map.js and is gone; leftover filters already removed with lugares
+    start_c = text.find('<div class="section" id="curiosidades">')
+    end_c = text.find('<div class="section" id="epoca">')
+    if start_c == -1 or end_c == -1:
+        raise SystemExit(f"curiosidades markers missing in {path}")
+    start_c = text.rfind("\n", 0, start_c) + 1
+    text = text[:start_c] + hub_curiosidades_teaser(lang) + "\n    " + text[end_c:]
     path.write_text(text, encoding="utf-8")
+
+
+def _card_html(card, lang, prefix, teaser=False):
+    loc = card[lang]
+    text = loc["teaser"] if teaser and loc.get("teaser") else loc["body"]
+    body = text.format(p=prefix)
+    return f"""        <article class="mini" id="{card['id']}">
+          <h3>{loc['title']}</h3>
+          <p class="handle">{loc['handle']}</p>
+          <p>{body}</p>
+        </article>"""
+
+
+def hub_curiosidades_teaser(lang):
+    highlights = [c for c in CURIOSIDADES if c.get("teaser")]
+    cards = "\n".join(_card_html(c, lang, "", teaser=True) for c in highlights)
+    n = len(CURIOSIDADES)
+    if lang == "en":
+        h2 = "Curiosity / for when you go"
+        note_h = "These are not visited pins"
+        note_p = (
+            "Reader tips. The map and “visited” pages do not change: I did not go to these "
+            "(except Catamarca, which I did). Corrientes, Formosa, Trevelin, Tafí del Valle, "
+            "El Chaltén, and each Córdoba valley stay unpainted."
+        )
+        lead = (
+            f"A short sample — {n} side trips live on their own page. "
+            "Public / approximate figures at ~ARS 1,550/USD (BNA, Nov 2026)."
+        )
+        cta = "See all curiosities"
+        href = "curiosidades/"
+    else:
+        h2 = "Curiosidades / para cuando vayas"
+        note_h = "No son pines visitados"
+        note_p = (
+            "Tips para lectores. El mapa y las páginas «visitado» no cambian: yo no pisé estos destinos "
+            "(salvo Catamarca, que sí). Corrientes, Formosa, Trevelin, Tafí del Valle, "
+            "El Chaltén y cada valle de Córdoba no se pintan de azul."
+        )
+        lead = (
+            f"Una muestra corta — las {n} fichas viven en su propia página. "
+            "Cifras públicas / aproximadas al ~ARS 1.550/USD (BNA, nov. 2026)."
+        )
+        cta = "Ver todas las curiosidades"
+        href = "curiosidades/"
+    return f"""    <div class="section" id="curiosidades">
+      <h2>{h2}</h2>
+      <div class="note tip-not-visited">
+        <strong>{note_h}</strong>
+        {note_p}
+      </div>
+      <p>{lead}</p>
+      <div class="cards-2 curiosidades">
+{cards}
+      </div>
+      <p><a class="curiosidades-cta" href="{href}">{cta} →</a></p>
+    </div>
+"""
+
+
+def curiosidades_page(lang):
+    prefix = "../"
+    groups = {gid: [] for gid, _, _ in CURIOSIDAD_GROUPS}
+    for card in CURIOSIDADES:
+        groups[card["group"]].append(_card_html(card, lang, prefix))
+
+    sections = []
+    toc_links = []
+    for gid, es_h, en_h in CURIOSIDAD_GROUPS:
+        heading = en_h if lang == "en" else es_h
+        toc_links.append(f'      <a href="#{gid}">{heading}</a>')
+        cards = "\n".join(groups[gid])
+        sections.append(
+            f"""    <div class="section" id="{gid}">
+      <h2>{heading}</h2>
+      <div class="cards-2 curiosidades">
+{cards}
+      </div>
+    </div>"""
+        )
+
+    n = len(CURIOSIDADES)
+    if lang == "en":
+        depth_site = "../../../"
+        css = "../../guide.css"
+        hub = "../"
+        es_href = "../../curiosidades/"
+        en_href = "./"
+        title = "Curiosity / for when you go — Aldo’s Argentina guide"
+        desc = "Side-trip tips for Argentina: not visited pins. Distances, seasons, and public price ranges."
+        crumb = '<a href="../">Argentina guide</a> / Curiosity'
+        h1 = "Curiosity / for when you go"
+        intro = (
+            f"{n} reader tips: side trips and underrated spots tied to pages I already cover, "
+            "or provinces I have not marked. The map does not change. No invented itineraries."
+        )
+        note_h = "These are not visited pins"
+        note_p = (
+            "Except Catamarca (I have been; the west is another hop). "
+            "Corrientes, Formosa, Neuquén, San Juan, and La Rioja stay unpainted. "
+            "USD at ~ARS 1,550 (BNA, Nov 2026). Public / approximate — confirm the week you go."
+        )
+        last = '<p><a href="../">Back to the guide</a> · national transport, buses, and money live on the hub.</p>'
+        toc_hub = "Guide"
+        hreflang_es = "https://aoelvp94.github.io/argentina/curiosidades/"
+        hreflang_en = "https://aoelvp94.github.io/argentina/en/curiosidades/"
+        lang_attr = "en"
+        toc_label = "On this page"
+    else:
+        depth_site = "../../"
+        css = "../guide.css"
+        hub = "../"
+        es_href = "./"
+        en_href = "../en/curiosidades/"
+        title = "Curiosidades / para cuando vayas — guía de Aldo"
+        desc = "Tips de saltos al lado en Argentina: no son pines visitados. Distancias, épocas y rangos públicos."
+        crumb = '<a href="../">Guía Argentina</a> / Curiosidades'
+        h1 = "Curiosidades / para cuando vayas"
+        intro = (
+            f"{n} tips para lectores: saltos al lado y lugares medio de costado, atados a páginas que ya cubro "
+            "o a provincias que no marqué. El mapa no cambia. No invento itinerarios."
+        )
+        note_h = "No son pines visitados"
+        note_p = (
+            "Salvo Catamarca (estuve; el oeste es otro salto). "
+            "Corrientes, Formosa, Neuquén, San Juan y La Rioja no se pintan de azul. "
+            "USD al ~ARS 1.550 (BNA, nov. 2026). Cifras públicas / aproximadas — confirmá la semana que vas."
+        )
+        last = '<p><a href="../">Volver a la guía</a> · transporte, micros y plata nacional están en la hub.</p>'
+        toc_hub = "Guía"
+        hreflang_es = "https://aoelvp94.github.io/argentina/curiosidades/"
+        hreflang_en = "https://aoelvp94.github.io/argentina/en/curiosidades/"
+        lang_attr = "es-AR"
+        toc_label = "Índice"
+
+    toc = "\n".join(toc_links)
+    body_sections = "\n\n".join(sections)
+    return f"""<!DOCTYPE html>
+<html lang="{lang_attr}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content="{desc}">
+  <link rel="alternate" hreflang="es" href="{hreflang_es}">
+  <link rel="alternate" hreflang="en" href="{hreflang_en}">
+  <link rel="alternate" hreflang="x-default" href="{hreflang_es}">
+  <link rel="stylesheet" href="{css}">
+</head>
+<body>
+{header_nav(lang, es_href, en_href, depth_site)}
+  <nav class="toc" aria-label="{toc_label}">
+    <div class="toc-inner">
+      <a href="{hub}">{toc_hub}</a>
+{toc}
+    </div>
+  </nav>
+  <main>
+    <p class="crumb">{crumb}</p>
+    <h1>{h1}</h1>
+    <p class="intro">{intro}</p>
+    <div class="note tip-not-visited">
+      <strong>{note_h}</strong>
+      {note_p}
+    </div>
+
+{body_sections}
+
+    <div class="section">
+      {last}
+    </div>
+  </main>
+</body>
+</html>
+"""
 
 
 def main():
@@ -2598,9 +2983,17 @@ def main():
         en_dir.mkdir(parents=True, exist_ok=True)
         (es_dir / "index.html").write_text(province_page(p, "es"), encoding="utf-8")
         (en_dir / "index.html").write_text(province_page(p, "en"), encoding="utf-8")
+    es_c = ROOT / "curiosidades"
+    en_c = ROOT / "en" / "curiosidades"
+    es_c.mkdir(parents=True, exist_ok=True)
+    en_c.mkdir(parents=True, exist_ok=True)
+    (es_c / "index.html").write_text(curiosidades_page("es"), encoding="utf-8")
+    (en_c / "index.html").write_text(curiosidades_page("en"), encoding="utf-8")
     patch_hub(ROOT / "index.html", "es")
     patch_hub(ROOT / "en" / "index.html", "en")
-    print(f"wrote {len(PROVINCES)} provinces × 2 + patched hub grids")
+    print(
+        f"wrote {len(PROVINCES)} provinces × 2 + {len(CURIOSIDADES)} curiosidades × 2 + patched hub"
+    )
 
 
 if __name__ == "__main__":
