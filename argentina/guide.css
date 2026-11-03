@@ -390,6 +390,7 @@ table.prices {
   min-width: 560px;
 }
 table.prices.times { min-width: 720px; }
+table.prices.network { min-width: 860px; font-size: 0.86rem; }
 table.prices th, table.prices td {
   text-align: left;
   padding: 8px 10px;
@@ -399,6 +400,8 @@ table.prices th, table.prices td {
 }
 table.prices th { color: #d5e0ea; font-weight: 650; }
 table.prices td.num { white-space: nowrap; color: #e8eef6; }
+table.prices .indic { color: #93c5fd; font-weight: 650; }
+table.prices .mute { color: #8ea0b3; font-size: 0.82rem; }
 
 .cards-2 {
   display: grid;
@@ -442,6 +445,62 @@ table.prices td.num { white-space: nowrap; color: #e8eef6; }
 }
 .music b { display: block; margin-bottom: 4px; }
 .music span { color: #9fb0c2; font-size: 0.88rem; line-height: 1.4; }
+.music-block { margin: 18px 0 8px; }
+.music-block h3, .voice-block h3, .season-block h3 {
+  margin: 22px 0 8px;
+  font-size: 1.05rem;
+  color: #fff;
+}
+.listen {
+  background: #12202c;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 14px 18px 8px;
+  margin: 12px 0 16px;
+}
+.listen ol { margin: 0 0 8px; padding-left: 1.2em; color: #c5d2df; }
+.listen li { margin: 0 0 8px; line-height: 1.5; }
+.mini .level {
+  display: inline-block;
+  margin: 0 0 8px;
+  color: #93c5fd;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.tour-meta {
+  margin: 0 0 6px;
+  color: #9fb0c2;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+.tour-meta span {
+  color: #93c5fd;
+  font-weight: 650;
+  margin-right: 6px;
+}
+.season-list li { margin: 0 0 10px; line-height: 1.5; }
+.tip-not-visited { border-color: rgba(251, 191, 36, 0.35); }
+.curiosidades .mini h3 { font-size: 1.02rem; }
+.wx { color: #8ea0b3; font-size: 0.88rem; }
+table.season-cal th, table.season-cal td {
+  text-align: center;
+  font-size: 0.78rem;
+  padding: 6px 4px;
+  white-space: nowrap;
+}
+table.season-cal th:first-child, table.season-cal td:first-child {
+  text-align: left;
+  white-space: normal;
+}
+table.season-cal .hi { background: rgba(34, 197, 94, 0.16); color: #86efac; }
+table.season-cal .mid { background: rgba(251, 191, 36, 0.14); color: #fde68a; }
+table.season-cal .lo { background: rgba(248, 113, 113, 0.12); color: #fca5a5; }
+.voice-block { margin: 18px 0 8px; }
+.fest-list { margin: 8px 0 12px; padding-left: 1.2em; color: #c5d2df; }
+.fest-list li { margin: 0 0 8px; line-height: 1.5; }
+.playlist { margin-top: 8px; }
 
 .hack-grid {
   display: grid;
