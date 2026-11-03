@@ -298,6 +298,12 @@ PROVINCES = [
                 "asof_en": "clarkexpediciones.com, Nov 2026",
             },
         ],
+        "tips": {
+            "es_title": "Para cuando vayas — Iruya",
+            "en_title": "For when you go — Iruya",
+            "es": """<p>Iruya (~2.780 m) es el pueblo salteño colgado en la montaña, norte de la Quebrada — no Cafayate ni Cachi. <strong>Yo no lo marqué como visitado.</strong> El acceso por ruta sale de <strong>Humahuaca</strong> (Jujuy): ~73–75 km / ~3 h de micro, RN9 + ripio RP13/RP133, Abra del Cóndor ~4.000 m. Desde Salta ciudad son ~318–320 km y un transbordo: no hay micro directo. <a href="https://www.transporteiruya.com.ar/inicio" rel="noopener">Transporte Iruya</a> publica horarios Humahuaca↔Iruya; el boleto, confirmalo en boletería esa semana — no invento tarifa. Mejor en seca (abr–nov): el ripio se complica con lluvia. No es day trip desde Salta.</p>""",
+            "en": """<p>Iruya (~2,780 m) is the Salta mountain village hanging on the slope, north of the Quebrada — not Cafayate or Cachi. <strong>I did not mark it as visited.</strong> The road access leaves from <strong>Humahuaca</strong> (Jujuy): ~73–75 km / ~3 h by bus, RN9 + RP13/RP133 gravel, Abra del Cóndor ~4,000 m. From Salta city it is ~318–320 km and a transfer: no direct bus. <a href="https://www.transporteiruya.com.ar/inicio" rel="noopener">Transporte Iruya</a> publishes Humahuaca↔Iruya times; confirm the fare at the window that week — I am not inventing a ticket. Better in the dry (Apr–Nov): rain wrecks the gravel. Not a day trip from Salta.</p>""",
+        },
     },
     {
         "slug": "tucuman",
@@ -2105,6 +2111,20 @@ CURIOSIDADES = [
             "title": "Cafayate / Cachi (Salta)",
             "handle": "Nuance · two valleys, not an extra pin",
             "body": "Salta city, yes. Cafayate (~190 km on RN68, Quebrada de las Conchas, torrontés) and Cachi (~160 km on RN33 / Cuesta del Obispo, Cardones) are different days: Movitrack’s classic sheet prices them the same (ARS 77,500 / ~USD 50, Nov 2026); the landscape does not. Do not squeeze both into one day “because they are on the map.” Tours and Cardones on the <a href=\"{p}salta/\">Salta page</a> — I am not repeating the operator here.",
+        },
+    },
+    {
+        "id": "iruya",
+        "group": "norte",
+        "es": {
+            "title": "Iruya (Salta)",
+            "handle": "Tip · ~2.780 m · no visitado por Aldo",
+            "body": "El pueblo salteño en medio de la montaña, norte de la Quebrada — no Cafayate. Se llega desde Humahuaca (Jujuy): ~73–75 km / ~3 h, ripio y Abra del Cóndor ~4.000 m. Desde Salta ciudad ~318–320 km con transbordo; no hay micro directo. Transporte Iruya publica horarios; el boleto, confirmalo en boletería — no invento tarifa. Mejor abr–nov. <a href=\"{p}salta/#tips\">Salta · Iruya</a>.",
+        },
+        "en": {
+            "title": "Iruya (Salta)",
+            "handle": "Tip · ~2,780 m · not visited by Aldo",
+            "body": "The Salta mountain village in the middle of the hills, north of the Quebrada — not Cafayate. You reach it from Humahuaca (Jujuy): ~73–75 km / ~3 h, gravel and Abra del Cóndor ~4,000 m. From Salta city ~318–320 km with a transfer; no direct bus. Transporte Iruya publishes times; confirm the fare at the window — I am not inventing a ticket. Better Apr–Nov. <a href=\"{p}salta/#tips\">Salta · Iruya</a>.",
         },
     },
     {
