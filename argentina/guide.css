@@ -154,6 +154,33 @@ h1 {
   color: #fca5a5;
 }
 .note.loud strong { color: #fecaca; }
+.note.wifi {
+  background: rgba(56, 189, 248, 0.08);
+  border-left-color: #38bdf8;
+  color: #7dd3fc;
+}
+.note.wifi strong { color: #bae6fd; }
+.note.wifi ul {
+  color: inherit;
+  margin: 8px 0 10px;
+  padding-left: 18px;
+}
+.note.wifi li { margin-bottom: 8px; }
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.tag-yes { background: rgba(34,197,94,0.18); color: #86efac; }
+.tag-no { background: rgba(148,163,184,0.2); color: #cbd5e1; }
+.tag-maybe { background: rgba(251,191,36,0.15); color: #fcd34d; }
+.note.wifi .tag { margin: 10px 8px 4px 0; vertical-align: middle; }
+table.prices .tag { white-space: normal; line-height: 1.35; }
+#micros, #transporte h3 { scroll-margin-top: 132px; }
 
 .map-wrap {
   position: relative;
