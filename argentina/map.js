@@ -19,6 +19,7 @@
     { id: "jujuy", slug: "jujuy", lat: -24.1858, lon: -65.2995, labelEs: "Jujuy", labelEn: "Jujuy", dir: "right" },
     { id: "salta", slug: "salta", lat: -24.7829, lon: -65.4232, labelEs: "Salta", labelEn: "Salta", dir: "left" },
     { id: "tucuman", slug: "tucuman", lat: -26.8083, lon: -65.2176, labelEs: "Tucumán", labelEn: "Tucumán", dir: "left" },
+    { id: "catamarca", slug: "catamarca", lat: -28.4696, lon: -65.7852, labelEs: "Catamarca", labelEn: "Catamarca", dir: "left" },
     { id: "santiago", slug: "santiago-del-estero", lat: -27.7834, lon: -64.2642, labelEs: "Sgo. Estero", labelEn: "Sgo. Estero", dir: "right" },
     { id: "misiones", slug: "misiones", lat: -25.5972, lon: -54.5786, labelEs: "Iguazú", labelEn: "Iguazú", dir: "right" },
     { id: "entre-rios", slug: "entre-rios", lat: -31.7319, lon: -60.5238, labelEs: "E. Ríos", labelEn: "E. Ríos", dir: "top" },
@@ -37,6 +38,7 @@
   const FIRST_PLACE = {
     "02": "caba",
     "06": "buenos-aires",
+    "10": "catamarca",
     "14": "cordoba",
     "26": "chubut",
     "30": "entre-rios",

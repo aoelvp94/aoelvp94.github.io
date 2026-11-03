@@ -12,6 +12,18 @@ def usd(ars: int) -> str:
     return f"~USD {int(round(ars / FX))}"
 
 
+def ars_fmt(n: int, lang: str) -> str:
+    return f"{n:,}" if lang == "en" else f"{n:,}".replace(",", ".")
+
+
+def usd_span(ars: int, ars_high: int | None = None) -> str:
+    lo = int(round(ars / FX))
+    if ars_high is None:
+        return f"~USD {lo}"
+    hi = int(round(ars_high / FX))
+    return f"~USD {lo}–{hi}"
+
+
 # Park fees: APN, valores vigentes desde 1 jun 2026 (tarifa general = extranjero).
 APN = {
     "iguazu_gen": 60000,
@@ -61,14 +73,50 @@ PROVINCES = [
         },
         "legs_es": [("bus", "Micro ~20–22 h · noche"), ("air", "Avión ~2 h")],
         "legs_en": [("bus", "Bus ~20–22 h · overnight"), ("air", "Flight ~2 h")],
-        "nearby": ["salta", "tucuman", "santiago-del-estero"],
+        "nearby": ["salta", "tucuman", "santiago-del-estero", "catamarca"],
         "tours": [
+            {
+                "url": "https://movitrack.com.ar/excursiones-clasicas",
+                "es_name": "Movitrack — Quebrada de Humahuaca",
+                "en_name": "Movitrack — Quebrada de Humahuaca",
+                "es": "Salida clásica desde Salta (también tienen oficina en San Salvador de Jujuy): Purmamarca, Tilcara, Humahuaca. Día largo; almuerzo y entradas a museos/pucará suelen ir aparte. Si ya estás en la Quebrada, un auto rinde más que volver a Salta.",
+                "en": "Classic departure from Salta (they also have an office in San Salvador de Jujuy): Purmamarca, Tilcara, Humahuaca. A long day; lunch and museum/pucará tickets are usually extra. If you are already in the Quebrada, a car beats bouncing back to Salta.",
+                "duration_es": "día completo (~12 h desde Salta)",
+                "duration_en": "full day (~12 h from Salta)",
+                "includes_es": "traslado y guía; comidas y entradas aparte",
+                "includes_en": "transfer and guide; meals and tickets extra",
+                "ars": 94500,
+                "asof": "movitrack.com.ar/excursiones-clasicas, nov. 2026",
+                "asof_en": "movitrack.com.ar/excursiones-clasicas, Nov 2026",
+                "note_es": "por persona, hoja clásica del operador",
+                "note_en": "per person, operator classic sheet",
+            },
+            {
+                "url": "https://movitrack.com.ar/excursiones-clasicas",
+                "es_name": "Movitrack — Salinas Grandes",
+                "en_name": "Movitrack — Salinas Grandes",
+                "es": "Salar vía Purmamarca / Cuesta de Lipán. Altura: abrigo y agua. El Safari a las Nubes (4×4 + Polvorilla + salinas, jornada muy larga) no tiene tarifa en esa misma hoja: confirmalo en Movitrack o en GetYourGuide/Viator, no en un número inventado.",
+                "en": "Salt flats via Purmamarca / Cuesta de Lipán. Altitude: jacket and water. Safari a las Nubes (4×4 + Polvorilla + salt flats, a very long day) is not on that same sheet: confirm it with Movitrack or on GetYourGuide/Viator — not an invented fare.",
+                "duration_es": "día completo (~13 h desde Salta)",
+                "duration_en": "full day (~13 h from Salta)",
+                "includes_es": "traslado y guía; comidas y Ojos del Salar aparte",
+                "includes_en": "transfer and guide; meals and Ojos del Salar extra",
+                "ars": 97500,
+                "asof": "movitrack.com.ar/excursiones-clasicas, nov. 2026",
+                "asof_en": "movitrack.com.ar/excursiones-clasicas, Nov 2026",
+                "note_es": "por persona, hoja clásica del operador",
+                "note_en": "per person, operator classic sheet",
+            },
             {
                 "url": "https://www.argentina.gob.ar/parquesnacionales/tarifas",
                 "es_name": "Parque Nacional Calilegua (APN)",
                 "en_name": "Calilegua National Park (APN)",
                 "es": "Selva de yungas, no puna. Entrada oficial; no hace falta un tour para caminar los senderos habilitados.",
                 "en": "Yungas jungle, not puna. Official gate fee; you do not need a tour for the open trails.",
+                "duration_es": "tu día en el parque",
+                "duration_en": "your park day",
+                "includes_es": "senderos habilitados; no hay lancha ni 4×4 incluido",
+                "includes_en": "open trails; no boat or 4×4 included",
                 "ars": APN["calilegua"],
                 "asof": "APN desde 1 jun 2026",
                 "asof_en": "APN from 1 Jun 2026",
@@ -114,26 +162,67 @@ PROVINCES = [
         },
         "legs_es": [("bus", "Micro ~18–20 h · noche"), ("air", "Avión ~2 h")],
         "legs_en": [("bus", "Bus ~18–20 h · overnight"), ("air", "Flight ~2 h")],
-        "nearby": ["jujuy", "tucuman", "santiago-del-estero"],
+        "nearby": ["jujuy", "tucuman", "santiago-del-estero", "catamarca"],
         "tours": [
             {
-                "url": "https://movitrack.com.ar/",
-                "es_name": "Movitrack (safaris 4×4 y valles)",
-                "en_name": "Movitrack (4×4 safaris and valley days)",
-                "es": "Operador salteño conocido para valles y 4×4. Confirmá el precio del día en su web: cambia con temporada y grupo. Tren a las Nubes es otra postal (no corre todos los días).",
-                "en": "A well-known Salta operator for valleys and 4×4 days. Confirm that day’s price on their site: it moves with season and group size. Tren a las Nubes is another postcard (not daily).",
-                "ars": None,
-                "asof": "confirmá en el operador",
-                "asof_en": "confirm with the operator",
-                "note_es": "no publico un número que no esté en su tarifa",
-                "note_en": "no invented fare — check their rate sheet",
+                "url": "https://movitrack.com.ar/excursiones-clasicas",
+                "es_name": "Movitrack — Cafayate / Cachi",
+                "en_name": "Movitrack — Cafayate / Cachi",
+                "es": "Operador salteño de toda la vida para valles. Cafayate (Quebrada de las Conchas + pueblo/bodega) y Cachi salen a la misma tarifa en la hoja clásica. Almuerzo y catas extra. Tren a las Nubes es otro producto (no corre todos los días; el ticket lo vende el tren, no Movitrack).",
+                "en": "A long-standing Salta operator for the valleys. Cafayate (Quebrada de las Conchas + town/winery) and Cachi share the same fare on the classic sheet. Lunch and tastings extra. Tren a las Nubes is a different product (not daily; the train sells its own ticket).",
+                "duration_es": "día completo (~12 h)",
+                "duration_en": "full day (~12 h)",
+                "includes_es": "traslado y guía; comidas y bodega/entradas aparte",
+                "includes_en": "transfer and guide; meals and winery/tickets extra",
+                "ars": 77500,
+                "asof": "movitrack.com.ar/excursiones-clasicas, nov. 2026",
+                "asof_en": "movitrack.com.ar/excursiones-clasicas, Nov 2026",
+                "note_es": "por persona; Cafayate o Cachi",
+                "note_en": "per person; Cafayate or Cachi",
+            },
+            {
+                "url": "https://movitrack.com.ar/excursiones-clasicas",
+                "es_name": "Movitrack — Humahuaca y Salinas",
+                "en_name": "Movitrack — Humahuaca and salt flats",
+                "es": "Humahuaca ARS 94.500 y Salinas Grandes ARS 97.500 en la misma hoja. Días de 12–13 h desde Salta. Safari a las Nubes (4×4 + viaducto + salinas) no está tarifado ahí: preguntá al operador o mirá GetYourGuide/Viator.",
+                "en": "Humahuaca ARS 94,500 and Salinas Grandes ARS 97,500 on the same sheet. 12–13 h days from Salta. Safari a las Nubes (4×4 + viaduct + salt flats) is not priced there: ask the operator or check GetYourGuide/Viator.",
+                "duration_es": "día completo (~12–13 h)",
+                "duration_en": "full day (~12–13 h)",
+                "includes_es": "traslado y guía; comidas aparte",
+                "includes_en": "transfer and guide; meals extra",
+                "ars": 94500,
+                "ars_high": 97500,
+                "asof": "movitrack.com.ar/excursiones-clasicas, nov. 2026",
+                "asof_en": "movitrack.com.ar/excursiones-clasicas, Nov 2026",
+                "note_es": "Humahuaca–Salinas en la hoja clásica",
+                "note_en": "Humahuaca–salt flats on the classic sheet",
+            },
+            {
+                "url": "https://movitrack.com.ar/excursiones-clasicas",
+                "es_name": "Movitrack — city tour Salta",
+                "en_name": "Movitrack — Salta city tour",
+                "es": "Circuito de centro y alrededores si acabás de aterrizar. Tres horas; no reemplaza Cafayate ni la Quebrada.",
+                "en": "Centre and outskirts if you just landed. Three hours; it does not replace Cafayate or the Quebrada.",
+                "duration_es": "~3 h",
+                "duration_en": "~3 h",
+                "includes_es": "recorrido urbano guiado",
+                "includes_en": "guided city loop",
+                "ars": 44500,
+                "asof": "movitrack.com.ar/excursiones-clasicas, nov. 2026",
+                "asof_en": "movitrack.com.ar/excursiones-clasicas, Nov 2026",
+                "note_es": "por persona",
+                "note_en": "per person",
             },
             {
                 "url": "https://www.argentina.gob.ar/parquesnacionales/tarifas",
                 "es_name": "Parque Nacional Los Cardones (APN)",
                 "en_name": "Los Cardones National Park (APN)",
-                "es": "Cardones y ruta a Cachi. Entrada oficial.",
-                "en": "Cardón cactus and the Cachi road. Official gate fee.",
+                "es": "Cardones y ruta a Cachi. Entrada oficial; muchos tours a Cachi la cruzan.",
+                "en": "Cardón cactus and the Cachi road. Official gate fee; many Cachi tours pass through.",
+                "duration_es": "parada en el día a Cachi",
+                "duration_en": "a stop on the Cachi day",
+                "includes_es": "ingreso al parque",
+                "includes_en": "park admission",
                 "ars": APN["cardones"],
                 "asof": "APN desde 1 jun 2026",
                 "asof_en": "APN from 1 Jun 2026",
@@ -154,11 +243,10 @@ PROVINCES = [
             "arrive": "Vuelo a TUC (~2 h) o micro (~14–16 h) desde Buenos Aires. Tafí queda a ~2 h en auto por montaña.",
             "do": [
                 "Casa Histórica (la independencia, 1816) y el centro de San Miguel.",
-                "Tafí del Valle si tenés un día extra.",
-                "Ruinas de Quilmes hacia el oeste.",
+                "Sangucherías de barrio: eso es Tucumán más que un tour.",
             ],
             "eat": "Sánguche de milanesa (el clásico tucumano, en pan sanguchero) y empanadas tucumanas. Eso, antes que cualquier restaurante «de autor». Buscá sangucherías de barrio.",
-            "hack": "Fácil de encadenar con Santiago del Estero o Salta. No amarro un operador puntual para Tafí/Quilmes: auto o agencia local, vehículo en condiciones para la cuesta.",
+            "hack": "Fácil de encadenar con Santiago del Estero, Catamarca o Salta.",
         },
         "en": {
             "name": "Tucumán",
@@ -169,15 +257,60 @@ PROVINCES = [
             "arrive": "Fly to TUC (~2 h) or bus (~14–16 h) from Buenos Aires. Tafí is ~2 h by car into the mountains.",
             "do": [
                 "Casa Histórica (independence, 1816) and downtown San Miguel.",
-                "Tafí del Valle if you have an extra day.",
-                "Quilmes ruins to the west.",
+                "Neighbourhood sandwich shops: that is Tucumán more than a tour.",
             ],
             "eat": "Milanesa sandwich (the Tucumán classic, in sanguchero bread) and Tucumán empanadas. That, before any “auteur” restaurant. Look for neighbourhood sandwich shops.",
-            "hack": "Easy to chain with Santiago del Estero or Salta. I am not locking a named operator for Tafí/Quilmes: car or a local agency, and a vehicle that can handle the climb.",
+            "hack": "Easy to chain with Santiago del Estero, Catamarca, or Salta.",
         },
         "legs_es": [("bus", "Micro ~14–16 h · noche"), ("air", "Avión ~2 h")],
         "legs_en": [("bus", "Bus ~14–16 h · overnight"), ("air", "Flight ~2 h")],
-        "nearby": ["santiago-del-estero", "salta", "jujuy"],
+        "nearby": ["santiago-del-estero", "salta", "jujuy", "catamarca"],
+        "tours": [],
+        "tips": {
+            "es_title": "Para cuando vayas — Tafí del Valle",
+            "en_title": "For when you go — Tafí del Valle",
+            "es": """<p>Tafí del Valle (~2.000 m) es el clásico de «subir a fresco» desde San Miguel. <strong>Yo no lo marqué como visitado</strong>: es un tip para lectores, no un pin del mapa. ~107–126 km por RN38 y RP307 (Quebrada de los Sosa), ~2 h 30 de micro.</p>
+      <p><a href="https://transporteaconquija.com.ar/" rel="noopener">Transporte Aconquija</a> es la empresa del valle. Ficha de Plataforma10 / el propio operador: <strong>ARS 18.000–20.000</strong> / {usd_lo}–{usd_hi} el tramo (jul–nov. 2026). Desde oct. 2026 el provincial se paga con tarjeta/QR, no efectivo. Ruinas de Quilmes y Amaicha quedan más al oeste: otro salto, auto o tour, no un day trip apurado.</p>""".format(usd_lo="~USD 12", usd_hi="13"),
+            "en": """<p>Tafí del Valle (~2,000 m) is the classic “go up to cool off” from San Miguel. <strong>I did not mark it as visited</strong>: a reader tip, not a map pin. ~107–126 km via RN38 and RP307 (Quebrada de los Sosa), ~2 h 30 by bus.</p>
+      <p><a href="https://transporteaconquija.com.ar/" rel="noopener">Transporte Aconquija</a> is the valley company. Plataforma10 / operator card: <strong>ARS 18,000–20,000</strong> / ~USD 12–13 one-way (Jul–Nov 2026). From Oct 2026 the provincial bus is card/QR, not cash. Quilmes ruins and Amaicha sit further west: another hop, car or tour, not a rushed day trip.</p>""",
+        },
+    },
+    {
+        "slug": "catamarca",
+        "region": "norte",
+        "es": {
+            "name": "Catamarca",
+            "where": "NOA · valles y alta montaña",
+            "teaser": "Entre Tucumán y la puna: calor de valle, oeste de altura y menos brochure que Salta.",
+            "vibe": "Estuve. No armé un diario de días, así que esta ficha es corta a propósito: no invento lodges ni anécdotas. San Fernando del Valle es la base calurosa; el oeste (Belén, Tinogasta, Fiambalá) es desierto de altura, seísmiles y vino. Menos circuito internacional que Salta o Jujuy. El postcard del oeste — Campo de Piedra Pómez, lagunas — depende de clima y operación local.",
+            "season": "Valle: calor fuerte dic–feb (fácil 35–40 °C). Mejor abr–jun y sep–nov. El oeste es seco, noches frías, altura de verdad: abrigo después de las 18 aunque el valle hierva. Dic–mar hay lluvia en sierras y a veces cortes. Misma lógica NOA: seco = otoño–primavera.",
+            "arrive": "Vuelo a CTC (Coronel Felipe Varela, ~2 h desde Buenos Aires) o micro (~16–18 h). Fácil de encadenar con Tucumán. El Paso de San Francisco a Chile existe; no te armo horarios que no chequeé.",
+            "do": [
+                "Centro de San Fernando del Valle del Catamarca.",
+                "Si el plan es montaña o desierto: Belén, Tinogasta, Fiambalá. Son distancias largas: auto o agencia, no un day trip improvisado desde el valle.",
+                "Campo de Piedra Pómez y lagunas de altura son el cliché del oeste. Confirmá operación y permisos en el lugar; no hay un operador único que yo nombre con tarifa pública.",
+            ],
+            "eat": "Empanadas, locro, cabrito, vino de altura del oeste. Mesa de norte, no de brochure mendocino.",
+            "hack": "No amarro un operador. Se entiende en combo con Tucumán o Salta, no como un salto de dos noches «porque queda en el mapa».",
+        },
+        "en": {
+            "name": "Catamarca",
+            "where": "Northwest · valleys and high Andes",
+            "teaser": "Between Tucumán and the puna: hot valley, high-altitude west, less brochure than Salta.",
+            "vibe": "I have been. I did not keep a day-by-day diary, so this page stays short on purpose: no invented lodges or anecdotes. San Fernando del Valle is the hot base; the west (Belén, Tinogasta, Fiambalá) is high desert, 6,000 m peaks, and wine. Less of an international circuit than Salta or Jujuy. The western postcard — Campo de Piedra Pómez, high lagoons — depends on weather and local operations.",
+            "season": "Valley: hard heat Dec–Feb (easily 35–40 °C). Better Apr–Jun and Sep–Nov. The west is dry, cold nights, real altitude: a jacket after 6 p.m. even if the valley is boiling. Dec–Mar means rain in the hills and occasional closures. Same northwest logic: dry = autumn–spring.",
+            "arrive": "Fly to CTC (Coronel Felipe Varela, ~2 h from Buenos Aires) or take the bus (~16–18 h). Easy to chain with Tucumán. Paso de San Francisco into Chile exists; I am not inventing timetables I have not checked.",
+            "do": [
+                "Downtown San Fernando del Valle de Catamarca.",
+                "If the plan is mountain or desert: Belén, Tinogasta, Fiambalá. Long distances: car or agency, not an improvised day trip from the valley.",
+                "Campo de Piedra Pómez and high lagoons are the western cliché. Confirm operations and permits on the ground; there is no single operator I can name with a public rate.",
+            ],
+            "eat": "Empanadas, locro, goat, high-altitude wine from the west. Northern table, not a Mendoza brochure.",
+            "hack": "I am not locking an operator. It makes sense as a combo with Tucumán or Salta, not as a two-night hop “because it is on the map.”",
+        },
+        "legs_es": [("bus", "Micro ~16–18 h · noche"), ("air", "Avión ~2 h")],
+        "legs_en": [("bus", "Bus ~16–18 h · overnight"), ("air", "Flight ~2 h")],
+        "nearby": ["tucuman", "santiago-del-estero", "salta"],
         "tours": [],
     },
     {
@@ -215,7 +348,7 @@ PROVINCES = [
         },
         "legs_es": [("bus", "Micro ~12–14 h · noche"), ("air", "Avión ~1 h 45")],
         "legs_en": [("bus", "Bus ~12–14 h · overnight"), ("air", "Flight ~1 h 45")],
-        "nearby": ["tucuman", "cordoba", "salta"],
+        "nearby": ["tucuman", "cordoba", "salta", "catamarca"],
         "tours": [],
     },
     {
@@ -259,8 +392,12 @@ PROVINCES = [
                 "url": "https://iguazuargentina.com/planifica-tu-visita/compra-tus-entradas/",
                 "es_name": "Entrada Parque Nacional Iguazú (APN)",
                 "en_name": "Iguazú National Park ticket (APN)",
-                "es": "Incluye tren ecológico y circuitos habilitados ese día. Comprá oficial; el parque no es la lancha.",
-                "en": "Includes the ecological train and the circuits open that day. Buy official; the park ticket is not the boat.",
+                "es": "Incluye tren ecológico y circuitos habilitados ese día. Comprá oficial; el parque no es la lancha. Garganta a veces cierra por caudal: mirá el parte del parque esa mañana.",
+                "en": "Includes the ecological train and the circuits open that day. Buy official; the park ticket is not the boat. Garganta sometimes closes with high water: check the park notice that morning.",
+                "duration_es": "el día en el parque (abrí temprano)",
+                "duration_en": "your park day (go early)",
+                "includes_es": "tren ecológico y pasarelas abiertas; lancha aparte",
+                "includes_en": "ecological train and open boardwalks; boat extra",
                 "ars": APN["iguazu_gen"],
                 "asof": "APN desde 1 jun 2026",
                 "asof_en": "APN from 1 Jun 2026",
@@ -271,11 +408,15 @@ PROVINCES = [
                 "url": "https://tickets.iguazujungle.com/",
                 "es_name": "Iguazú Jungle — Gran Aventura",
                 "en_name": "Iguazú Jungle — Gran Aventura",
-                "es": "Selva en vehículo abierto + lancha a los saltos. Restricciones de embarque. Entrada al parque aparte. Paseo Ecológico ~ARS 40.000 (a veces suspendido si cierran Garganta).",
-                "en": "Open-vehicle jungle trail + boat to the falls. Boarding restrictions. Park ticket extra. Ecological boat ride ~ARS 40,000 (sometimes suspended if Garganta is closed).",
+                "es": "Sendero Yacaratiá en vehículo abierto + lancha por rápidos hasta la base de los saltos. Te empapás. Edad mínima 12 años, DNI/pasaporte original, restricciones de embarque (embarazo, movilidad, etc.). Parque y traslados aparte. Reservá a la mañana: los cupos se van.",
+                "en": "Yacaratiá trail in an open vehicle + a boat up the rapids to the base of the falls. You will get soaked. Minimum age 12, original ID/passport, boarding restrictions (pregnancy, mobility, etc.). Park and transfers extra. Book in the morning: slots go.",
+                "duration_es": "~2 h (operador; algunas fichas dicen ~2 h 15)",
+                "duration_en": "~2 h (operator; some write-ups say ~2 h 15)",
+                "includes_es": "guía bilingüe, vehículo, lancha, bolsa estanca; no capa de lluvia ni entrada al parque",
+                "includes_en": "bilingual guide, vehicle, boat, dry bag; no rain poncho or park ticket",
                 "ars": 100000,
-                "asof": "tickets.iguazujungle.com, nov. 2026",
-                "asof_en": "tickets.iguazujungle.com, Nov 2026",
+                "asof": "iguazujungle.com / tickets.iguazujungle.com, nov. 2026",
+                "asof_en": "iguazujungle.com / tickets.iguazujungle.com, Nov 2026",
                 "note_es": "excursión sola; parque aparte",
                 "note_en": "excursion only; park extra",
             },
@@ -375,35 +516,35 @@ PROVINCES = [
         "region": "centro",
         "es": {
             "name": "Córdoba",
-            "where": "Sierras · universidad y fernet",
-            "teaser": "Ciudad viva; el fin de semana se va a Carlos Paz o al valle.",
-            "vibe": "Universidad, cuarteto, fernet con Coca y sierras a un rato. La ciudad es viva; el fin de semana se va a Carlos Paz o al valle.",
-            "season": "La ciudad rinde casi todo el año; sierras mejor sep–nov y mar–may. Evitá enero en Carlos Paz (calor + muchedumbre). Invierno seco en la ciudad, frío de noche en las sierras.",
-            "arrive": "Vuelo a COR (hub doméstico fuerte, ~1 h 20) o micro (~9–11 h) desde Retiro. Auto tiene sentido si vas a las sierras varios días. Desde COR conectás Mendoza y el NOA sin volver a Ezeiza.",
+            "where": "Capital universitaria · las sierras quedan a un micro",
+            "teaser": "Ciudad viva (universidad, cuarteto, fernet). Las sierras — Punilla, Calamuchita, Traslasierra — son tips de distancia y boleto, no pines aparte.",
+            "vibe": "Estuve en la capital. Universidad enorme, cuarteto, fernet con Coca y una ciudad que se mueve de día y de noche. El fin de semana cordobés se va a las sierras: yo no marqué cada pueblo. Esta página parte la ficha — ciudad visitada / valles para cuando vayas — a propósito. No invento anécdotas de hostería.",
+            "season": "Dos climas, no uno. <strong>Ciudad:</strong> rinde casi todo el año. Verano (dic–feb) caliente y seco, fácil 32–36 °C y siesta; invierno (jun–ago) seco, ~5–18 °C, sol de tarde. Mejor mar–may y sep–nov. <strong>Sierras:</strong> mismas estaciones, noches más frías. Ideal sep–nov y mar–may. Enero en Carlos Paz es calor + muchedumbre. Cosquín folklore = última semana de enero; Cosquín Rock = febrero (Punilla). Oktoberfest de Villa General Belgrano = octubre. Detalle y boletos en <a href=\"#tips\">sierras</a>.",
+            "arrive": "Desde Buenos Aires: vuelo a COR (~1 h 20, hub doméstico fuerte) o micro (~9–11 h, suele noche, cama). Indicativo CABA→Córdoba en la <a href=\"../#red-precios\">red de precios</a>: micro ~ARS 23.000–70.000 / ~USD 15–45; avión «desde» Turismocity 2 nov. 2026 ~ARS 88.000 / ~USD 57. El aeropuerto (Pajas Blancas) queda ~11 km al norte: taxi/remís/Uber al centro ~25–40 min. La Terminal de Ómnibus (T1/T2) es el nudo hacia las sierras — no salís a Punilla a pie desde el centro. Auto tiene sentido si encadenás dos valles; para un día a Carlos Paz o Alta Gracia el micro alcanza. Desde COR también conectás Mendoza y el NOA sin volver a Ezeiza.",
             "do": [
-                "Centro histórico y Manzana Jesuítica (UNESCO).",
-                "Sierras Chicas o Calamuchita.",
-                "Camino de las Altas Cumbres si manejás con calma.",
-                "Parque Nacional Quebrada del Condorito si el plan es sierras de verdad.",
+                "Centro histórico y Manzana Jesuítica (UNESCO): iglesia de la Compañía, Universidad Nacional, Colegio Monserrat. Se camina.",
+                "Nueva Córdoba (estudiantes, bares) y Güemes (bares, diseño, feria). Parque Sarmiento si querés verde sin salir de la ciudad.",
+                "Cuarteto de noche si te late: es cultura local, no un dinner-show. Quality Espacio y boliches de la capital; confirmá la cartelera.",
+                "Las sierras no son un barrio: son otro viaje de 40–180 km. Circuitos y micros en <a href=\"#tips\">sierras</a>.",
             ],
-            "eat": "Fernet con Coca (sí, es cultural), locro, empanadas cordobesas, asado. En las sierras, cabrito y comida de hostería.",
-            "hack": "No vale Córdoba de a pie si lo que querías eran las sierras: alquilá o tomá combi. Empate clásico: cama nocturno vs vuelo corto.",
+            "eat": "En la capital: fernet con Coca (sí, es cultural; el vaso largo es el default), empanadas cordobesas, locro, asado, pizza y comida de estudiante en Nueva Córdoba. No amarro un restaurante que puede cerrar mañana. En las sierras — si vas — cabrito, humita, comida de hostería; Carlos Paz es más parrilla de fin de semana que pueblo de olla.",
+            "hack": "Empate clásico CABA–Córdoba: cama nocturno vs vuelo corto. Si el plan es un valle, no duermas en Ezeiza: llegá a Córdoba, terminal, micro. Un día rinde Carlos Paz o Alta Gracia; Punilla norte (La Cumbre / Capilla) pide salir temprano; Calamuchita + Cumbrecita es día largo; Traslasierra no es day trip. Boletos en <a href=\"#tips\">la tabla</a>.",
         },
         "en": {
             "name": "Córdoba",
-            "where": "Sierras · university city and fernet",
-            "teaser": "A living city; the weekend leaves for Carlos Paz or the valley.",
-            "vibe": "University, cuarteto, fernet and Coke, and sierras a short hop away. The city is alive; the weekend leaves for Carlos Paz or the valley.",
-            "season": "The city works almost year-round; the sierras are better Sep–Nov and Mar–May. Avoid January in Carlos Paz (heat + crowds). Winter is dry in town, cold at night in the hills.",
-            "arrive": "Fly to COR (a real domestic hub, ~1 h 20) or bus (~9–11 h) from Retiro. A car makes sense if you are spending several days in the sierras. From COR you can connect Mendoza and the northwest without going back to Ezeiza.",
+            "where": "University capital · the sierras are a bus ride",
+            "teaser": "A living city (university, cuarteto, fernet). The sierras — Punilla, Calamuchita, Traslasierra — are distance-and-ticket tips, not extra pins.",
+            "vibe": "I have been to the capital. A huge university, cuarteto, fernet and Coke, and a city that moves day and night. The Córdoba weekend leaves for the sierras: I did not mark each town. This page splits on purpose — visited city / valleys for when you go. No invented inn anecdotes.",
+            "season": "Two climates, not one. <strong>City:</strong> works almost year-round. Summer (Dec–Feb) hot and dry, easily 32–36 °C and a siesta; winter (Jun–Aug) dry, ~5–18 °C, afternoon sun. Better Mar–May and Sep–Nov. <strong>Sierras:</strong> the same seasons, colder nights. Ideal Sep–Nov and Mar–May. January in Carlos Paz is heat + crowds. Cosquín folklore = last week of January; Cosquín Rock = February (Punilla). Villa General Belgrano Oktoberfest = October. Detail and fares in <a href=\"#tips\">sierras</a>.",
+            "arrive": "From Buenos Aires: fly to COR (~1 h 20, a real domestic hub) or bus (~9–11 h, often overnight, cama). Indicative BA→Córdoba on the <a href=\"../#red-precios\">fare network</a>: bus ~ARS 23,000–70,000 / ~USD 15–45; flight “from” Turismocity 2 Nov 2026 ~ARS 88,000 / ~USD 57. The airport (Pajas Blancas) sits ~11 km north: taxi/remis/Uber to the centre ~25–40 min. The bus terminal (T1/T2) is the hub for the sierras — you do not walk to Punilla from downtown. A car makes sense if you chain two valleys; for a Carlos Paz or Alta Gracia day the bus is enough. From COR you can also connect Mendoza and the northwest without going back to Ezeiza.",
             "do": [
-                "Historic centre and the Jesuit Block (UNESCO).",
-                "Sierras Chicas or Calamuchita.",
-                "Camino de las Altas Cumbres if you drive calmly.",
-                "Quebrada del Condorito National Park if the plan is actual hills.",
+                "Historic centre and the Jesuit Block (UNESCO): Compañía church, the national university, Colegio Monserrat. Walkable.",
+                "Nueva Córdoba (students, bars) and Güemes (bars, design, a fair). Parque Sarmiento if you want green without leaving town.",
+                "Cuarteto at night if that’s your thing: local culture, not a dinner-show. Quality Espacio and capital clubs; confirm that week’s bill.",
+                "The sierras are not a neighbourhood: they are another 40–180 km trip. Circuits and buses in <a href=\"#tips\">sierras</a>.",
             ],
-            "eat": "Fernet and Coke (yes, it is cultural), locro, Córdoba empanadas, asado. In the sierras, goat and inn food.",
-            "hack": "Skip a car-free Córdoba if what you wanted was the sierras: rent or take a combi. Classic tie: overnight cama bus vs a short flight.",
+            "eat": "In the capital: fernet and Coke (yes, it is cultural; the long glass is the default), Córdoba empanadas, locro, asado, pizza and student food in Nueva Córdoba. I am not locking a restaurant that may close tomorrow. In the sierras — if you go — goat, humita, inn food; Carlos Paz is more a weekend grill than a pot-food village.",
+            "hack": "Classic CABA–Córdoba tie: overnight cama vs a short flight. If a valley is the plan, do not sleep at Ezeiza: reach Córdoba, terminal, bus. One day covers Carlos Paz or Alta Gracia; northern Punilla (La Cumbre / Capilla) wants an early start; Calamuchita + Cumbrecita is a long day; Traslasierra is not a day trip. Tickets in <a href=\"#tips\">the table</a>.",
         },
         "legs_es": [("bus", "Micro ~9–11 h · suele noche"), ("air", "Avión ~1,5 h")],
         "legs_en": [("bus", "Bus ~9–11 h · often overnight"), ("air", "Flight ~1.5 h")],
@@ -418,10 +559,138 @@ PROVINCES = [
                 "ars": APN["condorito"],
                 "asof": "APN desde 1 jun 2026",
                 "asof_en": "APN from 1 Jun 2026",
+                "duration_es": "el día en el parque",
+                "duration_en": "your park day",
+                "includes_es": "ingreso; traslado desde Córdoba aparte",
+                "includes_en": "admission; transfer from Córdoba extra",
                 "note_es": "tarifa general",
                 "note_en": "general fee",
             }
         ],
+        "city_extra": {
+            "es_title": "Ciudad: comida, cultura, noche",
+            "en_title": "The city: food, culture, night",
+            "es": """<p>La capital es universitaria: UNC, más de trescientos mil estudiantes en un año normal. Eso explica la densidad de bares, el fernet y por qué Nueva Córdoba a las 23 no parece una ciudad de interior. No es Buenos Aires y no quiere serlo.</p>
+      <h3>Barrios que importan</h3>
+      <ul class="season-list">
+        <li><strong>Centro / Manzana Jesuítica</strong> — El piso colonial y universitario. Se camina de día. A la noche el centro se vacía más que Nueva Córdoba.</li>
+        <li><strong>Nueva Córdoba</strong> — Estudiantes, departamentos, bares, after. El pulmón de la noche barata. No es «pintoresco»: es gente.</li>
+        <li><strong>Güemes</strong> — Bares, diseño, feria (suele ser fin de semana; confirmá). Un poco más mixto que Nueva Córdoba.</li>
+        <li><strong>Cerro de las Rosas / zona norte</strong> — Más residencial, más auto, otra franja de edad. No es el primer barrio si venís dos noches.</li>
+      </ul>
+      <h3>Noche y oído</h3>
+      <p>Fernet Branca con Coca, vaso largo, es el trago de la ciudad — no un gag de turismo. Cuarteto (La Mona, Ulises Bueno, Q’Lokura) es la música que llena: Quality Espacio y boliches de la capital, no un dinner-show. El <a href="../#musica">mapa de música</a> de la hub tiene la lista. Si no te late el cuarteto, hay bares de rock y electrónico; no son el default. La noche arranca tarde: antes de las 00 mucha puerta está tibia.</p>
+      <h3>Cultura de día</h3>
+      <p>Manzana Jesuítica (UNESCO). Palacio Ferreyra / Emilio Caraffa si querés museo. Teatro del Libertador si hay función (confirmá cartelera). Parque Sarmiento para un rato de verde. No armo un ranking de restaurantes: el peso se mueve y las puertas cambian. Pedí empanadas y un fernet; el resto es boca a boca del día.</p>""",
+            "en": """<p>The capital is a university city: UNC, more than three hundred thousand students in a normal year. That explains the density of bars, the fernet, and why Nueva Córdoba at 11 p.m. does not look like a sleepy inland town. It is not Buenos Aires and does not want to be.</p>
+      <h3>Neighbourhoods that matter</h3>
+      <ul class="season-list">
+        <li><strong>Centre / Jesuit Block</strong> — The colonial and university floor. Walk it by day. At night the centre empties more than Nueva Córdoba.</li>
+        <li><strong>Nueva Córdoba</strong> — Students, apartments, bars, afters. The cheap-night lung. Not “picturesque”: it is people.</li>
+        <li><strong>Güemes</strong> — Bars, design, a fair (usually weekend; confirm). A little more mixed than Nueva Córdoba.</li>
+        <li><strong>Cerro de las Rosas / north</strong> — More residential, more car, another age band. Not the first neighbourhood if you have two nights.</li>
+      </ul>
+      <h3>Night and ear</h3>
+      <p>Fernet Branca and Coke, long glass, is the city’s drink — not a tourism gag. Cuarteto (La Mona, Ulises Bueno, Q’Lokura) is the music that fills rooms: Quality Espacio and capital clubs, not a dinner-show. The hub <a href="../#musica">music map</a> has the list. If cuarteto is not your thing, there are rock and electronic bars; they are not the default. The night starts late: before midnight a lot of doors are still warm.</p>
+      <h3>Daytime culture</h3>
+      <p>Jesuit Block (UNESCO). Palacio Ferreyra / Emilio Caraffa if you want a museum. Teatro del Libertador if there is a show (confirm the bill). Parque Sarmiento for a stretch of green. I am not ranking restaurants: pesos move and doors change. Ask for empanadas and a fernet; the rest is that day’s word of mouth.</p>""",
+        },
+        "tips": {
+            "toc_es": "Sierras",
+            "toc_en": "Sierras",
+            "es_flag_h": "La capital es el pin. Los valles no.",
+            "en_flag_h": "The capital is the pin. The valleys are not.",
+            "es_flag_p": "Yo marqué Córdoba ciudad. Carlos Paz, La Cumbre, Capilla, Alta Gracia y el resto son guía práctica para lectores: no pines del mapa, no un checklist de pueblos que pisé uno por uno.",
+            "en_flag_p": "I marked Córdoba city. Carlos Paz, La Cumbre, Capilla, Alta Gracia and the rest are a practical reader guide: not map pins, not a checklist of towns I walked one by one.",
+            "es_title": "Sierras desde la capital — distancias, micros, circuitos",
+            "en_title": "Sierras from the capital — distances, buses, circuits",
+            "es": """<p>La provincia es un abanico de valles al oeste de la capital. <strong>Primero llegás a Córdoba ciudad</strong> (vuelo ~1 h 20 / micro ~9–11 h desde Buenos Aires) y recién ahí el valle. Micros interurbanos salen de la <strong>Terminal de Ómnibus (T1/T2)</strong>. Tarifas: ERSEP oct. 2026 (+14,7%) donde hay nota de prensa; el resto es hoja de terminal ~jun. 2026 o un rango entre dos fichas vecinas. Confirmá en boletería el día que viajás. FX ~ARS 1.550/USD (BNA, nov. 2026). El colectivo urbano de la capital es otra red (tarjeta/QR del día; no mezcles ese boleto con el interurbano).</p>
+
+      <h3>Capital vs sierras, en una frase</h3>
+      <ul class="season-list">
+        <li><strong>Capital</strong> — Universidad, cuarteto, fernet, Manzana Jesuítica. Visité esto.</li>
+        <li><strong>Punilla</strong> (oeste, RN38 / lago San Roque) — Carlos Paz, Cosquín, La Falda, La Cumbre, Capilla del Monte. El valle más cerca y más masivo.</li>
+        <li><strong>Paravachasca</strong> (sudoeste) — Alta Gracia. Día jesuita corto.</li>
+        <li><strong>Calamuchita</strong> (sur) — Villa General Belgrano, La Cumbrecita. Día largo o noche.</li>
+        <li><strong>Traslasierra</strong> (más al oeste, Camino de las Altas Cumbres) — Mina Clavero, Nono, Villa Dolores. Finde, no day trip.</li>
+        <li><strong>Quebrada del Condorito</strong> — Parque nacional en las sierras grandes. Auto o excursión; no un colectivo de esquina. Entrada APN tarifa general ARS 25.000 / ~USD 16 (desde 1 jun 2026).</li>
+      </ul>
+
+      <h3>Pueblos y boletos (ida, desde la Terminal de Córdoba)</h3>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead><tr><th>Valle / pueblo</th><th>Para qué</th><th>Desde Córdoba</th><th>Micro ida (estimativo)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Punilla · Villa Carlos Paz</strong></td><td>Lago San Roque, fin de semana masivo, casino, no «naturaleza virgen».</td><td>~36–40 km · 45–60 min</td><td class="num">ARS 6.500 / ~USD 4 <span class="mute">ERSEP 1 oct. 2026</span></td></tr>
+            <tr><td><strong>Punilla · Cosquín</strong></td><td>Festival de folklore (última semana de ene); pueblo de ruta el resto del año.</td><td>~55–63 km · ~1 h 15</td><td class="num">ARS 10.000 / ~USD 6 <span class="mute">ERSEP oct. 2026</span></td></tr>
+            <tr><td><strong>Punilla · La Falda</strong></td><td>Entre Cosquín y La Cumbre; sierras más «veraneo clásico».</td><td>~80 km · ~1 h 30–1 h 45</td><td class="num">~ARS 13.000–18.000 / ~USD 8–12 <span class="mute">entre Cosquín y Capilla; confirmá boletería</span></td></tr>
+            <tr><td><strong>Punilla · La Cumbre</strong></td><td>Más quieto que Carlos Paz; golf, aire de veraneo inglés viejo, base para el norte del valle.</td><td>~90–100 km · ~1 h 45–2 h</td><td class="num">~ARS 15.000–20.000 / ~USD 10–13 <span class="mute">sin ficha ERSEP propia acá; confirmá</span></td></tr>
+            <tr><td><strong>Punilla · Capilla del Monte</strong></td><td>Cerro Uritorco, más seco, fama ovni / alternativa. El más lejos del valle corto.</td><td>~108–110 km · ~2 h</td><td class="num">ARS 21.000 / ~USD 14 <span class="mute">ERSEP oct. 2026</span></td></tr>
+            <tr><td><strong>Paravachasca · Alta Gracia</strong></td><td>Estancia jesuita UNESCO, museo del Che, día corto.</td><td>~36 km · ~40 min</td><td class="num">~ARS 5.700 / ~USD 4 <span class="mute">terminal jun. 2026; confirmá</span></td></tr>
+            <tr><td><strong>Calamuchita · Villa General Belgrano</strong></td><td>Oktoberfest (oct), base para La Cumbrecita.</td><td>~90 km · ~1 h 45</td><td class="num">~ARS 18.000–20.000 / ~USD 12–13 <span class="mute">~17.700 jun. 2026 + aumento oct.</span></td></tr>
+            <tr><td><strong>Calamuchita · La Cumbrecita</strong></td><td>Pueblo peatonal «alemán»; transbordo en VGB (Pájaro Blanco u otro local).</td><td>~120 km · 2–3 h con transbordo</td><td class="num">VGB + tramo local; confirmá Pájaro Blanco</td></tr>
+            <tr><td><strong>Traslasierra · Mina Clavero / Nono</strong></td><td>Otro valle, por Altas Cumbres. Río, fin de semana.</td><td>~150 km · ~3 h</td><td class="num">~ARS 36.000 / ~USD 23 <span class="mute">jun./oct. 2026</span></td></tr>
+            <tr><td><strong>Traslasierra · Villa Dolores</strong></td><td>Punta más lejos del mismo corredor.</td><td>~180 km · ~3 h+</td><td class="num">ARS 47.300 / ~USD 31 <span class="mute">jun./oct. 2026</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="wx">Ida. La vuelta suele costar parecido. Enero y fines largos llenan el coche a Carlos Paz: comprá con tiempo. Empresas: varias salen de la misma terminal — compará en boletería / Plataforma10; no me caso con un logo.</p>
+
+      <h3>Circuitos cortos desde la capital (sugeridos, no un itinerario que yo corrí pueblo por pueblo)</h3>
+      <ul class="season-list">
+        <li><strong>Medio día · Carlos Paz</strong> — El más fácil. Lago, costanera, vuelta a dormir a la capital. No lo vendas como «naturaleza»: es el balneario de la ciudad. ~ARS 6.500 / ~USD 4 el tramo.</li>
+        <li><strong>Día corto · Alta Gracia</strong> — Estancia jesuita + (si te late) casa de Che. ~40 min. Cierra más temprano que un boliche: salí de mañana. ~ARS 5.700 / ~USD 4.</li>
+        <li><strong>Día Punilla medio · Cosquín + La Falda o La Cumbre</strong> — Un solo valle, misma ruta. En enero Cosquín es el festival (última semana); el resto del año es pueblo de paso. Salí temprano si llegás a La Cumbre. Boletos en la tabla: Cosquín ARS 10.000; La Cumbre rango, confirmá.</li>
+        <li><strong>Día Punilla largo · Capilla del Monte / Uritorco</strong> — ~2 h. Más seco, más rareza. No apretés Carlos Paz + Uritorco «porque queda en el mapa»: son 70 km más de valle y otra energía. ARS 21.000 / ~USD 14 el tramo.</li>
+        <li><strong>Día largo · Calamuchita (VGB + Cumbrecita)</strong> — Salida temprana. VGB es la base; Cumbrecita es peatonal y pide transbordo. En octubre (Oktoberfest) dormí allá o aceptá el micro de vuelta lleno. ~ARS 18.000–20.000 a VGB + local.</li>
+        <li><strong>Día con auto o tour · Quebrada del Condorito</strong> — Cóndores si el día da. No hay un micro de esquina que te deje en el mirador. APN ARS 25.000 / ~USD 16 + traslado. Confirmá operación.</li>
+        <li><strong>Finde, no día · Traslasierra</strong> — Altas Cumbres (~3 h). Mina Clavero / Nono. Volver el mismo día es masoquismo de ruta. ~ARS 36.000 / ~USD 23 a Mina Clavero.</li>
+      </ul>
+      <p>No mezcles Punilla norte y Calamuchita el mismo día «para aprovechar». Son valles distintos, terminal de ida distinta en espíritu, y el sol se acaba. Mejor época para cualquiera de estos circuitos: sep–nov y mar–may. Enero funciona si aceptás gente y calor; julio es seco y frío de noche en altura.</p>""",
+            "en": """<p>The province is a fan of valleys west of the capital. <strong>You reach Córdoba city first</strong> (flight ~1 h 20 / bus ~9–11 h from Buenos Aires) and only then the valley. Intercity buses leave from the <strong>bus terminal (T1/T2)</strong>. Fares: ERSEP Oct 2026 (+14.7%) where the press listed them; the rest is a ~Jun 2026 terminal sheet or a range between two neighbouring cards. Confirm at the window the day you travel. FX ~ARS 1,550/USD (BNA, Nov 2026). The capital’s city bus is a different network (that day’s card/QR; do not mix it with the intercity ticket).</p>
+
+      <h3>Capital vs sierras, in one line</h3>
+      <ul class="season-list">
+        <li><strong>Capital</strong> — University, cuarteto, fernet, Jesuit Block. I visited this.</li>
+        <li><strong>Punilla</strong> (west, RN38 / Lake San Roque) — Carlos Paz, Cosquín, La Falda, La Cumbre, Capilla del Monte. The closest and most massive valley.</li>
+        <li><strong>Paravachasca</strong> (southwest) — Alta Gracia. A short Jesuit day.</li>
+        <li><strong>Calamuchita</strong> (south) — Villa General Belgrano, La Cumbrecita. A long day or a night.</li>
+        <li><strong>Traslasierra</strong> (further west, Camino de las Altas Cumbres) — Mina Clavero, Nono, Villa Dolores. A weekend, not a day trip.</li>
+        <li><strong>Quebrada del Condorito</strong> — National park in the big sierras. Car or tour; not a corner bus. APN general fee ARS 25,000 / ~USD 16 (from 1 Jun 2026).</li>
+      </ul>
+
+      <h3>Towns and tickets (one-way, from Córdoba terminal)</h3>
+      <div class="table-wrap">
+        <table class="prices">
+          <thead><tr><th>Valley / town</th><th>What it’s for</th><th>From Córdoba</th><th>Bus one-way (indicative)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Punilla · Villa Carlos Paz</strong></td><td>Lake San Roque, mass weekend, casino, not “untouched nature”.</td><td>~36–40 km · 45–60 min</td><td class="num">ARS 6,500 / ~USD 4 <span class="mute">ERSEP 1 Oct 2026</span></td></tr>
+            <tr><td><strong>Punilla · Cosquín</strong></td><td>Folklore festival (last week of Jan); a road town the rest of the year.</td><td>~55–63 km · ~1 h 15</td><td class="num">ARS 10,000 / ~USD 6 <span class="mute">ERSEP Oct 2026</span></td></tr>
+            <tr><td><strong>Punilla · La Falda</strong></td><td>Between Cosquín and La Cumbre; more “classic summering” sierras.</td><td>~80 km · ~1 h 30–1 h 45</td><td class="num">~ARS 13,000–18,000 / ~USD 8–12 <span class="mute">between Cosquín and Capilla; confirm at the window</span></td></tr>
+            <tr><td><strong>Punilla · La Cumbre</strong></td><td>Quieter than Carlos Paz; golf, an old English-summering air, a base for the north of the valley.</td><td>~90–100 km · ~1 h 45–2 h</td><td class="num">~ARS 15,000–20,000 / ~USD 10–13 <span class="mute">no dedicated ERSEP card here; confirm</span></td></tr>
+            <tr><td><strong>Punilla · Capilla del Monte</strong></td><td>Cerro Uritorco, drier, UFO / alternative fame. The far end of the short valley.</td><td>~108–110 km · ~2 h</td><td class="num">ARS 21,000 / ~USD 14 <span class="mute">ERSEP Oct 2026</span></td></tr>
+            <tr><td><strong>Paravachasca · Alta Gracia</strong></td><td>UNESCO Jesuit estancia, Che museum, a short day.</td><td>~36 km · ~40 min</td><td class="num">~ARS 5,700 / ~USD 4 <span class="mute">terminal Jun 2026; confirm</span></td></tr>
+            <tr><td><strong>Calamuchita · Villa General Belgrano</strong></td><td>Oktoberfest (Oct), base for La Cumbrecita.</td><td>~90 km · ~1 h 45</td><td class="num">~ARS 18,000–20,000 / ~USD 12–13 <span class="mute">~17,700 Jun 2026 + Oct hike</span></td></tr>
+            <tr><td><strong>Calamuchita · La Cumbrecita</strong></td><td>Car-free “German” village; change in VGB (Pájaro Blanco or another local).</td><td>~120 km · 2–3 h with a transfer</td><td class="num">VGB + local hop; confirm Pájaro Blanco</td></tr>
+            <tr><td><strong>Traslasierra · Mina Clavero / Nono</strong></td><td>Another valley, via Altas Cumbres. River, weekend.</td><td>~150 km · ~3 h</td><td class="num">~ARS 36,000 / ~USD 23 <span class="mute">Jun/Oct 2026</span></td></tr>
+            <tr><td><strong>Traslasierra · Villa Dolores</strong></td><td>Further along the same corridor.</td><td>~180 km · ~3 h+</td><td class="num">ARS 47,300 / ~USD 31 <span class="mute">Jun/Oct 2026</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="wx">One-way. The return is usually similar. January and long weekends fill the Carlos Paz coach: buy ahead. Companies: several leave the same terminal — compare at the window / Plataforma10; I am not marrying a logo.</p>
+
+      <h3>Short circuits from the capital (suggested, not an itinerary I walked town by town)</h3>
+      <ul class="season-list">
+        <li><strong>Half day · Carlos Paz</strong> — The easy one. Lake, waterfront, back to sleep in the capital. Do not sell it as “nature”: it is the city’s resort. ~ARS 6,500 / ~USD 4 the hop.</li>
+        <li><strong>Short day · Alta Gracia</strong> — Jesuit estancia + (if you want) Che’s house. ~40 min. It shuts earlier than a club: leave in the morning. ~ARS 5,700 / ~USD 4.</li>
+        <li><strong>Medium Punilla day · Cosquín + La Falda or La Cumbre</strong> — One valley, one road. In January Cosquín is the festival (last week); the rest of the year it is a pass-through town. Leave early if you reach La Cumbre. Tickets in the table: Cosquín ARS 10,000; La Cumbre a range, confirm.</li>
+        <li><strong>Long Punilla day · Capilla del Monte / Uritorco</strong> — ~2 h. Drier, weirder. Do not squeeze Carlos Paz + Uritorco “because they are on the map”: that is 70 km more of valley and another energy. ARS 21,000 / ~USD 14 the hop.</li>
+        <li><strong>Long day · Calamuchita (VGB + Cumbrecita)</strong> — Early start. VGB is the base; Cumbrecita is car-free and wants a transfer. In October (Oktoberfest) sleep there or accept a full bus back. ~ARS 18,000–20,000 to VGB + local.</li>
+        <li><strong>Day with a car or tour · Quebrada del Condorito</strong> — Condors if the day plays along. There is no corner bus that drops you at the lookout. APN ARS 25,000 / ~USD 16 + transfer. Confirm operations.</li>
+        <li><strong>Weekend, not a day · Traslasierra</strong> — Altas Cumbres (~3 h). Mina Clavero / Nono. Coming back the same day is road masochism. ~ARS 36,000 / ~USD 23 to Mina Clavero.</li>
+      </ul>
+      <p>Do not mix northern Punilla and Calamuchita the same day “to make the most of it.” They are different valleys, a different outgoing mood at the terminal, and the sun runs out. Best window for any of these circuits: Sep–Nov and Mar–May. January works if you accept people and heat; July is dry and cold at night up high.</p>""",
+        },
     },
     {
         "slug": "caba",
@@ -459,7 +728,59 @@ PROVINCES = [
         "legs_es": [("local", "Estás acá"), ("air", "AEP 20–40 min · EZE 45–75 min")],
         "legs_en": [("local", "You are here"), ("air", "AEP 20–40 min · EZE 45–75 min")],
         "nearby": ["buenos-aires", "entre-rios", "santa-fe"],
-        "tours": [],
+        "tours": [
+            {
+                "url": "https://www.guruwalk.com/buenos-aires",
+                "es_name": "Free walking tour (propina)",
+                "en_name": "Free walking tour (tip-based)",
+                "es": "Varias empresas salen de Plaza de Mayo o San Telmo, 2–3 h, inglés y español. No hay tarifa: se propina al final. No amarro una como «la» mejor: mirá reseñas recientes en GuruWalk, GetYourGuide o Viator.",
+                "en": "Several companies leave from Plaza de Mayo or San Telmo, 2–3 h, English and Spanish. No fare: you tip at the end. I am not locking one as “the” walk: read recent reviews on GuruWalk, GetYourGuide, or Viator.",
+                "duration_es": "2–3 h",
+                "duration_en": "2–3 h",
+                "includes_es": "guía a pie por el centro; propina al final, no un boleto",
+                "includes_en": "a walking guide through the centre; a tip at the end, not a ticket",
+                "price_es": "propina típica ~USD 10–20 (algunas notas locales hablan de ARS 2.000–5.000: es propina, no tarifa)",
+                "price_en": "typical tip ~USD 10–20 (some local notes say ARS 2,000–5,000: that is a tip, not a fare)",
+                "asof": "modelo tip-based, nov. 2026",
+                "asof_en": "tip-based model, Nov 2026",
+                "note_es": "no hay hoja de operador único",
+                "note_en": "no single operator sheet",
+            },
+            {
+                "url": "https://turismo.buenosaires.gob.ar/",
+                "es_name": "Milonga (clase + pista)",
+                "en_name": "Milonga (class + floor)",
+                "es": "Tango de verdad: se baila, no se mira desde una mesa con show. Cubiertos y códigos de pista cambian por salón. Glorieta de Belgrano es al aire libre y sin ticket. Dinner-show (Viejo Almacén, Señor Tango y compañía) es teatro para visitantes: otra plata, otro plan.",
+                "en": "Real tango: you dance, you don’t watch from a dinner table. Covers and floor codes change by hall. Glorieta de Belgrano is outdoors and unticketed. A dinner show (Viejo Almacén, Señor Tango and the rest) is visitor theatre: different money, different plan.",
+                "duration_es": "clase 1–2 h; milonga hasta tarde",
+                "duration_en": "class 1–2 h; milonga runs late",
+                "includes_es": "entrada al salón; copa y zapato a veces extra",
+                "includes_en": "door cover; drink and shoes sometimes extra",
+                "ars": 3000,
+                "ars_high": 8000,
+                "asof": "rango de puerta 2026, no un salón único",
+                "asof_en": "door range 2026, not one hall",
+                "note_es": "cubierto; clase principiante suele ARS 4.000–10.000",
+                "note_en": "cover; beginner class often ARS 4,000–10,000",
+            },
+            {
+                "url": "https://www.getyourguide.com/buenos-aires-l145/tango-tc186/",
+                "es_name": "Dinner-show de tango (si insistís)",
+                "en_name": "Tango dinner show (if you insist)",
+                "es": "No elijo «el» mejor show: cambian elenco, menú y precio. Pack cena + espectáculo ~USD 80–150 según sala. Compará GetYourGuide/Viator esa semana; si querés tango y no teatro, andá a una milonga.",
+                "en": "I am not picking “the” show: cast, menu, and price move. Dinner + show packs ~USD 80–150 depending on the room. Compare GetYourGuide/Viator that week; if you want tango not theatre, go to a milonga.",
+                "duration_es": "~3 h (cena + show)",
+                "duration_en": "~3 h (dinner + show)",
+                "includes_es": "suele incluir cena y espectáculo; copas extra varían",
+                "includes_en": "usually dinner and the show; extra drinks vary",
+                "usd_only": "aprox. USD 80–150",
+                "usd_only_en": "about USD 80–150",
+                "asof": "rango de mercado, nov. 2026",
+                "asof_en": "market range, Nov 2026",
+                "note_es": "confirmá en GetYourGuide/Viator, no en esta guía",
+                "note_en": "confirm on GetYourGuide/Viator, not here",
+            },
+        ],
     },
     {
         "slug": "buenos-aires",
@@ -542,16 +863,21 @@ PROVINCES = [
         "nearby": ["cordoba", "caba"],
         "tours": [
             {
-                "url": "https://troutandwine.com/",
-                "es_name": "Trout & Wine (wine tours chicos)",
-                "en_name": "Trout & Wine (small wine tours)",
-                "es": "Operador conocido, inglés/español. También podés ir directo a bodegas con reserva. En Maipú, bici + remís de vuelta es el clásico económico. No publico un precio que no esté en su tarifa del día.",
-                "en": "A known operator, English/Spanish. You can also go straight to wineries with a booking. In Maipú, bike + a remise back is the cheap classic. I am not inventing a day rate that is not on their sheet.",
-                "ars": None,
-                "asof": "confirmá en troutandwine.com",
-                "asof_en": "confirm at troutandwine.com",
-                "note_es": "varía con bodegas y grupo",
-                "note_en": "moves with wineries and group size",
+                "url": "https://troutandwine.com/tours/lujan-de-cuyo-wine/",
+                "es_name": "Trout & Wine — Luján de Cuyo / Valle de Uco",
+                "en_name": "Trout & Wine — Luján de Cuyo / Uco Valley",
+                "es": "Operador conocido, grupos chicos, guía en inglés. Luján desde USD 220; Uco desde USD 230 (hoja del operador). Recogida ~8:30–9:00, vuelta a la tarde. Si querés pagar en pesos, contactalos antes. Deluxe privado es otra tarifa (USD 360/370, ocupación doble). En Maipú, bici + remís de vuelta sigue siendo el clásico económico — no le pongo un número de alquiler que no vi en una hoja.",
+                "en": "A known operator, small groups, English guide. Luján from USD 220; Uco from USD 230 (operator sheet). Pickup ~8:30–9:00, back in the afternoon. To pay in pesos, contact them first. Private deluxe is a different fare (USD 360/370, double occupancy). In Maipú, bike + a remise back is still the cheap classic — I am not inventing a rental number I have not seen on a sheet.",
+                "duration_es": "~8 h (día completo)",
+                "duration_en": "~8 h (full day)",
+                "includes_es": "pickup en hotel, guía en inglés, catas, almuerzo gourmet, agua; propina aparte",
+                "includes_en": "hotel pickup, English guide, tastings, gourmet lunch, water; gratuities extra",
+                "usd_only": "desde USD 220 (Luján) / 230 (Uco) · ~ARS 341.000 / 356.500 al FX de esta guía",
+                "usd_only_en": "from USD 220 (Luján) / 230 (Uco) · ~ARS 341,000 / 356,500 at this guide’s FX",
+                "asof": "troutandwine.com, nov. 2026",
+                "asof_en": "troutandwine.com, Nov 2026",
+                "note_es": "publicado en USD; ARS a consultar",
+                "note_en": "listed in USD; ask if you want ARS",
             }
         ],
     },
@@ -593,23 +919,32 @@ PROVINCES = [
         "nearby": ["rio-negro", "santa-cruz"],
         "tours": [
             {
-                "url": "https://www.hydrosport.ar/",
-                "es_name": "Hydro Sport (avistaje embarcado)",
-                "en_name": "Hydro Sport (boat-based watching)",
-                "es": "Avistaje de ballenas desde Pirámides y salidas de delfines desde Madryn (estacional; a veces cierran venta). Hay otras lanchas en el muelle: compará y no persigas a los animales. El embarcado se paga aparte de la entrada al área protegida. Confirmá tarifa en su web.",
-                "en": "Whale watching from Pirámides and dolphin trips from Madryn (seasonal; they sometimes stop selling). Other boats at the pier: compare, and do not chase the animals. The boat is extra to the protected-area ticket. Confirm the fare on their site.",
-                "ars": None,
-                "asof": "confirmá en hydrosport.ar",
-                "asof_en": "confirm at hydrosport.ar",
-                "note_es": "estacional; el puerto cierra con viento",
-                "note_en": "seasonal; the port closes in wind",
+                "url": "https://www.hydrosport.ar/eng/tarifas",
+                "es_name": "Hydro Sport — avistaje de ballenas",
+                "en_name": "Hydro Sport — whale watching",
+                "es": "Lancha desde Puerto Pirámides (no desde Madryn). Temporada jun–dic; el puerto cierra con viento. Hay otras lanchas en el muelle (Southern Spirit, Tito Bottazzi y más) y la prensa 2026 habla de tarifas unificadas: compará, no persigas a los animales. Traslado Madryn–Pirámides aparte.",
+                "en": "Boat from Puerto Pirámides (not from Madryn). Season Jun–Dec; the port closes in wind. Other boats at the pier (Southern Spirit, Tito Bottazzi and more) and 2026 press talks about unified fares: compare, and do not chase the animals. Madryn–Pirámides transfer extra.",
+                "duration_es": "1 h 30 de navegación",
+                "duration_en": "1 h 30 on the water",
+                "includes_es": "embarque en Pirámides; no incluye traslado ni entrada a Valdés",
+                "includes_en": "boarding at Pirámides; transfer and Valdés ticket extra",
+                "ars": 150000,
+                "ars_high": 195000,
+                "asof": "hydrosport.ar/eng/tarifas + prensa unificada sep. 2026",
+                "asof_en": "hydrosport.ar/eng/tarifas + unified press Sep 2026",
+                "note_es": "baja 15/6–31/8 ARS 150.000 · alta desde 1/9 ARS 195.000 (adultos)",
+                "note_en": "low 15 Jun–31 Aug ARS 150,000 · high from 1 Sep ARS 195,000 (adults)",
             },
             {
                 "url": "https://www.argentina.gob.ar/turismo",
                 "es_name": "Entrada Península Valdés (área protegida)",
                 "en_name": "Península Valdés protected-area ticket",
-                "es": "Entrada 2026 al área protegida, no incluye lancha.",
-                "en": "2026 protected-area ticket, boat extra.",
+                "es": "Entrada 2026 al área protegida. No incluye lancha ni el micro a Pirámides. El Doradillo (ballenas desde la costa) es otro plan, más barato, cuando hay marea y temporada.",
+                "en": "2026 protected-area ticket. Does not include the boat or the bus to Pirámides. El Doradillo (whales from the shore) is a different, cheaper plan when tide and season line up.",
+                "duration_es": "el día en la península",
+                "duration_en": "your peninsula day",
+                "includes_es": "ingreso al área protegida",
+                "includes_en": "protected-area admission",
                 "ars": 50000,
                 "asof": "temporada 2026",
                 "asof_en": "2026 season",
@@ -617,6 +952,12 @@ PROVINCES = [
                 "note_en": "foreign visitors; residents ~ARS 20,000",
             },
         ],
+        "tips": {
+            "es_title": "Para cuando vayas — Trevelin (el otro Chubut)",
+            "en_title": "For when you go — Trevelin (the other Chubut)",
+            "es": """<p>Yo marqué <strong>Puerto Madryn</strong> (Atlántico). Trevelin es el oeste: pueblo galés a ~25 km de Esquel, cordillera, no ballenas. <strong>No es un pin visitado.</strong> Desde Bariloche son ~280–320 km por RN40 (~4–5 h). Gaiman (té galés cerca de Trelew) sí queda del lado de Madryn; no lo confundás con Trevelin. Micro Bariloche–Esquel: confirmá en Plataforma10 / Vía Bariloche esa semana — no publico un carrito que no vi.</p>""",
+            "en": """<p>I marked <strong>Puerto Madryn</strong> (Atlantic). Trevelin is the west: a Welsh town ~25 km from Esquel, Andes, not whales. <strong>Not a visited pin.</strong> From Bariloche it is ~280–320 km on RN40 (~4–5 h). Gaiman (Welsh tea near Trelew) is on the Madryn side; don’t mix it up with Trevelin. Bariloche–Esquel bus: confirm on Plataforma10 / Vía Bariloche that week — I am not publishing a cart I have not seen.</p>""",
+        },
     },
     {
         "slug": "rio-negro",
@@ -659,8 +1000,12 @@ PROVINCES = [
                 "url": "https://www.argentina.gob.ar/parquesnacionales/tarifas",
                 "es_name": "Parque Nacional Nahuel Huapi (APN)",
                 "en_name": "Nahuel Huapi National Park (APN)",
-                "es": "El parque alrededor de Bariloche. Entrada oficial; Circuito Chico se hace en auto, bici o bus turístico.",
-                "en": "The park around Bariloche. Official gate fee; Circuito Chico is car, bike, or tourist bus.",
+                "es": "El parque alrededor de Bariloche. Entrada oficial; Circuito Chico se hace en auto, bici o bus turístico. La lancha y Catedral van aparte.",
+                "en": "The park around Bariloche. Official gate fee; Circuito Chico is car, bike, or tourist bus. The boat and Catedral are extra.",
+                "duration_es": "el día en el parque",
+                "duration_en": "your park day",
+                "includes_es": "ingreso; no incluye lancha ni aerosilla",
+                "includes_en": "admission; boat and chairlift extra",
                 "ars": APN["nahuel"],
                 "asof": "APN desde 1 jun 2026",
                 "asof_en": "APN from 1 Jun 2026",
@@ -668,20 +1013,93 @@ PROVINCES = [
                 "note_en": "general fee; Argentine residents ~ARS 15,000",
             },
             {
+                "url": "https://www.turisur.com.ar/?c=inicio&lang=es&v=tarifas",
+                "es_name": "Turisur — Circuito Chico",
+                "en_name": "Turisur — Circuito Chico",
+                "es": "Bus turístico clásico (Campanario, Llao Llao, Bahía López). También se hace en auto o bici más barato. Tangol lista el mismo producto más caro (ARS 50.000 ES / 116.666 con guía en inglés): compará. Aerosilla de Campanario aparte.",
+                "en": "Classic tourist bus (Campanario, Llao Llao, Bahía López). Cheaper by car or bike. Tangol lists the same product higher (ARS 50,000 Spanish / 116,666 with an English guide): compare. Campanario chairlift extra.",
+                "duration_es": "~4,5 h (8:30–13:00 en la hoja Turisur 2026)",
+                "duration_en": "~4.5 h (8:30–13:00 on the Turisur 2026 sheet)",
+                "includes_es": "bus y guía; parque y Campanario aparte",
+                "includes_en": "bus and guide; park and Campanario extra",
+                "ars": 40500,
+                "asof": "turisur.com.ar tarifas terrestres 2026",
+                "asof_en": "turisur.com.ar land fares 2026",
+                "note_es": "adulto; infante 0–3 sin cargo",
+                "note_en": "adult; infant 0–3 free",
+            },
+            {
+                "url": "https://islavictoriayarrayanes.com/horarios-y-tarifas/",
+                "es_name": "Cau Cau / Turisur — Isla Victoria y Arrayanes",
+                "en_name": "Cau Cau / Turisur — Isla Victoria and Arrayanes",
+                "es": "Navegación en Nahuel Huapi desde Puerto Pañuelo. Parque APN y tasa de embarque (ARS 7.600) se pagan en el puerto. Traslado terrestre opcional ARS 22.000. Resellers (Tangol) cotizan el paquete más caro: la hoja del barco es esta.",
+                "en": "Nahuel Huapi boat from Puerto Pañuelo. APN park fee and boarding tax (ARS 7,600) are paid at the port. Optional land transfer ARS 22,000. Resellers (Tangol) quote a fatter package: the boat sheet is this one.",
+                "duration_es": "tarde ~12:15–18:30, o día completo con traslado 10:20–18:30",
+                "duration_en": "afternoon ~12:15–18:30, or full day with transfer 10:20–18:30",
+                "includes_es": "catamarán, Arrayanes ~45 min, Isla Victoria ~2 h 30; parque y tasa aparte",
+                "includes_en": "catamaran, Arrayanes ~45 min, Isla Victoria ~2 h 30; park and tax extra",
+                "ars": 140000,
+                "asof": "islavictoriayarrayanes.com / Turisur, desde 1 jun 2026",
+                "asof_en": "islavictoriayarrayanes.com / Turisur, from 1 Jun 2026",
+                "note_es": "adulto; menores/jubilados ARS 70.000",
+                "note_en": "adult; children/Argentine seniors ARS 70,000",
+            },
+            {
+                "url": "https://catedralaltapatagonia.com/tarifas/",
+                "es_name": "Cerro Catedral — Día Peatón",
+                "en_name": "Cerro Catedral — pedestrian day",
+                "es": "Ascenso y descenso peatón (Tour Catedral / Telecabina Amancay según operación del día). No es un tour guiado: es el medio de elevación. Pase esquiador es otra tarifa (prensa 2026 ~ARS 160.000). ChipCard aparte. El clima manda qué está abierto.",
+                "en": "Pedestrian up and down (Tour Catedral / Telecabina Amancay depending on the day’s operation). Not a guided tour: it is the lift. The skier pass is a different fare (2026 press ~ARS 160,000). ChipCard extra. Weather decides what is open.",
+                "duration_es": "el día de medios (suele 9–16)",
+                "duration_en": "the lift day (often 9–16)",
+                "includes_es": "un ascenso y descenso peatón; ski y estacionamiento aparte",
+                "includes_en": "one pedestrian up and down; ski and parking extra",
+                "ars": 90000,
+                "asof": "catedralaltapatagonia.com/tarifas, 2026",
+                "asof_en": "catedralaltapatagonia.com/tarifas, 2026",
+                "note_es": "tarifa única; infantes 0–5 sin cargo",
+                "note_en": "flat fare; infants 0–5 free",
+            },
+            {
                 "url": "https://www.cruceandino.com/",
                 "es_name": "Cruce Andino (tres lagos)",
                 "en_name": "Cruce Andino (three lakes)",
-                "es": "Nahuel Huapi, Frías, Todos los Santos. No es un micro. Parques y almuerzo aparte. Sale casi todos los días; el clima en el lago manda.",
-                "en": "Nahuel Huapi, Frías, Todos los Santos. It is not a bus. Parks and lunch extra. It runs most days; lake weather decides.",
-                "ars": None,
-                "usd_only": "USD 355 no residente / 277 residente",
-                "usd_only_en": "USD 355 non-resident / 277 resident",
-                "asof": "tarifa 2026–28",
-                "asof_en": "2026–28 fare",
-                "note_es": "publicado por el operador",
-                "note_en": "published by the operator",
+                "es": "Nahuel Huapi, Frías, Todos los Santos hacia Peulla/Puerto Varas. No es el micro por Samoré. Parques y almuerzo aparte. Sale casi todos los días; el lago manda.",
+                "en": "Nahuel Huapi, Frías, Todos los Santos toward Peulla/Puerto Varas. It is not the Samoré bus. Parks and lunch extra. It runs most days; the lake decides.",
+                "duration_es": "~12 h",
+                "duration_en": "~12 h",
+                "includes_es": "buses + barcos del cruce; parques, almuerzo y tasas aparte",
+                "includes_en": "crossing buses + boats; parks, lunch, and taxes extra",
+                "usd_only": "USD 355 no residente / 277 residente · ~ARS 550.000 / 429.000 al FX de esta guía",
+                "usd_only_en": "USD 355 non-resident / 277 resident · ~ARS 550,000 / 429,000 at this guide’s FX",
+                "asof": "cruceandino.com tarifa 2026–28",
+                "asof_en": "cruceandino.com 2026–28 fare",
+                "note_es": "publicado por el operador en USD",
+                "note_en": "published by the operator in USD",
+            },
+            {
+                "url": "https://www.turisur.com.ar/?c=inicio&lang=es&v=tarifas",
+                "es_name": "Turisur — Cerro Tronador",
+                "en_name": "Turisur — Cerro Tronador",
+                "es": "Día largo al volcán/glaciar del lado argentino. Parque Nahuel Huapi aparte. Hoja terrestre 2026 del mismo operador que Circuito Chico.",
+                "en": "A long day to the volcano/glacier on the Argentine side. Nahuel Huapi park extra. Same 2026 land sheet as Circuito Chico.",
+                "duration_es": "~9 h (9:00–18:00 en la hoja)",
+                "duration_en": "~9 h (9:00–18:00 on the sheet)",
+                "includes_es": "bus y guía; parque aparte",
+                "includes_en": "bus and guide; park extra",
+                "ars": 81000,
+                "asof": "turisur.com.ar tarifas terrestres 2026",
+                "asof_en": "turisur.com.ar land fares 2026",
+                "note_es": "adulto 4+; infante 0–3 sin cargo",
+                "note_en": "adult 4+; infant 0–3 free",
             },
         ],
+        "tips": {
+            "es_title": "Para cuando vayas — Trevelin / Esquel",
+            "en_title": "For when you go — Trevelin / Esquel",
+            "es": """<p>Si el plan es seguir al oeste de los lagos: Esquel y Trevelin (Chubut andino, té galés de cordillera). ~4–5 h desde Bariloche. <strong>Yo no los marqué como visitados</strong> — Villa La Angostura tampoco (eso ya sería Neuquén). Confirmá micros en Plataforma10; no invento tarifa de esa semana.</p>""",
+            "en": """<p>If the plan is to keep west of the lakes: Esquel and Trevelin (Andean Chubut, mountain Welsh tea). ~4–5 h from Bariloche. <strong>I did not mark them as visited</strong> — nor Villa La Angostura (that would already be Neuquén). Confirm buses on Plataforma10; I am not inventing that week’s fare.</p>""",
+        },
     },
     {
         "slug": "santa-cruz",
@@ -726,6 +1144,10 @@ PROVINCES = [
                 "en_name": "Los Glaciares National Park (APN)",
                 "es": "Entrada al área del Perito Moreno. Las pasarelas se hacen por tu cuenta. Llevá abrigo aunque sea enero.",
                 "en": "Ticket for the Perito Moreno area. The boardwalks you do on your own. Bring a jacket even in January.",
+                "duration_es": "el día en las pasarelas",
+                "duration_en": "your boardwalk day",
+                "includes_es": "ingreso al área; lancha y hielo aparte",
+                "includes_en": "area admission; boat and ice extra",
                 "ars": APN["glaciares"],
                 "asof": "APN desde 1 jun 2026",
                 "asof_en": "APN from 1 Jun 2026",
@@ -736,13 +1158,50 @@ PROVINCES = [
                 "url": "https://hieloyaventura.com/tarifas/",
                 "es_name": "Hielo y Aventura — Minitrekking",
                 "en_name": "Hielo y Aventura — Mini trekking",
-                "es": "Concesionaria del parque. Minitrekking todo el año; Big Ice 15 sep–30 abr (ARS 550.000 + traslado opcional). Safari Náutico ARS 80.000 todo el año. Parque aparte.",
-                "en": "Park concessionaire. Mini trekking year-round; Big Ice 15 Sep–30 Apr (ARS 550,000 + optional transfer). Nautical safari ARS 80,000 year-round. Park extra.",
+                "es": "Concesionaria del parque. Crampones sobre el glaciar; apto 8–65 años. Big Ice (más exigente, 15 sep–30 abr) ARS 550.000 + traslado opcional ARS 80.000. Parque y comida aparte.",
+                "en": "Park concessionaire. Crampons on the ice; ages 8–65. Big Ice (harder, 15 Sep–30 Apr) ARS 550,000 + optional transfer ARS 80,000. Park and food extra.",
+                "duration_es": "~4 h 30 desde el puerto; ~10 h con traslado desde Calafate + pasarelas",
+                "duration_en": "~4 h 30 from the port; ~10 h with transfer from Calafate + boardwalks",
+                "includes_es": "navegación, guías ES/EN, equipo técnico; parque, comida y traslado opcionales",
+                "includes_en": "boat, ES/EN guides, technical kit; park, food, and transfer optional",
                 "ars": 420000,
                 "asof": "hieloyaventura.com desde 1 nov 2026",
                 "asof_en": "hieloyaventura.com from 1 Nov 2026",
-                "note_es": "adulto, sin traslado (con traslado ARS 500.000)",
-                "note_en": "adult, without transfer (ARS 500,000 with transfer)",
+                "note_es": "adulto sin traslado (con traslado ARS 500.000)",
+                "note_en": "adult without transfer (ARS 500,000 with transfer)",
+            },
+            {
+                "url": "https://hieloyaventura.com/tarifas/",
+                "es_name": "Hielo y Aventura — Safari Náutico",
+                "en_name": "Hielo y Aventura — Nautical safari",
+                "es": "La lancha corta frente a la pared, todo el año. Si no estás para crampones, es el plan. Parque aparte. Safari Azul es otro producto (ARS 140.000, temporada acotada).",
+                "en": "The short boat along the wall, year-round. If crampons are not the day, this is the plan. Park extra. Safari Azul is a different product (ARS 140,000, limited season).",
+                "duration_es": "navegación corta (el día en el parque es aparte)",
+                "duration_en": "short navigation (the park day is separate)",
+                "includes_es": "embarque frente al glaciar; parque aparte",
+                "includes_en": "boarding in front of the glacier; park extra",
+                "ars": 80000,
+                "asof": "hieloyaventura.com desde 1 nov 2026",
+                "asof_en": "hieloyaventura.com from 1 Nov 2026",
+                "note_es": "adulto; 20% jubilados/residentes Santa Cruz/menores 4–15",
+                "note_en": "adult; 20% off for Argentine seniors / Santa Cruz residents / ages 4–15",
+            },
+            {
+                "url": "https://www.patagoniachic.com/el-calafate/excursiones/perito-moreno-kayak",
+                "es_name": "Patagonia Chic — Kayak Perito Moreno",
+                "en_name": "Patagonia Chic — Perito Moreno kayak",
+                "es": "Kayak doble en el Canal de los Témpanos, la pared de frente. 14 años o más; no hace falta experiencia. Agregador/operador de Calafate: si el plan es crampón sobre hielo, compará con Hielo y Aventura. La ficha pública ofrece cancelación gratis ~24 h — confirmala en el checkout.",
+                "en": "Double kayak on the Canal de los Témpanos, the wall in front of you. Age 14+; no experience required. Calafate aggregator/operator: if the plan is crampons on ice, compare with Hielo y Aventura. The public card offers free cancellation ~24 h — confirm it at checkout.",
+                "duration_es": "~1 h 30 de kayak (9:45–13:30 desde el parque); con traslado y pasarelas el día se va a la tarde",
+                "duration_en": "~1 h 30 of kayaking (9:45–13:30 from the park); with transfer and boardwalks the day runs into the afternoon",
+                "includes_es": "kayak, traje seco, guía, snack; la ficha dice ticket APN incluido — confirmá al pagar. Traslado hotel + pasarelas ARS 90.000 extra",
+                "includes_en": "kayak, dry suit, guide, snack; the card says the APN ticket is included — confirm at payment. Hotel transfer + boardwalks ARS 90,000 extra",
+                "ars": 370000,
+                "ars_high": 510000,
+                "asof": "patagoniachic.com, nov. 2026 (pantalla 370.000 vs lista 510.000)",
+                "asof_en": "patagoniachic.com, Nov 2026 (on-screen 370,000 vs 510,000 list)",
+                "note_es": "adulto 14+ desde el parque; el 370.000 era promo en pantalla, no un precio eterno",
+                "note_en": "adult 14+ starting at the park; 370,000 was an on-screen promo, not a forever fare",
             },
         ],
     },
@@ -787,8 +1246,12 @@ PROVINCES = [
                 "url": "https://www.argentina.gob.ar/parquesnacionales/tarifas",
                 "es_name": "Parque Nacional Tierra del Fuego (APN)",
                 "en_name": "Tierra del Fuego National Park (APN)",
-                "es": "El parque al oeste de la ciudad. Entrada oficial.",
-                "en": "The park west of town. Official gate fee.",
+                "es": "El parque al oeste de la ciudad. Entrada oficial. Senderos costeros; el Tren del Fin del Mundo es otro boleto, no el parque.",
+                "en": "The park west of town. Official gate fee. Coastal trails; the End of the World Train is a different ticket, not the park.",
+                "duration_es": "tu día en el parque",
+                "duration_en": "your park day",
+                "includes_es": "senderos habilitados; tren y Beagle aparte",
+                "includes_en": "open trails; train and Beagle extra",
                 "ars": APN["tdf"],
                 "asof": "APN desde 1 jun 2026",
                 "asof_en": "APN from 1 Jun 2026",
@@ -796,26 +1259,61 @@ PROVINCES = [
                 "note_en": "general fee; Argentine residents ARS 18,000",
             },
             {
-                "url": "https://taunushuaia.com.ar/",
-                "es_name": "Taun (guías de montaña locales)",
-                "en_name": "Taun (local mountain guides)",
-                "es": "Trekking, glaciar Vinciguerra, packrafting, Laguna Esmeralda. Para el Beagle, hay varias lanchas en el puerto: compará duración y si incluyen isla de pingüinos (estacional). Revisá el parte: el viento cancela. Confirmá tarifa con ellos.",
-                "en": "Trekking, Vinciguerra glacier, packrafting, Laguna Esmeralda. For the Beagle, several boats at the port: compare length and whether penguin island is included (seasonal). Check the forecast: wind cancels. Confirm their fare with them.",
-                "ars": None,
-                "asof": "confirmá en taunushuaia.com.ar",
-                "asof_en": "confirm at taunushuaia.com.ar",
-                "note_es": "sale según clima",
-                "note_en": "runs depend on weather",
+                "url": "https://taunushuaia.com.ar/excursion/laguna-esmeralda/",
+                "es_name": "Taun — Laguna Esmeralda",
+                "en_name": "Taun — Laguna Esmeralda",
+                "es": "Guías de montaña locales (EPGAMT/AAGM). El clásico de trekking fácil: 9 km, 300 m. Vinciguerra es otra ficha, más exigente. Packrafting: confirmá en el sitio. El viento cancela.",
+                "en": "Local mountain guides (EPGAMT/AAGM). The easy trekking classic: 9 km, 300 m. Vinciguerra is a different, harder card. Packrafting: confirm on the site. Wind cancels.",
+                "duration_es": "5 h · 9 km · 300 m · todo el año",
+                "duration_en": "5 h · 9 km · 300 m · year-round",
+                "includes_es": "traslados hotel, guía certificado, vianda, seguro, bastones y crampones/raquetas; ropa y calzado no",
+                "includes_en": "hotel transfers, certified guide, packed lunch, insurance, poles and crampons/snowshoes; clothes and boots extra",
+                "ars": 140000,
+                "asof": "taunushuaia.com.ar, nov. 2026",
+                "asof_en": "taunushuaia.com.ar, Nov 2026",
+                "note_es": "publicado en ARS en la ficha; el sitio también muestra USD",
+                "note_en": "listed in ARS on the card; the site also shows USD",
+            },
+            {
+                "url": "https://taunushuaia.com.ar/excursion/glaciar-vinciguerra/",
+                "es_name": "Taun — Trekking Glaciar Vinciguerra",
+                "en_name": "Taun — Vinciguerra Glacier trek",
+                "es": "La misma operadora local que Laguna Esmeralda. Día largo: Valle de Andorra, turbal, bosque nativo, Laguna de los Témpanos y el glaciar. Nivel medio: hay que mantener ritmo, no sprint. El hielo retrocede y las cuevas cambian — confirmá qué está abierto ese día. El viento cancela.",
+                "en": "The same local operator as Laguna Esmeralda. A long day: Valle de Andorra, peat bog, native forest, Laguna de los Témpanos and the glacier. Moderate grade: a steady pace, not a sprint. The ice is receding and the caves change — confirm what is open that day. Wind cancels.",
+                "duration_es": "8 h · 14 km · 650 m · media · todo el año",
+                "duration_en": "8 h · 14 km · 650 m · moderate · year-round",
+                "includes_es": "traslados, equipo técnico (bastones, crampones/raquetas, casco), comida, guía certificado, seguro; abrigo, calzado y botella aparte",
+                "includes_en": "transfers, technical kit (poles, crampons/snowshoes, helmet), food, certified guide, insurance; warm clothes, boots and bottle extra",
+                "ars": 190000,
+                "asof": "taunushuaia.com.ar/excursion/glaciar-vinciguerra/, nov. 2026",
+                "asof_en": "taunushuaia.com.ar/excursion/glaciar-vinciguerra/, Nov 2026",
+                "note_es": "publicado en la ficha del operador; listados de terceros a veces muestran otro número",
+                "note_en": "listed on the operator card; third-party listings sometimes show another number",
+            },
+            {
+                "url": "https://www.canoerocatamaranes.com.ar/product/navegacion-pinguinera/",
+                "es_name": "Canoero — Beagle pingüinera (Isla Martillo)",
+                "en_name": "Canoero — Beagle penguins (Isla Martillo)",
+                "es": "Catamarán desde el muelle: lobos, faro Les Eclaireurs e Isla Martillo. No se baja a la isla. Oct–mar. La navegación corta a Isla de los Lobos (sin pingüinos) es ARS 123.000 / ~3 h, todo el año. Tolkeyen y otras lanchas en el puerto: compará, no persigas fauna. Viento cancela.",
+                "en": "Catamaran from the pier: sea lions, Les Eclaireurs lighthouse, and Isla Martillo. No landing on the island. Oct–Mar. The short Isla de los Lobos run (no penguins) is ARS 123,000 / ~3 h, year-round. Tolkeyen and other boats at the port: compare, do not chase wildlife. Wind cancels.",
+                "duration_es": "~5 h (oct–mar)",
+                "duration_en": "~5 h (Oct–Mar)",
+                "includes_es": "navegación + tasa de puerto ARS 6.000; no incluye traslado ni desembarco",
+                "includes_en": "navigation + ARS 6,000 port tax; transfer and landing extra / not offered",
+                "ars": 213000,
+                "asof": "canoerocatamaranes.com.ar, vigencia hasta 31/12/2026",
+                "asof_en": "canoerocatamaranes.com.ar, valid through 31 Dec 2026",
+                "note_es": "por persona, tasa incluida; 4–11 años 50%",
+                "note_en": "per person, tax included; ages 4–11 pay 50%",
             },
         ],
     },
 ]
 
 NOT_YET = [
-    ("Catamarca", "NOA vecino de Salta/Tucumán; yo todavía no.", "Northwest neighbour of Salta/Tucumán; not yet for me."),
-    ("Chaco", "Impenetrable y resistencia chaqueña: aún no.", "Impenetrable forest and Resistencia: not yet."),
-    ("Corrientes", "Esteros e Iberá; carnaval. Aún no pisé.", "Esteros and Iberá; carnival. I have not been."),
-    ("Formosa", "Frontera norte. Aún no.", "Northern border. Not yet."),
+    ("Chaco", "Impenetrable y Resistencia: aún no.", "Impenetrable forest and Resistencia: not yet."),
+    ("Corrientes", "Esteros del Iberá / Colonia Carlos Pellegrini, carnaval. Aún no pisé: 4×4, mosquitos, mejor en seca (abr–oct). Tip, no pin.", "Iberá wetlands / Colonia Carlos Pellegrini, carnival. I have not been: 4×4, mosquitoes, better in the dry (Apr–Oct). A tip, not a pin."),
+    ("Formosa", "Bañado La Estrella y frontera con Paraguay. Aún no. Humedal, calor, logística propia. Tip, no pin.", "Bañado La Estrella and the Paraguay border. Not yet. Wetland, heat, its own logistics. A tip, not a pin."),
     ("La Pampa", "Pampa interior. Aún no.", "Interior pampas. Not yet."),
     ("La Rioja", "Talampaya queda acá. Aún no.", "Talampaya is here. Not yet."),
     ("Neuquén", "Villa La Angostura y San Martín de los Andes: yo marqué Bariloche en Río Negro.", "Villa La Angostura and San Martín de los Andes: I marked Bariloche in Río Negro."),
@@ -840,25 +1338,37 @@ def legs_html(legs):
 def tour_html(t, lang):
     name = t["en_name"] if lang == "en" else t["es_name"]
     body = t["en"] if lang == "en" else t["es"]
-    asof = t["asof_en"] if lang == "en" else t["asof"]
-    note = t["note_en"] if lang == "en" else t["note_es"]
-    if t.get("usd_only"):
+    asof = t.get("asof_en") if lang == "en" else t.get("asof")
+    note = t.get("note_en") if lang == "en" else t.get("note_es")
+    duration = t.get("duration_en") if lang == "en" else t.get("duration_es")
+    includes = t.get("includes_en") if lang == "en" else t.get("includes_es")
+    override = t.get("price_en") if lang == "en" else t.get("price_es")
+    if override:
+        price_line = f"{override} · {note}" if note else override
+    elif t.get("usd_only"):
         price = t["usd_only_en"] if lang == "en" else t["usd_only"]
-        price_line = f"{price} · {note}"
+        price_line = f"{price} · {note}" if note else price
     elif t.get("ars"):
-        price_line = f"ARS {t['ars']:,} / {usd(t['ars'])} · {note}".replace(",", ".")
-        if lang == "en":
-            price_line = f"ARS {t['ars']:,} / {usd(t['ars'])} · {note}".replace(",", ",")
-            # English uses 60,000
-            price_line = f"ARS {t['ars']:,} / {usd(t['ars'])} · {note}"
+        lo, hi = t["ars"], t.get("ars_high")
+        ars_bit = f"ARS {ars_fmt(lo, lang)}–{ars_fmt(hi, lang)}" if hi else f"ARS {ars_fmt(lo, lang)}"
+        price_line = f"{ars_bit} / {usd_span(lo, hi)}"
+        if note:
+            price_line = f"{price_line} · {note}"
     else:
-        price_line = note
+        price_line = note or ("confirm with the operator" if lang == "en" else "confirmá en el operador")
+    asof_html = f' <span class="asof">({asof})</span>' if asof else ""
+    meta = []
+    if duration:
+        dk = "Duration" if lang == "en" else "Duración"
+        meta.append(f'<p class="tour-meta"><span>{dk}</span> {duration}</p>')
+    if includes:
+        ik = "Includes" if lang == "en" else "Incluye"
+        meta.append(f'<p class="tour-meta"><span>{ik}</span> {includes}</p>')
+    meta_html = ("\n          " + "\n          ".join(meta) + "\n          ") if meta else "\n          "
     url = t["url"]
-    label = "Sitio" if lang != "en" else "Site"
     return f"""        <article class="tour">
           <h3><a href="{url}" rel="noopener">{name}</a></h3>
-          <p>{body}</p>
-          <p class="price">{price_line} <span class="asof">({asof})</span></p>
+          <p>{body}</p>{meta_html}<p class="price">{price_line}{asof_html}</p>
         </article>"""
 
 
@@ -924,7 +1434,7 @@ def province_page(p, lang):
         season_note = "Diciembre es verano, julio es invierno."
         visited = "Visitado por Aldo"
         tours_empty = "Acá no hay un operador único que yo pueda recomendar con nombre y tarifa pública. Parque o salida: confirmá en el lugar y mirá reseñas de esta temporada."
-        fx = "USD al ~ARS 1.550 (BNA, nov. 2026). El peso se mueve: usá el número para saber si es un café o un sueldo."
+        fx = "USD al ~ARS 1.550 (BNA, nov. 2026). El peso se mueve: usá el número para saber si es un café o un sueldo. Tarifas públicas del operador o de APN; si no hay hoja, GetYourGuide / Viator / foros locales — no un precio inventado."
         last = f'<p><a href="../">Volver a la guía</a> · transporte, micros y plata nacional están en la hub. Cabotaje a principios de nov. 2026: Aerolíneas Argentinas y JetSMART.</p>'
     else:
         depth_site = "../../../"
@@ -957,7 +1467,7 @@ def province_page(p, lang):
         season_note = "December is summer, July is winter."
         visited = "Visited by Aldo"
         tours_empty = "There is no single operator here I can name with a public rate sheet. Park or outing: confirm on the ground and read this season’s reviews."
-        fx = "USD at ~ARS 1,550 (BNA, Nov 2026). Pesos move: use the number to know whether you are talking about a coffee or a salary."
+        fx = "USD at ~ARS 1,550 (BNA, Nov 2026). Pesos move: use the number to know whether you are talking about a coffee or a salary. Public operator or APN fares; if there is no sheet, GetYourGuide / Viator / local forums — not an invented price."
         last = f'<p><a href="../">Back to the guide</a> · national transport, long-distance buses, and money live on the hub. Domestic air as of early Nov 2026: Aerolíneas Argentinas and JetSMART.</p>'
 
     # EN province nearby links are sibling folders under /argentina/en/
@@ -989,6 +1499,47 @@ def province_page(p, lang):
       <p>{tours_empty}</p>
     </div>"""
 
+    city = p.get("city_extra")
+    if city:
+        ctitle = city["en_title"] if lang == "en" else city["es_title"]
+        cbody = city["en"] if lang == "en" else city["es"]
+        toc_city_link = f'\n      <a href="#ciudad">{"City" if lang == "en" else "Ciudad"}</a>'
+        extra_section = f"""    <div class="section" id="ciudad">
+      <h2>{ctitle}</h2>
+      {cbody}
+    </div>
+"""
+    else:
+        toc_city_link = ""
+        extra_section = ""
+
+    tips = p.get("tips")
+    if tips:
+        ttitle = tips["en_title"] if lang == "en" else tips["es_title"]
+        tbody = tips["en"] if lang == "en" else tips["es"]
+        flag_h = tips.get("en_flag_h" if lang == "en" else "es_flag_h") or (
+            "Not a visited pin" if lang == "en" else "No es un pin visitado"
+        )
+        flag_p = tips.get("en_flag_p" if lang == "en" else "es_flag_p") or (
+            "Side-trip or curiosity for readers. I did not mark this as a place I went."
+            if lang == "en"
+            else "Tip o curiosidad para quien va. Yo no lo marqué como lugar que recorrí."
+        )
+        toc_tips_label = tips.get("toc_en" if lang == "en" else "toc_es") or "Tips"
+        toc_tips_link = f'\n      <a href="#tips">{toc_tips_label}</a>'
+        tips_section = f"""    <div class="section" id="tips">
+      <h2>{ttitle}</h2>
+      <div class="note tip-not-visited">
+        <strong>{flag_h}</strong>
+        {flag_p}
+      </div>
+      {tbody}
+    </div>
+"""
+    else:
+        toc_tips_link = ""
+        tips_section = ""
+
     extra_anchor = f' id="{p["extra_id"]}"' if p.get("extra_id") else ""
     legs = legs_html(p["legs_en"] if lang == "en" else p["legs_es"])
     lang_attr = "en" if lang == "en" else "es-AR"
@@ -1011,7 +1562,7 @@ def province_page(p, lang):
       <a href="{hub}">{toc_hub}</a>
       <a href="#epoca">{toc_season}</a>
       <a href="#llegar">{toc_arrive}</a>
-      <a href="#hacer">{toc_do}</a>
+      <a href="#hacer">{toc_do}</a>{toc_city_link}{toc_tips_link}
       <a href="#tours">{toc_tours}</a>
       <a href="#comer">{toc_eat}</a>
       <a href="#hack">{toc_hack}</a>
@@ -1048,6 +1599,8 @@ def province_page(p, lang):
       </ul>
     </div>
 
+{extra_section}
+{tips_section}
 {tours_section}
 
     <div class="section" id="comer">
@@ -1170,6 +1723,8 @@ def patch_hub(path: Path, lang: str):
         )
 
     start = text.find('<div class="section" id="lugares">')
+    if start == -1:
+        start = text.find('<div class="section" id="provincias">')
     end = text.find('<div class="section" id="transporte">')
     if start == -1 or end == -1:
         raise SystemExit(f"hub markers missing in {path}")
@@ -1190,13 +1745,9 @@ def main():
         en_dir.mkdir(parents=True, exist_ok=True)
         (es_dir / "index.html").write_text(province_page(p, "es"), encoding="utf-8")
         (en_dir / "index.html").write_text(province_page(p, "en"), encoding="utf-8")
-    es_hub = (ROOT / "index.html").read_text(encoding="utf-8")
-    if 'id="lugares"' in es_hub:
-        patch_hub(ROOT / "index.html", "es")
-        patch_hub(ROOT / "en" / "index.html", "en")
-        print(f"wrote {len(PROVINCES)} provinces × 2 + patched hubs")
-    else:
-        print(f"wrote {len(PROVINCES)} provinces × 2 (hubs already split)")
+    patch_hub(ROOT / "index.html", "es")
+    patch_hub(ROOT / "en" / "index.html", "en")
+    print(f"wrote {len(PROVINCES)} provinces × 2 + patched hub grids")
 
 
 if __name__ == "__main__":
