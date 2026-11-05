@@ -125,6 +125,7 @@
 \begin{cvsection}{OPEN SOURCE}
 	\begin{cvsubsection}{}{}{}
 		\begin{itemize}
+			\item \textbf{Apache Airflow.} Made \texttt{AdbcHook.insert\_rows} use ADBC bulk ingest by default (\texttt{fast\_executemany}). \href{https://github.com/apache/airflow/pull/76363}{\#76363}, merged.
 			\item \textbf{Apache Airflow.} Made OAuth credentials optional in the Airbyte provider, so self-hosted Airbyte OSS runs without OAuth. \href{https://github.com/apache/airflow/pull/64986}{\#64986}, merged.
 			\item \textbf{Astronomer Cosmos.} Fixed the dbt-on-EKS operator for newer Amazon provider versions. \href{https://github.com/astronomer/astronomer-cosmos/pull/2481}{\#2481}, merged.
 			\item \textbf{Apache Airflow.} S3 DAG bundles stage from a single archive. \href{https://github.com/apache/airflow/pull/73015}{\#73015}, open.
