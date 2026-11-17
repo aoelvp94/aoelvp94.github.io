@@ -391,8 +391,8 @@
   <script src="countries.js"></script>
   <script>
     // Insertion order is chronological (oldest → newest). 2026 SEA is last among visited.
-    const VISITED = new Set(["ARG","CAN","GTM","PAN","COL","ECU","PER","BOL","BRA","PRY","URY","CHL","DOM","BRB","CUB","CUW","ISL","NOR","FIN","DNK","SWE","ENG","NLD","BEL","DEU","POL","FRA","CHE","AUT","HUN","SVK","SVN","ESP","PRT","ITA","CZE","ROU","SRB","ALB","GRC","BIH","HRV","MNE","MKD","KOS","BGR","KOR","JPN","MYS","TUR","EGY","MAR","SGP","BHS","PRI","SLV","MEX","USA","VNM","KHM","LAO","THA","IDN","PHL"]);
-    const SOON = new Set(["LUX","ARM","GEO","AZE","ISR","JOR"]);
+    const VISITED = new Set(["ARG","CAN","GTM","PAN","COL","ECU","PER","BOL","BRA","PRY","URY","CHL","DOM","BRB","CUB","CUW","ISL","NOR","FIN","DNK","SWE","ENG","NLD","BEL","DEU","POL","FRA","CHE","AUT","HUN","SVK","SVN","ESP","PRT","ITA","CZE","ROU","SRB","ALB","GRC","BIH","HRV","MNE","MKD","KOS","BGR","KOR","JPN","MYS","TUR","EGY","MAR","SGP","BHS","PRI","SLV","MEX","USA","VNM","KHM","LAO","THA","IDN","PHL","LUX","ARM","GEO"]);
+    const SOON = new Set(["AZE","ISR","JOR"]);
     const NEXT = new Set([
       // Wishlist by continent. Do not treat these as visited or as visiting soon.
       "ZAF","KEN","MUS","TUN","ZMB","ZWE","TZA","NAM","ETH",
@@ -507,7 +507,8 @@
       { id: "sgp", title: "Singapore", kicker: "Apr 2025", photo: "singapore", alt: "Helix Bridge and Marina Bay Sands in Singapore at night", codes: ["SGP"] },
       { id: "summer26", title: "Caribbean & North America", kicker: "Jul–Aug 2026", photo: "bahamas", alt: "Ocean Cay marine reserve in the Bahamas", codes: ["BHS","PRI","SLV","MEX","USA"] },
       { id: "sea26", title: "Southeast Asia", kicker: "Sep–Oct 2026", photo: "vietnam", alt: "Limestone karsts in Ha Long Bay, Vietnam", codes: ["VNM","KHM","LAO","THA","IDN","PHL"] },
-      { id: "next", title: "Going next", kicker: "Visiting soon", photo: "luxembourg", alt: "The Grund district of Luxembourg City", codes: ["LUX","ARM","GEO","AZE","ISR","JOR"] },
+      { id: "nov26", title: "Luxembourg & the Caucasus", kicker: "Nov 2026", photo: "luxembourg", alt: "The Grund district of Luxembourg City", codes: ["LUX","ARM","GEO"] },
+      { id: "next", title: "Going next", kicker: "Visiting soon", photo: "jerusalem", alt: "Old City walls and the Tower of David in Jerusalem", codes: ["AZE","ISR","JOR"] },
       // Wishlist grouped by continent. Antarctica (ATA) is not in countries.js.
       { id: "bucket-africa", title: "Africa", kicker: "Want to visit", photo: "med", alt: "Jemaa el-Fnaa square in Marrakesh", codes: ["ZAF","KEN","MUS","TUN","ZMB","ZWE","TZA","NAM","ETH"] },
       { id: "bucket-asia", title: "Asia", kicker: "Want to visit", photo: "east-asia", alt: "Seoul skyline at night", codes: ["CHN","TWN","IND","BGD","LKA","NPL","BTN","MMR","BRN","TKM","KAZ","UZB","KGZ","TJK","ARE","OMN","BHR","QAT","KWT"] },
